@@ -27,22 +27,22 @@
 ---
 <br>
 
-## <p style="text-align: left;">**Message.author**: [Author](/Discohook/docs/Author.md)</p>
+## <p style="text-align: left;">**Message.author**: [Author](/docs/Author.md)</p>
 ### <p style="text-align: left;">The the author of the message.</p>
 ---
 <br>
 
-## <p style="text-align: left;">**Message.embeds**: {[Embed](/Discohook/docs/Embed.md)} | {}</p>
+## <p style="text-align: left;">**Message.embeds**: {[Embed](/docs/Embed.md)} | {}</p>
 ### <p style="text-align: left;">A list of embedded content attached to the message.</p>
 ---
 <br>
 
-## <p style="text-align: left;">**Message.reactions**: {[Reaction](/Discohook/docs/Reaction.md)} | {}</p>
+## <p style="text-align: left;">**Message.reactions**: {[Reaction](/docs/Reaction.md)} | {}</p>
 ### <p style="text-align: left;">A list of reactions to the message.</p>
 ---
 <br>
 
-## <p style="text-align: left;">**Message.mentions**: {[User](/Discohook/docs/User.md)} | {}</p>
+## <p style="text-align: left;">**Message.mentions**: {[User](/docs/User.md)} | {}</p>
 ### <p style="text-align: left;">A list of users specifically mentioned in the message.</p>
 ---
 <br>
