@@ -33,7 +33,7 @@
 <br>
 <br>
 
-## <p style="text-align: left;">**Webhook.new**(id: [string](https://create.roblox.com/docs/scripting/luau/strings), token: [string](https://create.roblox.com/docs/scripting/luau/strings)): Webhook</p>
+## <p style="text-align: left;">**Webhook.new**(id: [string](https://create.roblox.com/docs/scripting/luau/strings), token: [string](https://create.roblox.com/docs/scripting/luau/strings)): [Webhook](/docs/Webhook.md)</p>
 ### <p style="text-align: left;">This function returns a new Webhook object.</p>
 
 ### Parameters:
@@ -43,7 +43,7 @@
 ---
 <br>
 
-## <p style="text-align: left;">**Webhook:_validateExecuteRequest**(content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {Embed}?, usernameOverride: [string](https://create.roblox.com/docs/scripting/luau/strings)?): ([boolean](https://create.roblox.com/docs/scripting/luau/booleans), [string](https://create.roblox.com/docs/scripting/luau/strings)?)</p>
+## <p style="text-align: left;">**Webhook:_validateExecuteRequest**(content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {[Embed](/docs/Embed.md)}?, usernameOverride: [string](https://create.roblox.com/docs/scripting/luau/strings)?): ([boolean](https://create.roblox.com/docs/scripting/luau/booleans), [string](https://create.roblox.com/docs/scripting/luau/strings)?)</p>
 ### <p style="text-align: left;">This function validates execute requests to avoid making pointless requests to discord.</p>
 
 *<p style="text-align: left;">Note: This function is not meant to be used outside Discohook's internal code.</p>*
@@ -56,7 +56,7 @@
 ---
 <br>
 
-## <p style="text-align: left;">**Webhook:execute**(content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {Embed}?, queue: [boolean](https://create.roblox.com/docs/scripting/luau/booleans), waitForMessage: [boolean](https://create.roblox.com/docs/scripting/luau/booleans), optionalExecuteInfo: OptionalExecuteInfo?): Message? | ThreadMessage?</p>
+## <p style="text-align: left;">**Webhook:execute**(content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {[Embed](/docs/Embed.md)}?, queue: [boolean](https://create.roblox.com/docs/scripting/luau/booleans), waitForMessage: [boolean](https://create.roblox.com/docs/scripting/luau/booleans), optionalExecuteInfo: [OptionalExecuteInfo](/docs/OptionalExecuteInfo.md)?): [Message](/docs/Message.md)? | [ThreadMessage](/docs/ThreadMessage.md)?</p>
 ### <p style="text-align: left;">This function sends a message to discord.</p>
 
 *<p style="text-align: left;">Note: If queue and waitForMessage are true a message object will NOT be returned.</p>*
@@ -72,7 +72,7 @@
 ---
 <br>
 
-## <p style="text-align: left;">**Webhook:editMessage**(messageId: [string](https://create.roblox.com/docs/scripting/luau/strings), content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {Embed}?, threadId: [string](https://create.roblox.com/docs/scripting/luau/strings)?): EditedMessage? | EditedThreadMessage?</p>
+## <p style="text-align: left;">**Webhook:editMessage**(messageId: [string](https://create.roblox.com/docs/scripting/luau/strings), content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {Embed}?, threadId: [string](https://create.roblox.com/docs/scripting/luau/strings)?): [EditedMessage](/docs/EditedMessage.md)? | [EditedThreadMessage](/docs/EditedThreadMessage.md)?</p>
 ### <p style="text-align: left;">This function edits a message sent by the webhook.</p>
 
 ### Parameters:
