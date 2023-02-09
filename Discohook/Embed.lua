@@ -47,18 +47,18 @@ function Embed:setTimestamp(customTimestamp: string): nil
 	self.timestamp = os.date("!%Y-%m-%dT%H:%M:%S." .. math.round(tick() % 1 * 1000) .. "Z")
 end
 
-function Embed:setColor(color3: Color3?): nil
+function Embed:setColor(color3: Color3): nil
 	self.color = (bit32.lshift((color3.R * 255), 16)) + (bit32.lshift((color3.G * 255), 8)) + (color3.B * 255)
 end
 
-function Embed:setFooter(text: string, iconUrl: string): nil
+function Embed:setFooter(text: string, iconUrl: string?): nil
 	self.footer = {
 		["text"] = text,
 		["icon_url"] = iconUrl
 	}
 end
 
-function Embed:setImage(url: string, height: number, width: number): nil
+function Embed:setImage(url: string, height: number?, width: number?): nil
 	self.image = {
 		["url"] = url,
 		["height"] = height,
@@ -66,7 +66,7 @@ function Embed:setImage(url: string, height: number, width: number): nil
 	}
 end
 
-function Embed:setThumbnail(url: string, height: number, width: number): nil
+function Embed:setThumbnail(url: string, height: number?, width: number?): nil
 	self.thumbnail = {
 		["url"] = url,
 		["height"] = height,
@@ -74,7 +74,7 @@ function Embed:setThumbnail(url: string, height: number, width: number): nil
 	}
 end
 
-function Embed:setAuthor(name: string?, url: string?, iconUrl: string?): nil
+function Embed:setAuthor(name: string, url: string?, iconUrl: string?): nil
 	self.author = {
 		["name"] = name,
 		["url"] = url,
@@ -92,7 +92,7 @@ function Embed:addField(name: string, value: string, inLine: boolean?): nil
 	})
 end
 
-function Embed:toDictionary(): {string: string | number | {}}
+function Embed:toDictionary(): {string: string? | number? | nil | {string: string | number | boolean}?}
 	return {
 		["title"] = self.title,
 		["description"] = self.description,
@@ -124,7 +124,7 @@ function Embed:totalCharacters(): number
 	return total
 end
 
-function Embed:colorToRGB(): {}
+function Embed:colorToRGB(): {string: number}
 	local r = bit32.band((bit32.rshift(self.color, (8 * 2))), 0xFF)
 	local g = bit32.band((bit32.rshift(self.color, (8 * 1))), 0xFF)
 	local b = bit32.band((bit32.rshift(self.color, (8 * 0))), 0xFF)
