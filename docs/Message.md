@@ -7,7 +7,7 @@
 <br>
 
 ## <p style="text-align: left;">**Message.id**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p style="text-align: left;">The id of the Message.</p>
+### <p style="text-align: left;">The id of the message.</p>
 ---
 <br>
 
