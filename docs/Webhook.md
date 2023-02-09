@@ -24,10 +24,12 @@
 ## <p style="text-align: left;">**Webhook.Enum**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)</p>
 ### <p style="text-align: left;">A dictionary full of enums for Discohook.</p>
 ---
+
 <br>
 <br>
 
 # <p style="text-align: center;">*Methods*</p>
+
 <br>
 <br>
 

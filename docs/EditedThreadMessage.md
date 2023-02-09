@@ -90,3 +90,21 @@
 ## <p style="text-align: left;">**EditedThreadMessage.editedTimestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
 ### <p style="text-align: left;">When the message was edited in ISO8601 format.</p>
 ---
+
+<br>
+<br>
+
+# <p style="text-align: center;">*Methods*</p>
+
+<br>
+<br>
+
+## <p style="text-align: left;">**EditedThreadMessage.new**(data: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [EditedThreadMessage](/docs/EditedThreadMessage.md)</p>
+### <p style="text-align: left;">This method returns a new EditedThreadMessage object.</p>
+
+*<p style="text-align: left;">Note: This method is not meant to be called outside of Discohook's internal code.</p>*
+
+### Parameters:
+
+- data: message data.
+---

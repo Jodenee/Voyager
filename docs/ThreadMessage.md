@@ -85,3 +85,21 @@
 ## <p style="text-align: left;">**ThreadMessage.position**: [number](https://create.roblox.com/docs/scripting/luau/numbers)</p>
 ### <p style="text-align: left;">A number that represents the approximate position of the message in a thread.</p>
 ---
+
+<br>
+<br>
+
+# <p style="text-align: center;">*Methods*</p>
+
+<br>
+<br>
+
+## <p style="text-align: left;">**ThreadMessage.new**(data: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [ThreadMessage](/docs/ThreadMessage.md)</p>
+### <p style="text-align: left;">This method returns a new ThreadMessage object.</p>
+
+*<p style="text-align: left;">Note: This method is not meant to be called outside of Discohook's internal code.</p>*
+
+### Parameters:
+
+- data: message data.
+---
