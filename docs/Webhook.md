@@ -72,7 +72,7 @@
 ---
 <br>
 
-## <p align = "left">**Webhook:editMessage**(messageId: [string](https://create.roblox.com/docs/scripting/luau/strings), content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {Embed}?, threadId: [string](https://create.roblox.com/docs/scripting/luau/strings)?): [EditedMessage](/docs/EditedMessage.md)? | [EditedThreadMessage](/docs/EditedThreadMessage.md)?</p>
+## <p align = "left">**Webhook:editMessage**(messageId: [string](https://create.roblox.com/docs/scripting/luau/strings), content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {[Embed]((/docs/Embed.md))}?, threadId: [string](https://create.roblox.com/docs/scripting/luau/strings)?): [EditedMessage](/docs/EditedMessage.md)? | [EditedThreadMessage](/docs/EditedThreadMessage.md)?</p>
 ### <p align = "left">This function edits a message sent by the webhook.</p>
 
 ### <p align = "left">Parameters:<p>
