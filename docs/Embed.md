@@ -6,50 +6,49 @@
 
 <br>
 
-## <p style="text-align: left;">**Embed.title**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
+## <p style="text-align: left;">**Embed.title**: [string](https://create.roblox.com/docs/scripting/luau/strings) | [nil](https://create.roblox.com/docs/scripting/luau/nil)</p>
 ### <p style="text-align: left;">The title of the webhook.</p>
 ---
 <br>
 
-## <p style="text-align: left;">**Embed.description**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
+## <p style="text-align: left;">**Embed.description**: [string](https://create.roblox.com/docs/scripting/luau/strings) | [nil](https://create.roblox.com/docs/scripting/luau/nil)</p>
 ### <p style="text-align: left;">The description of the webhook.</p>
 ---
 <br>
 
-## <p style="text-align: left;">**Embed.url**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
+## <p style="text-align: left;">**Embed.url**: [string](https://create.roblox.com/docs/scripting/luau/strings) | [nil](https://create.roblox.com/docs/scripting/luau/nil)</p>
 ### <p style="text-align: left;">The url of the webhook.</p>
 ---
 <br>
 
-## <p style="text-align: left;">**Embed.timestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
+## <p style="text-align: left;">**Embed.timestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings) | [nil](https://create.roblox.com/docs/scripting/luau/nil)</p>
 ### <p style="text-align: left;">The timestamp of the webhook.</p>
 ---
 <br>
 
-## <p style="text-align: left;">**Embed.footer**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)</p>
+## <p style="text-align: left;">**Embed.footer**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) | [nil](https://create.roblox.com/docs/scripting/luau/nil)</p>
 ### <p style="text-align: left;">The footer of the webhook.</p>
 ---
 <br>
 
-## <p style="text-align: left;">**Embed.image**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)</p>
+## <p style="text-align: left;">**Embed.image**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) | [nil](https://create.roblox.com/docs/scripting/luau/nil)</p>
 ### <p style="text-align: left;">The image of the webhook.</p>
 ---
 <br>
 
-## <p style="text-align: left;">**Embed.thumbnail**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)</p>
+## <p style="text-align: left;">**Embed.thumbnail**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) | [nil](https://create.roblox.com/docs/scripting/luau/nil)</p>
 ### <p style="text-align: left;">The thumbnail of the webhook.</p>
 ---
 <br>
 
-## <p style="text-align: left;">**Embed.author**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)</p>
+## <p style="text-align: left;">**Embed.author**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) | [nil](https://create.roblox.com/docs/scripting/luau/nil)</p>
 ### <p style="text-align: left;">The author of the webhook.</p>
 ---
 <br>
 
-## <p style="text-align: left;">**Embed.fields**: {[dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)}</p>
+## <p style="text-align: left;">**Embed.fields**: {[dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)} | [nil](https://create.roblox.com/docs/scripting/luau/nil)</p>
 ### <p style="text-align: left;">The title of the webhook.</p>
 ---
-<br>
 
 <br>
 <br>
@@ -112,7 +111,7 @@
 
 ### Parameters:
 
-- customTimestamp: A custom timestamp for the embed.
+- customTimestamp: A custom ISO8601 timestamp for the embed.
 ---
 <br>
 
