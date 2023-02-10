@@ -36,7 +36,7 @@
 <br>
 <br>
 
-## <p style="text-align: left;">**User.new**(data: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [User](docs/User.md)</p>
+## <p style="text-align: left;">**User.new**(data: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [User](/docs/User.md)</p>
 ### <p style="text-align: left;">This method returns a new User object.</p>
 
 *<p style="text-align: left;">Note: This method is not meant to be called outside of Discohook's internal code.</p>*
