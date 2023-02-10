@@ -27,7 +27,7 @@
 <br>
 
 ## <p style="text-align: left;">**Author.bot**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)</p>
-### <p style="text-align: left;">whether the user is a bot.</p>
+### <p style="text-align: left;">Whether the user is a bot.</p>
 ---
 <br>
 <br>
