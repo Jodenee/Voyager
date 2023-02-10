@@ -1,8 +1,8 @@
-# <p style="text-align: center;">**User**</p>
+# <center>**User**</center>
 
 <br>
 
-# <p style="text-align: center;">*Properties*</p>
+# <center>*Properties*</center>
 
 <br>
 
@@ -32,7 +32,7 @@
 <br>
 <br>
 
-# <p style="text-align: center;">*Methods*</p>
+# <center>*Methods*</center>
 <br>
 <br>
 
@@ -43,7 +43,7 @@
 
 ### Parameters:
 
-- data: User data
+- data: User data.
 ---
 <br>
 
