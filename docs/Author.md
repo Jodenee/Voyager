@@ -39,6 +39,8 @@
 ## <p style="text-align: left;">**Author.new**(data: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [Author](docs/Author.md)</p>
 ### <p style="text-align: left;">This method returns a new Author object.</p>
 
+*<p style="text-align: left;">Note: This method is not meant to be called outside of Discohook's internal code.</p>*
+
 ### Parameters:
 
 - data: Author data
