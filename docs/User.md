@@ -1,8 +1,8 @@
-# <center>**User**</center>
+# <p align = "center">**User**</p>
 
 <br>
 
-# <center>*Properties*</center>
+# <p align = "center">*Properties*</p>
 
 <br>
 
@@ -32,7 +32,7 @@
 <br>
 <br>
 
-# <center>*Methods*</center>
+# <p align = "center">*Methods*</p>
 <br>
 <br>
 
