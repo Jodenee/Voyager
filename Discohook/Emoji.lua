@@ -6,7 +6,7 @@ function Emoji.new(data)
 	
 	self.id = data["id"]
 	self.name = data["name"]
-	self.animated = data["animated"]
+	self.animated = if data["animated"] ~= nil then data["animated"] else false
 	
 	return self
 end
