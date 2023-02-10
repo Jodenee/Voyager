@@ -63,7 +63,7 @@ function Webhook:_validateExecuteRequest(content: string?, embeds: {}?, username
 end
 
 function Webhook:execute(content: string?, embeds: {}?, queue: boolean, waitForMessage: boolean, optionalExecuteInfo: {}?)
-	local optionalExecuteInfo = optionalExecuteInfo or require(script.OptionalExecuteInfo).new("", false)
+	local optionalExecuteInfo = optionalExecuteInfo or require(script.OptionalExecuteInfo).new()
 	local isRequestValid, errorMessage = self:_validateExecuteRequest(content, embeds, optionalExecuteInfo.usernameOverride)	
 	if not isRequestValid then return error(errorMessage) end
 	
