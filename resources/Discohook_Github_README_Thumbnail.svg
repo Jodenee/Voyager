@@ -2,14 +2,40 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="512"
-   height="512"
-   viewBox="0 0 512 512"
+   width="1715"
+   height="322"
+   viewBox="0 0 1715 322"
    version="1.1"
    id="svg5"
+   sodipodi:docname="Discohook_Github_README_Thumbnail.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:export-filename="..\Exported Images\Discohook_Github_Thumbnail2.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview26"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     showgrid="false"
+     inkscape:zoom="0.535587"
+     inkscape:cx="764.58166"
+     inkscape:cy="375.28917"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer2" />
   <defs
      id="defs2">
     <linearGradient
@@ -40,24 +66,34 @@
        gradientUnits="userSpaceOnUse" />
   </defs>
   <g
+     inkscape:groupmode="layer"
      id="layer2"
-     style="fill:url(#linearGradient6588);fill-opacity:1">
+     inkscape:label="Thumbnail">
     <rect
-       style="fill:#5865f2;fill-opacity:1;stroke:#ffffff;stroke-width:13.1821;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-       id="rect10314"
-       width="449.94775"
-       height="449.94775"
-       x="71.590836"
-       y="-17.317034"
-       ry="70.857254"
-       transform="rotate(10)" />
-  </g>
-  <g
-     id="layer1">
+       style="fill:#5865f2;fill-opacity:1;stroke:#ffffff;stroke-width:11.9508;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       id="rect441"
+       width="1703.0492"
+       height="310.04919"
+       x="5.9754028"
+       y="5.9754028"
+       ry="20.766762"
+       inkscape:label="Thumbnail_BG"
+       rx="0" />
     <g
        id="g1820"
-       transform="matrix(0.91721963,0.16173057,-0.16173057,0.91721963,55.694691,-99.961104)"
-       style="display:inline">
+       transform="matrix(0.32064752,0.05653881,-0.05653881,0.32064752,1252.1088,36.560916)"
+       style="display:inline"
+       inkscape:label="Discohook_Logo">
+      <rect
+         style="display:inline;fill:#5865f2;fill-opacity:1;stroke:#ffffff;stroke-width:13.1821;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         id="rect10314"
+         width="449.94775"
+         height="449.94775"
+         x="71.590836"
+         y="-17.317034"
+         ry="70.857254"
+         transform="matrix(1.073688,0,0,1.073688,-40.253163,116.08024)"
+         inkscape:label="Discohook_Logo_BG" />
       <g
          id="g1790"
          transform="matrix(0,-2.1410355,2.1410355,0,-287.93932,983.62839)">
@@ -125,5 +161,17 @@
            d="m 256.35614,241.49856 c -7.8069,0 -14.87471,-3.16437 -19.99081,-8.28046 -5.11609,-5.1161 -8.28046,-12.18391 -8.28046,-19.99081 0,-7.80689 3.16437,-14.87471 8.28046,-19.99081 5.1161,-5.1161 12.18391,-8.28047 19.99081,-8.28047 7.80689,0 14.87471,3.16437 19.99081,8.28047" />
       </g>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:127.841px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5865f2;stroke:none;stroke-width:3.32919;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.514196"
+       x="526.4118"
+       y="206.7556"
+       id="text1103"
+       inkscape:label="Discohook_Text"><tspan
+         sodipodi:role="line"
+         id="tspan1101"
+         x="526.4118"
+         y="206.7556"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:127.841px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.32919;stroke-dasharray:none;stroke-opacity:0.514196">Discohook</tspan></text>
   </g>
 </svg>
