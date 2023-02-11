@@ -9,7 +9,7 @@
    id="svg5"
    sodipodi:docname="Discohook_Github_README_Thumbnail.svg"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   inkscape:export-filename="..\Exported Images\Discohook_Github_Thumbnail2.png"
+   inkscape:export-filename="..\Exported Images\Discohook_Github_README_Thumbnail.png.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,8 +28,8 @@
      inkscape:deskcolor="#505050"
      showgrid="false"
      inkscape:zoom="0.535587"
-     inkscape:cx="764.58166"
-     inkscape:cy="375.28917"
+     inkscape:cx="636.68461"
+     inkscape:cy="377.15628"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -81,7 +81,7 @@
        rx="0" />
     <g
        id="g1820"
-       transform="matrix(0.32064752,0.05653881,-0.05653881,0.32064752,1252.1088,36.560916)"
+       transform="matrix(0.32064752,0.05653881,-0.05653881,0.32064752,1265.1786,37.309985)"
        style="display:inline"
        inkscape:label="Discohook_Logo">
       <rect
@@ -163,15 +163,15 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:127.841px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5865f2;stroke:none;stroke-width:3.32919;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.514196"
-       x="526.4118"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:127.841px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#5865f2;stroke:none;stroke-width:3.32919;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:0.514196"
+       x="554.37701"
        y="206.7556"
        id="text1103"
        inkscape:label="Discohook_Text"><tspan
          sodipodi:role="line"
          id="tspan1101"
-         x="526.4118"
+         x="554.37701"
          y="206.7556"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:127.841px;font-family:'Arial Rounded MT Bold';-inkscape-font-specification:'Arial Rounded MT Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.32919;stroke-dasharray:none;stroke-opacity:0.514196">Discohook</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:127.84100342px;font-family:Arial;-inkscape-font-specification:'Arial, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3.32919;stroke-dasharray:none;stroke-opacity:0.514196">Discohook</tspan></text>
   </g>
 </svg>
