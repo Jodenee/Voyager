@@ -60,6 +60,6 @@
 <br>
 
 ## <p align = "left">**Author:hasAnimatedAvatar**(): [boolean](https://create.roblox.com/docs/scripting/luau/booleans)</p>
-### <p align = "left">This method checks Whether the author has an animated avatar.</p>
+### <p align = "left">This method checks whether the author has an animated avatar.</p>
 
 ---

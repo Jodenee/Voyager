@@ -65,9 +65,9 @@
 
 - content: The content for the message.
 - embeds: The embeds that'll be attached to the message.
-- queue: If to queue the request. This will make sure the message is sent.
-- waitForMessage: If to wait for the message to be returned. This will return a message object.
-- optionalExecuteInfo: optional info for the request.
+- queue: Whether to queue the request. This will make sure the message is sent.
+- waitForMessage: Whether to wait for the message to be returned. If this is set to true a Message or ThreadMessage object will be returned depending on where the message was sent.
+- optionalExecuteInfo: Optional info for the request.
 
 ---
 <br>

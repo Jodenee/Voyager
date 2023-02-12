@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-    <img src="resources/Discohook_Github_README_Thumbnail.svg" alt="Discohook" height="128em"/>
+    <img src="resources/Discohook_Banner.svg" alt="Discohook" height="128em"/>
 </p>
 
 <br>
