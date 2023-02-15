@@ -6,95 +6,124 @@
 
 <br>
 
-## <p align = "left">**Message.id**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The id of the message.</p>
----
-<br>
-
-## <p align = "left">**Message.messageType**: [number](https://create.roblox.com/docs/scripting/luau/numbers)</p>
-### <p align = "left">The type of message.</p>
----
+## **Message.id**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The id of the message.
 
 <br>
-
-## <p align = "left">**Message.content**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The content of the message.</p>
----
+<hr>
 <br>
 
-## <p align = "left">**Message.channelId**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The id of the channel the message was sent in.</p>
----
-<br>
-
-## <p align = "left">**Message.author**: [Author](/docs/Author.md)</p>
-### <p align = "left">The the author of the message.</p>
----
-<br>
-
-## <p align = "left">**Message.embeds**: {[Embed](/docs/Embed.md)} | {}</p>
-### <p align = "left">A list of embedded content attached to the message.</p>
----
-<br>
-
-## <p align = "left">**Message.reactions**: {[Reaction](/docs/Reaction.md)} | {}</p>
-### <p align = "left">A list of reactions to the message.</p>
----
-<br>
-
-## <p align = "left">**Message.mentions**: {[User](/docs/User.md)} | {}</p>
-### <p align = "left">A list of users specifically mentioned in the message.</p>
----
-<br>
-
-## <p align = "left">**Message.mentionRoles**: {[string](https://create.roblox.com/docs/scripting/luau/strings)} | {}</p>
-### <p align = "left">A list of role ids specifically mentioned in the message.</p>
----
-<br>
-
-## <p align = "left">**Message.pinned**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)</p>
-### <p align = "left">Whether the message is pinned.</p>
----
-<br>
-
-## <p align = "left">**Message.mentionEveryone**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)</p>
-### <p align = "left">Whether the message mentions everyone.</p>
----
-<br>
-
-## <p align = "left">**Message.tts**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)</p>
-### <p align = "left">Whether the message was a TTS message.</p>
----
-<br>
-
-## <p align = "left">**Message.timestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">When the message was sent in ISO8601 format.</p>
----
-<br>
-
-## <p align = "left">**Message.flags**: [number](https://create.roblox.com/docs/scripting/luau/numbers)</p>
-### <p align = "left">The message's flags combined as a bitfield.</p>
----
-<br>
-
-## <p align = "left">**Message.webhookId**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The webhook's id.</p>
----
+## **Message.messageType**: [number](https://create.roblox.com/docs/scripting/luau/numbers)
+The type of message.
 
 <br>
+<hr>
+<br>
+
+## **Message.content**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The content of the message.
+
+<br>
+<hr>
+<br>
+
+## **Message.channelId**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The id of the channel the message was sent in.
+
+<br>
+<hr>
+<br>
+
+## **Message.author**: [Author](/docs/Author.md)
+The the author of the message.
+
+<br>
+<hr>
+<br>
+
+## **Message.embeds**: {[Embed](/docs/Embed.md)} | {}
+A list of embedded content attached to the message.
+
+<br>
+<hr>
+<br>
+
+## **Message.reactions**: {[Reaction](/docs/Reaction.md)} | {}
+A list of reactions to the message.
+
+<br>
+<hr>
+<br>
+
+## **Message.mentions**: {[User](/docs/User.md)} | {}
+A list of users specifically mentioned in the message.
+
+<br>
+<hr>
+<br>
+
+## **Message.mentionRoles**: {[string](https://create.roblox.com/docs/scripting/luau/strings)} | {}
+A list of role ids specifically mentioned in the message.
+
+<br>
+<hr>
+<br>
+
+## **Message.pinned**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
+Whether the message is pinned.
+
+<br>
+<hr>
+<br>
+
+## **Message.mentionEveryone**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
+Whether the message mentions everyone.
+
+<br>
+<hr>
+<br>
+
+## **Message.tts**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
+Whether the message was a TTS message.
+
+<br>
+<hr>
+<br>
+
+## **Message.timestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+When the message was sent in ISO8601 format.
+
+<br>
+<hr>
+<br>
+
+## **Message.flags**: [number](https://create.roblox.com/docs/scripting/luau/numbers)
+The message's flags combined as a bitfield.
+
+<br>
+<hr>
+<br>
+
+## **Message.webhookId**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The webhook's id.
+
+<br>
+<hr>
 <br>
 
 # <p align = "center">*Methods*</p>
 
 <br>
-<br>
 
-## <p align = "left">**Message.new**(data: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [Message](/docs/Message.md)</p>
-### <p align = "left">This method returns a new Message object.</p>
+## **Message.new**(data: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [Message](/docs/Message.md)
+This method returns a new Message object.
 
-*<p align = "left">Note: This method is not meant to be called outside of Discohook's internal code.</p>*
+*Note: This method is not meant to be called outside of Discohook's internal code.*
 
-### <p align = "left">Parameters:<p>
+Parameters:<p>
 
 - data: message data.
----
+
+<br>
+<hr>
+<br>

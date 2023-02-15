@@ -6,60 +6,75 @@
 
 <br>
 
-## <p align = "left">**Author.id**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The id of the author.</p>
----
+## Author.id: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The id of the author.
+
+<br>
+<hr>
 <br>
 
-## <p align = "left">**Author.username**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The author's username.</p>
----
+## **Author.username**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The author's username.
+
+<br>
+<hr>
 <br>
 
-## <p align = "left">**Author.avatar**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The author's avatar hash.</p>
----
+## **Author.avatar**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The author's avatar hash.
+
+<br>
+<hr>
 <br>
 
-## <p align = "left">**Author.discriminator**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The author's discriminator.</p>
----
+## **Author.discriminator**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The author's discriminator.
+
+<br>
+<hr>
 <br>
 
-## <p align = "left">**Author.bot**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)</p>
-### <p align = "left">Whether the user is a bot.</p>
----
+## **Author.bot**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
+Whether the user is a bot.
+
 <br>
+<hr>
 <br>
 
 # <p align = "center">*Methods*</p>
+
 <br>
-<br>
 
-## <p align = "left">**Author.new**(data: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [Author](docs/Author.md)</p>
-### <p align = "left">This method returns a new Author object.</p>
+## **Author.new**(data: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [Author](docs/Author.md)
+This method returns a new Author object.
 
-*<p align = "left">Note: This method is not meant to be called outside of Discohook's internal code.</p>*
+*Note: This method is not meant to be called outside of Discohook's internal code.*
 
-### <p align = "left">Parameters:<p>
+Parameters:
 
 - data: Author data
----
+
+<br>
+<hr>
 <br>
 
-## <p align = "left">**Author:getAvatarUrl**(size: [number](https://create.roblox.com/docs/scripting/luau/numbers)?, imageFormat: [string](https://create.roblox.com/docs/scripting/luau/strings)?): [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">This method will return the author's avatar url.</p>
+## **Author:getAvatarUrl**(size: [number](https://create.roblox.com/docs/scripting/luau/numbers)?, imageFormat: [string](https://create.roblox.com/docs/scripting/luau/strings)?): [string](https://create.roblox.com/docs/scripting/luau/strings)
+This method will return the author's avatar url.
 
-*<p align = "left">Note: The size parameter can only be a power of two between 16 and 4096.</p>*
+*Note: The size parameter can only be a power of two between 16 and 4096.*
 
-### <p align = "left">Parameters:<p>
+Parameters:
 
 - size: The size of the avatar.
 - imageFormat: The format the avatar should be in. If left nil the defualt format is .png.
----
+
+<br>
+<hr>
 <br>
 
-## <p align = "left">**Author:hasAnimatedAvatar**(): [boolean](https://create.roblox.com/docs/scripting/luau/booleans)</p>
-### <p align = "left">This method checks whether the author has an animated avatar.</p>
+## **Author:hasAnimatedAvatar**(): [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
+This method checks whether the author has an animated avatar.
 
----
+<br>
+<hr>
+<br>

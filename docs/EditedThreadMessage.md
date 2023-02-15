@@ -6,105 +6,135 @@
 
 <br>
 
-## <p align = "left">**EditedThreadMessage.id**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The id of the message.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.messageType**: [number](https://create.roblox.com/docs/scripting/luau/numbers)</p>
-### <p align = "left">The type of message.</p>
----
+## **EditedThreadMessage.id**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The id of the message.
 
 <br>
-
-## <p align = "left">**EditedThreadMessage.content**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The content of the message.</p>
----
+<hr>
 <br>
 
-## <p align = "left">**EditedThreadMessage.channelId**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The id of the channel the message was sent in.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.author**: [Author](/docs/Author.md)</p>
-### <p align = "left">The the author of the message.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.embeds**: {[Embed](/docs/Embed.md)} | {}</p>
-### <p align = "left">A list of embedded content attached to the message.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.reactions**: {[Reaction](/docs/Reaction.md)} | {}</p>
-### <p align = "left">A list of reactions to the message.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.mentions**: {[User](/docs/User.md)} | {}</p>
-### <p align = "left">A list of users specifically mentioned in the message.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.mentionRoles**: {[string](https://create.roblox.com/docs/scripting/luau/strings)} | {}</p>
-### <p align = "left">A list of role ids specifically mentioned in the message.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.pinned**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)</p>
-### <p align = "left">Whether the message is pinned.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.mentionEveryone**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)</p>
-### <p align = "left">Whether the message mentions everyone.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.tts**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)</p>
-### <p align = "left">Whether the message was a TTS message.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.timestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">When the message was sent in ISO8601 format.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.flags**: [number](https://create.roblox.com/docs/scripting/luau/numbers)</p>
-### <p align = "left">The message's flags combined as a bitfield.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.webhookId**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">The webhook's id.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.position**: [number](https://create.roblox.com/docs/scripting/luau/numbers)</p>
-### <p align = "left">A number that represents the approximate position of the message in a thread.</p>
----
-<br>
-
-## <p align = "left">**EditedThreadMessage.editedTimestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings)</p>
-### <p align = "left">When the message was edited in ISO8601 format.</p>
----
+## **EditedThreadMessage.messageType**: [number](https://create.roblox.com/docs/scripting/luau/numbers)
+The type of message.
 
 <br>
+<hr>
+<br>
+
+## **EditedThreadMessage.content**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The content of the message.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.channelId**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The id of the channel the message was sent in.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.author**: [Author](/docs/Author.md)
+The the author of the message.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.embeds**: {[Embed](/docs/Embed.md)} | {}
+A list of embedded content attached to the message.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.reactions**: {[Reaction](/docs/Reaction.md)} | {}
+A list of reactions to the message.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.mentions**: {[User](/docs/User.md)} | {}
+A list of users specifically mentioned in the message.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.mentionRoles**: {[string](https://create.roblox.com/docs/scripting/luau/strings)} | {}
+A list of role ids specifically mentioned in the message.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.pinned**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
+Whether the message is pinned.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.mentionEveryone**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
+Whether the message mentions everyone.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.tts**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
+Whether the message was a TTS message.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.timestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+When the message was sent in ISO8601 format.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.flags**: [number](https://create.roblox.com/docs/scripting/luau/numbers)
+The message's flags combined as a bitfield.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.webhookId**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The webhook's id.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.position**: [number](https://create.roblox.com/docs/scripting/luau/numbers)
+A number that represents the approximate position of the message in a thread.
+
+<br>
+<hr>
+<br>
+
+## **EditedThreadMessage.editedTimestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+When the message was edited in ISO8601 format.
+
+<br>
+<hr>
 <br>
 
 # <p align = "center">*Methods*</p>
 
 <br>
-<br>
 
-## <p align = "left">**EditedThreadMessage.new**(data: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [EditedThreadMessage](/docs/EditedThreadMessage.md)</p>
-### <p align = "left">This method returns a new EditedThreadMessage object.</p>
+## **EditedThreadMessage.new**(data: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [EditedThreadMessage](/docs/EditedThreadMessage.md)
+This method returns a new EditedThreadMessage object.
 
-*<p align = "left">Note: This method is not meant to be called outside of Discohook's internal code.</p>*
+*Note: This method is not meant to be called outside of Discohook's internal code.*
 
-### <p align = "left">Parameters:<p>
+Parameters:<p>
 
 - data: message data.
 ---
