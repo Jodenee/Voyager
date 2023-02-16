@@ -2,12 +2,6 @@
     <img src="resources/Discohook_Banner.svg" alt="Discohook" height="128em"/>
 </p>
 
-<br>
-
-# [**Discohook**](https://www.roblox.com/library/12390338563)
-
-Discohook is a roblox api wrapper for discord webhooks.
-
 <hr>
 
 # Features
