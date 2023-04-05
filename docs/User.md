@@ -7,28 +7,28 @@
 <br>
 
 ## **User.id**: [string](https://create.roblox.com/docs/scripting/luau/strings)
-The id of the author.
+The id of the user.
 
 <br>
 <hr>
 <br>
 
 ## **User.username**: [string](https://create.roblox.com/docs/scripting/luau/strings)
-The author's username.
+The user's username.
 
 <br>
 <hr>
 <br>
 
 ## **User.avatar**: [string](https://create.roblox.com/docs/scripting/luau/strings)
-The author's avatar hash.
+The user's avatar hash.
 
 <br>
 <hr>
 <br>
 
 ## **User.discriminator**: [string](https://create.roblox.com/docs/scripting/luau/strings)
-The author's discriminator.
+The user's discriminator.
 
 <br>
 <hr>
