@@ -7,63 +7,63 @@
 <br>
 
 ## **Embed.title**: [string](https://create.roblox.com/docs/scripting/luau/strings) | [nil](https://create.roblox.com/docs/scripting/luau/nil)
-The title of the webhook.
+The title attached to the embed.
 
 <br>
 <hr>
 <br>
 
 ## **Embed.description**: [string](https://create.roblox.com/docs/scripting/luau/strings) | [nil](https://create.roblox.com/docs/scripting/luau/nil)
-The description of the webhook.
+The description attached to the embed.
 
 <br>
 <hr>
 <br>
 
 ## **Embed.url**: [string](https://create.roblox.com/docs/scripting/luau/strings) | [nil](https://create.roblox.com/docs/scripting/luau/nil)
-The url of the webhook.
+The url attached to the embed.
 
 <br>
 <hr>
 <br>
 
 ## **Embed.timestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings) | [nil](https://create.roblox.com/docs/scripting/luau/nil)
-The timestamp of the webhook.
+The timestamp attached to the embed.
 
 <br>
 <hr>
 <br>
 
 ## **Embed.footer**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) | [nil](https://create.roblox.com/docs/scripting/luau/nil)
-The footer of the webhook.
+The footer attached to the embed.
 
 <br>
 <hr>
 <br>
 
 ## **Embed.image**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) | [nil](https://create.roblox.com/docs/scripting/luau/nil)
-The image of the webhook.
+The image attached to the embed.
 
 <br>
 <hr>
 <br>
 
 ## **Embed.thumbnail**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) | [nil](https://create.roblox.com/docs/scripting/luau/nil)
-The thumbnail of the webhook.
+The thumbnail attached to the embed.
 
 <br>
 <hr>
 <br>
 
 ## **Embed.author**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) | [nil](https://create.roblox.com/docs/scripting/luau/nil)
-The author of the webhook.
+The author attached to the embed.
 
 <br>
 <hr>
 <br>
 
 ## **Embed.fields**: {[dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)} | [nil](https://create.roblox.com/docs/scripting/luau/nil)
-The title of the webhook.
+A list of fields that are attached to the embed.
 
 <br>
 <hr>
