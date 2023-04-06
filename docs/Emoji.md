@@ -7,14 +7,20 @@
 <br>
 
 ## **Emoji.id**: [string](https://create.roblox.com/docs/scripting/luau/strings) | [nil](https://create.roblox.com/docs/scripting/luau/nil)
-The emoji's id. If the emoji isn't custom then this will always be nil.
+
+*Note: If the emoji isn't custom then this will always be nil.*
+
+The emoji's id.
 
 <br>
 <hr>
 <br>
 
 ## **Emoji.name**: [string](https://create.roblox.com/docs/scripting/luau/strings)
-The emoji's name. If the emoji is a custom emoji then it'll be the name of the emoji otherwise it'll be it's unicode character.
+
+*Note: If the emoji is a custom emoji then it'll be the name of the emoji otherwise it'll be it's unicode character.*
+
+The emoji's name.
 
 <br>
 <hr>
