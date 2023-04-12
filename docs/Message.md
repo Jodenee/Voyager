@@ -97,8 +97,8 @@ When the message was sent in ISO8601 format.
 <hr>
 <br>
 
-## **Message.flags**: [number](https://create.roblox.com/docs/scripting/luau/numbers)
-The message's flags combined as a bitfield.
+## **Message.flags**: [MessageFlags](/docs/MessageFlags.md)
+A MessageFlags object that represents the message's flags.
 
 <br>
 <hr>

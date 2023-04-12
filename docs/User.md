@@ -35,7 +35,21 @@ The user's discriminator.
 <br>
 
 ## **User.bot**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
-whether the user is a bot.
+Whether the user is a bot.
+
+<br>
+<hr>
+<br>
+
+## **User.displayName**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+The user's displayName.
+
+<br>
+<hr>
+<br>
+
+## **User.publicFlags**: [PublicUserFlags](/docs/PublicUserFlags.md)
+The user's flags.
 
 <br>
 <hr>
@@ -74,24 +88,6 @@ Parameters:
 
 ## **User:hasAnimatedAvatar**(): [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
 This method checks Whether the user has an animated avatar.
-
-<br>
-<hr>
-<br>
-
-## **User:hasFlag**(flagNumber: [number](https://create.roblox.com/docs/scripting/luau/numbers)): [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
-This method checks Whether the user has a specific flag.
-
-Parameters:
-
-- flagNumber: A flag bitfield
-
-<br>
-<hr>
-<br>
-
-## **User:getFlags**(): {[number](https://create.roblox.com/docs/scripting/luau/numbers)}
-This method returns all of the user's flags.
 
 <br>
 <hr>

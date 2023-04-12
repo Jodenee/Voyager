@@ -38,19 +38,20 @@ A dictionary full of enums for Discohook.
 
 <br>
 
-## **Webhook.new**(id: [string](https://create.roblox.com/docs/scripting/luau/strings), token: [string](https://create.roblox.com/docs/scripting/luau/strings)): [Webhook](/docs/Webhook.md)
+## **Webhook.new**(id: [string](https://create.roblox.com/docs/scripting/luau/strings), token: [string](https://create.roblox.com/docs/scripting/luau/strings), customProxyUrl: [string](https://create.roblox.com/docs/scripting/luau/strings)?): [Webhook](/docs/Webhook.md)
 This function returns a new Webhook object.
 
 Parameters:
 
 - id: The id of the webhook.
 - token: The token of the webhook.
+- customProxyUrl: The base url of a self hosted [WebhookProxy](https://github.com/lewisakura/webhook-proxy). 
 
 <br>
 <hr>
 <br>
 
-## **Webhook:_validateExecuteRequest**(content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {[Embed](/docs/Embed.md)}?, usernameOverride: [string](https://create.roblox.com/docs/scripting/luau/strings)?): ([boolean](https://create.roblox.com/docs/scripting/luau/booleans), [string](https://create.roblox.com/docs/scripting/luau/strings)?)
+## **Webhook:_validateExecuteRequest**(content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {[Embed](/docs/Embed.md)}?, optionalExecuteInfo: [OptionalExecuteInfo](/docs/OptionalExecuteInfo.md)): ([boolean](https://create.roblox.com/docs/scripting/luau/booleans), [string](https://create.roblox.com/docs/scripting/luau/strings)?)
 This function validates execute requests to avoid making pointless requests to discord.
 
 *Note: This function is not meant to be used outside Discohook's internal code.*
@@ -59,7 +60,7 @@ Parameters:
 
 - content: The content of the execute request.
 - embeds: The embeds of the execute request.
-- usernameOverride: The username override of the execute request.
+- optionalExecuteInfo: An OptionalExecuteInfo object.
 
 <br>
 <hr>

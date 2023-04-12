@@ -159,33 +159,29 @@ This method sets the embed's footer.
 Parameters:
 
 - text: The footer's text.
-- iconUrl: The footer's url.
+- iconUrl: The footer's url. (Only HTTPs is supported)
 
 <br>
 <hr>
 <br>
 
-## **Embed:setImage**(url: [string](https://create.roblox.com/docs/scripting/luau/strings), height: [number](https://create.roblox.com/docs/scripting/luau/numbers)?, width: [number](https://create.roblox.com/docs/scripting/luau/numbers)?): [nil](https://create.roblox.com/docs/scripting/luau/nil)
+## **Embed:setImage**(url: [string](https://create.roblox.com/docs/scripting/luau/strings)): [nil](https://create.roblox.com/docs/scripting/luau/nil)
 This method sets the embed's image.
 
 Parameters:
 
-- url: The image's url.
-- height: The image's height.
-- width: The image's width.
+- url: The image's url. (Only HTTPs is supported)
 
 <br>
 <hr>
 <br>
 
-## **Embed:setThumbnail**(url: [string](https://create.roblox.com/docs/scripting/luau/strings), height: [number](https://create.roblox.com/docs/scripting/luau/numbers)?, width: [number](https://create.roblox.com/docs/scripting/luau/numbers)?): [nil](https://create.roblox.com/docs/scripting/luau/nil)
+## **Embed:setThumbnail**(url: [string](https://create.roblox.com/docs/scripting/luau/strings)): [nil](https://create.roblox.com/docs/scripting/luau/nil)
 This method sets the embed's thumbnail.
 
 Parameters:
 
-- url: The thumbnail's url.
-- height: The thumbnail's height.
-- width: The thumbnail's width.
+- url: The thumbnail's url. (Only HTTPs is supported)
 
 <br>
 <hr>
@@ -198,7 +194,7 @@ Parameters:
 
 - name: The author's name.
 - url: The author's url.
-- iconUrl: The icon's url.
+- iconUrl: The icon's url. (Only HTTPs is supported)
 
 <br>
 <hr>
@@ -231,7 +227,7 @@ This method returns the total amount of characters in the embed.
 <hr>
 <br>
 
-## **Embed:colorToRGB**(): {[string](https://create.roblox.com/docs/scripting/luau/strings): [number](https://create.roblox.com/docs/scripting/luau/numbers)}
+## **Embed:colorToRGB**(): {[string](https://create.roblox.com/docs/scripting/luau/strings): [number](https://create.roblox.com/docs/scripting/luau/numbers)} | [nil](https://create.roblox.com/docs/scripting/luau/nil)
 This method returns a dictionary representing the color.
 
 <br>
