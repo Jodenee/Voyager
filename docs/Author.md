@@ -35,7 +35,7 @@ The author's discriminator.
 <br>
 
 ## **Author.bot**: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)
-Whether the user is a bot.
+Whether the author is a bot.
 
 <br>
 <hr>
