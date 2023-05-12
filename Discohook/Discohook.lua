@@ -205,7 +205,7 @@ function Webhook:deleteMessage(messageId: string, threadId: string?)
 	end	
 	
 	local responce = httpService:RequestAsync({
-		Url = self.baseUrl .. "/messages/" .. messageId .. "?thread_id=" .. (threadId or ""),
+		Url = requestUrl,
 		Method = "DELETE"
 	})
 
