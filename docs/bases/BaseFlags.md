@@ -41,13 +41,13 @@ Parameters:
 <hr>
 <br>
 
-## **BaseFlags:setFlag**(flag: [number](https://create.roblox.com/docs/scripting/luau/numbers), toggal: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)): [nil](https://create.roblox.com/docs/scripting/luau/nil)
-This method will toggal a flag in the bitfield either to true or false.
+## **BaseFlags:setFlag**(flag: [number](https://create.roblox.com/docs/scripting/luau/numbers), toggle: [boolean](https://create.roblox.com/docs/scripting/luau/booleans)): [nil](https://create.roblox.com/docs/scripting/luau/nil)
+This method will toggle a flag in the bitfield either to true or false.
 
 Parameters:
 
 - flag: The flag that'll be toggled.
-- toggal: If true the flag will be added to bitfield, otherwise the flag will be removed from the bitfield.
+- toggle: If true the flag will be added to bitfield, otherwise the flag will be removed from the bitfield.
 
 <br>
 <hr>
