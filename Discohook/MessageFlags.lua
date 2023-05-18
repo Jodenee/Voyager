@@ -3,12 +3,6 @@ local MessageFlags = {}
 MessageFlags.__index = MessageFlags
 setmetatable(MessageFlags, BaseFlags)
 
-function MessageFlags.fromBitfield(value: number)
-	local self = setmetatable(BaseFlags.fromBitfield(value), MessageFlags)
-	
-	return self
-end
-
 function MessageFlags.fromFlags(flags: {number})
 	local self = setmetatable(BaseFlags.fromBitfield(0), MessageFlags)
 	
