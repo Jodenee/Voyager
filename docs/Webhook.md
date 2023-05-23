@@ -27,13 +27,6 @@ The baseUrl of the webhook.
 <hr>
 <br>
 
-## **Webhook.Enum**: [dictionary](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)
-A dictionary full of enums for Discohook.
-
-<br>
-<hr>
-<br>
-
 # <p align = "center">*Methods*</p>
 
 <br>
@@ -61,6 +54,21 @@ Parameters:
 - content: The content of the execute request.
 - embeds: The embeds of the execute request.
 - optionalExecuteInfo: An OptionalExecuteInfo object.
+
+<br>
+<hr>
+<br>
+
+## **Webhook:_request**(url: [string](https://create.roblox.com/docs/scripting/luau/strings), method: [string](https://create.roblox.com/docs/scripting/luau/strings), body: {}?): {}?
+This function is used to make http requests to the proxy.
+
+*Note: This function is not meant to be used outside Discohook's internal code.*
+
+Parameters:
+
+- url: The url the request will be sent to.
+- method: The http method.
+- body: The body of the request.
 
 <br>
 <hr>
