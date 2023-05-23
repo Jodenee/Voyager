@@ -73,17 +73,18 @@ function Webhook:_validateExecuteRequest(content: string?, embeds: {}?, optional
 	return true
 end
 
-function Webhook:_request(url: string, method: string, body: {}?): {}?
+function Webhook:_request(url: string, method: string, body: {}?, contentType: string?): {}?
 	local httpService = game:GetService("HttpService")
 	
 	local response = httpService:RequestAsync({
 		Url = url,
 		Method = method,
-		Headers = {["Content-Type"] = "application/json"},
+		Headers = {["Content-Type"] = contentType},
 		Body = httpService:JSONEncode(body)
 	})
-
+	
 	if not response.Success then return error("Status: " .. response.StatusCode .. " " .. response.StatusMessage) end	
+	if response.Body == "" then return end
 	
 	return httpService:JSONDecode(response.Body)
 end
@@ -118,7 +119,7 @@ function Webhook:execute(content: string?, embeds: {}?, queue: boolean, waitForM
 
 	if executeInfo.threadId then requestUrl ..= "&thread_id=" .. executeInfo.threadId end
 
-	local responseBody = self:_request(requestUrl, "POST", requestBody)
+	local responseBody = self:_request(requestUrl, "POST", requestBody, "application/json")
 
 	if not queue and waitForMessage then
 		if not executeInfo.threadId then 
@@ -150,8 +151,8 @@ function Webhook:editMessage(messageId: string, content: string?, embeds: {}?, t
 	else
 		requestUrl = self.baseUrl .. "/messages/" .. messageId
 	end
-
-	local responseBody = self:_request(requestUrl, "PATCH", requestBody)
+	
+	local responseBody = self:_request(requestUrl, "PATCH", requestBody, "application/json")
 
 	if not threadId then
 		return EditedMessage.new(responseBody)

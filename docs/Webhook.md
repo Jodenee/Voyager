@@ -59,7 +59,7 @@ Parameters:
 <hr>
 <br>
 
-## **Webhook:_request**(url: [string](https://create.roblox.com/docs/scripting/luau/strings), method: [string](https://create.roblox.com/docs/scripting/luau/strings), body: {}?): {}?
+## **Webhook:_request**(url: [string](https://create.roblox.com/docs/scripting/luau/strings), method: [string](https://create.roblox.com/docs/scripting/luau/strings), body: {}?, contentType: [string](https://create.roblox.com/docs/scripting/luau/strings)): {}?
 This function is used to make http requests to the proxy.
 
 *Note: This function is not meant to be used outside Discohook's internal code.*
@@ -69,6 +69,7 @@ Parameters:
 - url: The url the request will be sent to.
 - method: The http method.
 - body: The body of the request.
+- contentType: The content type to use in the request header.
 
 <br>
 <hr>
