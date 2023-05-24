@@ -2,13 +2,20 @@
     <img src="resources/Discohook_Banner.svg" alt="Discohook" height="128em"/>
 </p>
 
+<p align="center">
+    <img src="https://img.shields.io/github/license/Jodenee/Discohook?color=5865F2&style=for-the-badge" alt="License"/>
+    <img src="https://img.shields.io/maintenance/yes/2023?color=00FF84&style=for-the-badge" alt="Maintained"/>
+    <img src="https://img.shields.io/github/contributors/Jodenee/Discohook?color=5865F2&style=for-the-badge" alt="Contributors"/>
+</p>
+
 <hr>
 
 # Features
 
-- Simple and easy to use.
+- Easy to use.
 - Fast set up.
 - Flexible.
+- Easy integration.
 
 <hr>
 
@@ -16,7 +23,7 @@
 
 1. Get the [module script](https://www.roblox.com/library/12390338563).
 2. Make sure http requests in Game Settings > Security is enabled.
-3. Drag the module into your project and place it in ServerScriptService.
+3. Drag the module into your project and place it in ServerScriptService or ServerStorage.
 4. Now you can use Discohook.
 
 <hr>
@@ -24,7 +31,7 @@
 # Quick Example
 
 ```lua
-local webhook = require(path_to_module_here).new("webhookId", "webhookToken")
+local webhook = require(path_to_module_here.Webhook).new("webhookId", "webhookToken")
 
 webhook:execute("Hello, World!", nil, false, false)
 ```
