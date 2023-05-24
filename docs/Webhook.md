@@ -82,7 +82,7 @@ This function sends a message to discord.
 
 Parameters:
 
-- content: The content for the message.
+- content: The content of the message.
 - embeds: The embeds that'll be attached to the message.
 - queue: Whether to queue the request. This will make sure the message is sent.
 - waitForMessage: Whether to wait for the message to be returned. If this is set to true a Message or ThreadMessage object will be returned depending on where the message was sent.
@@ -92,7 +92,7 @@ Parameters:
 <hr>
 <br>
 
-## **Webhook:editMessage**(messageId: [string](https://create.roblox.com/docs/scripting/luau/strings), content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {[Embed]((/docs/Embed.md))}?, threadId: [string](https://create.roblox.com/docs/scripting/luau/strings)?): [EditedMessage](/docs/EditedMessage.md)? | [EditedThreadMessage](/docs/EditedThreadMessage.md)?
+## **Webhook:editMessage**(messageId: [string](https://create.roblox.com/docs/scripting/luau/strings), content: [string](https://create.roblox.com/docs/scripting/luau/strings)?, embeds: {[Embed]((/docs/Embed.md))}?, threadId: [string](https://create.roblox.com/docs/scripting/luau/strings)?): [EditedMessage](/docs/EditedMessage.md) | [EditedThreadMessage](/docs/EditedThreadMessage.md)
 This function edits a message sent by the webhook.
 
 Parameters:
@@ -106,7 +106,7 @@ Parameters:
 <hr>
 <br>
 
-## **Webhook:deleteMessage**(messageId: [string](https://create.roblox.com/docs/scripting/luau/strings), threadId: [string](https://create.roblox.com/docs/scripting/luau/strings)?)
+## **Webhook:deleteMessage**(messageId: [string](https://create.roblox.com/docs/scripting/luau/strings), threadId: [string](https://create.roblox.com/docs/scripting/luau/strings)?): [nil](https://create.roblox.com/docs/scripting/luau/nil)
 This function deletes a message sent by the webhook.
 
 Parameters:
