@@ -213,13 +213,6 @@ Parameters:
 <hr>
 <br>
 
-## **Embed:toDictionary**(): {[string](https://create.roblox.com/docs/scripting/luau/strings): [string](https://create.roblox.com/docs/scripting/luau/strings) | [number](https://create.roblox.com/docs/scripting/luau/numbers) | [nil](https://create.roblox.com/docs/scripting/luau/nil) | {[string](https://create.roblox.com/docs/scripting/luau/strings): [string](https://create.roblox.com/docs/scripting/luau/strings) | [number](https://create.roblox.com/docs/scripting/luau/numbers) | [boolean](https://create.roblox.com/docs/scripting/luau/booleans)}}
-This method returns the embed in dictionary form.
-
-<br>
-<hr>
-<br>
-
 ## **Embed:totalCharacters**(): [number](https://create.roblox.com/docs/scripting/luau/numbers)
 This method returns the total amount of characters in the embed.
 
