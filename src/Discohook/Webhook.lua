@@ -29,7 +29,7 @@ function Webhook:_validateExecuteRequest(content: string?, embeds: {}?, optional
 
 	if embeds then 
 		if #embeds > 10 then 
-			return false, "Webhooks must only have up to 10 embeds." 
+			return false, "A single message must only have up to 10 embeds." 
 		end 
 	end
 
