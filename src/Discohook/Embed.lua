@@ -49,7 +49,7 @@ function Embed:_validate(): (boolean, string?)
 		
 		for _, field in self.fields do
 			if string.len(field.name) > 256 then return false, "The name of a field must only contain up to 256 characters." end
-			if string.len(field.name) > 1024 then return false, "The value of a field must only contain up to 1024 characters." end			
+			if string.len(field.value) > 1024 then return false, "The value of a field must only contain up to 1024 characters." end			
 		end
 	end
 	
