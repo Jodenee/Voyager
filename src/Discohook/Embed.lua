@@ -115,21 +115,6 @@ function Embed:addField(name: string, value: string, inLine: boolean?): nil
 	})
 end
 
-function Embed:toDictionary(): {string: string | number | nil | {string: string | number | boolean}?}
-	return {
-		["title"] = self.title,
-		["description"] = self.description,
-		["url"] = self.url,
-		["timestamp"] = self.timestamp,
-		["color"] = self.color,
-		["footer"] = self.footer,
-		["image"] = self.image,
-		["thumbnail"] = self.thumbnail,
-		["author"] = self.author,
-		["fields"] = self.fields
-	}	
-end
-
 function Embed:totalCharacters(): number
 	local total = 0
 	
