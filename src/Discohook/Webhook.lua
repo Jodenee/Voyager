@@ -107,7 +107,7 @@ function Webhook:execute(content: string?, embeds: {}?, queue: boolean, waitForM
 
 	if embeds then	
 		for _, embed in embeds do
-			table.insert(requestBody.embeds, embed:toDictionary())
+			table.insert(requestBody.embeds, embed)
 		end
 	end
 
@@ -142,7 +142,7 @@ function Webhook:editMessage(messageId: string, content: string?, embeds: {}?, t
 			local isEmbedValid, errorMessage = embed:_validate()
 			if not isEmbedValid then error(errorMessage) end
 
-			table.insert(requestBody.embeds, embed:toDictionary())
+			table.insert(requestBody.embeds, embed)
 		end
 	end
 
