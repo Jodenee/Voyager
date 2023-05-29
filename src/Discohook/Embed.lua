@@ -137,7 +137,7 @@ function Embed:totalCharacters(): number
 	return total
 end
 
-function Embed:colorToRGB(): {string: number} | nil
+function Embed:colorToRGB(): {red: number, green: number, blue: number} | nil
 	if not self.color then return end
 	
 	local r = bit32.band((bit32.rshift(self.color, (8 * 2))), 0xFF)
