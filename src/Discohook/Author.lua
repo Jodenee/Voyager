@@ -22,6 +22,7 @@ function Author:getAvatarUrl(size: number?, imageFormat: string?): string?
 	if size then
 		if size < 16 or size > 4096 then return error("Image size must be between 16 to 4096.") end
 		if math.sqrt(size) % 1 ~= 0 then return error("Image size must be any power of two") end
+		
 		return "https://cdn.discordapp.com/avatars/" .. self.id .. "/" .. self.avatar .. (imageFormat or ".png") .. "?size=" .. size
 	else
 		return "https://cdn.discordapp.com/avatars/" .. self.id .. "/" .. self.avatar .. (imageFormat or ".png")
