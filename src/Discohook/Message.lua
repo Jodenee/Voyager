@@ -1,10 +1,11 @@
+local Message = {}
+Message.__index = Message
+
 local Author = require(script.Parent.Author)
 local User = require(script.Parent.User)
 local Embed = require(script.Parent.Embed)
 local Reaction = require(script.Parent.Reaction)
 local MessageFlags = require(script.Parent.MessageFlags)
-local Message = {}
-Message.__index = Message
 
 function Message.new(data)
 	local self = setmetatable({}, Message)
@@ -37,7 +38,9 @@ function Message.new(data)
 				embed:setColor(Color3.fromRGB(r, g, b))
 			end
 			
-			embed:setTimestamp(embedData["timestamp"])	
+			if embedData["timestamp"] then
+				embed:setTimestamp(embedData["timestamp"])
+			end
 			
 			if embedData["footer"] then
 				embed:setFooter(embedData["footer"]["text"], embedData["footer"]["icon_url"]) 

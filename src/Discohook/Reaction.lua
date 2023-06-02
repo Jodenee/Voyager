@@ -1,6 +1,7 @@
-local Emoji = require(script.Parent.Emoji)
 local Reaction = {}
 Reaction.__index = Reaction
+
+local Emoji = require(script.Parent.Emoji)
 
 function Reaction.new(data)
 	local self = setmetatable({}, Reaction)

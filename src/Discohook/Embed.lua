@@ -1,7 +1,7 @@
 local Embed = {}
 Embed.__index = Embed
 
-function Embed.new(title: string?, description: string?, url: string?)
+function Embed.new(title : string?, description : string?, url : string?)
 	local self = setmetatable({}, Embed)
 	
 	self.title = title
@@ -11,7 +11,7 @@ function Embed.new(title: string?, description: string?, url: string?)
 	return self
 end
 
-function Embed:_validate(): (boolean, string?)
+function Embed:_validate() : (boolean, string?)
 	if self.title then
 		if string.len(self.title) > 256 then return false, "The title of an embed must only contain up to 256 characters." end 
 	end
@@ -47,7 +47,7 @@ function Embed:_validate(): (boolean, string?)
 	if self.fields then
 		if #self.fields > 25 then return false, "One embed must only have up to 25 fields." end
 		
-		for _, field in self.fields do
+		for _, field: Field in self.fields do
 			if string.len(field.name) > 256 then return false, "The name of a field must only contain up to 256 characters." end
 			if string.len(field.value) > 1024 then return false, "The value of a field must only contain up to 1024 characters." end			
 		end
@@ -56,48 +56,48 @@ function Embed:_validate(): (boolean, string?)
 	return true
 end
 
-function Embed:setTitle(title: string): nil	
+function Embed:setTitle(title : string) : nil	
 	self.title = title
 end
 
-function Embed:setDescription(description: string): nil	
+function Embed:setDescription(description : string) : nil	
 	self.description = description
 end
 
-function Embed:setUrl(url: string): nil
+function Embed:setUrl(url : string) : nil
 	self.url = url
 end
 
-function Embed:setTimestamp(customTimestamp: string): nil
+function Embed:setTimestamp(customTimestamp : string) : nil
 	if customTimestamp then self.timestamp = customTimestamp return end
 
 	self.timestamp = os.date("!%Y-%m-%dT%H:%M:%S." .. math.round(tick() % 1 * 1000) .. "Z")
 end
 
-function Embed:setColor(color3: Color3): nil
+function Embed:setColor(color3 : Color3) : nil
 	self.color = bit32.lshift((color3.R * 255), 16) + bit32.lshift((color3.G * 255), 8) + (color3.B * 255)
 end
 
-function Embed:setFooter(text: string, iconUrl: string?): nil
+function Embed:setFooter(text : string, iconUrl : string?) : nil
 	self.footer = {
 		["text"] = text,
 		["icon_url"] = iconUrl
 	}
 end
 
-function Embed:setImage(url: string): nil
+function Embed:setImage(url : string) : nil
 	self.image = {
 		["url"] = url
 	}
 end
 
-function Embed:setThumbnail(url: string): nil
+function Embed:setThumbnail(url : string) : nil
 	self.thumbnail = {
 		["url"] = url
 	}
 end
 
-function Embed:setAuthor(name: string, url: string?, iconUrl: string?): nil
+function Embed:setAuthor(name : string, url : string?, iconUrl : string?) : nil
 	self.author = {
 		["name"] = name,
 		["url"] = url,
@@ -105,8 +105,8 @@ function Embed:setAuthor(name: string, url: string?, iconUrl: string?): nil
 	}
 end
 
-function Embed:addField(name: string, value: string, inLine: boolean?): nil
-	if self.fields == nil then self.fields = {} end
+function Embed:addField(name : string, value : string, inLine : boolean?) : nil
+	if not self.fields then self.fields = {} end
 
 	table.insert(self.fields, {
 		["name"] = name,
@@ -115,7 +115,7 @@ function Embed:addField(name: string, value: string, inLine: boolean?): nil
 	})
 end
 
-function Embed:totalCharacters(): number
+function Embed:totalCharacters() : number
 	local total = 0
 	
 	if self.title then total += string.len(self.title) end
@@ -137,7 +137,7 @@ function Embed:totalCharacters(): number
 	return total
 end
 
-function Embed:colorToRGB(): {red: number, green: number, blue: number}?
+function Embed:colorToRGB() : {red : number, green : number, blue : number}?
 	if not self.color then return end
 	
 	local r = bit32.band((bit32.rshift(self.color, (8 * 2))), 0xFF)

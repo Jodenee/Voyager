@@ -1,6 +1,8 @@
-local Message = require(script.Parent.Message)
 local EditedMessage = {}
 EditedMessage.__index = EditedMessage
+
+local Message = require(script.Parent.Message)
+
 setmetatable(EditedMessage, Message)
 
 function EditedMessage.new(data)

@@ -1,6 +1,8 @@
-local Message = require(script.Parent.Message)
 local ThreadMessage = {}
 ThreadMessage.__index = ThreadMessage
+
+local Message = require(script.Parent.Message)
+
 setmetatable(ThreadMessage, Message)
 
 function ThreadMessage.new(data)

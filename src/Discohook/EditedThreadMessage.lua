@@ -1,6 +1,8 @@
-local ThreadMessage = require(script.Parent.ThreadMessage)
 local EditedThreadMessage = {}
 EditedThreadMessage.__index = EditedThreadMessage
+
+local ThreadMessage = require(script.Parent.ThreadMessage)
+
 setmetatable(EditedThreadMessage, ThreadMessage)
 
 function EditedThreadMessage.new(data)

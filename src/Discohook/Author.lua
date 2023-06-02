@@ -13,7 +13,7 @@ function Author.new(data)
 	return self
 end
 
-function Author:getAvatarUrl(size: number?, imageFormat: string?): string?
+function Author:getAvatarUrl(size : number?, imageFormat : string?) : string?
 	if not self.avatar then return nil end
 	if imageFormat then 
 		if imageFormat ~= ".jpeg" and imageFormat ~= ".png" and imageFormat ~= ".webp" and imageFormat ~= ".gif" then return error("Unsupported image format given.") end 
@@ -29,7 +29,7 @@ function Author:getAvatarUrl(size: number?, imageFormat: string?): string?
 	end
 end
 
-function Author:hasAnimatedAvatar(): boolean
+function Author:hasAnimatedAvatar() : boolean
 	if not self.avatar then return false end
 	
 	return self.avatar:match("a_") == "a_"

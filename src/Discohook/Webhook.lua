@@ -1,12 +1,13 @@
+local Webhook = {}
+Webhook.__index = Webhook
+
 local Message = require(script.Parent.Message)
 local EditedMessage = require(script.Parent.EditedMessage)
 local ThreadMessage = require(script.Parent.ThreadMessage)
 local EditedThreadMessage = require(script.Parent.EditedThreadMessage)
 local OptionalExecuteInfo = require(script.Parent.OptionalExecuteInfo)
-local Webhook = {}
-Webhook.__index = Webhook
 
-function Webhook.new(id: string, token: string, customProxyUrl: string?)
+function Webhook.new(id : string, token : string, customProxyUrl : string?)
 	local self = setmetatable({}, Webhook)
 
 	self.id = id
@@ -16,7 +17,7 @@ function Webhook.new(id: string, token: string, customProxyUrl: string?)
 	return self
 end
 
-function Webhook:_validateExecuteRequest(content: string?, embeds: {}?, optionalExecuteInfo): (boolean, string?)
+function Webhook:_validateExecuteRequest(content : string?, embeds : {}?, optionalExecuteInfo) : (boolean, string?)
 	if (not content or content == "") and (not embeds or #embeds == 0) then
 		return false, "one of content, embeds are required." 
 	end
@@ -63,7 +64,7 @@ function Webhook:_validateExecuteRequest(content: string?, embeds: {}?, optional
 		for _, embed in embeds do
 			local isEmbedValid, errorMessage = embed:_validate()
 			if not isEmbedValid then return false, errorMessage end
-
+			
 			totalEmbedCharacters += embed:totalCharacters()
 		end
 
@@ -73,7 +74,7 @@ function Webhook:_validateExecuteRequest(content: string?, embeds: {}?, optional
 	return true
 end
 
-function Webhook:_request(url: string, method: string, body: {}?, contentType: string?): {}?
+function Webhook:_request(url : string, method : string, body : {}?, contentType : string?) : {}?
 	local httpService = game:GetService("HttpService")
 	
 	local response = httpService:RequestAsync({
@@ -89,7 +90,7 @@ function Webhook:_request(url: string, method: string, body: {}?, contentType: s
 	return httpService:JSONDecode(response.Body)
 end
 
-function Webhook:execute(content: string?, embeds: {}?, queue: boolean, waitForMessage: boolean, optionalExecuteInfo)
+function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo)
 	local executeInfo = optionalExecuteInfo or OptionalExecuteInfo.new()
 	local isRequestValid, errorMessage = self:_validateExecuteRequest(content, embeds, executeInfo)	
 	if not isRequestValid then return error(errorMessage) end
@@ -130,7 +131,7 @@ function Webhook:execute(content: string?, embeds: {}?, queue: boolean, waitForM
 	end
 end
 
-function Webhook:editMessage(messageId: string, content: string?, embeds: {}?, threadId: string?)
+function Webhook:editMessage(messageId : string, content : string?, embeds : {}?, threadId : string?)
 	local requestUrl
 	local requestBody = {
 		["content"] = content,
@@ -141,7 +142,7 @@ function Webhook:editMessage(messageId: string, content: string?, embeds: {}?, t
 		for _, embed in embeds do
 			local isEmbedValid, errorMessage = embed:_validate()
 			if not isEmbedValid then error(errorMessage) end
-
+			
 			table.insert(requestBody.embeds, embed)
 		end
 	end
@@ -161,7 +162,7 @@ function Webhook:editMessage(messageId: string, content: string?, embeds: {}?, t
 	end
 end
 
-function Webhook:deleteMessage(messageId: string, threadId: string?): nil
+function Webhook:deleteMessage(messageId : string, threadId : string?) : nil
 	local requestUrl
 
 	if threadId then

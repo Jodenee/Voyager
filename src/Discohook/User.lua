@@ -1,7 +1,9 @@
-local Author = require(script.Parent.Author)
-local PublicUserFlags = require(script.Parent.PublicUserFlags)
 local User = {}
 User.__index = User
+
+local Author = require(script.Parent.Author)
+local PublicUserFlags = require(script.Parent.PublicUserFlags)
+
 setmetatable(User, Author)
 
 function User.new(data)

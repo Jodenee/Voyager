@@ -1,9 +1,11 @@
-local BaseFlags = require(script.Parent.bases.BaseFlags)
 local MessageFlags = {}
 MessageFlags.__index = MessageFlags
+
+local BaseFlags = require(script.Parent.bases.BaseFlags)
+
 setmetatable(MessageFlags, BaseFlags)
 
-function MessageFlags.fromFlags(flags: {number})
+function MessageFlags.fromFlags(flags : {[number] : number})
 	local self = setmetatable(BaseFlags.fromBitfield(0), MessageFlags)
 	
 	for _, flag in flags do

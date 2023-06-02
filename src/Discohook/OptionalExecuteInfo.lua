@@ -1,8 +1,9 @@
-local MessageFlags = require(script.Parent.MessageFlags)
 local OptionalExecuteInfo = {}
 OptionalExecuteInfo.__index = OptionalExecuteInfo
 
-function OptionalExecuteInfo.new(threadId: string?, tts: boolean?, usernameOverride: string?, avatarOverride: string?, messageFlags, threadName: string?)
+local MessageFlags = require(script.Parent.MessageFlags)
+
+function OptionalExecuteInfo.new(threadId : string?, tts : boolean?, usernameOverride : string?, avatarOverride : string?, messageFlags : MessageFlags?, threadName : string?)
 	local self = setmetatable({}, OptionalExecuteInfo)
 	
 	self.threadId = threadId
