@@ -1,3 +1,5 @@
+--!strict
+
 local Webhook = {}
 Webhook.__index = Webhook
 
@@ -7,12 +9,21 @@ local ThreadMessage = require(script.Parent.ThreadMessage)
 local EditedThreadMessage = require(script.Parent.EditedThreadMessage)
 local OptionalExecuteInfo = require(script.Parent.OptionalExecuteInfo)
 
+type RatelimitInfo = {
+	XRatelimitLimit : number?,
+	XRatelimitRemaining : number?,
+	XRatelimitReset : string?,
+	XRatelimitResetAfter : number?,
+	XRatelimitBucket : string?
+}
+
 function Webhook.new(id : string, token : string, customProxyUrl : string?)
 	local self = setmetatable({}, Webhook)
 
 	self.id = id
 	self.token = token
 	self.baseUrl = (customProxyUrl or "https://webhook.lewisakura.moe") .. "/api/webhooks/" .. self.id .. "/" .. self.token
+	self.ratelimitInfo = {} :: RatelimitInfo
 
 	return self
 end
@@ -83,6 +94,14 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 		Headers = {["Content-Type"] = contentType},
 		Body = httpService:JSONEncode(body)
 	})
+	
+	self.ratelimitInfo = {
+		XRatelimitLimit = tonumber(response["Headers"]["x-ratelimit-limit"]),
+		XRatelimitRemaining = tonumber(response["Headers"]["x-ratelimit-remaining"]),
+		XRatelimitReset = response["Headers"]["x-ratelimit-reset"],
+		XRatelimitResetAfter = tonumber(response["Headers"]["x-ratelimit-reset-after"]),
+		XRatelimitBucket = response["Headers"]["x-ratelimit-bucket"]
+	}
 	
 	if not response.Success then return error("Status: " .. response.StatusCode .. " " .. response.StatusMessage) end	
 	if response.Body == "" then return end
