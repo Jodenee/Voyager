@@ -1,5 +1,3 @@
---!strict
-
 local Webhook = {}
 Webhook.__index = Webhook
 
