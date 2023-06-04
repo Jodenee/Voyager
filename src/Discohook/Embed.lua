@@ -47,7 +47,7 @@ function Embed:_validate() : (boolean, string?)
 	if self.fields then
 		if #self.fields > 25 then return false, "One embed must only have up to 25 fields." end
 		
-		for _, field: Field in self.fields do
+		for _, field in self.fields do
 			if string.len(field.name) > 256 then return false, "The name of a field must only contain up to 256 characters." end
 			if string.len(field.value) > 1024 then return false, "The value of a field must only contain up to 1024 characters." end			
 		end
