@@ -15,6 +15,12 @@ type RatelimitInfo = {
 	XRatelimitBucket : string?
 }
 
+type RequestStatus = {
+	success : boolean,
+	statusCode : number?,
+	statusMessage : string?
+}
+
 function Webhook.new(id : string, token : string, customProxyUrl : string?)
 	local self = setmetatable({}, Webhook)
 
@@ -34,12 +40,6 @@ function Webhook:_validateExecuteRequest(content : string?, embeds : {}?, option
 	if content then
 		if string.len(content) > 2000 then 
 			return false, "The content must only contain up to 2000 characters." 
-		end 
-	end
-
-	if embeds then 
-		if #embeds > 10 then 
-			return false, "A single message must only have up to 10 embeds." 
 		end 
 	end
 
@@ -69,6 +69,10 @@ function Webhook:_validateExecuteRequest(content : string?, embeds : {}?, option
 
 	if embeds then
 		local totalEmbedCharacters = 0
+		
+		if #embeds > 10 then 
+			return false, "A single message must only have up to 10 embeds." 
+		end 
 
 		for _, embed in embeds do
 			local isEmbedValid, errorMessage = embed:_validate()
@@ -77,13 +81,36 @@ function Webhook:_validateExecuteRequest(content : string?, embeds : {}?, option
 			totalEmbedCharacters += embed:totalCharacters()
 		end
 
-		if totalEmbedCharacters > 6000 then return false, "The combined sum of characters across all embeds attached to a message must only contain up to 6000 characters." end
+		if totalEmbedCharacters > 6000 then return false, "The combined sum of characters across all embeds attached to a message must only be up to 6000 characters." end
 	end
 
 	return true
 end
 
-function Webhook:_request(url : string, method : string, body : {}?, contentType : string?) : {}?
+function Webhook:_validateEditMessageRequest(content : string?, embeds : {}?) : (boolean, string?)
+	if content then
+		if string.len(content) > 2000 then 
+			return false, "The content must only contain up to 2000 characters." 
+		end 
+	end
+
+	if embeds then
+		local totalEmbedCharacters = 0
+
+		for _, embed in embeds do
+			local isEmbedValid, errorMessage = embed:_validate()
+			if not isEmbedValid then return false, errorMessage end
+
+			totalEmbedCharacters += embed:totalCharacters()
+		end
+
+		if totalEmbedCharacters > 6000 then return false, "The combined sum of characters across all embeds attached to a message must only be up to 6000 characters." end
+	end
+
+	return true
+end
+
+function Webhook:_request(url : string, method : string, body : {}?, contentType : string?) : (RequestStatus, {}?)
 	local httpService = game:GetService("HttpService")
 	
 	local response = httpService:RequestAsync({
@@ -93,6 +120,8 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 		Body = httpService:JSONEncode(body)
 	})
 	
+	local requestStatus : requestStatus = {success = response.Success, statusCode = response.StatusCode, statusMessage = response.StatusMessage} 
+	
 	self.ratelimitInfo = {
 		XRatelimitLimit = tonumber(response["Headers"]["x-ratelimit-limit"]),
 		XRatelimitRemaining = tonumber(response["Headers"]["x-ratelimit-remaining"]),
@@ -101,13 +130,16 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 		XRatelimitBucket = response["Headers"]["x-ratelimit-bucket"]
 	}
 	
-	if not response.Success then return error("Status: " .. response.StatusCode .. " " .. response.StatusMessage) end	
-	if response.Body == "" then return end
-	
-	return httpService:JSONDecode(response.Body)
+	if not response.Success then 
+		warn("Status: " .. response.StatusCode .. " " .. response.StatusMessage)
+		return requestStatus
+	end	
+	if response.Body == "" then return requestStatus end
+
+	return requestStatus, httpService:JSONDecode(response.Body)
 end
 
-function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo)
+function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo) : ({}?, RequestStatus?)
 	local executeInfo = optionalExecuteInfo or OptionalExecuteInfo.new()
 	local isRequestValid, errorMessage = self:_validateExecuteRequest(content, embeds, executeInfo)	
 	if not isRequestValid then return error(errorMessage) end
@@ -137,18 +169,23 @@ function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitF
 
 	if executeInfo.threadId then requestUrl ..= "&thread_id=" .. executeInfo.threadId end
 
-	local responseBody = self:_request(requestUrl, "POST", requestBody, "application/json")
+	local requestStatus, responseBody = self:_request(requestUrl, "POST", requestBody, "application/json")
 
-	if not queue and waitForMessage then
+	if not queue and waitForMessage and requestStatus.success then
 		if not executeInfo.threadId then 
-			return Message.new(responseBody)
+			return Message.new(responseBody), requestStatus
 		else
-			return ThreadMessage.new(responseBody)
+			return ThreadMessage.new(responseBody), requestStatus
 		end
 	end
+	
+	return nil, requestStatus
 end
 
-function Webhook:editMessage(messageId : string, content : string?, embeds : {}?, threadId : string?)
+function Webhook:editMessage(messageId : string, content : string?, embeds : {}?, threadId : string?) : ({}?, RequestStatus)
+	local isRequestValid, errorMessage = self:_validateEditMessageRequest(content, embeds)
+	if not isRequestValid then return error(errorMessage) end
+	
 	local requestUrl
 	local requestBody = {
 		["content"] = content,
@@ -156,10 +193,7 @@ function Webhook:editMessage(messageId : string, content : string?, embeds : {}?
 	}
 
 	if embeds then	
-		for _, embed in embeds do
-			local isEmbedValid, errorMessage = embed:_validate()
-			if not isEmbedValid then error(errorMessage) end
-			
+		for _, embed in embeds do			
 			table.insert(requestBody.embeds, embed)
 		end
 	end
@@ -170,16 +204,18 @@ function Webhook:editMessage(messageId : string, content : string?, embeds : {}?
 		requestUrl = self.baseUrl .. "/messages/" .. messageId
 	end
 	
-	local responseBody = self:_request(requestUrl, "PATCH", requestBody, "application/json")
+	local requestStatus, responseBody = self:_request(requestUrl, "PATCH", requestBody, "application/json")
+	
+	if not requestStatus.success then return nil, requestStatus end
 
 	if not threadId then
-		return EditedMessage.new(responseBody)
+		return EditedMessage.new(responseBody), requestStatus
 	else
-		return EditedThreadMessage.new(responseBody)
+		return EditedThreadMessage.new(responseBody), requestStatus
 	end
 end
 
-function Webhook:deleteMessage(messageId : string, threadId : string?) : nil
+function Webhook:deleteMessage(messageId : string, threadId : string?) : RequestStatus
 	local requestUrl
 
 	if threadId then
@@ -188,7 +224,7 @@ function Webhook:deleteMessage(messageId : string, threadId : string?) : nil
 		requestUrl = self.baseUrl .. "/messages/" .. messageId
 	end	
 
-	self:_request(requestUrl, "DELETE")
+	return self:_request(requestUrl, "DELETE")
 end
 
 return Webhook
