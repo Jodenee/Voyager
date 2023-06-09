@@ -17,8 +17,8 @@ type RatelimitInfo = {
 
 type RequestStatus = {
 	success : boolean,
-	statusCode : number?,
-	statusMessage : string?
+	statusCode : number,
+	statusMessage : string
 }
 
 function Webhook.new(id : string, token : string, customProxyUrl : string?)
