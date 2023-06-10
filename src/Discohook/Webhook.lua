@@ -110,7 +110,7 @@ function Webhook:_validateEditMessageRequest(content : string?, embeds : {}?) : 
 	return true
 end
 
-function Webhook:_request(url : string, method : string, body : {}?, contentType : string?) : (RequestStatus, {}?)
+function Webhook:_request(url : string, method : string, body : {}?, contentType : string?) : ({}?, RequestStatus)
 	local httpService = game:GetService("HttpService")
 	
 	local response = httpService:RequestAsync({
@@ -119,6 +119,8 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 		Headers = {["Content-Type"] = contentType},
 		Body = httpService:JSONEncode(body)
 	})
+	
+	print(response)
 	
 	local requestStatus : requestStatus = {success = response.Success, statusCode = response.StatusCode, statusMessage = response.StatusMessage} 
 	
@@ -132,14 +134,14 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 	
 	if not response.Success then 
 		warn("Status: " .. response.StatusCode .. " " .. response.StatusMessage)
-		return requestStatus
+		return nil, requestStatus
 	end	
-	if response.Body == "" then return requestStatus end
+	if response.Body == "" then return nil, requestStatus end
 
-	return requestStatus, httpService:JSONDecode(response.Body)
+	return httpService:JSONDecode(response.Body), requestStatus
 end
 
-function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo) : ({}?, RequestStatus?)
+function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo) : ({}?, RequestStatus)
 	local executeInfo = optionalExecuteInfo or OptionalExecuteInfo.new()
 	local isRequestValid, errorMessage = self:_validateExecuteRequest(content, embeds, executeInfo)	
 	if not isRequestValid then return error(errorMessage) end
@@ -169,7 +171,7 @@ function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitF
 
 	if executeInfo.threadId then requestUrl ..= "&thread_id=" .. executeInfo.threadId end
 
-	local requestStatus, responseBody = self:_request(requestUrl, "POST", requestBody, "application/json")
+	local responseBody, requestStatus = self:_request(requestUrl, "POST", requestBody, "application/json")
 
 	if not queue and waitForMessage and requestStatus.success then
 		if not executeInfo.threadId then 
@@ -204,7 +206,7 @@ function Webhook:editMessage(messageId : string, content : string?, embeds : {}?
 		requestUrl = self.baseUrl .. "/messages/" .. messageId
 	end
 	
-	local requestStatus, responseBody = self:_request(requestUrl, "PATCH", requestBody, "application/json")
+	local responseBody, requestStatus = self:_request(requestUrl, "PATCH", requestBody, "application/json")
 	
 	if not requestStatus.success then return nil, requestStatus end
 
@@ -223,8 +225,10 @@ function Webhook:deleteMessage(messageId : string, threadId : string?) : Request
 	else
 		requestUrl = self.baseUrl .. "/messages/" .. messageId
 	end	
-
-	return self:_request(requestUrl, "DELETE")
+	
+	local _, requestStatus = self:_request(requestUrl, "DELETE")
+	
+	return requestStatus
 end
 
 return Webhook
