@@ -130,10 +130,7 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 		XRatelimitBucket = response["Headers"]["x-ratelimit-bucket"]
 	}
 	
-	if not response.Success then 
-		warn("Status: " .. response.StatusCode .. " " .. response.StatusMessage)
-		return nil, requestStatus
-	end	
+	if not response.Success then return nil, requestStatus end
 	if response.Body == "" then return nil, requestStatus end
 
 	return httpService:JSONDecode(response.Body), requestStatus
