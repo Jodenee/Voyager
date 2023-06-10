@@ -120,8 +120,6 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 		Body = httpService:JSONEncode(body)
 	})
 	
-	print(response)
-	
 	local requestStatus : requestStatus = {success = response.Success, statusCode = response.StatusCode, statusMessage = response.StatusMessage} 
 	
 	self.ratelimitInfo = {
