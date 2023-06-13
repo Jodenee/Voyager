@@ -4,7 +4,7 @@
 
 <p align="center">
     <img src="https://img.shields.io/github/license/Jodenee/Discohook?color=1e1e1e&style=for-the-badge" alt="License"/>
-    <img src="https://img.shields.io/maintenance/yes/2023?color=00FF84&style=for-the-badge" alt="Maintained"/>
+    <img src="https://img.shields.io/maintenance/yes/2023?color=1e1e1e&style=for-the-badge" alt="Maintained"/>
     <img src="https://img.shields.io/github/contributors/Jodenee/Discohook?color=1e1e1e&style=for-the-badge" alt="Contributors"/>
 </p>
 
@@ -41,5 +41,11 @@ webhook:execute("Hello, World!", nil, false, false)
 # **Credit**
 
 Huge thanks to [*@lewisakura*](https://www.roblox.com/users/25704749/profile) for creating and hosting the [*proxy*](https://github.com/lewisakura/webhook-proxy) used in this module. Without them this module wouldn't have been possible.
+
+---
+
+# **Tutorial/Documentation**
+
+Learn how to use Voyager [*here*]().
 
 ---
