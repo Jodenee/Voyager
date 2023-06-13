@@ -46,6 +46,6 @@ Huge thanks to [*@lewisakura*](https://www.roblox.com/users/25704749/profile) fo
 
 # **Tutorial/Documentation**
 
-Learn how to use Voyager [*here*]().
+Learn how to use Voyager [*here*](https://jodenee.github.io/Voyager/dev/).
 
 ---
