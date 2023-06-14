@@ -51,7 +51,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	}
 	
 	local responce = httpService:RequestAsync({
-		Url = "https://webhook.lewisakura.moe/api/webhooks/webhookId/webhookToken",
+		Url = "https://webhook.lewisakura.moe/api/webhooks/webhookId/webhookToken/queue",
 		Method = "POST",
 		Headers = {["Content-Type"] = "application/json"},
 		Body = httpService:JSONEncode(requestBody)
