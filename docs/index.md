@@ -22,7 +22,7 @@ Voyager is a Roblox API wrapper for Discord webhooks. Voyager makes sending requ
 
 - Simple: Voyager is curated to be easily utilized by both beginner and advanced scripters.
 - Flexible: Voyager is curated to be modular as to fit as many use cases as possible.
-- Pre-request data validation: Voyager comes with built in validation functions that automatically validate any data you give it before making an HTTP request. This is done to mitigate making pointless requests to the proxy as making too many bad requests may get you temporarily or indefinitely banned from the proxy.
+- Pre-request data validation: Voyager comes with built in validation functions that automatically validate any data you give it before making an HTTP request. This is done to mitigate making pointless requests to the proxy, as making too many bad requests may get you temporarily or indefinitely banned from the proxy.
 
 ---
 
