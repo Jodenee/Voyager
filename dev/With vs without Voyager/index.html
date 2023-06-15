@@ -791,7 +791,51 @@
 <h2 id="goal">Goal</h2>
 <p>Make a script that sends a Discord message with embedded content that displays the player's feedback.</p>
 <h3 id="with-voyager">With Voyager</h3>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">examples\playerFeedback.lua</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">examples/playerFeedback.lua</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">-- Put Voyager in server storage</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1">-- Make a remote event called &quot;SendFeedback&quot; in replicated storage</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kd">local</span> <span class="n">voyager</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ServerStorage&quot;</span><span class="p">).</span><span class="n">Voyager</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kd">local</span> <span class="n">sendFeedbackRemote</span> <span class="o">=</span> <span class="n">game</span><span class="p">:</span><span class="n">GetService</span><span class="p">(</span><span class="s2">&quot;ReplicatedStorage&quot;</span><span class="p">).</span><span class="n">SendFeedback</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kd">local</span> <span class="n">webhook</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">voyager</span><span class="p">.</span><span class="n">Webhook</span><span class="p">).</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;webhookId&quot;</span><span class="p">,</span> <span class="s2">&quot;webhookToken&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">sendFeedbackRemote</span><span class="p">.</span><span class="n">OnServerEvent</span><span class="p">:</span><span class="n">Connect</span><span class="p">(</span><span class="kr">function</span><span class="p">(</span><span class="n">player</span> <span class="p">:</span> <span class="n">Player</span><span class="p">,</span> <span class="n">feedback</span> <span class="p">:</span> <span class="n">string</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    <span class="kd">local</span> <span class="n">embed</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">voyager</span><span class="p">.</span><span class="n">Embed</span><span class="p">).</span><span class="n">new</span><span class="p">(</span><span class="kc">nil</span><span class="p">,</span> <span class="n">feedback</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="n">embed</span><span class="p">:</span><span class="n">setAuthor</span><span class="p">(</span><span class="s2">&quot;Feedback from &quot;</span> <span class="o">..</span> <span class="n">player</span><span class="p">.</span><span class="n">DisplayName</span><span class="p">,</span> <span class="s2">&quot;https://www.roblox.com/users/&quot;</span> <span class="o">..</span> <span class="n">player</span><span class="p">.</span><span class="n">UserId</span> <span class="o">..</span> <span class="s2">&quot;/profile&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>    <span class="n">embed</span><span class="p">:</span><span class="n">setColor</span><span class="p">(</span><span class="n">Color3</span><span class="p">.</span><span class="n">fromRGB</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">135</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="n">embed</span><span class="p">:</span><span class="n">setTimestamp</span><span class="p">()</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>    <span class="n">embed</span><span class="p">:</span><span class="n">addField</span><span class="p">(</span><span class="s2">&quot;Account Age&quot;</span><span class="p">,</span> <span class="s2">&quot;**&quot;</span> <span class="o">..</span> <span class="n">player</span><span class="p">.</span><span class="n">AccountAge</span> <span class="o">..</span> <span class="s2">&quot;** Days&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="n">embed</span><span class="p">:</span><span class="n">addField</span><span class="p">(</span><span class="s2">&quot;Has Verified Badge?&quot;</span><span class="p">,</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">HasVerifiedBadge</span><span class="p">),</span> <span class="kc">true</span><span class="p">)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="n">embed</span><span class="p">:</span><span class="n">addField</span><span class="p">(</span><span class="s2">&quot;From Game&quot;</span><span class="p">,</span> <span class="s2">&quot;[Game Link](https://www.roblox.com/games/&quot;</span> <span class="o">..</span> <span class="n">game</span><span class="p">.</span><span class="n">PlaceId</span> <span class="o">..</span> <span class="s2">&quot;)&quot;</span> <span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>    <span class="kd">local</span> <span class="n">_</span><span class="p">,</span> <span class="n">requestStatus</span> <span class="o">=</span> <span class="n">webhook</span><span class="p">:</span><span class="n">execute</span><span class="p">(</span><span class="kc">nil</span><span class="p">,</span> <span class="p">{</span><span class="n">embed</span><span class="p">},</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="kr">if</span> <span class="ow">not</span> <span class="n">requestStatus</span><span class="p">.</span><span class="n">success</span> <span class="kr">then</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>        <span class="nb">warn</span><span class="p">(</span><span class="s2">&quot;Request was not successful! &quot;</span> <span class="o">..</span> <span class="n">requestStatus</span><span class="p">.</span><span class="n">statusCode</span> <span class="o">..</span> <span class="s2">&quot; &quot;</span> <span class="o">..</span> <span class="n">requestStatus</span><span class="p">.</span><span class="n">statusMessage</span><span class="p">)</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>    <span class="kr">end</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="kr">end</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="without-voyager">Without Voyager</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
