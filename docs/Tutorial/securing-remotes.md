@@ -10,8 +10,30 @@ To show you how to secure a remote the feedback example found in examples will b
 
 The way we will prevent exploiters from spamming our remote is by putting players in cooldown when they fire the remote. So if a player fires the remote it'll put them on a cooldown and until the cooldown duration has passed they will not be able to send feedback.
 
-```lua linenums="1" title="examples\playerFeedback.lua"
---8<-- "examples\playerFeedback.lua"
+```lua linenums="1" title="examples/playerFeedback.lua"
+-- Put Voyager in server storage
+-- Make a remote event called "SendFeedback" in replicated storage
+
+local voyager = game:GetService("ServerStorage").Voyager
+local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
+local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+
+sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : string)
+	local embed = require(voyager.Embed).new(nil, feedback)
+	
+	embed:setAuthor("Feedback from " .. player.DisplayName, "https://www.roblox.com/users/" .. player.UserId .. "/profile")
+	embed:setColor(Color3.fromRGB(0, 135, 255))
+	embed:setTimestamp()
+	embed:addField("Account Age", "**" .. player.AccountAge .. "** Days", true)
+	embed:addField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
+	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
+	
+	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	
+	if not requestStatus.success then
+		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)
+	end
+end)
 ```
 
 First we will make 2 new variables, the first one will be a table that stores timestamps and the second one will store a number that'll represent the cooldown duration in seconds.

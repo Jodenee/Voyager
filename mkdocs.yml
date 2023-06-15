@@ -46,7 +46,6 @@ extra_css:
 
 markdown_extensions:
   - admonition
-  - pymdownx.snippets
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
