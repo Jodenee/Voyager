@@ -7,7 +7,10 @@
     --md-primary-fg-color--dark: #000000; /* primary fg color color */
 
     /* Versioning list overrides */
-    .md-version__list {background-color: #141414; color: #ffffff;}
+    .md-version__list {
+        background-color: #141414; 
+        color: #ffffff;
+    }
     .md-version__item:focus {background-color: #222222;}
     .md-version__link:focus {background-color: #363636;}
 }
