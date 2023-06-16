@@ -151,7 +151,7 @@ A number that represents the approximate position of the message in a thread.
 <br />
 
 ## **EditedThreadMessage.editedTimestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings)
-When the message was edited in ISO8601 format.
+When the message was edited in [*ISO8601 format*](https://www.iso.org/iso-8601-date-and-time-format.html).
 
 <br />
 
