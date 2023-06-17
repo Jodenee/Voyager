@@ -28,7 +28,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	embed:addField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	local _, requestStatus = webhook:execute(nil, {embed})
 	
 	if not requestStatus.success then
 		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)
@@ -55,7 +55,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	embed:addField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	local _, requestStatus = webhook:execute(nil, {embed})
 	
 	if not requestStatus.success then
 		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)
@@ -92,7 +92,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	embed:addField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	local _, requestStatus = webhook:execute(nil, {embed})
 	
 	if not requestStatus.success then
 		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)
@@ -136,7 +136,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	embed:addField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	local _, requestStatus = webhook:execute(nil, {embed})
 	
 	if not requestStatus.success then
 		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)
@@ -192,7 +192,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	embed:addField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	local _, requestStatus = webhook:execute(nil, {embed})
 	
 	if not requestStatus.success then
 		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)
@@ -244,7 +244,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	embed:addField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	local _, requestStatus = webhook:execute(nil, {embed})
 	
 	if not requestStatus.success then
 		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)
@@ -298,7 +298,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	embed:addField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	local _, requestStatus = webhook:execute(nil, {embed})
 	
 	if not requestStatus.success then
 		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)
@@ -359,7 +359,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	embed:addField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	local _, requestStatus = webhook:execute(nil, {embed})
 	
 	if not requestStatus.success then
 		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)
@@ -429,7 +429,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	embed:addField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	local _, requestStatus = webhook:execute(nil, {embed})
 	
 	if not requestStatus.success then
 		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)

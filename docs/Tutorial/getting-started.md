@@ -38,18 +38,20 @@ Now that we have a webhook object, we can send messages to Discord by using the 
 local Voyager = path_here.Voyager
 local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 
-webhook:execute("Hello, World!", nil, true, false)
+webhook:execute("Hello, World!")
 ```
 
-As you can see the execute function takes at least 3 arguments. 
+The execute function requires at least 1 argument, that being either the content of the message or a table of embeds. 
 
-The first one being the optional content of the message.
+The first argument is content of the message. (optional)
 
-The second one being an optional table of Embed objects.
+The second argument is a table of Embed objects. (optional)
 
-The third one being whether we want to queue the request. 
+The third argument is whether we want to queue the request. If left empty it will default to true.
 
-The forth one being whether we want to wait for a message object to be returned. 
+The forth argument is whether we want to wait for a message object to be returned. If left empty it will default to false.
+
+The fifth argument is a [*OptionalExecuteInfo*](../API%20Reference/OptionalExecuteInfo.md) object. This object is used to enable lesser used features like tts, avatar url override, thread id etc. (optional)
 
 If you require a more indepth description about the Webhook object's execute function you can find it [*here*](../API%20Reference/Webhook.md) under the methods section.
 
@@ -187,7 +189,7 @@ playerService.PlayerAdded:Connect(function(player : Player)
 	embed:addField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
     embed:setTimestamp()
 
-    webhook:execute(nil, {embed}, true, false)
+    webhook:execute(nil, {embed})
 end)
 ```
 
@@ -208,7 +210,7 @@ playerService.PlayerAdded:Connect(function(player : Player)
 	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")", true)
 	embed:setTimestamp()
 	
-	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	local _, requestStatus = webhook:execute(nil, {embed})
 	
 	if not requestStatus.success then
 		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)

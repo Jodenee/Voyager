@@ -10,7 +10,7 @@ Not having any logic in place to handle errors is very bad practice, as data int
 local Voyager = path_here.Voyager
 local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 
-webhook:execute("Hello, World!", nil, true, false)
+webhook:execute("Hello, World!")
 ```
 
 All of the webhook's functions excluding some private ones return a RequestStatus object. With this object you can easily handle any error that may occur.
@@ -21,7 +21,7 @@ First we have to put the RequestStatus object into a variable
 local Voyager = path_here.Voyager
 local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 
-local _, requestStatus = webhook:execute("Hello, World!", nil, true, false)
+local _, requestStatus = webhook:execute("Hello, World!")
 ```
 
 The reason we put a _ before requestStatus is because execute can return a Message or ThreadMessage object but since waitForMessage is false it wont. And since it wont it'll return nil so we name it _ to show it'll not be used.
@@ -32,7 +32,7 @@ Now we can check if the request was successfuly sent to the proxy.
 local Voyager = path_here.Voyager
 local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 
-local _, requestStatus = webhook:execute("Hello, World!", nil, true, false)
+local _, requestStatus = webhook:execute("Hello, World!")
 
 if requestStatus.success then
     print("The message was sent!")
