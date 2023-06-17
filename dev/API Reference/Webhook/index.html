@@ -774,7 +774,11 @@
 <p>This method sends a message to Discord.</p>
 <details class="note" open="open">
 <summary>Note</summary>
-<p>If both queue and waitForMessage are true <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a> will be returned.</p>
+<p>If both queue and waitForMessage are true, a message object will not be returned.</p>
+</details>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If queue is left nil it will default to true. If waitForMessage is left nil it will default to false.</p>
 </details>
 <details class="tip">
 <summary>Tip</summary>

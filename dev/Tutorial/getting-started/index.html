@@ -804,13 +804,14 @@
 <span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">local</span> <span class="n">Voyager</span> <span class="o">=</span> <span class="n">path_here</span><span class="p">.</span><span class="n">Voyager</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kd">local</span> <span class="n">webhook</span> <span class="o">=</span> <span class="nb">require</span><span class="p">(</span><span class="n">Voyager</span><span class="p">.</span><span class="n">Webhook</span><span class="p">).</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;webhookId&quot;</span><span class="p">,</span> <span class="s2">&quot;webhookToken&quot;</span><span class="p">)</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="hll"><span class="n">webhook</span><span class="p">:</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">,</span> <span class="kc">nil</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="hll"><span class="n">webhook</span><span class="p">:</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
-<p>As you can see the execute function takes at least 3 arguments. </p>
-<p>The first one being the optional content of the message.</p>
-<p>The second one being an optional table of Embed objects.</p>
-<p>The third one being whether we want to queue the request. </p>
-<p>The forth one being whether we want to wait for a message object to be returned. </p>
+<p>The execute function requires at least 1 argument, that being either the content of the message or a table of embeds. </p>
+<p>The first argument is content of the message. (optional)</p>
+<p>The second argument is a table of Embed objects. (optional)</p>
+<p>The third argument is whether we want to queue the request. If left empty it will default to true.</p>
+<p>The forth argument is whether we want to wait for a message object to be returned. If left empty it will default to false.</p>
+<p>The fifth argument is a <a href="../../API%20Reference/OptionalExecuteInfo/"><em>OptionalExecuteInfo</em></a> object. This object is used to enable lesser used features like tts, avatar url override, thread id etc. (optional)</p>
 <p>If you require a more indepth description about the Webhook object's execute function you can find it <a href="../../API%20Reference/Webhook/"><em>here</em></a> under the methods section.</p>
 <p>The other objects mentioned in this tutorial will be given an proper explination later in the tutorial.</p>
 <p><br></p>
@@ -988,7 +989,7 @@
 <a id="__codelineno-11-12" name="__codelineno-11-12"></a>    <span class="n">embed</span><span class="p">:</span><span class="n">addField</span><span class="p">(</span><span class="s2">&quot;Has Verified Badge?&quot;</span><span class="p">,</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">player</span><span class="p">.</span><span class="n">HasVerifiedBadge</span><span class="p">),</span> <span class="kc">true</span><span class="p">)</span>
 <a id="__codelineno-11-13" name="__codelineno-11-13"></a>    <span class="n">embed</span><span class="p">:</span><span class="n">setTimestamp</span><span class="p">()</span>
 <a id="__codelineno-11-14" name="__codelineno-11-14"></a>
-<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="hll">    <span class="n">webhook</span><span class="p">:</span><span class="n">execute</span><span class="p">(</span><span class="kc">nil</span><span class="p">,</span> <span class="p">{</span><span class="n">embed</span><span class="p">},</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="hll">    <span class="n">webhook</span><span class="p">:</span><span class="n">execute</span><span class="p">(</span><span class="kc">nil</span><span class="p">,</span> <span class="p">{</span><span class="n">embed</span><span class="p">})</span>
 </span><a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="kr">end</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>Lastly we'll add some basic error handling</p>
@@ -1025,7 +1026,7 @@
 <a id="__codelineno-12-12" name="__codelineno-12-12"></a>    <span class="n">embed</span><span class="p">:</span><span class="n">addField</span><span class="p">(</span><span class="s2">&quot;From Game&quot;</span><span class="p">,</span> <span class="s2">&quot;[Game Link](https://www.roblox.com/games/&quot;</span> <span class="o">..</span> <span class="n">game</span><span class="p">.</span><span class="n">PlaceId</span> <span class="o">..</span> <span class="s2">&quot;)&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
 <a id="__codelineno-12-13" name="__codelineno-12-13"></a>    <span class="n">embed</span><span class="p">:</span><span class="n">setTimestamp</span><span class="p">()</span>
 <a id="__codelineno-12-14" name="__codelineno-12-14"></a>
-<a id="__codelineno-12-15" name="__codelineno-12-15"></a>    <span class="kd">local</span> <span class="n">_</span><span class="p">,</span> <span class="n">requestStatus</span> <span class="o">=</span> <span class="n">webhook</span><span class="p">:</span><span class="n">execute</span><span class="p">(</span><span class="kc">nil</span><span class="p">,</span> <span class="p">{</span><span class="n">embed</span><span class="p">},</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a>    <span class="kd">local</span> <span class="n">_</span><span class="p">,</span> <span class="n">requestStatus</span> <span class="o">=</span> <span class="n">webhook</span><span class="p">:</span><span class="n">execute</span><span class="p">(</span><span class="kc">nil</span><span class="p">,</span> <span class="p">{</span><span class="n">embed</span><span class="p">})</span>
 <a id="__codelineno-12-16" name="__codelineno-12-16"></a>
 <a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="hll">    <span class="kr">if</span> <span class="ow">not</span> <span class="n">requestStatus</span><span class="p">.</span><span class="n">success</span> <span class="kr">then</span>
 </span><a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="hll">        <span class="nb">warn</span><span class="p">(</span><span class="s2">&quot;Request was not successful! &quot;</span> <span class="o">..</span> <span class="n">requestStatus</span><span class="p">.</span><span class="n">statusCode</span> <span class="o">..</span> <span class="s2">&quot; &quot;</span> <span class="o">..</span> <span class="n">requestStatus</span><span class="p">.</span><span class="n">statusMessage</span><span class="p">)</span>
