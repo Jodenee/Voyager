@@ -513,9 +513,231 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Webhook
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Webhook
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfo" class="md-nav__link">
+    RatelimitInfo
+  </a>
+  
+    <nav class="md-nav" aria-label="RatelimitInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfoxratelimitlimit-number" class="md-nav__link">
+    RatelimitInfo.XRatelimitLimit : number?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfoxratelimitremaining-number" class="md-nav__link">
+    RatelimitInfo.XRatelimitRemaining : number?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfoxratelimitreset-string" class="md-nav__link">
+    RatelimitInfo.XRatelimitReset : string?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfoxratelimitresetafter-number" class="md-nav__link">
+    RatelimitInfo.XRatelimitResetAfter : number?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfoxratelimitbucket-string" class="md-nav__link">
+    RatelimitInfo.XRatelimitBucket : string?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requeststatus" class="md-nav__link">
+    RequestStatus
+  </a>
+  
+    <nav class="md-nav" aria-label="RequestStatus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requeststatussuccess-boolean" class="md-nav__link">
+    RequestStatus.success : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requeststatusstatuscode-number" class="md-nav__link">
+    RequestStatus.statusCode : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requeststatusstatusmessage-string" class="md-nav__link">
+    RequestStatus.statusMessage : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhookid-string" class="md-nav__link">
+    Webhook.id : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhooktoken-string" class="md-nav__link">
+    Webhook.token : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookbaseurl-string" class="md-nav__link">
+    Webhook.baseUrl : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookratelimitinfo-ratelimitinfo" class="md-nav__link">
+    Webhook.ratelimitInfo : RatelimitInfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhooknewid-string-token-string-customproxyurl-string-webhook" class="md-nav__link">
+    Webhook.new(id : string, token : string, customProxyUrl : string?) : Webhook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookexecutecontent-string-embeds-number-embed-queue-boolean-waitformessage-boolean-optionalexecuteinfo-optionalexecuteinfo-message-threadmessage-requeststatus" class="md-nav__link">
+    Webhook:execute(content : string?, embeds : {[number] : Embed}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo : OptionalExecuteInfo?) : (Message? | ThreadMessage?, RequestStatus)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookeditmessagemessageid-string-content-string-embeds-number-embed-threadid-string-editedmessage-editedthreadmessage-requeststatus" class="md-nav__link">
+    Webhook:editMessage(messageId : string, content : string?, embeds : {[number] : Embed}?, threadId : string?) : (EditedMessage | EditedThreadMessage, RequestStatus)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookdeletemessagemessageid-string-threadid-string-requeststatus" class="md-nav__link">
+    Webhook:deleteMessage(messageId : string, threadId : string?) : RequestStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook_validateexecuterequestcontent-string-embeds-number-embed-optionalexecuteinfo-optionalexecuteinfo-boolean-string" class="md-nav__link">
+    Webhook:_validateExecuteRequest(content : string?, embeds : {[number] : Embed}?, optionalExecuteInfo : OptionalExecuteInfo?) : (boolean, string?)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook_validateeditmessagerequestcontent-string-embeds-number-embed-boolean-string" class="md-nav__link">
+    Webhook:_validateEditMessageRequest(content : string?, embeds : {[number] : Embed}?) : (boolean, string?)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook_requesturl-string-method-string-body-contenttype-string-requeststatus" class="md-nav__link">
+    Webhook:_request(url : string, method : string, body : {}?, contentType : string) : ({}?, RequestStatus)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -687,6 +909,212 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfo" class="md-nav__link">
+    RatelimitInfo
+  </a>
+  
+    <nav class="md-nav" aria-label="RatelimitInfo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfoxratelimitlimit-number" class="md-nav__link">
+    RatelimitInfo.XRatelimitLimit : number?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfoxratelimitremaining-number" class="md-nav__link">
+    RatelimitInfo.XRatelimitRemaining : number?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfoxratelimitreset-string" class="md-nav__link">
+    RatelimitInfo.XRatelimitReset : string?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfoxratelimitresetafter-number" class="md-nav__link">
+    RatelimitInfo.XRatelimitResetAfter : number?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ratelimitinfoxratelimitbucket-string" class="md-nav__link">
+    RatelimitInfo.XRatelimitBucket : string?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requeststatus" class="md-nav__link">
+    RequestStatus
+  </a>
+  
+    <nav class="md-nav" aria-label="RequestStatus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requeststatussuccess-boolean" class="md-nav__link">
+    RequestStatus.success : boolean
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requeststatusstatuscode-number" class="md-nav__link">
+    RequestStatus.statusCode : number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#requeststatusstatusmessage-string" class="md-nav__link">
+    RequestStatus.statusMessage : string
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhookid-string" class="md-nav__link">
+    Webhook.id : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhooktoken-string" class="md-nav__link">
+    Webhook.token : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookbaseurl-string" class="md-nav__link">
+    Webhook.baseUrl : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookratelimitinfo-ratelimitinfo" class="md-nav__link">
+    Webhook.ratelimitInfo : RatelimitInfo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhooknewid-string-token-string-customproxyurl-string-webhook" class="md-nav__link">
+    Webhook.new(id : string, token : string, customProxyUrl : string?) : Webhook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookexecutecontent-string-embeds-number-embed-queue-boolean-waitformessage-boolean-optionalexecuteinfo-optionalexecuteinfo-message-threadmessage-requeststatus" class="md-nav__link">
+    Webhook:execute(content : string?, embeds : {[number] : Embed}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo : OptionalExecuteInfo?) : (Message? | ThreadMessage?, RequestStatus)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookeditmessagemessageid-string-content-string-embeds-number-embed-threadid-string-editedmessage-editedthreadmessage-requeststatus" class="md-nav__link">
+    Webhook:editMessage(messageId : string, content : string?, embeds : {[number] : Embed}?, threadId : string?) : (EditedMessage | EditedThreadMessage, RequestStatus)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhookdeletemessagemessageid-string-threadid-string-requeststatus" class="md-nav__link">
+    Webhook:deleteMessage(messageId : string, threadId : string?) : RequestStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook_validateexecuterequestcontent-string-embeds-number-embed-optionalexecuteinfo-optionalexecuteinfo-boolean-string" class="md-nav__link">
+    Webhook:_validateExecuteRequest(content : string?, embeds : {[number] : Embed}?, optionalExecuteInfo : OptionalExecuteInfo?) : (boolean, string?)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook_validateeditmessagerequestcontent-string-embeds-number-embed-boolean-string" class="md-nav__link">
+    Webhook:_validateEditMessageRequest(content : string?, embeds : {[number] : Embed}?) : (boolean, string?)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook_requesturl-string-method-string-body-contenttype-string-requeststatus" class="md-nav__link">
+    Webhook:_request(url : string, method : string, body : {}?, contentType : string) : ({}?, RequestStatus)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -705,32 +1133,32 @@
 
 <h1 id="webhook">Webhook</h1>
 <p><br /></p>
-<h1 id="types"><p align = "center"><strong><em>Types</em></strong></p></h1>
+<h2 id="types">Types</h2>
 <p><br /></p>
-<h2 id="ratelimitinfo"><strong>RatelimitInfo</strong></h2>
-<h3 id="ratelimitinfoxratelimitlimit-number">RatelimitInfo.XRatelimitLimit <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a></h3>
-<h3 id="ratelimitinfoxratelimitremaining-number">RatelimitInfo.XRatelimitRemaining <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a></h3>
-<h3 id="ratelimitinfoxratelimitreset-string">RatelimitInfo.XRatelimitReset <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h3>
-<h3 id="ratelimitinfoxratelimitresetafter-number">RatelimitInfo.XRatelimitResetAfter <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a></h3>
-<h3 id="ratelimitinfoxratelimitbucket-string">RatelimitInfo.XRatelimitBucket <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h3>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h2 id="requeststatus"><strong>RequestStatus</strong></h2>
-<h3 id="requeststatussuccess-boolean">RequestStatus.success <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a></h3>
-<h3 id="requeststatusstatuscode-number">RequestStatus.statusCode <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a></h3>
-<h3 id="requeststatusstatusmessage-string">RequestStatus.statusMessage <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
+<h3 id="ratelimitinfo"><strong>RatelimitInfo</strong></h3>
+<h4 id="ratelimitinfoxratelimitlimit-number">RatelimitInfo.XRatelimitLimit <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a></h4>
+<h4 id="ratelimitinfoxratelimitremaining-number">RatelimitInfo.XRatelimitRemaining <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a></h4>
+<h4 id="ratelimitinfoxratelimitreset-string">RatelimitInfo.XRatelimitReset <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h4>
+<h4 id="ratelimitinfoxratelimitresetafter-number">RatelimitInfo.XRatelimitResetAfter <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a></h4>
+<h4 id="ratelimitinfoxratelimitbucket-string">RatelimitInfo.XRatelimitBucket <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h4>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h1 id="properties"><p align = "center"><strong><em>Properties</em></strong></p></h1>
+<h3 id="requeststatus"><strong>RequestStatus</strong></h3>
+<h4 id="requeststatussuccess-boolean">RequestStatus.success <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a></h4>
+<h4 id="requeststatusstatuscode-number">RequestStatus.statusCode <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a></h4>
+<h4 id="requeststatusstatusmessage-string">RequestStatus.statusMessage <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h4>
 <p><br /></p>
-<h2 id="webhookid-string"><strong>Webhook.id :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h2>
+<hr />
+<p><br /></p>
+<h2 id="properties">Properties</h2>
+<p><br /></p>
+<h3 id="webhookid-string"><strong>Webhook.id :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
 <p>The webhook's id.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="webhooktoken-string"><strong>Webhook.token :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h2>
+<h3 id="webhooktoken-string"><strong>Webhook.token :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
 <p>The webhook's token.</p>
 <details class="danger" open="open">
 <summary>Danger</summary>
@@ -739,12 +1167,12 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="webhookbaseurl-string"><strong>Webhook.baseUrl :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h2>
+<h3 id="webhookbaseurl-string"><strong>Webhook.baseUrl :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
 <p>The webhook's base url.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="webhookratelimitinfo-ratelimitinfo"><strong>Webhook.ratelimitInfo :</strong> <a href="#ratelimitinfo"><em>RatelimitInfo</em></a></h2>
+<h3 id="webhookratelimitinfo-ratelimitinfo"><strong>Webhook.ratelimitInfo :</strong> <a href="#ratelimitinfo"><em>RatelimitInfo</em></a></h3>
 <p>The latest ratelimit information given to the webhook by Discord. <a href="https://discord.com/developers/docs/topics/rate-limits#header-format-rate-limit-header-examples"><em>Offical docs reference</em></a></p>
 <details class="note" open="open">
 <summary>Note</summary>
@@ -757,9 +1185,9 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h1 id="methods"><p align = "center"><strong><em>Methods</em></strong></p></h1>
+<h2 id="methods">Methods</h2>
 <p><br /></p>
-<h2 id="webhooknewid-string-token-string-customproxyurl-string-webhook"><strong>Webhook.new</strong>(id <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, token <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, customProxyUrl <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="./"><em>Webhook</em></a></h2>
+<h3 id="webhooknewid-string-token-string-customproxyurl-string-webhook"><strong>Webhook.new</strong>(id <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, token <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, customProxyUrl <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="./"><em>Webhook</em></a></h3>
 <p>This method returns a new Webhook object.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -770,7 +1198,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="webhookexecutecontent-string-embeds-number-embed-queue-boolean-waitformessage-boolean-optionalexecuteinfo-optionalexecuteinfo-message-threadmessage-requeststatus"><strong>Webhook:execute</strong>(content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?, queue <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, waitForMessage <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, optionalExecuteInfo <strong>:</strong> <a href="../OptionalExecuteInfo/"><em>OptionalExecuteInfo?</em></a>) <strong>:</strong> (<a href="../Message/"><em>Message?</em></a> | <a href="../ThreadMessage/"><em>ThreadMessage?</em></a>, <a href="#requeststatus"><em>RequestStatus</em></a>)</h2>
+<h3 id="webhookexecutecontent-string-embeds-number-embed-queue-boolean-waitformessage-boolean-optionalexecuteinfo-optionalexecuteinfo-message-threadmessage-requeststatus"><strong>Webhook:execute</strong>(content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?, queue <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, waitForMessage <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, optionalExecuteInfo <strong>:</strong> <a href="../OptionalExecuteInfo/"><em>OptionalExecuteInfo?</em></a>) <strong>:</strong> (<a href="../Message/"><em>Message?</em></a> | <a href="../ThreadMessage/"><em>ThreadMessage?</em></a>, <a href="#requeststatus"><em>RequestStatus</em></a>)</h3>
 <p>This method sends a message to Discord.</p>
 <details class="note" open="open">
 <summary>Note</summary>
@@ -795,7 +1223,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="webhookeditmessagemessageid-string-content-string-embeds-number-embed-threadid-string-editedmessage-editedthreadmessage-requeststatus"><strong>Webhook:editMessage</strong>(messageId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?, threadId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> (<a href="../EditedMessage/"><em>EditedMessage</em></a> | <a href="../EditedThreadMessage/"><em>EditedThreadMessage</em></a>, <a href="#requeststatus"><em>RequestStatus</em></a>)</h2>
+<h3 id="webhookeditmessagemessageid-string-content-string-embeds-number-embed-threadid-string-editedmessage-editedthreadmessage-requeststatus"><strong>Webhook:editMessage</strong>(messageId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?, threadId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> (<a href="../EditedMessage/"><em>EditedMessage</em></a> | <a href="../EditedThreadMessage/"><em>EditedThreadMessage</em></a>, <a href="#requeststatus"><em>RequestStatus</em></a>)</h3>
 <p>This method edits a message sent by the webhook.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -807,7 +1235,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="webhookdeletemessagemessageid-string-threadid-string-requeststatus"><strong>Webhook:deleteMessage</strong>(messageId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, threadId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="#requeststatus"><em>RequestStatus</em></a></h2>
+<h3 id="webhookdeletemessagemessageid-string-threadid-string-requeststatus"><strong>Webhook:deleteMessage</strong>(messageId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, threadId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="#requeststatus"><em>RequestStatus</em></a></h3>
 <p>This method deletes a message sent by the webhook.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -817,7 +1245,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="webhook_validateexecuterequestcontent-string-embeds-number-embed-optionalexecuteinfo-optionalexecuteinfo-boolean-string"><strong>Webhook:_validateExecuteRequest</strong>(content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?, optionalExecuteInfo <strong>:</strong> <a href="../OptionalExecuteInfo/"><em>OptionalExecuteInfo?</em></a>) <strong>:</strong> (<a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>)</h2>
+<h3 id="webhook_validateexecuterequestcontent-string-embeds-number-embed-optionalexecuteinfo-optionalexecuteinfo-boolean-string"><strong>Webhook:_validateExecuteRequest</strong>(content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?, optionalExecuteInfo <strong>:</strong> <a href="../OptionalExecuteInfo/"><em>OptionalExecuteInfo?</em></a>) <strong>:</strong> (<a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>)</h3>
 <p>This method validates data given to :execute before sending it to Discord. This is done to avoid making pointless requests to the proxy and Discord.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
@@ -832,7 +1260,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="webhook_validateeditmessagerequestcontent-string-embeds-number-embed-boolean-string"><strong>Webhook:_validateEditMessageRequest</strong>(content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?) <strong>:</strong> (<a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>)</h2>
+<h3 id="webhook_validateeditmessagerequestcontent-string-embeds-number-embed-boolean-string"><strong>Webhook:_validateEditMessageRequest</strong>(content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?) <strong>:</strong> (<a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>)</h3>
 <p>This method validates data given to :editMessage before sending it to Discord. This is done to avoid making pointless requests to the proxy and Discord.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
@@ -846,7 +1274,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="webhook_requesturl-string-method-string-body-contenttype-string-requeststatus"><strong>Webhook:_request</strong>(url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, method <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, body <strong>:</strong> {}?, contentType <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> ({}?, <a href="#requeststatus"><em>RequestStatus</em></a>)</h2>
+<h3 id="webhook_requesturl-string-method-string-body-contenttype-string-requeststatus"><strong>Webhook:_request</strong>(url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, method <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, body <strong>:</strong> {}?, contentType <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> ({}?, <a href="#requeststatus"><em>RequestStatus</em></a>)</h3>
 <p>This method is used to make HTTP requests to the proxy.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>

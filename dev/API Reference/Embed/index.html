@@ -373,9 +373,227 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Embed
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Embed
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#embedtitle-string" class="md-nav__link">
+    Embed.title : string?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embeddescription-string" class="md-nav__link">
+    Embed.description : string?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedurl-string" class="md-nav__link">
+    Embed.url : string?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedtimestamp-string" class="md-nav__link">
+    Embed.timestamp : string?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedcolor-number" class="md-nav__link">
+    Embed.color : number?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedfooter-text-string-icon_url-string-proxy_icon_url-string" class="md-nav__link">
+    Embed.footer : {text : string, icon_url : string?, proxy_icon_url : string?}?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedimage-url-string-height-number-width-number-proxy_url-string" class="md-nav__link">
+    Embed.image : {url : string, height : number?, width : number?, proxy_url : string?}?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedthumbnail-url-string-height-number-width-number-proxy_url-string" class="md-nav__link">
+    Embed.thumbnail : {url : string, height : number?, width : number?, proxy_url : string?}?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedauthor-name-string-url-string-icon_url-string-proxy_icon_url-string" class="md-nav__link">
+    Embed.author : {name : string, url : string?, icon_url : string?, proxy_icon_url : string?}?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedfields-number-name-string-value-string-inline-boolean" class="md-nav__link">
+    Embed.fields : {[number] : {name : string, value : string, inLine : boolean?}}?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#embednewtitle-string-description-string-url-string-embed" class="md-nav__link">
+    Embed.new(title : string?, description : string?, url : string?) : Embed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsettitletitle-string-nil" class="md-nav__link">
+    Embed:setTitle(title : string) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetdescriptiondescription-string-nil" class="md-nav__link">
+    Embed:setDescription(description : string) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedseturlurl-string-nil" class="md-nav__link">
+    Embed:setUrl(url : string) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsettimestampcustomtimestamp-string-nil" class="md-nav__link">
+    Embed:setTimestamp(customTimestamp : string?) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetcolorcolor3-color3-nil" class="md-nav__link">
+    Embed:setColor(color3 : Color3) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetfootertext-string-iconurl-string-nil" class="md-nav__link">
+    Embed:setFooter(text : string, iconUrl : string?) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetimageurl-string-nil" class="md-nav__link">
+    Embed:setImage(url : string) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetthumbnailurl-string-nil" class="md-nav__link">
+    Embed:setThumbnail(url : string) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetauthorname-string-url-string-iconurl-string-nil" class="md-nav__link">
+    Embed:setAuthor(name : string, url : string?, iconUrl : string?) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedaddfieldname-string-value-string-inline-boolean-nil" class="md-nav__link">
+    Embed:addField(name: string, value: string, inLine: boolean?): nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedtotalcharacters-number" class="md-nav__link">
+    Embed:totalCharacters(): number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedcolortorgb-r-number-g-number-b-number" class="md-nav__link">
+    Embed:colorToRGB(): {r: number, g: number, b: number}?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embed_validate-boolean-string" class="md-nav__link">
+    Embed:_validate() : (boolean, string?)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -687,6 +905,208 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#embedtitle-string" class="md-nav__link">
+    Embed.title : string?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embeddescription-string" class="md-nav__link">
+    Embed.description : string?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedurl-string" class="md-nav__link">
+    Embed.url : string?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedtimestamp-string" class="md-nav__link">
+    Embed.timestamp : string?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedcolor-number" class="md-nav__link">
+    Embed.color : number?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedfooter-text-string-icon_url-string-proxy_icon_url-string" class="md-nav__link">
+    Embed.footer : {text : string, icon_url : string?, proxy_icon_url : string?}?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedimage-url-string-height-number-width-number-proxy_url-string" class="md-nav__link">
+    Embed.image : {url : string, height : number?, width : number?, proxy_url : string?}?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedthumbnail-url-string-height-number-width-number-proxy_url-string" class="md-nav__link">
+    Embed.thumbnail : {url : string, height : number?, width : number?, proxy_url : string?}?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedauthor-name-string-url-string-icon_url-string-proxy_icon_url-string" class="md-nav__link">
+    Embed.author : {name : string, url : string?, icon_url : string?, proxy_icon_url : string?}?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedfields-number-name-string-value-string-inline-boolean" class="md-nav__link">
+    Embed.fields : {[number] : {name : string, value : string, inLine : boolean?}}?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#embednewtitle-string-description-string-url-string-embed" class="md-nav__link">
+    Embed.new(title : string?, description : string?, url : string?) : Embed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsettitletitle-string-nil" class="md-nav__link">
+    Embed:setTitle(title : string) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetdescriptiondescription-string-nil" class="md-nav__link">
+    Embed:setDescription(description : string) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedseturlurl-string-nil" class="md-nav__link">
+    Embed:setUrl(url : string) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsettimestampcustomtimestamp-string-nil" class="md-nav__link">
+    Embed:setTimestamp(customTimestamp : string?) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetcolorcolor3-color3-nil" class="md-nav__link">
+    Embed:setColor(color3 : Color3) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetfootertext-string-iconurl-string-nil" class="md-nav__link">
+    Embed:setFooter(text : string, iconUrl : string?) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetimageurl-string-nil" class="md-nav__link">
+    Embed:setImage(url : string) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetthumbnailurl-string-nil" class="md-nav__link">
+    Embed:setThumbnail(url : string) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedsetauthorname-string-url-string-iconurl-string-nil" class="md-nav__link">
+    Embed:setAuthor(name : string, url : string?, iconUrl : string?) : nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedaddfieldname-string-value-string-inline-boolean-nil" class="md-nav__link">
+    Embed:addField(name: string, value: string, inLine: boolean?): nil
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedtotalcharacters-number" class="md-nav__link">
+    Embed:totalCharacters(): number
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embedcolortorgb-r-number-g-number-b-number" class="md-nav__link">
+    Embed:colorToRGB(): {r: number, g: number, b: number}?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#embed_validate-boolean-string" class="md-nav__link">
+    Embed:_validate() : (boolean, string?)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -705,34 +1125,34 @@
 
 <h1 id="embed">Embed</h1>
 <p><br /></p>
-<h1 id="properties"><p align = "center"><strong><em>Properties</em></strong></p></h1>
+<h2 id="properties">Properties</h2>
 <p><br /></p>
-<h2 id="embedtitle-string"><strong>Embed.title :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h2>
+<h3 id="embedtitle-string"><strong>Embed.title :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h3>
 <p>The title attached to the embed.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embeddescription-string"><strong>Embed.description :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h2>
+<h3 id="embeddescription-string"><strong>Embed.description :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h3>
 <p>The description attached to the embed.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedurl-string"><strong>Embed.url :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h2>
+<h3 id="embedurl-string"><strong>Embed.url :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h3>
 <p>The url attached to the embed's title.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedtimestamp-string"><strong>Embed.timestamp :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h2>
+<h3 id="embedtimestamp-string"><strong>Embed.timestamp :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a></h3>
 <p>An <a href="https://www.iso.org/iso-8601-date-and-time-format.html"><em>ISO8601 timestamp</em></a> attached to the embed's footer.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedcolor-number"><strong>Embed.color :</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a></h2>
+<h3 id="embedcolor-number"><strong>Embed.color :</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a></h3>
 <p>The embed's color code.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedfooter-text-string-icon_url-string-proxy_icon_url-string"><strong>Embed.footer :</strong> {text <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, icon_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, proxy_icon_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>}?</h2>
+<h3 id="embedfooter-text-string-icon_url-string-proxy_icon_url-string"><strong>Embed.footer :</strong> {text <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, icon_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, proxy_icon_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>}?</h3>
 <p>The embed's footer.</p>
 <details class="info" open="open">
 <summary>Info</summary>
@@ -741,7 +1161,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedimage-url-string-height-number-width-number-proxy_url-string"><strong>Embed.image :</strong> {url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, height <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a>, width <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a>, proxy_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>}?</h2>
+<h3 id="embedimage-url-string-height-number-width-number-proxy_url-string"><strong>Embed.image :</strong> {url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, height <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a>, width <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a>, proxy_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>}?</h3>
 <p>The embed's image.</p>
 <details class="info" open="open">
 <summary>Info</summary>
@@ -750,7 +1170,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedthumbnail-url-string-height-number-width-number-proxy_url-string"><strong>Embed.thumbnail :</strong> {url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, height <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a>, width <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a>, proxy_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>}?</h2>
+<h3 id="embedthumbnail-url-string-height-number-width-number-proxy_url-string"><strong>Embed.thumbnail :</strong> {url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, height <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a>, width <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a>, proxy_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>}?</h3>
 <p>The embed's thumbnail.</p>
 <details class="info" open="open">
 <summary>Info</summary>
@@ -759,7 +1179,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedauthor-name-string-url-string-icon_url-string-proxy_icon_url-string"><strong>Embed.author :</strong> {name <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, icon_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, proxy_icon_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>}?</h2>
+<h3 id="embedauthor-name-string-url-string-icon_url-string-proxy_icon_url-string"><strong>Embed.author :</strong> {name <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, icon_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, proxy_icon_url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>}?</h3>
 <p>The embed's author.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
@@ -772,14 +1192,14 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedfields-number-name-string-value-string-inline-boolean"><strong>Embed.fields :</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> {name <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, value <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, inLine <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean?</em></a>}}?</h2>
+<h3 id="embedfields-number-name-string-value-string-inline-boolean"><strong>Embed.fields :</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> {name <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, value <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, inLine <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean?</em></a>}}?</h3>
 <p>A table of field objects that are attached to the embed.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h1 id="methods"><p align = "center"><strong><em>Methods</em></strong></p></h1>
+<h2 id="methods">Methods</h2>
 <p><br /></p>
-<h2 id="embednewtitle-string-description-string-url-string-embed"><strong>Embed.new</strong>(title <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, description <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="./"><em>Embed</em></a></h2>
+<h3 id="embednewtitle-string-description-string-url-string-embed"><strong>Embed.new</strong>(title <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, description <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="./"><em>Embed</em></a></h3>
 <p>This method returns a new Embed object.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -790,7 +1210,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedsettitletitle-string-nil"><strong>Embed:setTitle</strong>(title <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h2>
+<h3 id="embedsettitletitle-string-nil"><strong>Embed:setTitle</strong>(title <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
 <p>This method overrides the embed's title with a new one.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -799,7 +1219,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedsetdescriptiondescription-string-nil"><strong>Embed:setDescription</strong>(description <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h2>
+<h3 id="embedsetdescriptiondescription-string-nil"><strong>Embed:setDescription</strong>(description <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
 <p>This method overrides the embed's description with a new one.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -808,7 +1228,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedseturlurl-string-nil"><strong>Embed:setUrl</strong>(url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h2>
+<h3 id="embedseturlurl-string-nil"><strong>Embed:setUrl</strong>(url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
 <p>This method overrides the embed's url with a new one.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -817,7 +1237,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedsettimestampcustomtimestamp-string-nil"><strong>Embed:setTimestamp</strong>(customTimestamp <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h2>
+<h3 id="embedsettimestampcustomtimestamp-string-nil"><strong>Embed:setTimestamp</strong>(customTimestamp <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
 <p>This method overrides the embed's timestamp with a new one.</p>
 <details class="note" open="open">
 <summary>Note</summary>
@@ -830,7 +1250,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedsetcolorcolor3-color3-nil"><strong>Embed:setColor</strong>(color3 <strong>:</strong> <a href="https://create.roblox.com/docs/reference/engine/datatypes/Color3"><em>Color3</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h2>
+<h3 id="embedsetcolorcolor3-color3-nil"><strong>Embed:setColor</strong>(color3 <strong>:</strong> <a href="https://create.roblox.com/docs/reference/engine/datatypes/Color3"><em>Color3</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
 <p>This method overrides the embed's color code with a new one.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -839,7 +1259,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedsetfootertext-string-iconurl-string-nil"><strong>Embed:setFooter</strong>(text <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, iconUrl <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h2>
+<h3 id="embedsetfootertext-string-iconurl-string-nil"><strong>Embed:setFooter</strong>(text <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, iconUrl <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
 <p>This method overrides the embed's footer with a new one.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
@@ -853,7 +1273,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedsetimageurl-string-nil"><strong>Embed:setImage</strong>(url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h2>
+<h3 id="embedsetimageurl-string-nil"><strong>Embed:setImage</strong>(url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
 <p>This method overrides the embed's image with a new one.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
@@ -866,7 +1286,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedsetthumbnailurl-string-nil"><strong>Embed:setThumbnail</strong>(url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h2>
+<h3 id="embedsetthumbnailurl-string-nil"><strong>Embed:setThumbnail</strong>(url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
 <p>This method overrides the embed's thumbnail with a new one.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
@@ -879,7 +1299,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedsetauthorname-string-url-string-iconurl-string-nil"><strong>Embed:setAuthor</strong>(name <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, iconUrl <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h2>
+<h3 id="embedsetauthorname-string-url-string-iconurl-string-nil"><strong>Embed:setAuthor</strong>(name <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, iconUrl <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
 <p>This method overrides the embed's author with a new one.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
@@ -894,7 +1314,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedaddfieldname-string-value-string-inline-boolean-nil"><strong>Embed:addField</strong>(name: <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, value: <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, inLine: <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean?</em></a>): <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h2>
+<h3 id="embedaddfieldname-string-value-string-inline-boolean-nil"><strong>Embed:addField</strong>(name: <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, value: <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, inLine: <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean?</em></a>): <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
 <p>This method adds a new field to the embed.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -905,17 +1325,17 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedtotalcharacters-number"><strong>Embed:totalCharacters</strong>(): <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a></h2>
+<h3 id="embedtotalcharacters-number"><strong>Embed:totalCharacters</strong>(): <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a></h3>
 <p>This method returns the total amount of characters in the embed.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embedcolortorgb-r-number-g-number-b-number"><strong>Embed:colorToRGB</strong>(): {r: <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>, g: <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>, b: <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>}?</h2>
+<h3 id="embedcolortorgb-r-number-g-number-b-number"><strong>Embed:colorToRGB</strong>(): {r: <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>, g: <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>, b: <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>}?</h3>
 <p>This method returns the embed's color in rgb format.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="embed_validate-boolean-string"><strong>Embed:_validate</strong>() <strong>:</strong> (<a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>)</h2>
+<h3 id="embed_validate-boolean-string"><strong>Embed:_validate</strong>() <strong>:</strong> (<a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>)</h3>
 <p>This method validates the embed to avoid making a pointless request to discord.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>

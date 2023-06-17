@@ -331,9 +331,115 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Author
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Author
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorid-string" class="md-nav__link">
+    Author.id : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorusername-string" class="md-nav__link">
+    Author.username :  string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authoravatar-string" class="md-nav__link">
+    Author.avatar :  string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authordiscriminator-string" class="md-nav__link">
+    Author.discriminator :  string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorbot-boolean" class="md-nav__link">
+    Author.bot :  boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authornewdata-dictionary-author" class="md-nav__link">
+    Author.new(data : dictionary) : Author
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorgetavatarurlsize-number-imageformat-string-string" class="md-nav__link">
+    Author:getAvatarUrl(size : number?, imageFormat : string?) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorhasanimatedavatar-boolean" class="md-nav__link">
+    Author:hasAnimatedAvatar() : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -687,6 +793,96 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+    <nav class="md-nav" aria-label="Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorid-string" class="md-nav__link">
+    Author.id : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorusername-string" class="md-nav__link">
+    Author.username :  string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authoravatar-string" class="md-nav__link">
+    Author.avatar :  string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authordiscriminator-string" class="md-nav__link">
+    Author.discriminator :  string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorbot-boolean" class="md-nav__link">
+    Author.bot :  boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authornewdata-dictionary-author" class="md-nav__link">
+    Author.new(data : dictionary) : Author
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorgetavatarurlsize-number-imageformat-string-string" class="md-nav__link">
+    Author:getAvatarUrl(size : number?, imageFormat : string?) : string
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authorhasanimatedavatar-boolean" class="md-nav__link">
+    Author:hasAnimatedAvatar() : boolean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -704,24 +900,25 @@
 
 
 <h1 id="author">Author</h1>
-<h1 id="properties"><p align = "center"><strong><em>Properties</em></strong></p></h1>
 <p><br /></p>
-<h2 id="authorid-string"><strong>Author.id :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h2>
+<h2 id="properties">Properties</h2>
+<p><br /></p>
+<h3 id="authorid-string"><strong>Author.id :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
 <p>The author's discord id.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="authorusername-string"><strong>Author.username :</strong>  <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h2>
+<h3 id="authorusername-string"><strong>Author.username :</strong>  <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
 <p>The author's discord username.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="authoravatar-string"><strong>Author.avatar :</strong>  <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h2>
+<h3 id="authoravatar-string"><strong>Author.avatar :</strong>  <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
 <p>The author's discord avatar hash.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="authordiscriminator-string"><strong>Author.discriminator :</strong>  <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h2>
+<h3 id="authordiscriminator-string"><strong>Author.discriminator :</strong>  <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
 <p>The author's discord discriminator.</p>
 <details class="warning" open="open">
 <summary>Deprecation Notice</summary>
@@ -730,14 +927,14 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="authorbot-boolean"><strong>Author.bot :</strong>  <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a></h2>
+<h3 id="authorbot-boolean"><strong>Author.bot :</strong>  <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a></h3>
 <p>Whether the author is a bot.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h1 id="methods"><p align = "center"><strong><em>Methods</em></strong></p></h1>
+<h2 id="methods">Methods</h2>
 <p><br /></p>
-<h2 id="authornewdata-dictionary-author"><strong>Author.new</strong>(data <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/tables#dictionaries"><em>dictionary</em></a>) <strong>:</strong> <a href="./"><em>Author</em></a></h2>
+<h3 id="authornewdata-dictionary-author"><strong>Author.new</strong>(data <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/tables#dictionaries"><em>dictionary</em></a>) <strong>:</strong> <a href="./"><em>Author</em></a></h3>
 <p>This method returns a new Author object.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
@@ -750,7 +947,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="authorgetavatarurlsize-number-imageformat-string-string"><strong>Author:getAvatarUrl</strong>(size <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a>, imageFormat <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h2>
+<h3 id="authorgetavatarurlsize-number-imageformat-string-string"><strong>Author:getAvatarUrl</strong>(size <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a>, imageFormat <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
 <p>This method will return the author's avatar url.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
@@ -772,7 +969,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h2 id="authorhasanimatedavatar-boolean"><strong>Author:hasAnimatedAvatar</strong>() <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a></h2>
+<h3 id="authorhasanimatedavatar-boolean"><strong>Author:hasAnimatedAvatar</strong>() <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a></h3>
 <p>This method checks whether the author has an animated avatar.</p>
 <p><br /></p>
 <hr />

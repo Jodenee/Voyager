@@ -29,7 +29,7 @@
 
     /* Code block color vars */
     --md-code-hl-string-color: #007a37; /* Code string color */
-    --md-code-hl-color: #b4b4b4; /* Code highlight color */
+    --md-code-hl-color: #dddddd; /* Code highlight color */
 
     /* Search form color overrides */
     .md-search__form {
