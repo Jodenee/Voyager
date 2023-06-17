@@ -28,7 +28,6 @@ function Message.new(data)
 
 	if data.embeds then
 		for _, embedData in data.embeds do
-			print(embedData)
 			local embed = Embed.new(embedData.title, embedData.description, embedData.url)
 			
 			if embedData.color then
