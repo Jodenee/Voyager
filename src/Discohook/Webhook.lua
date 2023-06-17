@@ -140,7 +140,10 @@ function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitF
 	local executeInfo = optionalExecuteInfo or OptionalExecuteInfo.new()
 	local isRequestValid, errorMessage = self:_validateExecuteRequest(content, embeds, executeInfo)	
 	if not isRequestValid then return error(errorMessage) end
-
+	
+	if queue == nil then queue = true end
+	if waitForMessage == nil then waitForMessage = false end
+	
 	local requestUrl
 	local requestBody = {
 		content = content,
