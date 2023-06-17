@@ -25,9 +25,10 @@ function Message.new(data)
 	self.timestamp = data.timestamp
 	self.flags = MessageFlags.fromBitfield(data.flags)
 	self.webhookId = data.webhook_id
-	
+
 	if data.embeds then
 		for _, embedData in data.embeds do
+			print(embedData)
 			local embed = Embed.new(embedData.title, embedData.description, embedData.url)
 			
 			if embedData.color then
@@ -53,11 +54,11 @@ function Message.new(data)
 				
 				embed.image.height = embedData.image.height
 				embed.image.width = embedData.image.width
-				embed.image.proxy_url = embedData.image.proxy_icon_url
+				embed.image.proxy_url = embedData.image.proxy_url
 			end
 			
 			if embedData.thumbnail then
-				embed:setThumbnail(embedData.thumbnail.url, embedData.thumbnail.height, embedData.thumbnail.width, embedData.footer.proxy_url)
+				embed:setThumbnail(embedData.thumbnail.url)
 				
 				embed.thumbnail.height = embedData.thumbnail.height
 				embed.thumbnail.width = embedData.thumbnail.width
@@ -65,8 +66,9 @@ function Message.new(data)
 			end
 			
 			if embedData.author then 
-				embed:setAuthor(embedData.author.name, embedData.author.url, embedData.author.icon_url, embedData.footer.proxy_icon_url)
-				embed.author.proxy_url = embedData.author.proxy_icon_url
+				embed:setAuthor(embedData.author.name, embedData.author.url, embedData.author.icon_url)
+				
+				embed.author.proxy_icon_url = embedData.author.proxy_icon_url
 			end
 			
 			
