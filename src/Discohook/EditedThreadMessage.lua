@@ -8,7 +8,7 @@ setmetatable(EditedThreadMessage, ThreadMessage)
 function EditedThreadMessage.new(data)
 	local self = setmetatable(ThreadMessage.new(data), EditedThreadMessage)
 	
-	self.editedTimestamp = data["edited_timestamp"]
+	self.editedTimestamp = data.edited_timestamp
 	
 	return self
 end

@@ -80,28 +80,28 @@ end
 
 function Embed:setFooter(text : string, iconUrl : string?) : nil
 	self.footer = {
-		["text"] = text,
-		["icon_url"] = iconUrl
+		text = text,
+		icon_url = iconUrl
 	}
 end
 
 function Embed:setImage(url : string) : nil
 	self.image = {
-		["url"] = url
+		url = url
 	}
 end
 
 function Embed:setThumbnail(url : string) : nil
 	self.thumbnail = {
-		["url"] = url
+		url = url
 	}
 end
 
 function Embed:setAuthor(name : string, url : string?, iconUrl : string?) : nil
 	self.author = {
-		["name"] = name,
-		["url"] = url,
-		["icon_url"] = iconUrl
+		name = name,
+		url = url,
+		icon_url = iconUrl
 	}
 end
 
@@ -109,9 +109,9 @@ function Embed:addField(name : string, value : string, inLine : boolean?) : nil
 	if not self.fields then self.fields = {} end
 
 	table.insert(self.fields, {
-		["name"] = name,
-		["value"] = value,
-		["inline"] = inLine
+		name = name,
+		value = value,
+		inline = inLine
 	})
 end
 
@@ -145,9 +145,9 @@ function Embed:colorToRGB() : {red : number, green : number, blue : number}?
 	local b = bit32.band((bit32.rshift(self.color, (8 * 0))), 0xFF)
 	
 	return {
-		["red"] = r,
-		["green"] = g,
-		["blue"] = b
+		red = r,
+		green = g,
+		blue = b
 	}
 end
 

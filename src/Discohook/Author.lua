@@ -4,11 +4,11 @@ Author.__index = Author
 function Author.new(data)
 	local self = setmetatable({}, Author)
 	
-	self.id = data["id"]
-	self.username = data["username"]
-	self.avatar = data["avatar"]
-	self.discriminator = data["discriminator"]
-	self.bot = data["bot"] or false
+	self.id = data.id
+	self.username = data.username
+	self.avatar = data.avatar
+	self.discriminator = data.discriminator
+	self.bot = data.bot or false
 	
 	return self
 end

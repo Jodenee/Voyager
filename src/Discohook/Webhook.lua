@@ -123,14 +123,14 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 	local requestStatus : requestStatus = {success = response.Success, statusCode = response.StatusCode, statusMessage = response.StatusMessage} 
 	
 	self.ratelimitInfo = {
-		XRatelimitLimit = tonumber(response["Headers"]["x-ratelimit-limit"]),
-		XRatelimitRemaining = tonumber(response["Headers"]["x-ratelimit-remaining"]),
-		XRatelimitReset = response["Headers"]["x-ratelimit-reset"],
-		XRatelimitResetAfter = tonumber(response["Headers"]["x-ratelimit-reset-after"]),
-		XRatelimitBucket = response["Headers"]["x-ratelimit-bucket"]
+		XRatelimitLimit = tonumber(response.Headers["x-ratelimit-limit"]),
+		XRatelimitRemaining = tonumber(response.Headers["x-ratelimit-remaining"]),
+		XRatelimitReset = response.Headers["x-ratelimit-reset"],
+		XRatelimitResetAfter = tonumber(response.Headers["x-ratelimit-reset-after"]),
+		XRatelimitBucket = response.Headers["x-ratelimit-bucket"]
 	}
 	
-	if not response.Success then return nil, requestStatus end
+	if not response.Success then return nil, requestStatus end	
 	if response.Body == "" then return nil, requestStatus end
 
 	return httpService:JSONDecode(response.Body), requestStatus
@@ -143,13 +143,13 @@ function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitF
 
 	local requestUrl
 	local requestBody = {
-		["content"] = content,
-		["username"] = executeInfo.usernameOverride,
-		["avatar_url"] = executeInfo.avatarOverride,
-		["tts"] = executeInfo.tts,
-		["embeds"] = {},
-		["flags"] = executeInfo.messageFlags.value,
-		["thread_name"] = executeInfo.threadName
+		content = content,
+		username = executeInfo.usernameOverride,
+		avatar_url = executeInfo.avatarOverride,
+		tts = executeInfo.tts,
+		embeds = {},
+		flags = executeInfo.messageFlags.value,
+		thread_name = executeInfo.threadName
 	}
 
 	if embeds then	
@@ -185,8 +185,8 @@ function Webhook:editMessage(messageId : string, content : string?, embeds : {}?
 	
 	local requestUrl
 	local requestBody = {
-		["content"] = content,
-		["embeds"] = {}
+		content = content,
+		embeds = {}
 	}
 
 	if embeds then	
