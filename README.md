@@ -33,7 +33,7 @@
 local Voyager = path_here.Voyager
 local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 
-webhook:execute("Hello, World!", nil, false, false)
+webhook:execute("Hello, World!")
 ```
 
 ---
