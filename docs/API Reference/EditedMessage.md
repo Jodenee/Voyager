@@ -2,11 +2,11 @@
 
 <br />
 
-# <p align = "center">***Properties***</p>
+## Properties
 
 <br />
 
-## **EditedMessage.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedMessage.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The message's id.
 
 <br />
@@ -15,7 +15,7 @@ The message's id.
 
 <br />
 
-## **EditedMessage.messageType :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
+### **EditedMessage.messageType :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
 The type of message the message is.
 
 <br />
@@ -24,7 +24,7 @@ The type of message the message is.
 
 <br />
 
-## **EditedMessage.content :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedMessage.content :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The message's content.
 
 <br />
@@ -33,7 +33,7 @@ The message's content.
 
 <br />
 
-## **EditedMessage.channelId :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedMessage.channelId :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The id of the channel the message was sent in.
 
 <br />
@@ -42,7 +42,7 @@ The id of the channel the message was sent in.
 
 <br />
 
-## **EditedMessage.author :** [*Author*](Author.md)
+### **EditedMessage.author :** [*Author*](Author.md)
 The the author of the message.
 
 <br />
@@ -51,7 +51,7 @@ The the author of the message.
 
 <br />
 
-## **EditedMessage.embeds :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}
+### **EditedMessage.embeds :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}
 A table of embeds that are attached to the message.
 
 <br />
@@ -60,7 +60,7 @@ A table of embeds that are attached to the message.
 
 <br />
 
-## **EditedMessage.reactions :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Reaction*](Reaction.md)}
+### **EditedMessage.reactions :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Reaction*](Reaction.md)}
 A table of reactions that were added to the message.
 
 <br />
@@ -69,7 +69,7 @@ A table of reactions that were added to the message.
 
 <br />
 
-## **EditedMessage.mentions :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*User*](User.md)}
+### **EditedMessage.mentions :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*User*](User.md)}
 A table of users mentioned in the message.
 
 <br />
@@ -78,7 +78,7 @@ A table of users mentioned in the message.
 
 <br />
 
-## **EditedMessage.mentionRoles :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)}
+### **EditedMessage.mentionRoles :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)}
 A table of role ids mentioned in the message.
 
 <br />
@@ -87,7 +87,7 @@ A table of role ids mentioned in the message.
 
 <br />
 
-## **EditedMessage.pinned :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **EditedMessage.pinned :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 Whether the message is pinned.
 
 <br />
@@ -96,7 +96,7 @@ Whether the message is pinned.
 
 <br />
 
-## **EditedMessage.mentionEveryone :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **EditedMessage.mentionEveryone :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 Whether the message mentions @everyone.
 
 <br />
@@ -105,7 +105,7 @@ Whether the message mentions @everyone.
 
 <br />
 
-## **EditedMessage.tts :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **EditedMessage.tts :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 Whether the message was a TTS message.
 
 <br />
@@ -114,7 +114,7 @@ Whether the message was a TTS message.
 
 <br />
 
-## **EditedMessage.timestamp :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedMessage.timestamp :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 A timestamp of when the message was sent in [*ISO8601 format*](https://www.iso.org/iso-8601-date-and-time-format.html).
 
 <br />
@@ -123,7 +123,7 @@ A timestamp of when the message was sent in [*ISO8601 format*](https://www.iso.o
 
 <br />
 
-## **EditedMessage.flags :** [*MessageFlags*](MessageFlags.md)
+### **EditedMessage.flags :** [*MessageFlags*](MessageFlags.md)
 A [*MessageFlags*](MessageFlags.md) object representing the message's flags.
 
 <br />
@@ -132,7 +132,7 @@ A [*MessageFlags*](MessageFlags.md) object representing the message's flags.
 
 <br />
 
-## **EditedMessage.webhookId :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedMessage.webhookId :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The webhook that sent the message's id.
 
 <br />
@@ -141,7 +141,7 @@ The webhook that sent the message's id.
 
 <br />
 
-## **EditedMessage.editedTimestamp :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedMessage.editedTimestamp :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 A timestamp of when the message was edited in [*ISO8601 format*](https://www.iso.org/iso-8601-date-and-time-format.html).
 
 <br />
@@ -150,11 +150,11 @@ A timestamp of when the message was edited in [*ISO8601 format*](https://www.iso
 
 <br />
 
-# <p align = "center">***Methods***</p>
+## Methods
 
 <br />
 
-## **EditedMessage.new**(data **:** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)) **:** [*EditedMessage*](EditedMessage.md)
+### **EditedMessage.new**(data **:** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)) **:** [*EditedMessage*](EditedMessage.md)
 This method returns a new EditedMessage object.
 
 ???+ warning

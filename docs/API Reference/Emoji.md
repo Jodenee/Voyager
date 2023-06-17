@@ -2,11 +2,11 @@
 
 <br />
 
-# <p align = "center">***Properties***</p>
+## Properties
 
 <br />
 
-## **Emoji.id :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Emoji.id :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 
 The emoji's id.
 
@@ -19,7 +19,7 @@ The emoji's id.
 
 <br />
 
-## **Emoji.name :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Emoji.name :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 
 The emoji's name or unicode character.
 
@@ -32,7 +32,7 @@ The emoji's name or unicode character.
 
 <br />
 
-## **Emoji.animated :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **Emoji.animated :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 Whether the emoji is animated.
 
 <br />
@@ -41,11 +41,11 @@ Whether the emoji is animated.
 
 <br />
 
-# <p align = "center">***Methods***</p>
+## Methods
 
 <br />
 
-## **Emoji.new**(data **:** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)) **:** [Emoji](Emoji.md)
+### **Emoji.new**(data **:** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)) **:** [Emoji](Emoji.md)
 This function returns a new Emoji object.
 
 ???+ warning

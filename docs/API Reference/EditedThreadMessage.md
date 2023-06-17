@@ -2,11 +2,11 @@
 
 <br />
 
-# <p align = "center">***Properties***</p>
+## Properties
 
 <br />
 
-## **EditedThreadMessage.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedThreadMessage.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The message's id.
 
 <br />
@@ -15,7 +15,7 @@ The message's id.
 
 <br />
 
-## **EditedThreadMessage.messageType :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
+### **EditedThreadMessage.messageType :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
 The type of message the message is.
 
 <br />
@@ -24,7 +24,7 @@ The type of message the message is.
 
 <br />
 
-## **EditedThreadMessage.content :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedThreadMessage.content :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The message's content.
 
 <br />
@@ -33,7 +33,7 @@ The message's content.
 
 <br />
 
-## **EditedThreadMessage.channelId :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedThreadMessage.channelId :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The id of the channel the message was sent in.
 
 <br />
@@ -42,7 +42,7 @@ The id of the channel the message was sent in.
 
 <br />
 
-## **EditedThreadMessage.author :** [*Author*](Author.md)
+### **EditedThreadMessage.author :** [*Author*](Author.md)
 The the author of the message.
 
 <br />
@@ -51,7 +51,7 @@ The the author of the message.
 
 <br />
 
-## **EditedThreadMessage.embeds :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}
+### **EditedThreadMessage.embeds :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}
 A table of embeds that are attached to the message.
 
 <br />
@@ -60,7 +60,7 @@ A table of embeds that are attached to the message.
 
 <br />
 
-## **EditedThreadMessage.reactions :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Reaction*](Reaction.md)}
+### **EditedThreadMessage.reactions :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Reaction*](Reaction.md)}
 A table of reactions to the message.
 
 <br />
@@ -69,7 +69,7 @@ A table of reactions to the message.
 
 <br />
 
-## **EditedThreadMessage.mentions :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*User*](User.md)}
+### **EditedThreadMessage.mentions :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*User*](User.md)}
 A table of users mentioned in the message.
 
 <br />
@@ -78,7 +78,7 @@ A table of users mentioned in the message.
 
 <br />
 
-## **EditedThreadMessage.mentionRoles :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)}
+### **EditedThreadMessage.mentionRoles :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)}
 A table of role ids mentioned in the message.
 
 <br />
@@ -87,7 +87,7 @@ A table of role ids mentioned in the message.
 
 <br />
 
-## **EditedThreadMessage.pinned :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **EditedThreadMessage.pinned :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 Whether the message is pinned.
 
 <br />
@@ -96,7 +96,7 @@ Whether the message is pinned.
 
 <br />
 
-## **EditedThreadMessage.mentionEveryone :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **EditedThreadMessage.mentionEveryone :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 Whether the message mentions @everyone.
 
 <br />
@@ -105,7 +105,7 @@ Whether the message mentions @everyone.
 
 <br />
 
-## **EditedThreadMessage.tts :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **EditedThreadMessage.tts :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 Whether the message was a TTS message.
 
 <br />
@@ -114,7 +114,7 @@ Whether the message was a TTS message.
 
 <br />
 
-## **EditedThreadMessage.timestamp :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedThreadMessage.timestamp :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 A timestamp of when the message was sent in [*ISO8601 format*](https://www.iso.org/iso-8601-date-and-time-format.html).
 
 <br />
@@ -123,7 +123,7 @@ A timestamp of when the message was sent in [*ISO8601 format*](https://www.iso.o
 
 <br />
 
-## **EditedThreadMessage.flags :** [*MessageFlags*](MessageFlags.md)
+### **EditedThreadMessage.flags :** [*MessageFlags*](MessageFlags.md)
 A [*MessageFlags*](MessageFlags.md) object representing the message's flags.
 
 <br />
@@ -132,7 +132,7 @@ A [*MessageFlags*](MessageFlags.md) object representing the message's flags.
 
 <br />
 
-## **EditedThreadMessage.webhookId :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedThreadMessage.webhookId :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The webhook that sent the message's id.
 
 <br />
@@ -141,7 +141,7 @@ The webhook that sent the message's id.
 
 <br />
 
-## **EditedThreadMessage.position**: [number](https://create.roblox.com/docs/scripting/luau/numbers)
+### **EditedThreadMessage.position**: [number](https://create.roblox.com/docs/scripting/luau/numbers)
 A number that represents the approximate position of the message in a thread.
 
 <br />
@@ -150,7 +150,7 @@ A number that represents the approximate position of the message in a thread.
 
 <br />
 
-## **EditedThreadMessage.editedTimestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings)
+### **EditedThreadMessage.editedTimestamp**: [string](https://create.roblox.com/docs/scripting/luau/strings)
 When the message was edited in [*ISO8601 format*](https://www.iso.org/iso-8601-date-and-time-format.html).
 
 <br />
@@ -159,11 +159,11 @@ When the message was edited in [*ISO8601 format*](https://www.iso.org/iso-8601-d
 
 <br />
 
-# <p align = "center">***Methods***</p>
+## Methods
 
 <br />
 
-## **EditedThreadMessage.new**(data **:** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)) **:** [*EditedThreadMessage*](EditedThreadMessage.md)
+### **EditedThreadMessage.new**(data **:** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)) **:** [*EditedThreadMessage*](EditedThreadMessage.md)
 This method returns a new EditedThreadMessage object.
 
 ???+ warning

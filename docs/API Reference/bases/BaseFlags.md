@@ -2,11 +2,11 @@
 
 <br />
 
-# <p align = "center">***Properties***</p>
+## Properties
 
 <br />
 
-## **BaseFlags.value :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
+### **BaseFlags.value :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
 Flags combined as a bitfield.
 
 <br />
@@ -15,11 +15,11 @@ Flags combined as a bitfield.
 
 <br />
 
-# <p align = "center">***Methods***</p>
+## Methods
 
 <br />
 
-## **BaseFlags.fromBitfield**(value **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*BaseFlags*](BaseFlags.md)
+### **BaseFlags.fromBitfield**(value **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*BaseFlags*](BaseFlags.md)
 This method returns a new BaseFlags object.
 
 ???+ warning
@@ -35,7 +35,7 @@ This method returns a new BaseFlags object.
 
 <br />
 
-## **BaseFlags:hasFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **BaseFlags:hasFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 This method will check whether the bitfield contains the passed flag.
 
 ***Parameters***
@@ -48,7 +48,7 @@ This method will check whether the bitfield contains the passed flag.
 
 <br />
 
-## **BaseFlags:setFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers), toggle **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **BaseFlags:setFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers), toggle **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method will toggle a flag in the bitfield either to true or false.
 
 ***Parameters***

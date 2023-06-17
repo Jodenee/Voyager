@@ -2,11 +2,11 @@
 
 <br />
 
-# <p align = "center">***Properties***</p>
+## Properties
 
 <br />
 
-## **User.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **User.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The user's discord id.
 
 <br />
@@ -15,7 +15,7 @@ The user's discord id.
 
 <br />
 
-## **User.username :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **User.username :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The user's discord username.
 
 <br />
@@ -24,7 +24,7 @@ The user's discord username.
 
 <br />
 
-## **User.avatar :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **User.avatar :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The user's discord avatar hash.
 
 <br />
@@ -33,7 +33,7 @@ The user's discord avatar hash.
 
 <br />
 
-## **User.discriminator :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **User.discriminator :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The user's discord discriminator.
 
 ???+ warning "Deprecation Notice"
@@ -45,7 +45,7 @@ The user's discord discriminator.
 
 <br />
 
-## **User.bot :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **User.bot :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 Whether the user is a bot.
 
 <br />
@@ -54,7 +54,7 @@ Whether the user is a bot.
 
 <br />
 
-## **User.globalName :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+### **User.globalName :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 the user's display name on Discord.
 
 <br />
@@ -63,7 +63,7 @@ the user's display name on Discord.
 
 <br />
 
-## **User.publicFlags :** [*PublicUserFlags*](PublicUserFlags.md)
+### **User.publicFlags :** [*PublicUserFlags*](PublicUserFlags.md)
 The user's flags.
 
 <br />
@@ -72,11 +72,11 @@ The user's flags.
 
 <br />
 
-# <p align = "center">***Methods***</p>
+## Methods
 
 <br />
 
-## **User.new**(data **:** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)) **:** [*User*](User.md)
+### **User.new**(data **:** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)) **:** [*User*](User.md)
 This method returns a new User object.
 
 ???+ warning
@@ -92,7 +92,7 @@ This method returns a new User object.
 
 <br />
 
-## **User:getAvatarUrl**(size **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), imageFormat **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+### **User:getAvatarUrl**(size **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), imageFormat **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 This method will return the user's avatar url.
 
 ???+ warning
@@ -115,7 +115,7 @@ This method will return the user's avatar url.
 
 <br />
 
-## **User:hasAnimatedAvatar**(): [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **User:hasAnimatedAvatar**(): [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 This method checks whether the user has an animated avatar.
 
 <br />

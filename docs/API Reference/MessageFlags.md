@@ -2,11 +2,11 @@
 
 <br />
 
-# <p align = "center">***Properties***</p>
+## Properties
 
 <br />
 
-## **MessageFlags.value :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
+### **MessageFlags.value :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
 Flags combined as a bitfield.
 
 <br />
@@ -15,11 +15,11 @@ Flags combined as a bitfield.
 
 <br />
 
-# <p align = "center">***Methods***</p>
+## Methods
 
 <br />
 
-## **MessageFlags.fromBitfield**(value **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*MessageFlags*](MessageFlags.md)
+### **MessageFlags.fromBitfield**(value **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*MessageFlags*](MessageFlags.md)
 This method returns a new MessageFlags object.
 
 Parameters:
@@ -32,7 +32,7 @@ Parameters:
 
 <br />
 
-## **MessageFlags.fromFlags**(flags **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)}) **:** [*MessageFlags*](MessageFlags.md)
+### **MessageFlags.fromFlags**(flags **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)}) **:** [*MessageFlags*](MessageFlags.md)
 This method returns a new MessageFlags object from a table of flags.
 
 ??? tip
@@ -48,7 +48,7 @@ This method returns a new MessageFlags object from a table of flags.
 
 <br />
 
-## **MessageFlags:hasFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **MessageFlags:hasFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 This method will check whether the bitfield contains a specific flag.
 
 ??? tip
@@ -64,7 +64,7 @@ This method will check whether the bitfield contains a specific flag.
 
 <br />
 
-## **MessageFlags:setFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers), toggle **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)): [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **MessageFlags:setFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers), toggle **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)): [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method will toggle a flag in the bitfield either to true or false.
 
 ??? tip

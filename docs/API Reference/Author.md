@@ -1,9 +1,12 @@
 # Author
-# <p align = "center">***Properties***</p>
 
 <br />
 
-## **Author.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+## Properties
+
+<br />
+
+### **Author.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The author's discord id.
 
 <br />
@@ -12,7 +15,7 @@ The author's discord id.
 
 <br />
 
-## **Author.username :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Author.username :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The author's discord username.
 
 <br />
@@ -21,7 +24,7 @@ The author's discord username.
 
 <br />
 
-## **Author.avatar :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Author.avatar :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The author's discord avatar hash.
 
 <br />
@@ -30,7 +33,7 @@ The author's discord avatar hash.
 
 <br />
 
-## **Author.discriminator :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Author.discriminator :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The author's discord discriminator.
 
 ???+ warning "Deprecation Notice"
@@ -42,7 +45,7 @@ The author's discord discriminator.
 
 <br />
 
-## **Author.bot :**  [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **Author.bot :**  [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 Whether the author is a bot.
 
 <br />
@@ -51,11 +54,11 @@ Whether the author is a bot.
 
 <br />
 
-# <p align = "center">***Methods***</p>
+## Methods
 
 <br />
 
-## **Author.new**(data **:** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)) **:** [*Author*](Author.md)
+### **Author.new**(data **:** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)) **:** [*Author*](Author.md)
 This method returns a new Author object.
 
 ???+ warning
@@ -71,7 +74,7 @@ This method returns a new Author object.
 
 <br />
 
-## **Author:getAvatarUrl**(size **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), imageFormat **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Author:getAvatarUrl**(size **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), imageFormat **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 This method will return the author's avatar url.
 
 ???+ warning
@@ -94,7 +97,7 @@ This method will return the author's avatar url.
 
 <br />
 
-## **Author:hasAnimatedAvatar**() **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **Author:hasAnimatedAvatar**() **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 This method checks whether the author has an animated avatar.
 
 <br />

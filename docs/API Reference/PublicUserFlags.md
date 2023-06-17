@@ -2,11 +2,11 @@
 
 <br />
 
-# <p align = "center">***Properties***</p>
+## Properties
 
 <br />
 
-## **PublicUserFlags.value :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
+### **PublicUserFlags.value :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
 Flags combined as a bitfield.
 
 <br />
@@ -15,11 +15,11 @@ Flags combined as a bitfield.
 
 <br />
 
-# <p align = "center">***Methods***</p>
+## Methods
 
 <br />
 
-## **PublicUserFlags.fromBitfield**(value **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*PublicUserFlags*](PublicUserFlags.md)
+### **PublicUserFlags.fromBitfield**(value **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*PublicUserFlags*](PublicUserFlags.md)
 This method returns a new [*PublicUserFlags*](PublicUserFlags.md) object.
 
 ???+ warning
@@ -35,7 +35,7 @@ This method returns a new [*PublicUserFlags*](PublicUserFlags.md) object.
 
 <br />
 
-## **PublicUserFlags:hasFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+### **PublicUserFlags:hasFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 This method will check whether the bitfield contains a specific flag.
 
 ??? tip
@@ -51,7 +51,7 @@ This method will check whether the bitfield contains a specific flag.
 
 <br />
 
-## **PublicUserFlags:setFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers), toggle **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **PublicUserFlags:setFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers), toggle **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method will toggle a flag in the bitfield either to true or false.
 
 ??? tip
@@ -68,7 +68,7 @@ This method will toggle a flag in the bitfield either to true or false.
 
 <br />
 
-## **PublicUserFlags:getFlags**() **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)}
+### **PublicUserFlags:getFlags**() **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)}
 This method will return a table of flags that are in the bitfield.
 
 <br />

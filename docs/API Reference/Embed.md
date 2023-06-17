@@ -2,11 +2,11 @@
 
 <br />
 
-# <p align = "center">***Properties***</p>
+## Properties
 
 <br />
 
-## **Embed.title :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Embed.title :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 The title attached to the embed.
 
 <br />
@@ -15,7 +15,7 @@ The title attached to the embed.
 
 <br />
 
-## **Embed.description :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Embed.description :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 The description attached to the embed.
 
 <br />
@@ -24,7 +24,7 @@ The description attached to the embed.
 
 <br />
 
-## **Embed.url :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Embed.url :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 The url attached to the embed's title.
 
 <br />
@@ -33,7 +33,7 @@ The url attached to the embed's title.
 
 <br />
 
-## **Embed.timestamp :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Embed.timestamp :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 An [*ISO8601 timestamp*](https://www.iso.org/iso-8601-date-and-time-format.html) attached to the embed's footer.
 
 <br />
@@ -42,7 +42,7 @@ An [*ISO8601 timestamp*](https://www.iso.org/iso-8601-date-and-time-format.html)
 
 <br />
 
-## **Embed.color :** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
+### **Embed.color :** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
 The embed's color code.
 
 <br />
@@ -51,7 +51,7 @@ The embed's color code.
 
 <br />
 
-## **Embed.footer :** {text **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), proxy_icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
+### **Embed.footer :** {text **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), proxy_icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
 The embed's footer.
 
 ???+ info
@@ -63,7 +63,7 @@ The embed's footer.
 
 <br />
 
-## **Embed.image :** {url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), height **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), width **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), proxy_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
+### **Embed.image :** {url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), height **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), width **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), proxy_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
 The embed's image.
 
 ???+ info
@@ -75,7 +75,7 @@ The embed's image.
 
 <br />
 
-## **Embed.thumbnail :** {url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), height **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), width **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), proxy_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
+### **Embed.thumbnail :** {url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), height **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), width **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), proxy_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
 The embed's thumbnail.
 
 ???+ info
@@ -87,7 +87,7 @@ The embed's thumbnail.
 
 <br />
 
-## **Embed.author :** {name **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), proxy_icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
+### **Embed.author :** {name **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), proxy_icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
 
 The embed's author.
 
@@ -103,7 +103,7 @@ The embed's author.
 
 <br />
 
-## **Embed.fields :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** {name **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), value **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), inLine **:** [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans)}}?
+### **Embed.fields :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** {name **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), value **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), inLine **:** [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans)}}?
 A table of field objects that are attached to the embed.
 
 <br />
@@ -112,11 +112,11 @@ A table of field objects that are attached to the embed.
 
 <br />
 
-# <p align = "center">***Methods***</p>
+## Methods
 
 <br />
 
-## **Embed.new**(title **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), description **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*Embed*](Embed.md)
+### **Embed.new**(title **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), description **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*Embed*](Embed.md)
 This method returns a new Embed object.
 
 ***Parameters***
@@ -131,7 +131,7 @@ This method returns a new Embed object.
 
 <br />
 
-## **Embed:setTitle**(title **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **Embed:setTitle**(title **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method overrides the embed's title with a new one.
 
 ***Parameters***
@@ -144,7 +144,7 @@ This method overrides the embed's title with a new one.
 
 <br />
 
-## **Embed:setDescription**(description **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **Embed:setDescription**(description **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method overrides the embed's description with a new one.
 
 ***Parameters***
@@ -157,7 +157,7 @@ This method overrides the embed's description with a new one.
 
 <br />
 
-## **Embed:setUrl**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **Embed:setUrl**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method overrides the embed's url with a new one.
 
 ***Parameters***
@@ -170,7 +170,7 @@ This method overrides the embed's url with a new one.
 
 <br />
 
-## **Embed:setTimestamp**(customTimestamp **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **Embed:setTimestamp**(customTimestamp **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method overrides the embed's timestamp with a new one.
 
 ???+ note
@@ -186,7 +186,7 @@ This method overrides the embed's timestamp with a new one.
 
 <br />
 
-## **Embed:setColor**(color3 **:** [*Color3*](https://create.roblox.com/docs/reference/engine/datatypes/Color3)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **Embed:setColor**(color3 **:** [*Color3*](https://create.roblox.com/docs/reference/engine/datatypes/Color3)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method overrides the embed's color code with a new one.
 
 ***Parameters***
@@ -199,7 +199,7 @@ This method overrides the embed's color code with a new one.
 
 <br />
 
-## **Embed:setFooter**(text **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), iconUrl **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **Embed:setFooter**(text **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), iconUrl **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method overrides the embed's footer with a new one.
 
 ???+ warning
@@ -216,7 +216,7 @@ This method overrides the embed's footer with a new one.
 
 <br />
 
-## **Embed:setImage**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **Embed:setImage**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method overrides the embed's image with a new one.
 
 ???+ warning
@@ -232,7 +232,7 @@ This method overrides the embed's image with a new one.
 
 <br />
 
-## **Embed:setThumbnail**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **Embed:setThumbnail**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method overrides the embed's thumbnail with a new one.
 
 ???+ warning
@@ -248,7 +248,7 @@ This method overrides the embed's thumbnail with a new one.
 
 <br />
 
-## **Embed:setAuthor**(name **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), iconUrl **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **Embed:setAuthor**(name **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), iconUrl **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method overrides the embed's author with a new one.
 
 ???+ warning
@@ -266,7 +266,7 @@ This method overrides the embed's author with a new one.
 
 <br />
 
-## **Embed:addField**(name: [*string*](https://create.roblox.com/docs/scripting/luau/strings), value: [*string*](https://create.roblox.com/docs/scripting/luau/strings), inLine: [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans)): [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
+### **Embed:addField**(name: [*string*](https://create.roblox.com/docs/scripting/luau/strings), value: [*string*](https://create.roblox.com/docs/scripting/luau/strings), inLine: [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans)): [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
 This method adds a new field to the embed.
 
 ***Parameters***
@@ -281,7 +281,7 @@ This method adds a new field to the embed.
 
 <br />
 
-## **Embed:totalCharacters**(): [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
+### **Embed:totalCharacters**(): [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
 This method returns the total amount of characters in the embed.
 
 <br />
@@ -290,7 +290,7 @@ This method returns the total amount of characters in the embed.
 
 <br />
 
-## **Embed:colorToRGB**(): {r: [*number*](https://create.roblox.com/docs/scripting/luau/numbers), g: [*number*](https://create.roblox.com/docs/scripting/luau/numbers), b: [*number*](https://create.roblox.com/docs/scripting/luau/numbers)}?
+### **Embed:colorToRGB**(): {r: [*number*](https://create.roblox.com/docs/scripting/luau/numbers), g: [*number*](https://create.roblox.com/docs/scripting/luau/numbers), b: [*number*](https://create.roblox.com/docs/scripting/luau/numbers)}?
 This method returns the embed's color in rgb format.
 
 <br />
@@ -299,7 +299,7 @@ This method returns the embed's color in rgb format.
 
 <br />
 
-## **Embed:_validate**() **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
+### **Embed:_validate**() **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
 This method validates the embed to avoid making a pointless request to discord.
 
 ???+ warning

@@ -2,11 +2,11 @@
 
 <br />
 
-# <p align = "center">***Enums***</p>
+## Enums
 
 <br />
 
-## **Enum.UserPublicFlags :** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)
+### **Enum.UserPublicFlags :** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)
 
 A dictionary of user flags. [*Offical docs reference*](https://discord.com/developers/docs/resources/user#user-object-user-flags)
 
@@ -16,7 +16,7 @@ A dictionary of user flags. [*Offical docs reference*](https://discord.com/devel
 
 <br />
 
-## **Enum.MessageFlags :** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)
+### **Enum.MessageFlags :** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)
 
 A dictionary of message flags. [*Offical docs reference*](https://discord.com/developers/docs/resources/channel#message-object-message-flags)
 
@@ -26,7 +26,7 @@ A dictionary of message flags. [*Offical docs reference*](https://discord.com/de
 
 <br />
 
-## **Enum.AvatarImageFormats :** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)
+### **Enum.AvatarImageFormats :** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)
 
 A dictionary of strings that represent image formats. [*Offical docs reference*](https://discord.com/developers/docs/reference#image-formatting-image-formats)
 

@@ -2,35 +2,21 @@
 
 <br />
 
-# <p align = "center">***Types***</p>
+## Types
 
 <br />
 
-## **RatelimitInfo**
+### **RatelimitInfo**
 
-### RatelimitInfo.XRatelimitLimit **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
+#### RatelimitInfo.XRatelimitLimit **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
 
-### RatelimitInfo.XRatelimitRemaining **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
+#### RatelimitInfo.XRatelimitRemaining **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
 
-### RatelimitInfo.XRatelimitReset **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+#### RatelimitInfo.XRatelimitReset **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 
-### RatelimitInfo.XRatelimitResetAfter **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
+#### RatelimitInfo.XRatelimitResetAfter **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
 
-### RatelimitInfo.XRatelimitBucket **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
-
-<br />
-
----
-
-<br />
-
-## **RequestStatus**
-
-### RequestStatus.success **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
-
-### RequestStatus.statusCode **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
-
-### RequestStatus.statusMessage **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+#### RatelimitInfo.XRatelimitBucket **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 
 <br />
 
@@ -38,11 +24,25 @@
 
 <br />
 
-# <p align = "center">***Properties***</p>
+### **RequestStatus**
+
+#### RequestStatus.success **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+
+#### RequestStatus.statusCode **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
+
+#### RequestStatus.statusMessage **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 
 <br />
 
-## **Webhook.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+---
+
+<br />
+
+## Properties
+
+<br />
+
+### **Webhook.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The webhook's id.
 
 <br />
@@ -51,7 +51,7 @@ The webhook's id.
 
 <br />
 
-## **Webhook.token :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Webhook.token :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The webhook's token.
 
 ???+ danger
@@ -63,7 +63,7 @@ The webhook's token.
 
 <br />
 
-## **Webhook.baseUrl :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Webhook.baseUrl :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The webhook's base url.
 
 <br />
@@ -72,7 +72,7 @@ The webhook's base url.
 
 <br />
 
-## **Webhook.ratelimitInfo :** [*RatelimitInfo*](#ratelimitinfo)
+### **Webhook.ratelimitInfo :** [*RatelimitInfo*](#ratelimitinfo)
 The latest ratelimit information given to the webhook by Discord. [*Offical docs reference*](https://discord.com/developers/docs/topics/rate-limits#header-format-rate-limit-header-examples)
 
 ???+ note
@@ -87,11 +87,11 @@ The latest ratelimit information given to the webhook by Discord. [*Offical docs
 
 <br />
 
-# <p align = "center">***Methods***</p>
+## Methods
 
 <br />
 
-## **Webhook.new**(id **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), token **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), customProxyUrl **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*Webhook*](Webhook.md)
+### **Webhook.new**(id **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), token **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), customProxyUrl **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*Webhook*](Webhook.md)
 This method returns a new Webhook object.
 
 ***Parameters***
@@ -106,7 +106,7 @@ This method returns a new Webhook object.
 
 <br />
 
-## **Webhook:execute**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, queue **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), waitForMessage **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), optionalExecuteInfo **:** [*OptionalExecuteInfo?*](OptionalExecuteInfo.md)) **:** ([*Message?*](Message.md) | [*ThreadMessage?*](ThreadMessage.md), [*RequestStatus*](#requeststatus))
+### **Webhook:execute**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, queue **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), waitForMessage **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), optionalExecuteInfo **:** [*OptionalExecuteInfo?*](OptionalExecuteInfo.md)) **:** ([*Message?*](Message.md) | [*ThreadMessage?*](ThreadMessage.md), [*RequestStatus*](#requeststatus))
 This method sends a message to Discord.
 
 ???+ note
@@ -132,7 +132,7 @@ This method sends a message to Discord.
 
 <br />
 
-## **Webhook:editMessage**(messageId **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, threadId **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** ([*EditedMessage*](EditedMessage.md) | [*EditedThreadMessage*](EditedThreadMessage.md), [*RequestStatus*](#requeststatus))
+### **Webhook:editMessage**(messageId **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, threadId **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** ([*EditedMessage*](EditedMessage.md) | [*EditedThreadMessage*](EditedThreadMessage.md), [*RequestStatus*](#requeststatus))
 This method edits a message sent by the webhook.
 
 ***Parameters***
@@ -148,7 +148,7 @@ This method edits a message sent by the webhook.
 
 <br />
 
-## **Webhook:deleteMessage**(messageId **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), threadId **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*RequestStatus*](#requeststatus)
+### **Webhook:deleteMessage**(messageId **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), threadId **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*RequestStatus*](#requeststatus)
 This method deletes a message sent by the webhook.
 
 ***Parameters***
@@ -162,7 +162,7 @@ This method deletes a message sent by the webhook.
 
 <br />
 
-## **Webhook:_validateExecuteRequest**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, optionalExecuteInfo **:** [*OptionalExecuteInfo?*](OptionalExecuteInfo.md)) **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
+### **Webhook:_validateExecuteRequest**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, optionalExecuteInfo **:** [*OptionalExecuteInfo?*](OptionalExecuteInfo.md)) **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
 This method validates data given to :execute before sending it to Discord. This is done to avoid making pointless requests to the proxy and Discord.
 
 ???+ warning
@@ -180,7 +180,7 @@ This method validates data given to :execute before sending it to Discord. This 
 
 <br />
 
-## **Webhook:_validateEditMessageRequest**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?) **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
+### **Webhook:_validateEditMessageRequest**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?) **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
 This method validates data given to :editMessage before sending it to Discord. This is done to avoid making pointless requests to the proxy and Discord.
 
 ???+ warning
@@ -197,7 +197,7 @@ This method validates data given to :editMessage before sending it to Discord. T
 
 <br />
 
-## **Webhook:_request**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), method **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), body **:** {}?, contentType **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** ({}?, [*RequestStatus*](#requeststatus))
+### **Webhook:_request**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), method **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), body **:** {}?, contentType **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** ({}?, [*RequestStatus*](#requeststatus))
 This method is used to make HTTP requests to the proxy.
 
 ???+ warning
