@@ -51,39 +51,51 @@ The embed's color code.
 
 <br />
 
-## **Embed.footer :** {text **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
+## **Embed.footer :** {text **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), proxy_icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
 The embed's footer.
 
+???+ info
+    proxy_icon_url is only returned if the embed object was returned by Discord.
+
 <br />
 
 ---
 
 <br />
 
-## **Embed.image :** {url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)}?
+## **Embed.image :** {url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), height **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), width **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), proxy_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
 The embed's image.
 
+???+ info
+    height, width and proxy_url are only returned if the embed object was returned by Discord.
+
 <br />
 
 ---
 
 <br />
 
-## **Embed.thumbnail :** {url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)}?
+## **Embed.thumbnail :** {url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), height **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), width **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), proxy_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
 The embed's thumbnail.
 
+???+ info
+    height, width and proxy_url are only returned if the embed object was returned by Discord.
+
 <br />
 
 ---
 
 <br />
 
-## **Embed.author :** {name **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
+## **Embed.author :** {name **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), proxy_icon_url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)}?
 
 The embed's author.
 
 ???+ warning
     This is **NOT** an [author](Author.md) object!
+
+???+ info
+    proxy_icon_url is only returned if the embed object was returned by Discord.
 
 <br />
 
