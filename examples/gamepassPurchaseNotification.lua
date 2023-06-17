@@ -16,7 +16,7 @@ marketplaceService.PromptGamePassPurchaseFinished:Connect(function(player : Play
 	embed:addField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")", true)
 	embed:setTimestamp()
 
-	local _, requestStatus = webhook:execute(nil, {embed}, true, false)
+	local _, requestStatus = webhook:execute(nil, {embed})
 	
 	if not requestStatus.success then
 		warn("Request was not successful! " .. requestStatus.statusCode .. " " .. requestStatus.statusMessage)
