@@ -43,7 +43,7 @@ An [*ISO8601 timestamp*](https://www.iso.org/iso-8601-date-and-time-format.html)
 <br />
 
 ### **Embed.color :** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
-The embed's color code.
+A number representing the embed's color.
 
 <br />
 
@@ -132,7 +132,10 @@ This method returns a new Embed object.
 <br />
 
 ### **Embed:setTitle**(title **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
-This method overrides the embed's title with a new one.
+This method sets the embed's title.
+
+???+ note
+    If the embed already has a title it'll be overridden.
 
 ***Parameters***
 
@@ -145,7 +148,10 @@ This method overrides the embed's title with a new one.
 <br />
 
 ### **Embed:setDescription**(description **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
-This method overrides the embed's description with a new one.
+This method sets the embed's description.
+
+???+ note
+    If the embed already has a description it'll be overridden.
 
 ***Parameters***
 
@@ -158,7 +164,10 @@ This method overrides the embed's description with a new one.
 <br />
 
 ### **Embed:setUrl**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
-This method overrides the embed's url with a new one.
+This method sets the embed's url.
+
+???+ note
+    If the embed already has a url it'll be overridden.
 
 ***Parameters***
 
@@ -171,10 +180,13 @@ This method overrides the embed's url with a new one.
 <br />
 
 ### **Embed:setTimestamp**(customTimestamp **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
-This method overrides the embed's timestamp with a new one.
+This method sets the embed's timestamp.
 
 ???+ note
     If customTimestamp is left nil then the current timestamp will be used instead.
+
+???+ note
+    If the embed already has a timestamp it'll be overridden.
 
 ***Parameters***
 
@@ -187,7 +199,10 @@ This method overrides the embed's timestamp with a new one.
 <br />
 
 ### **Embed:setColor**(color3 **:** [*Color3*](https://create.roblox.com/docs/reference/engine/datatypes/Color3)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
-This method overrides the embed's color code with a new one.
+This method sets the embed's color code.
+
+???+ note
+    If the embed already has a color it'll be overridden.
 
 ***Parameters***
 
@@ -200,7 +215,10 @@ This method overrides the embed's color code with a new one.
 <br />
 
 ### **Embed:setFooter**(text **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), iconUrl **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
-This method overrides the embed's footer with a new one.
+This method sets the embed's footer.
+
+???+ note
+    If the embed already has a footer it'll be overridden.
 
 ???+ warning
     Only HTTPs urls are supported for the iconUrl parameter.
@@ -217,7 +235,10 @@ This method overrides the embed's footer with a new one.
 <br />
 
 ### **Embed:setImage**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
-This method overrides the embed's image with a new one.
+This method sets the embed's image.
+
+???+ note
+    If the embed already has an image it'll be overridden.
 
 ???+ warning
     Only HTTPs urls are supported for the url parameter.
@@ -233,7 +254,10 @@ This method overrides the embed's image with a new one.
 <br />
 
 ### **Embed:setThumbnail**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
-This method overrides the embed's thumbnail with a new one.
+This method sets the embed's thumbnail.
+
+???+ note
+    If the embed already has a thumbnail it'll be overridden.
 
 ???+ warning
     Only HTTPs urls are supported for the url parameter.
@@ -249,7 +273,10 @@ This method overrides the embed's thumbnail with a new one.
 <br />
 
 ### **Embed:setAuthor**(name **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), url **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), iconUrl **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
-This method overrides the embed's author with a new one.
+This method sets the embed's author.
+
+???+ note
+    If the embed already has an author it'll be overridden.
 
 ???+ warning
     Only HTTPs urls are supported for the iconUrl parameter.
