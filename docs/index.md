@@ -12,13 +12,13 @@
 
 ---
 
-# **About**
+## **About**
 
 Voyager is a Roblox API wrapper for Discord webhooks. Voyager makes sending requests to Discord webhooks from Roblox much easier, as you not only write less code but the code you do write is much more readable too, this results in a much better developer experience. Voyager also has very good API coverage over Discord's webhook API, so no matter how niche your use case is, Voyager can most likely help you out!
 
 ---
 
-# **Key Features**
+## **Key Features**
 
 - Simple: Voyager is curated to be easily utilized by both beginner and advanced scripters.
 - Flexible: Voyager is curated to be modular as to fit as many use cases as possible.
@@ -26,17 +26,16 @@ Voyager is a Roblox API wrapper for Discord webhooks. Voyager makes sending requ
 
 ---
 
-# **Installation**
+## **Installation**
 
 1. Get the [*module script*](https://www.roblox.com/library/12390338563).
 2. Make sure HTTP requests in Game Settings > Security is enabled.
 3. Drag the module into your project and place it in ServerScriptService or ServerStorage.
-4. Now you can use Voyager!
 
 ---
 
-# **Tutorial**
+## **Tutorial**
 
-Learn how to use Voyager [*here*](Tutorial/index.md).
+Start learning how to use Voyager [*here*](Tutorial/index.md).
 
 ---
