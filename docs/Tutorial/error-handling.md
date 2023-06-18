@@ -13,9 +13,9 @@ local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 webhook:execute("Hello, World!")
 ```
 
-All of the webhook's functions excluding some private ones return a RequestStatus object. With this object you can easily handle any error that may occur.
+All of the webhook's functions excluding some private ones return a [*RequestStatus*](../API-Reference/Webhook.md) table. With this table you can easily handle any error that may occur.
 
-First we have to put the RequestStatus object into a variable
+First we have to put the [*RequestStatus*](../API-Reference/Webhook.md) table into a variable
 
 ```lua linenums="1" hl_lines="4"
 local Voyager = path_here.Voyager
@@ -58,7 +58,7 @@ print(message.id)
 
 But doing this very unsafe as the request isn't guaranteed to be sent successfuly 100% of the time. And since the request isn't guaranteed to be sent the message variable may be nil, causing the script to error.
 
-Now we can set up some logic to prevent that from happening. First we should put the requestStatus object into a variable.
+Now we can set up some logic to prevent that from happening. First we should put the [*RequestStatus*](../API-Reference/Webhook.md) table into a variable.
 
 ```lua linenums="1" hl_lines="4"
 local Voyager = path_here.Voyager
@@ -69,7 +69,7 @@ local message, requestStatus = webhook:execute("Hello, World!", nil, false, true
 print(message.id)
 ```
 
-Now that we have the requestStatus object we can set up the basic logic
+Now that we have the [*RequestStatus*](../API-Reference/Webhook.md) table we can set up the basic logic
 
 ```lua linenums="1" hl_lines="6-10"
 local Voyager = path_here.Voyager

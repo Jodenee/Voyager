@@ -51,9 +51,9 @@ The third argument is whether we want to queue the request. If left empty it wil
 
 The forth argument is whether we want to wait for a message object to be returned. If left empty it will default to false.
 
-The fifth argument is a [*OptionalExecuteInfo*](../API%20Reference/OptionalExecuteInfo.md) object. This object is used to enable lesser used features like tts, avatar url override, thread id etc. (optional)
+The fifth argument is a [*OptionalExecuteInfo*](../API-Reference/OptionalExecuteInfo.md) object. This object is used to enable lesser used features like tts, avatar url override, thread id etc. (optional)
 
-If you require a more indepth description about the Webhook object's execute function you can find it [*here*](../API%20Reference/Webhook.md) under the methods section.
+If you require a more indepth description about the Webhook object's execute function you can find it [*here*](../API-Reference/Webhook.md) under the methods section.
 
 The other objects mentioned in this tutorial will be given an proper explination later in the tutorial.
 
@@ -224,7 +224,7 @@ end)
 
 ## Real use case
 
-Here is a real world use case. If you dont understand what a spesific function does, feel free to look it up in the docs for clarification. [*Embed docs*](../API%20Reference/Embed.md)
+Here is a real world use case. If you dont understand what a spesific function does, feel free to look it up in the docs for clarification. [*Embed docs*](../API-Reference/Embed.md)
 
 ```lua linenums="1" title="examples/gamepassPurchaseNotification.lua"
 -- Put Voyager in server storage
