@@ -16,6 +16,11 @@
 
     /* nav title overrides */
     .md-nav__title {background-color: #00000000;} 
+
+    /* Voyager thumbnail overrides */
+    #voyager_thumbnail {
+        max-width: 75%;
+    }
 }
 
 [data-md-color-scheme="light"] {

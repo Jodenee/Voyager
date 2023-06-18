@@ -2,9 +2,9 @@
 
 ## Goal
 
-Make a script that sends a Discord message with embedded content that displays the player's feedback.
+Make a script that sends a message with embedded content that displays the player's feedback to Discord.
 
-### With Voyager
+## With Voyager
 
 ```lua linenums="1" title="examples/playerFeedback.lua"
 -- Put Voyager in server storage
@@ -32,7 +32,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 end)
 ```
 
-### Without Voyager
+## Without Voyager
 
 ```lua linenums="1"
 -- Make a remote event called "SendFeedback" in replicated storage

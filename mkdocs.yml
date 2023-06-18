@@ -40,6 +40,9 @@ theme:
         
   features:
     - content.code.copy
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
 
 extra_css:
   - assets/stylesheets/theme.css

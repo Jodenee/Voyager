@@ -64,7 +64,7 @@ And it's as simple as that! if you run the script, a message like the one below 
 <br>
 
 <div align="center">
-    <img width="75%" src="../../assets/images/tutorial/getting-started/Image1.png">
+    <img width="50%" src="../../assets/images/tutorial/getting-started/Image1.png">
 </div>
 
 <br>
@@ -219,7 +219,7 @@ end)
 ```
 
 <div align="center">
-    <img width="75%" src="../../assets/images/tutorial/sending-messages/Image1.png">
+    <img width="50%" src="../../assets/images/tutorial/sending-messages/Image1.png">
 </div>
 
 ## Real use case
@@ -254,5 +254,5 @@ end)
 ```
 
 <div align="center">
-    <img width="75%" src="../../assets/images/tutorial/sending-messages/Image2.png">
+    <img width="50%" src="../../assets/images/tutorial/sending-messages/Image2.png">
 </div>

@@ -8,15 +8,15 @@
 
 ### **RatelimitInfo**
 
-#### RatelimitInfo.XRatelimitLimit **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
+**RatelimitInfo.XRatelimitLimit :** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
 
-#### RatelimitInfo.XRatelimitRemaining **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
+**RatelimitInfo.XRatelimitRemaining :** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
 
-#### RatelimitInfo.XRatelimitReset **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+**RatelimitInfo.XRatelimitReset :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 
-#### RatelimitInfo.XRatelimitResetAfter **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
+**RatelimitInfo.XRatelimitResetAfter :** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
 
-#### RatelimitInfo.XRatelimitBucket **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+**RatelimitInfo.XRatelimitBucket :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 
 <br />
 
@@ -26,11 +26,11 @@
 
 ### **RequestStatus**
 
-#### RequestStatus.success **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+**RequestStatus.success :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 
-#### RequestStatus.statusCode **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
+**RequestStatus.statusCode :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
 
-#### RequestStatus.statusMessage **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+**RequestStatus.statusMessage :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 
 <br />
 

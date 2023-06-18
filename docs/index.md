@@ -1,7 +1,7 @@
 # Overview
 
 <p align="center" width="100%">
-    <img src="assets/images/Voyager_Banner.svg" alt="Voyager" height="128em"/>
+    <img id="voyager_thumbnail" src="assets/images/Voyager_Banner.svg" alt="Voyager" height="128em"/>
 </p>
 
 <p align="center">
