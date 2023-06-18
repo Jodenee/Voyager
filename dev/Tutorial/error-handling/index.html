@@ -254,7 +254,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../API%20Reference/Author/" class="md-tabs__link">
+      <a href="../../API-Reference/Author/" class="md-tabs__link">
         API Reference
       </a>
     </li>
@@ -389,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/Author/" class="md-nav__link">
+      <a href="../../API-Reference/Author/" class="md-nav__link">
         Author
       </a>
     </li>
@@ -403,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/EditedMessage/" class="md-nav__link">
+      <a href="../../API-Reference/EditedMessage/" class="md-nav__link">
         EditedMessage
       </a>
     </li>
@@ -417,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/EditedThreadMessage/" class="md-nav__link">
+      <a href="../../API-Reference/EditedThreadMessage/" class="md-nav__link">
         EditedThreadMessage
       </a>
     </li>
@@ -431,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/Embed/" class="md-nav__link">
+      <a href="../../API-Reference/Embed/" class="md-nav__link">
         Embed
       </a>
     </li>
@@ -445,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/Emoji/" class="md-nav__link">
+      <a href="../../API-Reference/Emoji/" class="md-nav__link">
         Emoji
       </a>
     </li>
@@ -459,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/Enum/" class="md-nav__link">
+      <a href="../../API-Reference/Enum/" class="md-nav__link">
         Enum
       </a>
     </li>
@@ -473,7 +473,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/Message/" class="md-nav__link">
+      <a href="../../API-Reference/Message/" class="md-nav__link">
         Message
       </a>
     </li>
@@ -487,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/MessageFlags/" class="md-nav__link">
+      <a href="../../API-Reference/MessageFlags/" class="md-nav__link">
         MessageFlags
       </a>
     </li>
@@ -501,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/OptionalExecuteInfo/" class="md-nav__link">
+      <a href="../../API-Reference/OptionalExecuteInfo/" class="md-nav__link">
         OptionalExecuteInfo
       </a>
     </li>
@@ -515,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/PublicUserFlags/" class="md-nav__link">
+      <a href="../../API-Reference/PublicUserFlags/" class="md-nav__link">
         PublicUserFlags
       </a>
     </li>
@@ -529,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/Reaction/" class="md-nav__link">
+      <a href="../../API-Reference/Reaction/" class="md-nav__link">
         Reaction
       </a>
     </li>
@@ -543,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/ThreadMessage/" class="md-nav__link">
+      <a href="../../API-Reference/ThreadMessage/" class="md-nav__link">
         ThreadMessage
       </a>
     </li>
@@ -557,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/User/" class="md-nav__link">
+      <a href="../../API-Reference/User/" class="md-nav__link">
         User
       </a>
     </li>
@@ -571,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/Webhook/" class="md-nav__link">
+      <a href="../../API-Reference/Webhook/" class="md-nav__link">
         Webhook
       </a>
     </li>
@@ -612,7 +612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../API%20Reference/bases/BaseFlags/" class="md-nav__link">
+      <a href="../../API-Reference/bases/BaseFlags/" class="md-nav__link">
         BaseFlags
       </a>
     </li>
@@ -811,8 +811,8 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">webhook</span><span class="p">:</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>All of the webhook's functions excluding some private ones return a RequestStatus object. With this object you can easily handle any error that may occur.</p>
-<p>First we have to put the RequestStatus object into a variable</p>
+<p>All of the webhook's functions excluding some private ones return a <a href="../../API-Reference/Webhook/"><em>RequestStatus</em></a> table. With this table you can easily handle any error that may occur.</p>
+<p>First we have to put the <a href="../../API-Reference/Webhook/"><em>RequestStatus</em></a> table into a variable</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -859,7 +859,7 @@
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <p>But doing this very unsafe as the request isn't guaranteed to be sent successfuly 100% of the time. And since the request isn't guaranteed to be sent the message variable may be nil, causing the script to error.</p>
-<p>Now we can set up some logic to prevent that from happening. First we should put the requestStatus object into a variable.</p>
+<p>Now we can set up some logic to prevent that from happening. First we should put the <a href="../../API-Reference/Webhook/"><em>RequestStatus</em></a> table into a variable.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
@@ -872,7 +872,7 @@
 </span><a id="__codelineno-4-5" name="__codelineno-4-5"></a>
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">id</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Now that we have the requestStatus object we can set up the basic logic</p>
+<p>Now that we have the <a href="../../API-Reference/Webhook/"><em>RequestStatus</em></a> table we can set up the basic logic</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
