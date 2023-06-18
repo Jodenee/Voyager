@@ -10,7 +10,7 @@
 
 ---
 
-# **Key Features**
+## **Key Features**
 
 - Simple: Voyager is curated to be easily utilized by both beginner and advanced scripters.
 - Flexible: Voyager is curated to be modular as to fit as many use cases as possible.
@@ -18,16 +18,15 @@
 
 ---
 
-# **Installation**
+## **Installation**
 
 1. Get the [*module script*](https://www.roblox.com/library/12390338563).
 2. Make sure http requests in Game Settings > Security is enabled.
 3. Drag the module into your project and place it in ServerScriptService or ServerStorage.
-4. Now you can use Voyager.
 
 ---
 
-# **Quick Example**
+## **Quick Example**
 
 ```lua
 local Voyager = path_here.Voyager
@@ -38,13 +37,13 @@ webhook:execute("Hello, World!")
 
 ---
 
-# **Credit**
+## **Credit**
 
 Huge thanks to [*@lewisakura*](https://www.roblox.com/users/25704749/profile) for creating and hosting the [*proxy*](https://github.com/lewisakura/webhook-proxy) used in this module. Without them this module wouldn't have been possible.
 
 ---
 
-# **Tutorial/Documentation**
+## **Tutorial/Documentation**
 
 Learn how to use Voyager [*here*](https://jodenee.github.io/Voyager/dev/).
 
