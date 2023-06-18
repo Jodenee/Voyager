@@ -20,7 +20,7 @@
 
 # **Installation**
 
-1. Get the [module script](https://www.roblox.com/library/12390338563).
+1. Get the [*module script*](https://www.roblox.com/library/12390338563).
 2. Make sure http requests in Game Settings > Security is enabled.
 3. Drag the module into your project and place it in ServerScriptService or ServerStorage.
 4. Now you can use Voyager.
