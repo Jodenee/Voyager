@@ -1148,7 +1148,7 @@
 <hr />
 <p><br /></p>
 <h3 id="embedcolor-number"><strong>Embed.color :</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number?</em></a></h3>
-<p>The embed's color code.</p>
+<p>A number representing the embed's color.</p>
 <p><br /></p>
 <hr />
 <p><br /></p>
@@ -1211,7 +1211,11 @@
 <hr />
 <p><br /></p>
 <h3 id="embedsettitletitle-string-nil"><strong>Embed:setTitle</strong>(title <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
-<p>This method overrides the embed's title with a new one.</p>
+<p>This method sets the embed's title.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If the embed already has a title it'll be overridden.</p>
+</details>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
 <li><strong><em>title:</em></strong> The title of the embed.</li>
@@ -1220,7 +1224,11 @@
 <hr />
 <p><br /></p>
 <h3 id="embedsetdescriptiondescription-string-nil"><strong>Embed:setDescription</strong>(description <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
-<p>This method overrides the embed's description with a new one.</p>
+<p>This method sets the embed's description.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If the embed already has a description it'll be overridden.</p>
+</details>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
 <li><strong><em>description:</em></strong> The description of the embed.</li>
@@ -1229,7 +1237,11 @@
 <hr />
 <p><br /></p>
 <h3 id="embedseturlurl-string-nil"><strong>Embed:setUrl</strong>(url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
-<p>This method overrides the embed's url with a new one.</p>
+<p>This method sets the embed's url.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If the embed already has a url it'll be overridden.</p>
+</details>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
 <li><strong><em>url:</em></strong> The url attached to the embed's title.</li>
@@ -1238,10 +1250,14 @@
 <hr />
 <p><br /></p>
 <h3 id="embedsettimestampcustomtimestamp-string-nil"><strong>Embed:setTimestamp</strong>(customTimestamp <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
-<p>This method overrides the embed's timestamp with a new one.</p>
+<p>This method sets the embed's timestamp.</p>
 <details class="note" open="open">
 <summary>Note</summary>
 <p>If customTimestamp is left nil then the current timestamp will be used instead.</p>
+</details>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If the embed already has a timestamp it'll be overridden.</p>
 </details>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -1251,7 +1267,11 @@
 <hr />
 <p><br /></p>
 <h3 id="embedsetcolorcolor3-color3-nil"><strong>Embed:setColor</strong>(color3 <strong>:</strong> <a href="https://create.roblox.com/docs/reference/engine/datatypes/Color3"><em>Color3</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
-<p>This method overrides the embed's color code with a new one.</p>
+<p>This method sets the embed's color code.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If the embed already has a color it'll be overridden.</p>
+</details>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
 <li><strong><em>color3:</em></strong> A color3 value.</li>
@@ -1260,7 +1280,11 @@
 <hr />
 <p><br /></p>
 <h3 id="embedsetfootertext-string-iconurl-string-nil"><strong>Embed:setFooter</strong>(text <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, iconUrl <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
-<p>This method overrides the embed's footer with a new one.</p>
+<p>This method sets the embed's footer.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If the embed already has a footer it'll be overridden.</p>
+</details>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>Only HTTPs urls are supported for the iconUrl parameter.</p>
@@ -1274,7 +1298,11 @@
 <hr />
 <p><br /></p>
 <h3 id="embedsetimageurl-string-nil"><strong>Embed:setImage</strong>(url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
-<p>This method overrides the embed's image with a new one.</p>
+<p>This method sets the embed's image.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If the embed already has an image it'll be overridden.</p>
+</details>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>Only HTTPs urls are supported for the url parameter.</p>
@@ -1287,7 +1315,11 @@
 <hr />
 <p><br /></p>
 <h3 id="embedsetthumbnailurl-string-nil"><strong>Embed:setThumbnail</strong>(url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
-<p>This method overrides the embed's thumbnail with a new one.</p>
+<p>This method sets the embed's thumbnail.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If the embed already has a thumbnail it'll be overridden.</p>
+</details>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>Only HTTPs urls are supported for the url parameter.</p>
@@ -1300,7 +1332,11 @@
 <hr />
 <p><br /></p>
 <h3 id="embedsetauthorname-string-url-string-iconurl-string-nil"><strong>Embed:setAuthor</strong>(name <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, url <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, iconUrl <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/nil"><em>nil</em></a></h3>
-<p>This method overrides the embed's author with a new one.</p>
+<p>This method sets the embed's author.</p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If the embed already has an author it'll be overridden.</p>
+</details>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>Only HTTPs urls are supported for the iconUrl parameter.</p>
