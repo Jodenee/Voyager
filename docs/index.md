@@ -14,7 +14,7 @@
 
 ## **About**
 
-Voyager is a Roblox API wrapper for Discord webhooks. Voyager makes sending requests to Discord webhooks from Roblox much easier, as you not only write less code but the code you do write is much more readable too, this results in a much better developer experience. Voyager also has very good API coverage over Discord's webhook API, so no matter how niche your use case is, Voyager can most likely help you out!
+Voyager is a Roblox API wrapper for Discord webhooks. Voyager makes interacting with Discord webhooks much easier, as you not only write less code but the code you do write is much more readable too, this results in a much better developer experience. Voyager also has very good API coverage over Discord's webhook API, so no matter how niche your use case is, Voyager can most likely help you out!
 
 ---
 
