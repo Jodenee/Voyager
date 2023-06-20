@@ -55,7 +55,7 @@ The webhook's id.
 The webhook's token.
 
 ???+ danger
-    Never share this with anyone! As leaking this value to someone gives them full access to your webhook.
+    Never share this with anyone! If this value is made public all a malicious actor needs is your webhook's id which can be easily retrieved. Then you are at their mercy.
 
 <br />
 
@@ -65,6 +65,9 @@ The webhook's token.
 
 ### **Webhook.baseUrl :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 The webhook's base url.
+
+???+ danger
+    Never share this with anyone! If this value is made public it gives everyone with access to the value full access to your webhook. Then you are at their mercy. If you think someone has your webhook's url the best course of action is to delete it and create a new one.
 
 <br />
 
@@ -76,10 +79,10 @@ The webhook's base url.
 The latest ratelimit information given to the webhook by Discord. [*Offical docs reference*](https://discord.com/developers/docs/topics/rate-limits#header-format-rate-limit-header-examples)
 
 ???+ note
-    All of the values inside ratelimitInfo will be nil until you make a request to Discord via :execute, :editMessage or :deleteMessage.
+    ratelimitInfo will be nil until you make a request to Discord via :execute, :editMessage or :deleteMessage.
 
 ??? tip
-    These values can be used to avoid getting ratelimited from the proxy.
+    These values can be utilised to prevent getting ratelimited from the proxy.
 
 <br />
 
@@ -163,7 +166,7 @@ This method deletes a message sent by the webhook.
 <br />
 
 ### **Webhook:_validateExecuteRequest**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, optionalExecuteInfo **:** [*OptionalExecuteInfo?*](OptionalExecuteInfo.md)) **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
-This method validates data given to :execute before sending it to Discord. This is done to avoid making pointless requests to the proxy and Discord.
+This method validates data given to :execute before sending it to the proxy. This is done to avoid making pointless requests to the proxy.
 
 ???+ warning
     This method is not meant to be used outside Voyager's internal code.
@@ -181,7 +184,7 @@ This method validates data given to :execute before sending it to Discord. This 
 <br />
 
 ### **Webhook:_validateEditMessageRequest**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?) **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
-This method validates data given to :editMessage before sending it to Discord. This is done to avoid making pointless requests to the proxy and Discord.
+This method validates data given to :editMessage before sending it to the proxy. This is done to avoid making pointless requests to the proxy.
 
 ???+ warning
     This method is not meant to be used outside Voyager's internal code.
