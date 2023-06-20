@@ -133,7 +133,7 @@ A [*MessageFlags*](MessageFlags.md) object representing the message's flags.
 <br />
 
 ### **EditedMessage.webhookId :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The webhook that sent the message's id.
+The id of the webhook that sent this message.
 
 <br />
 
