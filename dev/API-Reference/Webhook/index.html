@@ -939,13 +939,17 @@
 <p>The webhook's token.</p>
 <details class="danger" open="open">
 <summary>Danger</summary>
-<p>Never share this with anyone! As leaking this value to someone gives them full access to your webhook.</p>
+<p>Never share this with anyone! If this value is made public all a malicious actor needs is your webhook's id which can be easily retrieved. Then you are at their mercy.</p>
 </details>
 <p><br /></p>
 <hr />
 <p><br /></p>
 <h3 id="webhookbaseurl-string"><strong>Webhook.baseUrl :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
 <p>The webhook's base url.</p>
+<details class="danger" open="open">
+<summary>Danger</summary>
+<p>Never share this with anyone! If this value is made public it gives everyone with access to the value full access to your webhook. Then you are at their mercy. If you think someone has your webhook's url the best course of action is to delete it and create a new one.</p>
+</details>
 <p><br /></p>
 <hr />
 <p><br /></p>
@@ -953,11 +957,11 @@
 <p>The latest ratelimit information given to the webhook by Discord. <a href="https://discord.com/developers/docs/topics/rate-limits#header-format-rate-limit-header-examples"><em>Offical docs reference</em></a></p>
 <details class="note" open="open">
 <summary>Note</summary>
-<p>All of the values inside ratelimitInfo will be nil until you make a request to Discord via :execute, :editMessage or :deleteMessage.</p>
+<p>ratelimitInfo will be nil until you make a request to Discord via :execute, :editMessage or :deleteMessage.</p>
 </details>
 <details class="tip">
 <summary>Tip</summary>
-<p>These values can be used to avoid getting ratelimited from the proxy.</p>
+<p>These values can be utilised to prevent getting ratelimited from the proxy.</p>
 </details>
 <p><br /></p>
 <hr />
@@ -1023,7 +1027,7 @@
 <hr />
 <p><br /></p>
 <h3 id="webhook_validateexecuterequestcontent-string-embeds-number-embed-optionalexecuteinfo-optionalexecuteinfo-boolean-string"><strong>Webhook:_validateExecuteRequest</strong>(content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?, optionalExecuteInfo <strong>:</strong> <a href="../OptionalExecuteInfo/"><em>OptionalExecuteInfo?</em></a>) <strong>:</strong> (<a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>)</h3>
-<p>This method validates data given to :execute before sending it to Discord. This is done to avoid making pointless requests to the proxy and Discord.</p>
+<p>This method validates data given to :execute before sending it to the proxy. This is done to avoid making pointless requests to the proxy.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>This method is not meant to be used outside Voyager's internal code.</p>
@@ -1038,7 +1042,7 @@
 <hr />
 <p><br /></p>
 <h3 id="webhook_validateeditmessagerequestcontent-string-embeds-number-embed-boolean-string"><strong>Webhook:_validateEditMessageRequest</strong>(content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?) <strong>:</strong> (<a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>)</h3>
-<p>This method validates data given to :editMessage before sending it to Discord. This is done to avoid making pointless requests to the proxy and Discord.</p>
+<p>This method validates data given to :editMessage before sending it to the proxy. This is done to avoid making pointless requests to the proxy.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>This method is not meant to be used outside Voyager's internal code.</p>
