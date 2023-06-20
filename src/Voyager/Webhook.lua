@@ -185,7 +185,7 @@ function Webhook:editMessage(messageId : string, content : string?, embeds : {}?
 	local isRequestValid, errorMessage = self:_validateEditMessageRequest(content, embeds)
 	if not isRequestValid then return error(errorMessage) end
 	
-	local requestUrl
+	local requestUrl = self.baseUrl .. "/messages/" .. messageId
 	local requestBody = {
 		content = content,
 		embeds = {}
@@ -197,11 +197,7 @@ function Webhook:editMessage(messageId : string, content : string?, embeds : {}?
 		end
 	end
 
-	if threadId then
-		requestUrl = self.baseUrl .. "/messages/" .. messageId .. "?thread_id=" .. threadId
-	else
-		requestUrl = self.baseUrl .. "/messages/" .. messageId
-	end
+	if threadId then requestUrl ..= "?thread_id=" .. threadId end
 	
 	local responseBody, requestStatus = self:_request(requestUrl, "PATCH", requestBody, "application/json")
 	
@@ -217,7 +213,7 @@ end
 function Webhook:deleteMessage(messageId : string, threadId : string?) : RequestStatus
 	local requestUrl = self.baseUrl .. "/messages/" .. messageId
 
-	if threadId then requestUrl ..= "?thread_id=" .. threadId end
+	if threadId then requestUrl ..= "?thread_id=" .. threadId end	
 	
 	local _, requestStatus = self:_request(requestUrl, "DELETE")
 	
