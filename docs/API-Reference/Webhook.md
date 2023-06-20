@@ -198,7 +198,7 @@ This method validates data given to :editMessage before sending it to Discord. T
 <br />
 
 ### **Webhook:_request**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), method **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), body **:** {}?, contentType **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** ({}?, [*RequestStatus*](#requeststatus))
-This method is used to make HTTP requests to the proxy.
+This method is used to make HTTP requests to the proxy. While this method is not meant to be used outside Voyager's internal code, if you know what you're doing, it can be used to send requests to endpoints not yet implemented to Voyager yet.
 
 ???+ warning
     This method is not meant to be used outside Voyager's internal code.
