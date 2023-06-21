@@ -9,6 +9,7 @@ setmetatable(User, Author)
 function User.new(data)
 	local self = setmetatable(Author.new(data), User)
 	
+	self.displayName = "Deprecated"
 	self.globalName = data.global_name
 	self.publicFlags = PublicUserFlags.fromBitfield(data.public_flags)
 	

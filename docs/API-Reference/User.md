@@ -37,7 +37,7 @@ The user's discord avatar hash.
 The user's discord discriminator.
 
 ???+ warning "Deprecation Notice"
-    This property has been deprecated. Please edit any code that uses it as it will be removed soon.
+    This property has been deprecated. Please edit any code that uses it as it will be removed in a later version.
 
 <br />
 
@@ -56,6 +56,17 @@ Whether the user is a bot.
 
 ### **User.globalName :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 the user's display name on Discord.
+
+<br />
+
+---
+
+<br />
+
+### **User.displayName :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+
+???+ warning "Deprecation Notice"
+    This property has been deprecated. Please edit any code that uses it as it will be removed in a later version. (Use User.globalName instead)
 
 <br />
 
