@@ -221,7 +221,7 @@ This method sets the embed's footer.
     If the embed already has a footer it'll be overridden.
 
 ???+ warning
-    Only HTTPs urls are supported for the iconUrl parameter.
+    Only HTTPS urls are supported for the iconUrl parameter.
 
 ***Parameters***
 
@@ -241,7 +241,7 @@ This method sets the embed's image.
     If the embed already has an image it'll be overridden.
 
 ???+ warning
-    Only HTTPs urls are supported for the url parameter.
+    Only HTTPS urls are supported for the url parameter.
 
 ***Parameters***
 
@@ -260,7 +260,7 @@ This method sets the embed's thumbnail.
     If the embed already has a thumbnail it'll be overridden.
 
 ???+ warning
-    Only HTTPs urls are supported for the url parameter.
+    Only HTTPS urls are supported for the url parameter.
 
 ***Parameters***
 
@@ -279,7 +279,7 @@ This method sets the embed's author.
     If the embed already has an author it'll be overridden.
 
 ???+ warning
-    Only HTTPs urls are supported for the iconUrl parameter.
+    Only HTTPS urls are supported for the iconUrl parameter.
 
 ***Parameters***
 

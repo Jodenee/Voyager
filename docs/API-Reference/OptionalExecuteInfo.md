@@ -34,7 +34,7 @@ An override for the webhook's username.
 <br />
 
 ### **OptionalExecuteInfo.avatarOverride :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
-An override for the webhook's avatar.
+A url to an image that'll override for the webhook's avatar.
 
 <br />
 
@@ -74,10 +74,7 @@ This method returns a new OptionalExecuteInfo object.
     If both threadId and threadName are given an error will occur!
 
 ???+ note
-    If tts is left nil it will default to false.
-
-???+ note
-    If messageFlags is left nil it will default to a MessageFlags object with a value of 0.
+    If tts is left nil it will default to false. If messageFlags is left nil it will default to a MessageFlags object with a value of 0.
 
 ***Parameters***
 

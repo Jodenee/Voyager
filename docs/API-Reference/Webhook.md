@@ -113,13 +113,13 @@ This method returns a new Webhook object.
 This method sends a message to Discord.
 
 ???+ note
-    If both queue and waitForMessage are true, a message object will not be returned.
+    If both queue and waitForMessage are true, a message object will NOT be returned.
 
 ???+ note
     If queue is left nil it will default to true. If waitForMessage is left nil it will default to false.
 
 ??? tip
-    If you dont feel like making your own ratelimit handler set queue to true. This will ensure the message is sent to Discord. The only down side is it may take a few more seconds to show up depending on how busy the queue is.
+    If you dont feel like making your own ratelimit handler set queue to true. This will ensure the message is sent to Discord. The only down side is it may take a few more seconds to be sent depending on how busy the proxy's queue is.
 
 ***Parameters***
 
@@ -140,7 +140,7 @@ This method edits a message sent by the webhook.
 
 ***Parameters***
 
-- ***messageId:*** The message you wanna edit's id.
+- ***messageId:*** The id of the message you wanna edit.
 - ***content:*** The new content that'll override the old content.
 - ***embeds:*** The new embeds that'll override the old embeds.
 - ***threadId:*** The id of the thread the message is in.
@@ -156,7 +156,7 @@ This method deletes a message sent by the webhook.
 
 ***Parameters***
 
-- ***messageId:*** The message you wanna delete's id.
+- ***messageId:*** The id of the message you wanna delete.
 - ***threadId:*** The id of the thread the message is in.
 
 <br />
