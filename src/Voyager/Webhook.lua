@@ -143,7 +143,7 @@ function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitF
 	if queue == nil then queue = true end
 	if waitForMessage == nil then waitForMessage = false end
 	
-	local requestUrl
+	local requestUrl = self.baseUrl
 	local requestBody = {
 		content = content,
 		username = executeInfo.usernameOverride,
@@ -159,13 +159,9 @@ function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitF
 			table.insert(requestBody.embeds, embed)
 		end
 	end
-
-	if queue then
-		requestUrl = self.baseUrl .. "/queue?wait=" .. tostring(waitForMessage)
-	else
-		requestUrl = self.baseUrl .. "?wait=" .. tostring(waitForMessage)
-	end
-
+	
+	if queue then requestUrl ..= "/queue" end
+	requestUrl ..= "?wait=" .. tostring(waitForMessage)
 	if executeInfo.threadId then requestUrl ..= "&thread_id=" .. executeInfo.threadId end
 
 	local responseBody, requestStatus = self:_request(requestUrl, "POST", requestBody, "application/json")
