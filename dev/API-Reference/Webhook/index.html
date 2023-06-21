@@ -983,7 +983,7 @@
 <p>This method sends a message to Discord.</p>
 <details class="note" open="open">
 <summary>Note</summary>
-<p>If both queue and waitForMessage are true, a message object will not be returned.</p>
+<p>If both queue and waitForMessage are true, a message object will NOT be returned.</p>
 </details>
 <details class="note" open="open">
 <summary>Note</summary>
@@ -991,7 +991,7 @@
 </details>
 <details class="tip">
 <summary>Tip</summary>
-<p>If you dont feel like making your own ratelimit handler set queue to true. This will ensure the message is sent to Discord. The only down side is it may take a few more seconds to show up depending on how busy the queue is.</p>
+<p>If you dont feel like making your own ratelimit handler set queue to true. This will ensure the message is sent to Discord. The only down side is it may take a few more seconds to be sent depending on how busy the proxy's queue is.</p>
 </details>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -1008,7 +1008,7 @@
 <p>This method edits a message sent by the webhook.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
-<li><strong><em>messageId:</em></strong> The message you wanna edit's id.</li>
+<li><strong><em>messageId:</em></strong> The id of the message you wanna edit.</li>
 <li><strong><em>content:</em></strong> The new content that'll override the old content.</li>
 <li><strong><em>embeds:</em></strong> The new embeds that'll override the old embeds.</li>
 <li><strong><em>threadId:</em></strong> The id of the thread the message is in.</li>
@@ -1020,7 +1020,7 @@
 <p>This method deletes a message sent by the webhook.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
-<li><strong><em>messageId:</em></strong> The message you wanna delete's id.</li>
+<li><strong><em>messageId:</em></strong> The id of the message you wanna delete.</li>
 <li><strong><em>threadId:</em></strong> The id of the thread the message is in.</li>
 </ul>
 <p><br /></p>
