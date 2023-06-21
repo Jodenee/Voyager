@@ -8,6 +8,8 @@ function Embed.new(title : string?, description : string?, url : string?)
 	self.description = description
 	self.url = url
 	
+	self.fields = {}
+	
 	return self
 end
 
@@ -44,13 +46,11 @@ function Embed:_validate() : (boolean, string?)
 		end
 	end
 	
-	if self.fields then
-		if #self.fields > 25 then return false, "One embed must only have up to 25 fields." end
-		
-		for _, field in self.fields do
-			if string.len(field.name) > 256 then return false, "The name of a field must only contain up to 256 characters." end
-			if string.len(field.value) > 1024 then return false, "The value of a field must only contain up to 1024 characters." end			
-		end
+	if #self.fields > 25 then return false, "One embed must only have up to 25 fields." end
+	
+	for _, field in self.fields do
+		if string.len(field.name) > 256 then return false, "The name of a field must only contain up to 256 characters." end
+		if string.len(field.value) > 1024 then return false, "The value of a field must only contain up to 1024 characters." end			
 	end
 	
 	return true
@@ -106,8 +106,6 @@ function Embed:setAuthor(name : string, url : string?, iconUrl : string?) : nil
 end
 
 function Embed:addField(name : string, value : string, inLine : boolean?) : nil
-	if not self.fields then self.fields = {} end
-
 	table.insert(self.fields, {
 		name = name,
 		value = value,
