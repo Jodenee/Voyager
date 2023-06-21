@@ -43,29 +43,27 @@ function Webhook:_validateExecuteRequest(content : string?, embeds : {}?, option
 		end 
 	end
 
-	if optionalExecuteInfo then
-		if optionalExecuteInfo.usernameOverride then
-			local restrictedUsernames = {"everyone", "here"}
-			local restrictedSubStrings = {"discord", "clyde", "```"}
-			local loweredUsername = optionalExecuteInfo.usernameOverride:lower()
+	if optionalExecuteInfo.usernameOverride then
+		local restrictedUsernames = {"everyone", "here"}
+		local restrictedSubStrings = {"discord", "clyde", "```"}
+		local loweredUsername = optionalExecuteInfo.usernameOverride:lower()
 
-			for _, restrictedUsername in restrictedUsernames do	
-				if loweredUsername == restrictedUsername then return false, "Username override is a restricted username. \"" .. restrictedUsername .. "\"" end
-			end
-
-			for _, restrictedSubString in restrictedSubStrings do	
-				if loweredUsername:match(restrictedSubString) then return false, "Username override contains a restricted substring. \"" .. restrictedSubString .. "\"" end
-			end
-
-			if string.len(optionalExecuteInfo.usernameOverride) < 1 or string.len(optionalExecuteInfo.usernameOverride) > 80 then
-				return false, "Username override must be between 1 and 80 in length." 
-			end
+		for _, restrictedUsername in restrictedUsernames do	
+			if loweredUsername == restrictedUsername then return false, "Username override is a restricted username. \"" .. restrictedUsername .. "\"" end
 		end
 
-		if optionalExecuteInfo.threadId and optionalExecuteInfo.threadName then
-			return false, "threadId and threadName cannot be used together."
+		for _, restrictedSubString in restrictedSubStrings do	
+			if loweredUsername:match(restrictedSubString) then return false, "Username override contains a restricted substring. \"" .. restrictedSubString .. "\"" end
 		end
-	end	
+
+		if string.len(optionalExecuteInfo.usernameOverride) < 1 or string.len(optionalExecuteInfo.usernameOverride) > 80 then
+			return false, "Username override must be between 1 and 80 in length." 
+		end
+	end
+
+	if optionalExecuteInfo.threadId and optionalExecuteInfo.threadName then
+		return false, "threadId and threadName cannot be used together."
+	end
 
 	if embeds then
 		local totalEmbedCharacters = 0
