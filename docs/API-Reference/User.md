@@ -7,7 +7,7 @@
 <br />
 
 ### **User.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The user's discord id.
+The user's Discord id.
 
 <br />
 
@@ -16,7 +16,7 @@ The user's discord id.
 <br />
 
 ### **User.username :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The user's discord username.
+The user's Discord username.
 
 <br />
 
@@ -25,7 +25,7 @@ The user's discord username.
 <br />
 
 ### **User.avatar :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The user's discord avatar hash.
+The user's Discord avatar hash.
 
 <br />
 
@@ -34,7 +34,7 @@ The user's discord avatar hash.
 <br />
 
 ### **User.discriminator :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The user's discord discriminator.
+The user's Discord discriminator.
 
 ???+ warning "Deprecation Notice"
     This property has been deprecated. Please edit any code that uses it as it will be removed in a later version.

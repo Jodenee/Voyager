@@ -7,7 +7,7 @@
 <br />
 
 ### **Author.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The author's discord id.
+The author's Discord id.
 
 <br />
 
@@ -16,7 +16,7 @@ The author's discord id.
 <br />
 
 ### **Author.username :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The author's discord username.
+The author's Discord username.
 
 <br />
 
@@ -25,7 +25,7 @@ The author's discord username.
 <br />
 
 ### **Author.avatar :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The author's discord avatar hash.
+The author's Discord avatar hash.
 
 <br />
 
@@ -34,7 +34,7 @@ The author's discord avatar hash.
 <br />
 
 ### **Author.discriminator :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The author's discord discriminator.
+The author's Discord discriminator.
 
 ???+ warning "Deprecation Notice"
     This property has been deprecated. Please edit any code that uses it as it will be removed soon.
@@ -66,7 +66,7 @@ This method returns a new Author object.
 
 ***Parameters***
 
-- ***data:*** An [*author object*](https://discord.com/developers/docs/resources/user#user-object).
+- ***data:*** An [*author object*](https://Discord.com/developers/docs/resources/user#user-object).
 
 <br />
 

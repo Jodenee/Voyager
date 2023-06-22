@@ -327,7 +327,7 @@ This method returns the embed's color in rgb format.
 <br />
 
 ### **Embed:_validate**() **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
-This method validates the embed to avoid making a pointless request to discord.
+This method validates the embed to avoid making a pointless request to Discord.
 
 ???+ warning
     This method is not meant to be used outside Voyager's internal code.
