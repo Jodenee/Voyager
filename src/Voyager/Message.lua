@@ -31,11 +31,7 @@ function Message.new(data)
 			local embed = Embed.new(embedData.title, embedData.description, embedData.url)
 
 			if embedData.color then
-				local r = bit32.band((bit32.rshift(embedData.color, (8 * 2))), 0xFF)
-				local g = bit32.band((bit32.rshift(embedData.color, (8 * 1))), 0xFF)
-				local b = bit32.band((bit32.rshift(embedData.color, (8 * 0))), 0xFF)
-
-				embed:setColor(Color3.fromRGB(r, g, b))
+				embed.color = embedData.color
 			end
 
 			if embedData.timestamp then
