@@ -147,16 +147,10 @@ function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitF
 		username = executeInfo.usernameOverride,
 		avatar_url = executeInfo.avatarOverride,
 		tts = executeInfo.tts,
-		embeds = {},
+		embeds = embeds,
 		flags = executeInfo.messageFlags.value,
 		thread_name = executeInfo.threadName
 	}
-
-	if embeds then	
-		for _, embed in embeds do
-			table.insert(requestBody.embeds, embed)
-		end
-	end
 	
 	if queue then requestUrl ..= "/queue" end
 	requestUrl ..= "?wait=" .. tostring(waitForMessage)
@@ -182,14 +176,8 @@ function Webhook:editMessage(messageId : string, content : string?, embeds : {}?
 	local requestUrl = self.baseUrl .. "/messages/" .. messageId
 	local requestBody = {
 		content = content,
-		embeds = {}
+		embeds = embeds
 	}
-
-	if embeds then	
-		for _, embed in embeds do			
-			table.insert(requestBody.embeds, embed)
-		end
-	end
 
 	if threadId then requestUrl ..= "?thread_id=" .. threadId end
 	
