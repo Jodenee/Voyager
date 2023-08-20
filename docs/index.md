@@ -6,7 +6,7 @@
 
 <p align="center">
     <img src="https://img.shields.io/github/license/Jodenee/Discohook?color=1e1e1e&style=for-the-badge" alt="License"/>
-    <img src="https://img.shields.io/maintenance/yes/2023?color=1e1e1e&style=for-the-badge" alt="Maintained"/>
+    <img src="https://img.shields.io/github/issues/jodenee/Voyager?style=for-the-badge&color=1e1e1e" alt="Open Issues"/>
     <img src="https://img.shields.io/github/contributors/Jodenee/Discohook?color=1e1e1e&style=for-the-badge" alt="Contributors"/>
 </p>
 

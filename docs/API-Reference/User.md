@@ -33,18 +33,6 @@ The user's Discord avatar hash.
 
 <br />
 
-### **User.discriminator :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The user's Discord discriminator.
-
-???+ warning "Deprecation Notice"
-    This property has been deprecated. Please edit any code that uses it as it will be removed in a later version.
-
-<br />
-
----
-
-<br />
-
 ### **User.bot :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 Whether the user is a bot.
 
@@ -56,17 +44,6 @@ Whether the user is a bot.
 
 ### **User.globalName :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 the user's display name on Discord.
-
-<br />
-
----
-
-<br />
-
-### **User.displayName :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
-
-???+ warning "Deprecation Notice"
-    This property has been deprecated. Please edit any code that uses it as it will be removed in a later version. (Use User.globalName instead)
 
 <br />
 

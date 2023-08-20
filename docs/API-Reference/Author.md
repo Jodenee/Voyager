@@ -33,18 +33,6 @@ The author's Discord avatar hash.
 
 <br />
 
-### **Author.discriminator :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The author's Discord discriminator.
-
-???+ warning "Deprecation Notice"
-    This property has been deprecated. Please edit any code that uses it as it will be removed soon.
-
-<br />
-
----
-
-<br />
-
 ### **Author.bot :**  [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
 Whether the author is a bot.
 
