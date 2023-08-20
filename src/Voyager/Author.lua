@@ -7,7 +7,6 @@ function Author.new(data)
 	self.id = data.id
 	self.username = data.username
 	self.avatar = data.avatar
-	self.discriminator = data.discriminator
 	self.bot = data.bot or false
 	
 	return self
