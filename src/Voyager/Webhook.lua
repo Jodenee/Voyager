@@ -15,6 +15,17 @@ type RatelimitInfo = {
 	XRatelimitBucket : string?
 }
 
+type RatelimitInformation = {
+	limit : number,
+	remaining : number,
+	reset : string,
+	resetAfter : number,
+	resetAfterSafe : number,
+	bucket : string,
+	global : boolean?,
+	scope : string?
+}
+
 type RequestStatus = {
 	success : boolean,
 	statusCode : number,
@@ -26,6 +37,22 @@ function Webhook.new(id : string, token : string, customProxyUrl : string?)
 
 	self.id = id
 	self.token = token
+	self.baseUrl = (customProxyUrl or "https://webhook.lewisakura.moe") .. "/api/webhooks/" .. self.id .. "/" .. self.token
+	self.ratelimitInfo = {} :: RatelimitInfo
+
+	return self
+end
+
+function Webhook.fromUrl(webhookUrl: string, customProxyUrl : string?)
+	local self = setmetatable({}, Webhook)
+	local webhookId, webhookToken = string.match(webhookUrl, "^https://discord.com/api/webhooks/(%d+)/([%w%p]+)$")
+	
+	if (not webhookId) or (not webhookToken) then
+		error("Invalid webhook url.")
+	end
+	
+	self.id = webhookId
+	self.token = webhookToken
 	self.baseUrl = (customProxyUrl or "https://webhook.lewisakura.moe") .. "/api/webhooks/" .. self.id .. "/" .. self.token
 	self.ratelimitInfo = {} :: RatelimitInfo
 
@@ -108,7 +135,7 @@ function Webhook:_validateEditMessageRequest(content : string?, embeds : {}?) : 
 	return true
 end
 
-function Webhook:_request(url : string, method : string, body : {}?, contentType : string?) : ({}?, RequestStatus)
+function Webhook:_request(url : string, method : string, body : {}?, contentType : string?) : ({}?, RequestStatus, ratelimitInformation)
 	local httpService = game:GetService("HttpService")
 	
 	local response = httpService:RequestAsync({
@@ -117,23 +144,41 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 		Headers = {["Content-Type"] = contentType},
 		Body = httpService:JSONEncode(body)
 	})
-	
-	local requestStatus : requestStatus = {success = response.Success, statusCode = response.StatusCode, statusMessage = response.StatusMessage} 
-	
+	local responseHeaders = response.Headers
+
 	self.ratelimitInfo = {
-		XRatelimitLimit = tonumber(response.Headers["x-ratelimit-limit"]),
-		XRatelimitRemaining = tonumber(response.Headers["x-ratelimit-remaining"]),
-		XRatelimitReset = response.Headers["x-ratelimit-reset"],
-		XRatelimitResetAfter = tonumber(response.Headers["x-ratelimit-reset-after"]),
-		XRatelimitBucket = response.Headers["x-ratelimit-bucket"]
+		XRatelimitLimit = tonumber(responseHeaders["x-ratelimit-limit"]),
+		XRatelimitRemaining = tonumber(responseHeaders["x-ratelimit-remaining"]),
+		XRatelimitReset = responseHeaders["x-ratelimit-reset"],
+		XRatelimitResetAfter = tonumber(responseHeaders["x-ratelimit-reset-after"]),
+		XRatelimitBucket = responseHeaders["x-ratelimit-bucket"]
 	}
 	
-	if not response.Success or response.Body == "" then return nil, requestStatus end	
+	local ratelimitInformation = {
+		limit = tonumber(responseHeaders["x-ratelimit-limit"]),
+		remaining = tonumber(responseHeaders["x-ratelimit-remaining"]),
+		reset = responseHeaders["x-ratelimit-reset"],
+		resetAfter = tonumber(responseHeaders["x-ratelimit-reset-after"]),
+		resetAfterSafe = tonumber(responseHeaders["x-ratelimit-reset-after"]) + 1,
+		bucket = responseHeaders["x-ratelimit-bucket"],
+		global = responseHeaders["x-ratelimit-global"],
+		scope = responseHeaders["x-ratelimit-scope"]		
+	}
+	
+	local requestStatus : requestStatus = {
+		success = response.Success, 
+		statusCode = response.StatusCode, 
+		statusMessage = response.StatusMessage
+	}
+	
+	if not response.Success or response.Body == "" then
+		return nil, requestStatus, ratelimitInformation 
+	end	
 
-	return httpService:JSONDecode(response.Body), requestStatus
+	return httpService:JSONDecode(response.Body), requestStatus, ratelimitInformation
 end
 
-function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo) : ({}?, RequestStatus)
+function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo) : ({}?, RequestStatus, RatelimitInformation)
 	local executeInfo = optionalExecuteInfo or OptionalExecuteInfo.new()
 	local isRequestValid, errorMessage = self:_validateExecuteRequest(content, embeds, executeInfo)	
 	if not isRequestValid then return error(errorMessage) end
@@ -156,20 +201,20 @@ function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitF
 	requestUrl ..= "?wait=" .. tostring(waitForMessage)
 	if executeInfo.threadId then requestUrl ..= "&thread_id=" .. executeInfo.threadId end
 
-	local responseBody, requestStatus = self:_request(requestUrl, "POST", requestBody, "application/json")
+	local responseBody, requestStatus, requestRatelimitInfo = self:_request(requestUrl, "POST", requestBody, "application/json")
 
 	if not queue and waitForMessage and requestStatus.success then
 		if not executeInfo.threadId then 
-			return Message.new(responseBody), requestStatus
+			return Message.new(responseBody), requestStatus, requestRatelimitInfo
 		else
-			return ThreadMessage.new(responseBody), requestStatus
+			return ThreadMessage.new(responseBody), requestStatus, requestRatelimitInfo
 		end
 	end
 	
-	return nil, requestStatus
+	return nil, requestStatus, requestRatelimitInfo
 end
 
-function Webhook:editMessage(messageId : string, content : string?, embeds : {}?, threadId : string?) : ({}?, RequestStatus)
+function Webhook:editMessage(messageId : string, content : string?, embeds : {}?, threadId : string?) : ({}?, RequestStatus, RatelimitInformation)
 	local isRequestValid, errorMessage = self:_validateEditMessageRequest(content, embeds)
 	if not isRequestValid then return error(errorMessage) end
 	
@@ -181,25 +226,25 @@ function Webhook:editMessage(messageId : string, content : string?, embeds : {}?
 
 	if threadId then requestUrl ..= "?thread_id=" .. threadId end
 	
-	local responseBody, requestStatus = self:_request(requestUrl, "PATCH", requestBody, "application/json")
+	local responseBody, requestStatus, requestRatelimitInfo = self:_request(requestUrl, "PATCH", requestBody, "application/json")
 	
 	if not requestStatus.success then return nil, requestStatus end
 
 	if not threadId then
-		return EditedMessage.new(responseBody), requestStatus
+		return EditedMessage.new(responseBody), requestStatus, requestRatelimitInfo
 	else
-		return EditedThreadMessage.new(responseBody), requestStatus
+		return EditedThreadMessage.new(responseBody), requestStatus, requestRatelimitInfo
 	end
 end
 
-function Webhook:deleteMessage(messageId : string, threadId : string?) : RequestStatus
+function Webhook:deleteMessage(messageId : string, threadId : string?) : (RequestStatus, RatelimitInformation)
 	local requestUrl = self.baseUrl .. "/messages/" .. messageId
 
 	if threadId then requestUrl ..= "?thread_id=" .. threadId end	
 	
-	local _, requestStatus = self:_request(requestUrl, "DELETE")
+	local _, requestStatus, requestRatelimitInfo = self:_request(requestUrl, "DELETE")
 	
-	return requestStatus
+	return requestStatus, requestRatelimitInfo
 end
 
 return Webhook
