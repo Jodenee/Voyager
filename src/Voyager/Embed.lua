@@ -68,7 +68,7 @@ function Embed:setUrl(url : string) : nil
 	self.url = url
 end
 
-function Embed:setTimestamp(customTimestamp : string) : nil
+function Embed:setTimestamp(customTimestamp : string?) : nil
 	if customTimestamp then self.timestamp = customTimestamp return end
 
 	self.timestamp = os.date("!%Y-%m-%dT%H:%M:%S." .. math.round(tick() % 1 * 1000) .. "Z")
@@ -119,12 +119,7 @@ function Embed:totalCharacters() : number
 	if self.title then total += string.len(self.title) end
 	if self.description then total += string.len(self.description) end
 	if self.footer then total += string.len(self.footer.text) end
-	
-	if self.author then 
-		if self.author.name then 
-			total += string.len(self.author.name) 
-		end 
-	end
+	if self.author then total += string.len(self.author.name) end
 	
 	if self.fields then
 		for _, field in self.fields do
