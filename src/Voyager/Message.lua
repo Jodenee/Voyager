@@ -23,8 +23,10 @@ function Message.new(data)
 	self.mentionEveryone = data.mention_everyone
 	self.tts = data.tts
 	self.timestamp = data.timestamp
+	self.createdAt = DateTime.fromIsoDate(data.timestamp)
 	self.flags = MessageFlags.fromBitfield(data.flags)
 	self.webhookId = data.webhook_id
+	self.jumpUrl = "https://discord.com/channels/@me/" .. self.channelId .. "/" .. self.id
 
 	if data.embeds then
 		for _, embedData in data.embeds do
