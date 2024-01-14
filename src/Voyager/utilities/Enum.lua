@@ -26,5 +26,11 @@ return {
 		PNG = ".png",
 		WebP = ".webp",
 		GIF = ".gif"
+	},
+	
+	RatelimitScopes = {
+		USER = "user",
+		SHARED = "shared",
+		GLOBAL = "global"
 	}
 }
