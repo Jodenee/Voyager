@@ -15,18 +15,25 @@ type RatelimitInfo = {
 	XRatelimitBucket : string?
 }
 
-type RatelimitInformation = {
+export type RatelimitInformation = {
 	limit : number,
 	remaining : number,
-	reset : string,
-	resetAfter : number,
+	reset : DateTime,
+	resetAfter : number, -- In seconds.
 	resetAfterSafe : number,
 	bucket : string,
-	global : boolean?,
-	scope : string?
+	retryAfter : number, -- In milliseconds since proxy uses v6 of the Discord API.
+	retryAfterSafe : number
 }
 
-type RequestStatus = {
+export type RatelimitedInformation = {
+	global : boolean,
+	scope : string,
+	retryAfter : number, -- In milliseconds since proxy uses v6 of the Discord API.
+	retryAfterSafe : number
+}
+
+export type RequestStatus = {
 	success : boolean,
 	statusCode : number,
 	statusMessage : string
@@ -135,7 +142,7 @@ function Webhook:_validateEditMessageRequest(content : string?, embeds : {}?) : 
 	return true
 end
 
-function Webhook:_request(url : string, method : string, body : {}?, contentType : string?) : ({}?, RequestStatus, ratelimitInformation)
+function Webhook:_request(url : string, method : string, body : {}?, contentType : string?) : ({}?, RequestStatus, RatelimitInformation | RatelimitedInformation | {})
 	local httpService = game:GetService("HttpService")
 	
 	local response = httpService:RequestAsync({
@@ -144,8 +151,11 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 		Headers = {["Content-Type"] = contentType},
 		Body = httpService:JSONEncode(body)
 	})
-	local responseHeaders = response.Headers
-
+	local responseHeaders : {} = response.Headers
+	local decodedBody : {} | nil
+	local ratelimitInformation : RatelimitInformation | RatelimitedInformation | {} = {}
+	local wasRequestQueued : boolean = false
+	
 	self.ratelimitInfo = {
 		XRatelimitLimit = tonumber(responseHeaders["x-ratelimit-limit"]),
 		XRatelimitRemaining = tonumber(responseHeaders["x-ratelimit-remaining"]),
@@ -154,31 +164,52 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 		XRatelimitBucket = responseHeaders["x-ratelimit-bucket"]
 	}
 	
-	local ratelimitInformation = {
-		limit = tonumber(responseHeaders["x-ratelimit-limit"]),
-		remaining = tonumber(responseHeaders["x-ratelimit-remaining"]),
-		reset = responseHeaders["x-ratelimit-reset"],
-		resetAfter = tonumber(responseHeaders["x-ratelimit-reset-after"]),
-		resetAfterSafe = tonumber(responseHeaders["x-ratelimit-reset-after"]) + 1,
-		bucket = responseHeaders["x-ratelimit-bucket"],
-		global = responseHeaders["x-ratelimit-global"],
-		scope = responseHeaders["x-ratelimit-scope"]		
-	}
+	if response.Body ~= "" then
+		decodedBody = httpService:JSONDecode(response.Body)
+		wasRequestQueued = decodedBody.proxy
+	end
+	
+	if response.Success and not wasRequestQueued then
+		ratelimitInformation = {
+			limit = tonumber(responseHeaders["x-ratelimit-limit"]),
+			remaining = tonumber(responseHeaders["x-ratelimit-remaining"]),
+			reset = DateTime.fromUnixTimestamp(tonumber(responseHeaders["x-ratelimit-reset"])),
+			resetAfter = tonumber(responseHeaders["x-ratelimit-reset-after"]), 
+			resetAfterSafe = tonumber(responseHeaders["x-ratelimit-reset-after"]) + 1,
+			bucket = responseHeaders["x-ratelimit-bucket"]		
+		} :: RatelimitInformation
+	elseif response.StatusCode == 429 and not wasRequestQueued then	
+		if not responseHeaders["via"] then
+			-- Cloudflare ratelimit
+			
+			ratelimitInformation = {
+				isCloudflareRatelimit = true,
+				scope = "global", -- Cloudflare ratelimits count as global.
+				retryAfter = tonumber(responseHeaders["retry-after"]),
+				retryAfterSafe = responseHeaders["retry-after"] + 1000	
+			} :: RatelimitedInformation
+		else
+			-- Discord ratelimit
+			
+			ratelimitInformation = {
+				isCloudflareRatelimit = false,
+				scope = responseHeaders["x-ratelimit-scope"],
+				retryAfter = tonumber(responseHeaders["retry-after"]),
+				retryAfterSafe = responseHeaders["retry-after"] + 1000,
+			} :: RatelimitedInformation
+		end
+	end
 	
 	local requestStatus : requestStatus = {
 		success = response.Success, 
 		statusCode = response.StatusCode, 
 		statusMessage = response.StatusMessage
 	}
-	
-	if not response.Success or response.Body == "" then
-		return nil, requestStatus, ratelimitInformation 
-	end	
 
-	return httpService:JSONDecode(response.Body), requestStatus, ratelimitInformation
+	return decodedBody, requestStatus, ratelimitInformation
 end
 
-function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo) : ({}?, RequestStatus, RatelimitInformation)
+function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo) : ({}?, RequestStatus, RatelimitInformation | RatelimitedInformation | {})
 	local executeInfo = optionalExecuteInfo or OptionalExecuteInfo.new()
 	local isRequestValid, errorMessage = self:_validateExecuteRequest(content, embeds, executeInfo)	
 	if not isRequestValid then return error(errorMessage) end
@@ -214,7 +245,7 @@ function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitF
 	return nil, requestStatus, requestRatelimitInfo
 end
 
-function Webhook:editMessage(messageId : string, content : string?, embeds : {}?, threadId : string?) : ({}?, RequestStatus, RatelimitInformation)
+function Webhook:editMessage(messageId : string, content : string?, embeds : {}?, threadId : string?) : ({}?, RequestStatus, RatelimitInformation | RatelimitedInformation | {})
 	local isRequestValid, errorMessage = self:_validateEditMessageRequest(content, embeds)
 	if not isRequestValid then return error(errorMessage) end
 	
@@ -237,7 +268,7 @@ function Webhook:editMessage(messageId : string, content : string?, embeds : {}?
 	end
 end
 
-function Webhook:deleteMessage(messageId : string, threadId : string?) : (RequestStatus, RatelimitInformation)
+function Webhook:deleteMessage(messageId : string, threadId : string?) : (RequestStatus, RatelimitInformation | RatelimitedInformation | {})
 	local requestUrl = self.baseUrl .. "/messages/" .. messageId
 
 	if threadId then requestUrl ..= "?thread_id=" .. threadId end	
