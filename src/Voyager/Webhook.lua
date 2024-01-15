@@ -22,8 +22,6 @@ export type RatelimitInformation = {
 	resetAfter : number, -- In seconds.
 	resetAfterSafe : number,
 	bucket : string,
-	retryAfter : number, -- In milliseconds since proxy uses v6 of the Discord API.
-	retryAfterSafe : number
 }
 
 export type RatelimitedInformation = {
