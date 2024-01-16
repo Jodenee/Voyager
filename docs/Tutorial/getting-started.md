@@ -224,7 +224,7 @@ end)
 
 ## Real use case
 
-Here is a real world use case. If you dont understand what a spesific function does, feel free to look it up in the docs for clarification. [*Embed docs*](../API-Reference/Embed.md)
+Here is a real world use case. If you dont understand what a specific function does, feel free to look it up in the docs for clarification. [*Embed docs*](../API-Reference/Embed.md)
 
 ```lua linenums="1" title="examples/gamepassPurchaseNotification.lua"
 -- Put Voyager in server storage
