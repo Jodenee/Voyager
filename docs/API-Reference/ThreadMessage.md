@@ -117,6 +117,18 @@ Whether the message was a TTS message.
 ### **ThreadMessage.timestamp :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 A timestamp of when the message was sent in [*ISO8601 format*](https://www.iso.org/iso-8601-date-and-time-format.html).
 
+???+ warning "Deprecation Notice"
+    This property has been deprecated. Please use ***ThreadMessage.createdAt*** instead. 
+
+<br />
+
+---
+
+<br />
+
+### **ThreadMessage.createdAt :** [*DateTime*](https://create.roblox.com/docs/reference/engine/datatypes/DateTime)
+A datetime object representing when the message was sent.
+
 <br />
 
 ---
@@ -143,6 +155,15 @@ The id of the webhook that sent this message.
 
 ### **ThreadMessage.position**: [number](https://create.roblox.com/docs/scripting/luau/numbers)
 A number that represents the approximate position of the message in a thread.
+
+<br />
+
+---
+
+<br />
+
+### **ThreadMessage.jumpUrl :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+The jump url of the message.
 
 <br />
 

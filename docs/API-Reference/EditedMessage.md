@@ -117,6 +117,18 @@ Whether the message was a TTS message.
 ### **EditedMessage.timestamp :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 A timestamp of when the message was sent in [*ISO8601 format*](https://www.iso.org/iso-8601-date-and-time-format.html).
 
+???+ warning "Deprecation Notice"
+    This property has been deprecated. Please use *EditedMessage.createdAt* instead. 
+
+<br />
+
+---
+
+<br />
+
+### **EditedMessage.createdAt :** [*DateTime*](https://create.roblox.com/docs/reference/engine/datatypes/DateTime)
+A datetime object representing when the message was sent.
+
 <br />
 
 ---
@@ -143,6 +155,27 @@ The id of the webhook that sent this message.
 
 ### **EditedMessage.editedTimestamp :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 A timestamp of when the message was edited in [*ISO8601 format*](https://www.iso.org/iso-8601-date-and-time-format.html).
+
+???+ warning "Deprecation Notice"
+    This property has been deprecated. Please use ***EditedMessage.editedAt*** instead. 
+
+<br />
+
+---
+
+<br />
+
+### **EditedMessage.editedAt :** [*DateTime*](https://create.roblox.com/docs/reference/engine/datatypes/DateTime)
+A datetime object representing when the message was last edited.
+
+<br />
+
+---
+
+<br />
+
+### **EditedMessage.jumpUrl :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+The jump url of the message.
 
 <br />
 

@@ -35,3 +35,13 @@ A dictionary of strings that represent image formats. [*Offical docs reference*]
 ---
 
 <br />
+
+### **Enum.RatelimitScopes :** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)
+
+A dictionary of scopes you can be ratelimited from. [*Offical docs reference*](https://discord.com/developers/docs/topics/rate-limits#exceeding-a-rate-limit-example-exceeded-user-rate-limit-response)
+
+<br />
+
+---
+
+<br />
