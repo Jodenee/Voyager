@@ -243,7 +243,7 @@ function Webhook:execute(content : string?, embeds : {}?, queue : boolean, waitF
 	return nil, requestStatus, requestRatelimitInfo
 end
 
-function Webhook:editMessage(messageId : string, content : string?, embeds : {}?, threadId : string?) : ({}?, RequestStatus, RatelimitInformation | RatelimitedInformation | {})
+function Webhook:editMessage(messageId : string, content : string?, embeds : {}?, threadId : string?) : ({}?, RequestStatus, RatelimitInformation | RatelimitedInformation)
 	local isRequestValid, errorMessage = self:_validateEditMessageRequest(content, embeds)
 	if not isRequestValid then return error(errorMessage) end
 	
@@ -266,7 +266,7 @@ function Webhook:editMessage(messageId : string, content : string?, embeds : {}?
 	end
 end
 
-function Webhook:deleteMessage(messageId : string, threadId : string?) : (RequestStatus, RatelimitInformation | RatelimitedInformation | {})
+function Webhook:deleteMessage(messageId : string, threadId : string?) : (RequestStatus, RatelimitInformation | RatelimitedInformation)
 	local requestUrl = self.baseUrl .. "/messages/" .. messageId
 
 	if threadId then requestUrl ..= "?thread_id=" .. threadId end	
