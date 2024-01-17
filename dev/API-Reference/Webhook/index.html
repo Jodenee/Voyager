@@ -888,7 +888,7 @@
           <li class="md-nav__item">
   <a href="#webhookexecutecontent-string-embeds-number-embed-queue-boolean-waitformessage-boolean-optionalexecuteinfo-optionalexecuteinfo-message-threadmessage-requeststatus-ratelimitinformation-ratelimitedinformation" class="md-nav__link">
     <span class="md-ellipsis">
-      Webhook:execute(content : string?, embeds : {[number] : Embed}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo : OptionalExecuteInfo?) : (Message? | ThreadMessage?, RequestStatus, RatelimitInformation | RatelimitedInformation | { })
+      Webhook:execute(content : string?, embeds : {[number] : Embed}?, queue : boolean, waitForMessage : boolean, optionalExecuteInfo : OptionalExecuteInfo?) : (Message? | ThreadMessage?, RequestStatus, RatelimitInformation | RatelimitedInformation | {})
     </span>
   </a>
   
@@ -897,7 +897,7 @@
           <li class="md-nav__item">
   <a href="#webhookeditmessagemessageid-string-content-string-embeds-number-embed-threadid-string-editedmessage-editedthreadmessage-requeststatus-ratelimitinformation-ratelimitedinformation" class="md-nav__link">
     <span class="md-ellipsis">
-      Webhook:editMessage(messageId : string, content : string?, embeds : {[number] : Embed}?, threadId : string?) : (EditedMessage | EditedThreadMessage, RequestStatus, RatelimitInformation | RatelimitedInformation | { })
+      Webhook:editMessage(messageId : string, content : string?, embeds : {[number] : Embed}?, threadId : string?) : (EditedMessage | EditedThreadMessage, RequestStatus, RatelimitInformation | RatelimitedInformation)
     </span>
   </a>
   
@@ -906,7 +906,7 @@
           <li class="md-nav__item">
   <a href="#webhookdeletemessagemessageid-string-threadid-string-requeststatus-ratelimitinformation-ratelimitedinformation" class="md-nav__link">
     <span class="md-ellipsis">
-      Webhook:deleteMessage(messageId : string, threadId : string?) : (RequestStatus, RatelimitInformation | RatelimitedInformation | { })
+      Webhook:deleteMessage(messageId : string, threadId : string?) : (RequestStatus, RatelimitInformation | RatelimitedInformation)
     </span>
   </a>
   
@@ -1204,8 +1204,8 @@
 <summary>Info</summary>
 <p>The difference between <a href="#ratelimitinformation">RatelimitInformation</a> and <a href="#ratelimitedinformation">RatelimitedInformation</a> is, RatelimitInformation is used to prevent getting ratelimited from the proxy, while RatelimitedInformation is used to handle a ratelimit responce from the proxy.</p>
 </details>
-<details class="danger" open="open">
-<summary>Danger</summary>
+<details class="warning" open="open">
+<summary>Warning</summary>
 <p>Logical errors <strong>must</strong> be avoided when handling ratelimits yourself, as you may end up sending too many requests and getting either ratelimited or, banned from the proxy.</p>
 </details>
 <p><br /></p>
@@ -1221,8 +1221,8 @@
 <summary>Info</summary>
 <p>The difference between <a href="#ratelimitinformation">RatelimitInformation</a> and <a href="#ratelimitedinformation">RatelimitedInformation</a> is, RatelimitInformation is used to prevent getting ratelimited from the proxy, while RatelimitedInformation is used to handle a ratelimit responce from the proxy.</p>
 </details>
-<details class="danger" open="open">
-<summary>Danger</summary>
+<details class="warning" open="open">
+<summary>Warning</summary>
 <p>Logical errors <strong>must</strong> be avoided when handling ratelimits yourself, as you may end up sending too many requests and getting banned from the proxy.</p>
 </details>
 <p><br /></p>
@@ -1304,7 +1304,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h3 id="webhookexecutecontent-string-embeds-number-embed-queue-boolean-waitformessage-boolean-optionalexecuteinfo-optionalexecuteinfo-message-threadmessage-requeststatus-ratelimitinformation-ratelimitedinformation"><strong>Webhook:execute</strong>(content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?, queue <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, waitForMessage <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, optionalExecuteInfo <strong>:</strong> <a href="../OptionalExecuteInfo/"><em>OptionalExecuteInfo?</em></a>) <strong>:</strong> (<a href="../Message/"><em>Message?</em></a> | <a href="../ThreadMessage/"><em>ThreadMessage?</em></a>, <a href="#requeststatus"><em>RequestStatus</em></a>, <a href="#ratelimitinformation"><em>RatelimitInformation</em></a> | <a href="#ratelimitedinformation"><em>RatelimitedInformation</em></a> | { })</h3>
+<h3 id="webhookexecutecontent-string-embeds-number-embed-queue-boolean-waitformessage-boolean-optionalexecuteinfo-optionalexecuteinfo-message-threadmessage-requeststatus-ratelimitinformation-ratelimitedinformation"><strong>Webhook:execute</strong>(content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?, queue <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, waitForMessage <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a>, optionalExecuteInfo <strong>:</strong> <a href="../OptionalExecuteInfo/"><em>OptionalExecuteInfo?</em></a>) <strong>:</strong> (<a href="../Message/"><em>Message?</em></a> | <a href="../ThreadMessage/"><em>ThreadMessage?</em></a>, <a href="#requeststatus"><em>RequestStatus</em></a>, <a href="#ratelimitinformation"><em>RatelimitInformation</em></a> | <a href="#ratelimitedinformation"><em>RatelimitedInformation</em></a> | {})</h3>
 <p>This method sends a message to Discord.</p>
 <details class="note" open="open">
 <summary>Note</summary>
@@ -1313,6 +1313,10 @@
 <details class="note" open="open">
 <summary>Note</summary>
 <p>If queue is left nil it will default to true. If waitForMessage is left nil it will default to false.</p>
+</details>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>If queue is true, ratelimitInfo will <strong>NOT</strong> be returned.</p>
 </details>
 <details class="tip">
 <summary>Tip</summary>
@@ -1329,7 +1333,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h3 id="webhookeditmessagemessageid-string-content-string-embeds-number-embed-threadid-string-editedmessage-editedthreadmessage-requeststatus-ratelimitinformation-ratelimitedinformation"><strong>Webhook:editMessage</strong>(messageId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?, threadId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> (<a href="../EditedMessage/"><em>EditedMessage</em></a> | <a href="../EditedThreadMessage/"><em>EditedThreadMessage</em></a>, <a href="#requeststatus"><em>RequestStatus</em></a>, <a href="#ratelimitinformation"><em>RatelimitInformation</em></a> | <a href="#ratelimitedinformation"><em>RatelimitedInformation</em></a> | { })</h3>
+<h3 id="webhookeditmessagemessageid-string-content-string-embeds-number-embed-threadid-string-editedmessage-editedthreadmessage-requeststatus-ratelimitinformation-ratelimitedinformation"><strong>Webhook:editMessage</strong>(messageId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, content <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>, embeds <strong>:</strong> {[<a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a>] <strong>:</strong> <a href="../Embed/"><em>Embed</em></a>}?, threadId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> (<a href="../EditedMessage/"><em>EditedMessage</em></a> | <a href="../EditedThreadMessage/"><em>EditedThreadMessage</em></a>, <a href="#requeststatus"><em>RequestStatus</em></a>, <a href="#ratelimitinformation"><em>RatelimitInformation</em></a> | <a href="#ratelimitedinformation"><em>RatelimitedInformation</em></a>)</h3>
 <p>This method edits a message sent by the webhook.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
@@ -1341,7 +1345,7 @@
 <p><br /></p>
 <hr />
 <p><br /></p>
-<h3 id="webhookdeletemessagemessageid-string-threadid-string-requeststatus-ratelimitinformation-ratelimitedinformation"><strong>Webhook:deleteMessage</strong>(messageId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, threadId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> (<a href="#requeststatus"><em>RequestStatus</em></a>, <a href="#ratelimitinformation"><em>RatelimitInformation</em></a> | <a href="#ratelimitedinformation"><em>RatelimitedInformation</em></a> | { })</h3>
+<h3 id="webhookdeletemessagemessageid-string-threadid-string-requeststatus-ratelimitinformation-ratelimitedinformation"><strong>Webhook:deleteMessage</strong>(messageId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a>, threadId <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string?</em></a>) <strong>:</strong> (<a href="#requeststatus"><em>RequestStatus</em></a>, <a href="#ratelimitinformation"><em>RatelimitInformation</em></a> | <a href="#ratelimitedinformation"><em>RatelimitedInformation</em></a>)</h3>
 <p>This method deletes a message sent by the webhook.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
