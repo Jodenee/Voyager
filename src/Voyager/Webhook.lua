@@ -25,7 +25,6 @@ export type RatelimitInformation = {
 }
 
 export type RatelimitedInformation = {
-	global : boolean,
 	scope : string,
 	retryAfter : number, -- In milliseconds since proxy uses v6 of the Discord API.
 	retryAfterSafe : number
@@ -181,7 +180,6 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 			-- Cloudflare ratelimit
 			
 			ratelimitInformation = {
-				isCloudflareRatelimit = true,
 				scope = "global", -- Cloudflare ratelimits count as global.
 				retryAfter = tonumber(responseHeaders["retry-after"]),
 				retryAfterSafe = responseHeaders["retry-after"] + 1000	
@@ -190,7 +188,6 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 			-- Discord ratelimit
 			
 			ratelimitInformation = {
-				isCloudflareRatelimit = false,
 				scope = responseHeaders["x-ratelimit-scope"],
 				retryAfter = tonumber(responseHeaders["retry-after"]),
 				retryAfterSafe = responseHeaders["retry-after"] + 1000,
