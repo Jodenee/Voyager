@@ -1206,7 +1206,7 @@
 </details>
 <details class="warning" open="open">
 <summary>Warning</summary>
-<p>Logical errors <strong>must</strong> be avoided when handling ratelimits yourself, as you may end up sending too many requests and getting either ratelimited or, banned from the proxy.</p>
+<p>Logical errors <strong>must</strong> be avoided when handling bucket ratelimits yourself, as you may end up sending too many requests and getting either ratelimited or banned from the proxy.</p>
 </details>
 <p><br /></p>
 <hr />
@@ -1223,7 +1223,7 @@
 </details>
 <details class="warning" open="open">
 <summary>Warning</summary>
-<p>Logical errors <strong>must</strong> be avoided when handling ratelimits yourself, as you may end up sending too many requests and getting banned from the proxy.</p>
+<p>Logical errors <strong>must</strong> be avoided when handling 429 responses yourself, as you may end up sending too many requests and getting banned from the proxy.</p>
 </details>
 <p><br /></p>
 <hr />
@@ -1246,7 +1246,7 @@
 <p>The webhook's token.</p>
 <details class="danger" open="open">
 <summary>Danger</summary>
-<p>Never share this with <strong>anyone</strong>! If this value is made public all a malicious actor needs is your webhook's id which can be easily retrieved. Then you are at their mercy.</p>
+<p>Never share this with <strong>anyone</strong>! If this string is made public it gives everyone full access to your webhook. If you think someone has your webhook's token the best course of action is to delete the webhook and create a new one.</p>
 </details>
 <p><br /></p>
 <hr />
@@ -1255,7 +1255,7 @@
 <p>The webhook's base url.</p>
 <details class="danger" open="open">
 <summary>Danger</summary>
-<p>Never share this with <strong>anyone</strong>! If this value is made public it gives everyone with access to the value full access to your webhook. Then you are at their mercy. If you think someone has your webhook's url the best course of action is to delete it and create a new one.</p>
+<p>Never share this with <strong>anyone</strong>! If this string is made public it gives everyone full access to your webhook. If you think someone has your webhook's url the best course of action is to delete the webhook and create a new one.</p>
 </details>
 <p><br /></p>
 <hr />
