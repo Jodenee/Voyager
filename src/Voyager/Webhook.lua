@@ -172,7 +172,7 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 			remaining = tonumber(responseHeaders["x-ratelimit-remaining"]),
 			reset = DateTime.fromUnixTimestamp(tonumber(responseHeaders["x-ratelimit-reset"])),
 			resetAfter = tonumber(responseHeaders["x-ratelimit-reset-after"]), 
-			resetAfterSafe = tonumber(responseHeaders["x-ratelimit-reset-after"]) + 1,
+			resetAfterSafe = responseHeaders["x-ratelimit-reset-after"] + 1,
 			bucket = responseHeaders["x-ratelimit-bucket"]		
 		} :: RatelimitInformation
 	elseif response.StatusCode == 429 and not wasRequestQueued then	
@@ -190,7 +190,7 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 			ratelimitInformation = {
 				scope = responseHeaders["x-ratelimit-scope"],
 				retryAfter = tonumber(responseHeaders["retry-after"]),
-				retryAfterSafe = responseHeaders["retry-after"] + 1000,
+				retryAfterSafe = responseHeaders["retry-after"] + 1000
 			} :: RatelimitedInformation
 		end
 	end
