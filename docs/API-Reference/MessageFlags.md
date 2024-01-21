@@ -32,7 +32,7 @@ Parameters:
 
 <br />
 
-### **MessageFlags.fromFlags**(flags **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)}) **:** [*MessageFlags*](MessageFlags.md)
+### **MessageFlags.fromFlags**(flags **:** {[*number*](https://create.roblox.com/docs/scripting/luau/numbers)}) **:** [*MessageFlags*](MessageFlags.md)
 This method returns a new MessageFlags object from a table of flags.
 
 ??? tip

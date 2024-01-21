@@ -103,7 +103,7 @@ The embed's author.
 
 <br />
 
-### **Embed.fields :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** {name **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), value **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), inLine **:** [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans)}}?
+### **Embed.fields :** {{name **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), value **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), inLine **:** [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans)}}?
 A table of field objects that are attached to the embed.
 
 <br />

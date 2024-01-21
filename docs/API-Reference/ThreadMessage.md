@@ -51,7 +51,7 @@ The the author of the message.
 
 <br />
 
-### **ThreadMessage.embeds :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}
+### **ThreadMessage.embeds :** {[*Embed*](Embed.md)}
 A table of embeds that are attached to the message.
 
 <br />
@@ -60,7 +60,7 @@ A table of embeds that are attached to the message.
 
 <br />
 
-### **ThreadMessage.reactions :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Reaction*](Reaction.md)}
+### **ThreadMessage.reactions :** {[*Reaction*](Reaction.md)}
 A table of reactions to the message.
 
 <br />
@@ -69,7 +69,7 @@ A table of reactions to the message.
 
 <br />
 
-### **ThreadMessage.mentions :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*User*](User.md)}
+### **ThreadMessage.mentions :** {[*User*](User.md)}
 A table of users mentioned in the message.
 
 <br />
@@ -78,7 +78,7 @@ A table of users mentioned in the message.
 
 <br />
 
-### **ThreadMessage.mentionRoles :** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)}
+### **ThreadMessage.mentionRoles :** {[*string*](https://create.roblox.com/docs/scripting/luau/strings)}
 A table of role ids mentioned in the message.
 
 <br />
@@ -127,7 +127,7 @@ A timestamp of when the message was sent in [*ISO8601 format*](https://www.iso.o
 <br />
 
 ### **ThreadMessage.createdAt :** [*DateTime*](https://create.roblox.com/docs/reference/engine/datatypes/DateTime)
-A datetime object representing when the message was sent.
+A datetime object representing when the message was created.
 
 <br />
 

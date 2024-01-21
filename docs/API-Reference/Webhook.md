@@ -47,7 +47,7 @@ Please use the [offical Discord](https://discord.com/developers/docs/topics/rate
     The difference between [RatelimitInformation](#ratelimitinformation) and [RatelimitedInformation](#ratelimitedinformation) is, RatelimitInformation is used to prevent getting ratelimited from the proxy, while RatelimitedInformation is used to handle a ratelimit responce from the proxy.
 
 ???+ warning
-    Logical errors **must** be avoided when handling ratelimits yourself, as you may end up sending too many requests and getting either ratelimited or, banned from the proxy.
+    Logical errors **must** be avoided when handling bucket ratelimits yourself, as you may end up sending too many requests and getting either ratelimited or banned from the proxy.
 
 <br />
 
@@ -71,7 +71,7 @@ Please use the [offical Discord](https://discord.com/developers/docs/topics/rate
     The difference between [RatelimitInformation](#ratelimitinformation) and [RatelimitedInformation](#ratelimitedinformation) is, RatelimitInformation is used to prevent getting ratelimited from the proxy, while RatelimitedInformation is used to handle a ratelimit responce from the proxy.
 
 ???+ warning
-    Logical errors **must** be avoided when handling ratelimits yourself, as you may end up sending too many requests and getting banned from the proxy.
+    Logical errors **must** be avoided when handling 429 responses yourself, as you may end up sending too many requests and getting banned from the proxy.
 
 <br />
 
@@ -110,7 +110,7 @@ The webhook's id.
 The webhook's token.
 
 ???+ danger
-    Never share this with **anyone**! If this value is made public all a malicious actor needs is your webhook's id which can be easily retrieved. Then you are at their mercy.
+    Never share this with **anyone**! If this string is made public it gives everyone full access to your webhook. If you think someone has your webhook's token the best course of action is to delete the webhook and create a new one.
 
 <br />
 
@@ -122,7 +122,7 @@ The webhook's token.
 The webhook's base url.
 
 ???+ danger
-    Never share this with **anyone**! If this value is made public it gives everyone with access to the value full access to your webhook. Then you are at their mercy. If you think someone has your webhook's url the best course of action is to delete it and create a new one.
+    Never share this with **anyone**! If this string is made public it gives everyone full access to your webhook. If you think someone has your webhook's url the best course of action is to delete the webhook and create a new one.
 
 <br />
 
