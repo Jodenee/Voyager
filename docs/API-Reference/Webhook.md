@@ -87,6 +87,10 @@ Please use the [offical Discord](https://discord.com/developers/docs/topics/rate
 
 **RequestStatus.statusMessage :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 
+**RequestStatus.message :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+
+**RequestStatus.reason :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+
 <br />
 
 ---
