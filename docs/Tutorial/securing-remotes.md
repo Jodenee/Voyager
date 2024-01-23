@@ -74,12 +74,12 @@ local cooldownDuration = 60 * 10 -- 10 minutes
 
 function canSendFeedback(player : Player) : boolean
 	if not playersOnCooldown[player] then return true end
-	
-	if os.time() - playersOnCooldown[player] > cooldownDuration then	
-		return true
-	else
-		return false
-	end
+
+	--[[ 
+		Subtract the current time by the time the player was put on cooldown 
+		and check if the difference is more or equal to the cooldownDuration variable
+	]]--
+	return (os.time() - playersOnCooldown[player]) >= cooldownDuration
 end
 
 sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : string)
@@ -111,12 +111,12 @@ local cooldownDuration = 60 * 10 -- 10 minutes
 
 function canSendFeedback(player : Player) : boolean
 	if not playersOnCooldown[player] then return true end
-	
-	if os.time() - playersOnCooldown[player] > cooldownDuration then	
-		return true
-	else
-		return false
-	end
+
+	--[[ 
+		Subtract the current time by the time the player was put on cooldown 
+		and check if the difference is more or equal to the cooldownDuration variable
+	]]--
+	return (os.time() - playersOnCooldown[player]) >= cooldownDuration
 end
 
 game:GetService("Players").PlayerRemoving:Connect(function(player : Player)
@@ -163,12 +163,12 @@ local cooldownDuration = 60 * 10 -- 10 minutes
 
 function canSendFeedback(player : Player) : boolean
 	if not playersOnCooldown[player] then return true end
-	
-	if os.time() - playersOnCooldown[player] > cooldownDuration then	
-		return true
-	else
-		return false
-	end
+
+	--[[ 
+		Subtract the current time by the time the player was put on cooldown 
+		and check if the difference is more or equal to the cooldownDuration variable
+	]]--
+	return (os.time() - playersOnCooldown[player]) >= cooldownDuration
 end
 
 game:GetService("Players").PlayerAdded:Connect(function(player : Player)
@@ -219,12 +219,12 @@ local cooldownDatastore = game:GetService("DataStoreService"):GetDataStore("cool
 
 function canSendFeedback(player : Player) : boolean
 	if not playersOnCooldown[player] then return true end
-	
-	if os.time() - playersOnCooldown[player] > cooldownDuration then	
-		return true
-	else
-		return false
-	end
+
+	--[[ 
+		Subtract the current time by the time the player was put on cooldown 
+		and check if the difference is more or equal to the cooldownDuration variable
+	]]--
+	return (os.time() - playersOnCooldown[player]) >= cooldownDuration
 end
 
 playerService.PlayerRemoving:Connect(function(player : Player)
@@ -265,12 +265,12 @@ local cooldownDatastore = game:GetService("DataStoreService"):GetDataStore("cool
 
 function canSendFeedback(player : Player) : boolean
 	if not playersOnCooldown[player] then return true end
-	
-	if os.time() - playersOnCooldown[player] > cooldownDuration then	
-		return true
-	else
-		return false
-	end
+
+	--[[ 
+		Subtract the current time by the time the player was put on cooldown 
+		and check if the difference is more or equal to the cooldownDuration variable
+	]]--
+	return (os.time() - playersOnCooldown[player]) >= cooldownDuration
 end
 
 playerService.PlayerAdded:Connect(function(player : Player)
@@ -319,14 +319,13 @@ local cooldownDatastore = game:GetService("DataStoreService"):GetDataStore("cool
 
 function canSendFeedback(player : Player) : boolean
 	if not playersOnCooldown[player] then return true end
-	
-	if os.time() - playersOnCooldown[player] > cooldownDuration then	
-		return true
-	else
-		return false
-	end
-end
 
+	--[[ 
+		Subtract the current time by the time the player was put on cooldown 
+		and check if the difference is more or equal to the cooldownDuration variable
+	]]--
+	return (os.time() - playersOnCooldown[player]) >= cooldownDuration
+end
 playerService.PlayerAdded:Connect(function(player : Player)
 	local success, result = pcall(function()
 		playersOnCooldown[player] = cooldownDatastore:GetAsync(player.UserId)
@@ -380,12 +379,12 @@ local cooldownDatastore = game:GetService("DataStoreService"):GetDataStore("cool
 
 function canSendFeedback(player : Player) : boolean
 	if not playersOnCooldown[player] then return true end
-	
-	if os.time() - playersOnCooldown[player] > cooldownDuration then	
-		return true
-	else
-		return false
-	end
+
+	--[[ 
+		Subtract the current time by the time the player was put on cooldown 
+		and check if the difference is more or equal to the cooldownDuration variable
+	]]--
+	return (os.time() - playersOnCooldown[player]) >= cooldownDuration
 end
 
 playerService.PlayerAdded:Connect(function(player : Player)
