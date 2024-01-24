@@ -1,0 +1,102 @@
+:root {
+    /* Header color vars */
+    --md-primary-fg-color: #000000; /* Header background color */
+    --md-primary-bg-color: #ffffff; /* Header icon color */
+
+    /* Body color vars */
+    --md-primary-fg-color--dark: #000000; /* primary fg color color */
+
+    /* Versioning list overrides */
+    .md-version__list {
+        background-color: #141414; 
+        color: #ffffff;
+    }
+    .md-version__item:focus {background-color: #222222;}
+    .md-version__link:focus {background-color: #363636;}
+
+    /* nav title overrides */
+    .md-nav__title {background-color: #00000000;} 
+
+    /* Voyager thumbnail overrides */
+    #voyager_thumbnail {
+        max-width: 75%;
+    }
+}
+
+[data-md-color-scheme="light"] {
+    /* Body color vars */
+    --md-typeset-color:    #141414; /* List Text color */
+    --md-typeset-a-color:  #686868; /* Link color */
+    --md-accent-fg-color:  #b4b4b4; /* Link hover color */
+    --md-default-fg-color--light: #141414; /* Title color */
+    --md-default-fg-color--lightest: #141414; /* Hr color */
+    --md-default-bg-color: #ffffff; /* Background color */
+
+    /* Code block color vars */
+    --md-code-hl-string-color: #007a37; /* Code string color */
+    --md-code-hl-color: #dddddd; /* Code highlight color */
+
+    /* Search form color overrides */
+    .md-search__form {
+        color: #141414;
+        background-color: #1a1a1a;
+    }
+
+    /* Search form hover color overrides */
+    .md-search__form:hover {
+        color: #141414;
+        background-color: #424242;
+    }
+
+    /* Search result bar color overrides */
+    .md-search-result__meta {
+        background-color: #ffffff;
+        color: #141414;
+    }
+
+    /* nav title overrides */
+    .md-nav__title {color: #000000;}
+}
+
+[data-md-color-scheme="dark"] {    
+    /* Body color vars */
+    --md-typeset-color:    #ffffff; /* List text color */
+    --md-typeset-a-color:  #c0c0c0; /* Link color */
+    --md-accent-fg-color:  #707070; /* Link hover color */
+    --md-default-fg-color--light: #ffffff; /* Title color */
+    --md-default-fg-color--lightest: #ffffff; /* Hr color */
+    --md-default-fg-color: #ffffff; /* Forum color */
+    --md-default-bg-color: #141414; /* Background color */
+    --md-admonition-bg-color: #141414; /* admonition background color */
+    --md-admonition-fg-color: #ffffff; /* admonition text color */
+
+    /* Code block color vars */
+    --md-code-bg-color: #222222; /* Code block background color */
+    --md-code-hl-name-color: #e2e2e2; /* Code block name color */
+    --md-code-hl-punctuation-color: #ffffff; /* Code punctuation color */
+    --md-code-hl-operator-color: #ffffff; /* Code operator color */
+    --md-code-hl-string-color: #00bb54; /* Code string color */
+    --md-code-hl-comment-color: #5f5f5f; /* Code comment color */
+    --md-code-hl-color: #494949; /* Code highlight color */
+
+    /* Search form color overrides */
+    .md-search__form {
+        color: #141414;
+        background-color: #1a1a1a;
+    }
+
+    /* Search form hover color overrides */
+    .md-search__form:hover {
+        color: #141414;
+        background-color: #424242;
+    }
+
+    /* Search result bar color overrides */
+    .md-search-result__meta {
+        background-color: #141414;
+        color: #ffffff;
+    }
+
+    /* nav title overrides */
+    .md-nav__title {color: #ffffff;}
+}
