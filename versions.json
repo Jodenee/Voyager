@@ -1,1 +1,23 @@
+<<<<<<< HEAD
 [{"version": "2.3.1", "title": "2.3.1", "aliases": []}, {"version": "2.3.0", "title": "2.3.0", "aliases": []}, {"version": "v2.4.0", "title": "v2.4.0", "aliases": ["latest"]}, {"version": "dev", "title": "dev", "aliases": []}]
+=======
+[
+  {
+    "version": "dev",
+    "title": "dev",
+    "aliases": []
+  },
+  {
+    "version": "2.3.1",
+    "title": "2.3.1",
+    "aliases": [
+      "latest"
+    ]
+  },
+  {
+    "version": "2.3.0",
+    "title": "2.3.0",
+    "aliases": []
+  }
+]
+>>>>>>> 2903b3fdec3d738234296f318f0a973dbaca1589
