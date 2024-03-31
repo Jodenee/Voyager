@@ -1,6 +1,10 @@
 name: Deploy documentation (dev)
 
 on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Deploy documentation (dev)"
   push:
     branches:
       - "dev"
