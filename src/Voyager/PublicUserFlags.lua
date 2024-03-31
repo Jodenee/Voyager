@@ -11,15 +11,15 @@ function PublicUserFlags.fromBitfield(value : number)
 	return self
 end
 
-function PublicUserFlags:getFlags() : {[number] : number}
-	local enum = require(script.Parent.utilities.Enum)
-	local flags = {}
+function PublicUserFlags:getFlags() : {number}
+	local enum = require(script.Parent.Enum)
+	local foundFlags = {}
 	
-	for _, flag in enum.UserPublicFlags do
-		if self:hasFlag(flag) then table.insert(flags, flag) end
+	for _, flag in enum.PublicUserFlag do
+		if self:hasFlag(flag) then table.insert(foundFlags, flag) end
 	end
 	
-	return flags
+	return foundFlags
 end
 
 return PublicUserFlags
