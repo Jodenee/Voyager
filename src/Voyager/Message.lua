@@ -90,12 +90,6 @@ function Message.new(data)
 		end
 	end	
 
-	if data.reactions then
-		for _, reactionData in data.reactions do
-			table.insert(self.reactions, Reaction.new(reactionData))
-		end
-	end
-
 	return self
 end
 
