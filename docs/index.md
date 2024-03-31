@@ -36,6 +36,6 @@ Voyager is a Roblox API wrapper for Discord webhooks. Voyager makes interacting 
 
 ## **Tutorial**
 
-Start learning how to use Voyager [*here*](Tutorial/index.md).
+Learn how to use Voyager [*here!*](Tutorials/index.md)
 
 ---

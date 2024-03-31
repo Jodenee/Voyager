@@ -50,7 +50,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 					["url"] = "https://www.roblox.com/users/" .. player.UserId .. "/profile"
 				},
 				["color"] = 34815,
-				["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%S." .. math.round(tick() % 1 * 1000) .. "Z"),
+				["timestamp"] = DateTime.now():ToIsoDate(),
 				["fields"] = {
 					{
 						["name"] = "Account Age",

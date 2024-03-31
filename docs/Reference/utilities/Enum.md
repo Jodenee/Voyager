@@ -2,6 +2,9 @@
 
 <br />
 
+???+ warning "Deprecation Notice"
+    These enums have been deprecated. Use the new enums found [here](../Enum.md).
+
 ## Enums
 
 <br />

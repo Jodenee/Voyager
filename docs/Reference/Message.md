@@ -63,6 +63,9 @@ A table of embeds that are attached to the message.
 ### **Message.reactions :** {[*Reaction*](Reaction.md)}
 A table of reactions to the message.
 
+???+ warning "Deprecation Notice"
+    This property has been deprecated due to an API change.
+
 <br />
 
 ---

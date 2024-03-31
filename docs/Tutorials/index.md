@@ -1,0 +1,3 @@
+In these tutorials you'll learn the [*basics of Voyager*](getting-started.md), [*error handling*](error-handling.md) and how to [*protect remote events from exploiters*](securing-remotes.md). You are required to know the basics of [*luau*](https://luau-lang.org/). It's recommended that you know some basic [*OOP*](https://en.wikipedia.org/wiki/Object-oriented_programming) concepts as well but it's not needed. It's also recommended that you do not skim through tutorials, this is to ensure you don't miss anything important.
+
+Also keep in mind that these tutorials dont go over absolutely everything! If you wanna make the most of Voyager It's critical to read the documentation as it will cover everything Voyager has to offer.

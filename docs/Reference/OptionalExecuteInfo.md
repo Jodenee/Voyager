@@ -67,7 +67,7 @@ The name of the thread to create.
 
 <br />
 
-### **OptionalExecuteInfo.new**(threadId **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), tts **:** [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans), usernameOverride **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), avatarOverride **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), messageFlags **:** [*MessageFlags?*](MessageFlags.md), threadName **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [OptionalExecuteInfo](/docs/OptionalExecuteInfo.md)
+### **OptionalExecuteInfo.new**(threadId **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), tts **:** [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans), usernameOverride **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), avatarOverride **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), messageFlags **:** [*MessageFlags?*](MessageFlags.md), threadName **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [OptionalExecuteInfo](OptionalExecuteInfo.md)
 This method returns a new OptionalExecuteInfo object.
 
 ???+ warning

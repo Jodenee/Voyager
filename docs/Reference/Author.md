@@ -42,6 +42,15 @@ Whether the author is a bot.
 
 <br />
 
+### **Author.mention :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+A string representation of a mention.
+
+<br />
+
+---
+
+<br />
+
 ## Methods
 
 <br />
@@ -62,7 +71,7 @@ This method returns a new Author object.
 
 <br />
 
-### **Author:getAvatarUrl**(size **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), imageFormat **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+### **Author:getAvatarUrl**(size **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), imageFormat **:** *(".jpeg" | ".png" | ".webp" | ".gif")?*) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
 This method will return the author's avatar url.
 
 ???+ warning
