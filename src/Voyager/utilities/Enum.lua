@@ -18,12 +18,14 @@ return {
 	},
 
 	MessageFlags = {
-		SUPPRESS_EMBEDS = 4
+		SUPPRESS_EMBEDS = 4,
+		SUPPRESS_NOTIFICATIONS = 4096
 	},
 
 	AvatarImageFormats = {
 		JPEG = ".jpeg",
 		PNG = ".png",
+		WEBP = ".webp",
 		WebP = ".webp",
 		GIF = ".gif"
 	},
