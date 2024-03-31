@@ -8,12 +8,14 @@ function Author.new(data)
 	self.username = data.username
 	self.avatar = data.avatar
 	self.bot = data.bot or false
+	self.mention = "<@" .. data.id .. ">"
 	
 	return self
 end
 
-function Author:getAvatarUrl(size : number?, imageFormat : string?) : string?
+function Author:getAvatarUrl(size : number?, imageFormat : (".jpeg" | ".png" | ".webp" | ".gif")?) : string?
 	if not self.avatar then return end
+	
 	if imageFormat then 
 		if imageFormat ~= ".jpeg" and imageFormat ~= ".png" and imageFormat ~= ".webp" and imageFormat ~= ".gif" then return error("Unsupported image format given.") end 
 	end
