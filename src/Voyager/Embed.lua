@@ -68,10 +68,10 @@ function Embed:setUrl(url : string) : nil
 	self.url = url
 end
 
-function Embed:setTimestamp(customTimestamp : string?) : nil
+function Embed:setTimestamp(customTimestamp : string) : nil
 	if customTimestamp then self.timestamp = customTimestamp return end
 
-	self.timestamp = os.date("!%Y-%m-%dT%H:%M:%S." .. math.round(tick() % 1 * 1000) .. "Z")
+	self.timestamp = DateTime.now():ToIsoDate()
 end
 
 function Embed:setColor(color3 : Color3) : nil
