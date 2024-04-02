@@ -68,7 +68,7 @@ function Embed:setUrl(url : string) : nil
 	self.url = url
 end
 
-function Embed:setTimestamp(customTimestamp : string) : nil
+function Embed:setTimestamp(customTimestamp : string?) : nil
 	if customTimestamp then self.timestamp = customTimestamp return end
 
 	self.timestamp = DateTime.now():ToIsoDate()
