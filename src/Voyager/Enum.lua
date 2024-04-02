@@ -1,5 +1,5 @@
 return {
-	UserPublicFlag = {
+	PublicUserFlag = {
 		Staff = bit32.lshift(1, 0),
 		Partner = bit32.lshift(1, 1),
 		Hypesquad = bit32.lshift(1, 2),
@@ -31,7 +31,7 @@ return {
 		Global = "global"
 	}
 } :: {
-	UserPublicFlag : {
+	PublicUserFlag : {
 		Staff : number,
 		Partner : number,
 		Hypesquad : number,
