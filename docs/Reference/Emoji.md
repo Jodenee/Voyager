@@ -2,6 +2,9 @@
 
 <br />
 
+???+ warning "Deprecation Notice"
+    This class has been deprecated.
+
 ## Properties
 
 <br />

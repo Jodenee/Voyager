@@ -51,7 +51,7 @@ The the author of the message.
 
 <br />
 
-### **EditedThreadMessage.embeds :** {[*Embed*](Embed.md)}
+### **EditedThreadMessage.embeds :** { [*Embed*](Embed.md) }
 A table of embeds that are attached to the message.
 
 <br />
@@ -60,8 +60,11 @@ A table of embeds that are attached to the message.
 
 <br />
 
-### **EditedThreadMessage.reactions :** {[*Reaction*](Reaction.md)}
+### **EditedThreadMessage.reactions :** { [*Reaction*](Reaction.md) }
 A table of reactions to the message.
+
+???+ warning "Deprecation Notice"
+    This property has been deprecated due to an API change.
 
 <br />
 
@@ -69,7 +72,7 @@ A table of reactions to the message.
 
 <br />
 
-### **EditedThreadMessage.mentions :** {[*User*](User.md)}
+### **EditedThreadMessage.mentions :** { [*User*](User.md) }
 A table of users mentioned in the message.
 
 <br />
@@ -78,7 +81,7 @@ A table of users mentioned in the message.
 
 <br />
 
-### **EditedThreadMessage.mentionRoles :** {[*string*](https://create.roblox.com/docs/scripting/luau/strings)}
+### **EditedThreadMessage.mentionRoles :** { [*string*](https://create.roblox.com/docs/scripting/luau/strings) }
 A table of role ids mentioned in the message.
 
 <br />
@@ -125,6 +128,7 @@ A timestamp of when the message was sent in [*ISO8601 format*](https://www.iso.o
 ---
 
 <br />
+
 ### **EditedThreadMessage.createdAt :** [*DateTime*](https://create.roblox.com/docs/reference/engine/datatypes/DateTime)
 A datetime object representing when the message was created.
 

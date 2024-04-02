@@ -51,7 +51,7 @@ The the author of the message.
 
 <br />
 
-### **Message.embeds :** {[*Embed*](Embed.md)}
+### **Message.embeds :** { [*Embed*](Embed.md) }
 A table of embeds that are attached to the message.
 
 <br />
@@ -60,7 +60,7 @@ A table of embeds that are attached to the message.
 
 <br />
 
-### **Message.reactions :** {[*Reaction*](Reaction.md)}
+### **Message.reactions :** { [*Reaction*](Reaction.md) }
 A table of reactions to the message.
 
 ???+ warning "Deprecation Notice"
@@ -72,7 +72,7 @@ A table of reactions to the message.
 
 <br />
 
-### **Message.mentions :** {[*User*](User.md)}
+### **Message.mentions :** { [*User*](User.md) }
 A table of users mentioned in the message.
 
 <br />
@@ -81,7 +81,7 @@ A table of users mentioned in the message.
 
 <br />
 
-### **Message.mentionRoles :** {[*string*](https://create.roblox.com/docs/scripting/luau/strings)}
+### **Message.mentionRoles :** { [*string*](https://create.roblox.com/docs/scripting/luau/strings) }
 A table of role ids mentioned in the message.
 
 <br />

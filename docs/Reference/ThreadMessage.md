@@ -51,7 +51,7 @@ The the author of the message.
 
 <br />
 
-### **ThreadMessage.embeds :** {[*Embed*](Embed.md)}
+### **ThreadMessage.embeds :** { [*Embed*](Embed.md) }
 A table of embeds that are attached to the message.
 
 <br />
@@ -60,8 +60,11 @@ A table of embeds that are attached to the message.
 
 <br />
 
-### **ThreadMessage.reactions :** {[*Reaction*](Reaction.md)}
+### **ThreadMessage.reactions :** { [*Reaction*](Reaction.md) }
 A table of reactions to the message.
+
+???+ warning "Deprecation Notice"
+    This property has been deprecated due to an API change.
 
 <br />
 
@@ -69,7 +72,7 @@ A table of reactions to the message.
 
 <br />
 
-### **ThreadMessage.mentions :** {[*User*](User.md)}
+### **ThreadMessage.mentions :** { [*User*](User.md) }
 A table of users mentioned in the message.
 
 <br />
@@ -78,7 +81,7 @@ A table of users mentioned in the message.
 
 <br />
 
-### **ThreadMessage.mentionRoles :** {[*string*](https://create.roblox.com/docs/scripting/luau/strings)}
+### **ThreadMessage.mentionRoles :** { [*string*](https://create.roblox.com/docs/scripting/luau/strings) }
 A table of role ids mentioned in the message.
 
 <br />
