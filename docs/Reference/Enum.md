@@ -2,7 +2,7 @@
 
 <br />
 
-### **Enum.UserPublicFlag :** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)
+### **Enum.PublicUserFlag :** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)
 
 A dictionary of user public flags. [*Offical docs reference*](https://discord.com/developers/docs/resources/user#user-object-user-flags)
 

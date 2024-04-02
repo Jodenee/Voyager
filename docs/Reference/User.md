@@ -42,6 +42,15 @@ Whether the user is a bot.
 
 <br />
 
+### **Author.mention :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+A string that mentions this user.
+
+<br />
+
+---
+
+<br />
+
 ### **User.globalName :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 the user's display name on Discord.
 

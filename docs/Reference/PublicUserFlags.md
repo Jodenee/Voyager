@@ -68,7 +68,7 @@ This method will toggle a flag in the bitfield either to true or false.
 
 <br />
 
-### **PublicUserFlags:getFlags**() **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)}
+### **PublicUserFlags:getFlags**() **:** { [*number*](https://create.roblox.com/docs/scripting/luau/numbers) }
 This method will return a table of flags that are in the bitfield.
 
 <br />

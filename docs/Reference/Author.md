@@ -43,7 +43,7 @@ Whether the author is a bot.
 <br />
 
 ### **Author.mention :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-A string representation of a mention.
+A string that mentions this user.
 
 <br />
 
