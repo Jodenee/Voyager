@@ -22,10 +22,10 @@ function MessageFlags.fromFlags(flags : {number})
 end
 
 function MessageFlags:getFlags() : {number}
-	local enum = require(script.Parent.Enum)
+	local enum = require(script.Parent.utilities.Enum)
 	local foundFlags = {}
 
-	for _, flag in enum.MessageFlag do
+	for _, flag in enum.MessageFlags do
 		if self:hasFlag(flag) then table.insert(foundFlags, flag) end
 	end
 
