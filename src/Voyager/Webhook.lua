@@ -151,7 +151,7 @@ function Webhook:_request(url : string, method : string, body : {}?, contentType
 		Body = httpService:JSONEncode(body)
 	})
 	local responseHeaders : {} = response.Headers
-	local decodedBody : {} | nil = {}
+	local decodedBody : {} = {}
 	local ratelimitInformation : RatelimitInformation | RatelimitedInformation | {} = {}
 	local wasRequestQueued : boolean = false
 
