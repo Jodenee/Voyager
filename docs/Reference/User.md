@@ -99,7 +99,7 @@ This method will return the user's avatar url.
     If the imageFormat paramiter is left out. It will defualt to .png.
 
 ??? tip
-    Use [*Enum.AvatarImageFormats*](utilities/Enum.md) to fill in the imageFormat parameter.
+    Use [*Enum.AvatarImageFormats*](../utilities/Enum.md) to fill in the imageFormat parameter.
 
 ***Parameters***
 
