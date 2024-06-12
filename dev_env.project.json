@@ -1,0 +1,13 @@
+{
+  "name": "voyager",
+  "tree": {
+    "$className": "DataModel",
+
+    "ServerStorage": {
+      "Voyager": {
+        "$className": "Folder",
+        "$path": "src/Voyager"
+      }
+    }
+  }
+}
