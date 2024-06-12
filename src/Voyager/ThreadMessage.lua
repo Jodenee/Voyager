@@ -7,9 +7,9 @@ setmetatable(ThreadMessage, Message)
 
 function ThreadMessage.new(data)
 	local self = setmetatable(Message.new(data), ThreadMessage)
-	
-	self.position = data.position
-	
+
+	self.Position = data.position
+
 	return self
 end
 

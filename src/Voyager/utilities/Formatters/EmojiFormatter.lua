@@ -1,14 +1,14 @@
 local EmojiFormatter = {}
 
-function EmojiFormatter.emoji(emojiName : string) : string 
+function EmojiFormatter.Emoji(emojiName : string) : string 
 	return ":" .. emojiName .. ":"
 end
 
-function EmojiFormatter.customEmoji(emojiName : string, emojiId : string) : string 
+function EmojiFormatter.CustomEmoji(emojiName : string, emojiId : string) : string 
 	return "<:" .. emojiName .. ":" .. emojiId .. ">"
 end
 
-function EmojiFormatter.animatedEmoji(emojiName : string, emojiId : string) : string 
+function EmojiFormatter.AnimatedEmoji(emojiName : string, emojiId : string) : string 
 	return "<a:" .. emojiName .. ":" .. emojiId .. ">"
 end
 

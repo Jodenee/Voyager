@@ -8,10 +8,10 @@ setmetatable(User, Author)
 
 function User.new(data)
 	local self = setmetatable(Author.new(data), User)
-	
-	self.globalName = data.global_name
-	self.publicFlags = PublicUserFlags.fromBitfield(data.public_flags)
-	
+
+	self.GlobalName = data.global_name
+	self.PublicFlags = PublicUserFlags.FromBitfield(data.public_flags)
+
 	return self
 end
 

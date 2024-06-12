@@ -6,12 +6,12 @@ local MessageFlags = require(script.Parent.MessageFlags)
 function OptionalExecuteInfo.new(threadId : string?, tts : boolean?, usernameOverride : string?, avatarOverride : string?, messageFlags : {}?, threadName : string?)
 	local self = setmetatable({}, OptionalExecuteInfo)
 
-	self.threadId = threadId
-	self.tts = tts or false
-	self.usernameOverride = usernameOverride
-	self.avatarOverride = avatarOverride
-	self.messageFlags = messageFlags or MessageFlags.fromBitfield(0)
-	self.threadName = threadName
+	self.ThreadId = threadId
+	self.TTS = tts or false
+	self.UsernameOverride = usernameOverride
+	self.AvatarOverride = avatarOverride
+	self.MessageFlags = messageFlags or MessageFlags.FromBitfield(0)
+	self.ThreadName = threadName
 
 	return self
 end

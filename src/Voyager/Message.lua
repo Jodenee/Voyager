@@ -4,91 +4,92 @@ Message.__index = Message
 local Author = require(script.Parent.Author)
 local User = require(script.Parent.User)
 local Embed = require(script.Parent.Embed)
-local Reaction = require(script.Parent.Reaction)
 local MessageFlags = require(script.Parent.MessageFlags)
 
 function Message.new(data)
 	local self = setmetatable({}, Message)
 
-	self.id = data.id
-	self.messageType = data["type"]
-	self.content = data.content
-	self.channelId = data.channel_id
-	self.author = Author.new(data.author)
-	self.embeds = {}
-	self.reactions = {}
-	self.mentions = {}
-	self.mentionRoles = {}
-	self.pinned = data.pinned
-	self.mentionEveryone = data.mention_everyone
-	self.tts = data.tts
-	self.timestamp = data.timestamp
-	self.createdAt = DateTime.fromIsoDate(data.timestamp)
-	self.flags = MessageFlags.fromBitfield(data.flags)
-	self.webhookId = data.webhook_id
-	self.jumpUrl = "https://discord.com/channels/@me/" .. self.channelId .. "/" .. self.id
+	self.Id = data.id
+	self.MessageType = data["type"]
+	self.Content = data.content
+	self.ChannelId = data.channel_id
+	self.Author = Author.new(data.author)
+	self.Embeds = {}
+	self.MentionedUsers = {}
+	self.MentionedRoles = {}
+	self.IsPinned = data.pinned
+	self.MentionsEveryone = data.mention_everyone
+	self.TTS = data.tts
+	self.CreatedAt = DateTime.fromIsoDate(data.timestamp)
+	self.Flags = MessageFlags.FromBitfield(data.flags)
+	self.WebhookId = data.webhook_id
+	self.JumpUrl = "https://discord.com/channels/@me/" .. self.ChannelId .. "/" .. self.Id
 
 	if data.embeds then
 		for _, embedData in data.embeds do
 			local embed = Embed.new(embedData.title, embedData.description, embedData.url)
 
 			if embedData.color then
-				embed.color = embedData.color
+				local red = bit32.band(bit32.rshift(embedData.color, 16), 255)
+				local green = bit32.band(bit32.rshift(embedData.color, 8), 255)
+				local blue = bit32.band(embedData.color, 255)
+
+				embed:SetColor(Color3.fromRGB(red, green, blue))
 			end
 
 			if embedData.timestamp then
-				embed:setTimestamp(embedData.timestamp)
+				embed:SetTimestamp(embedData.timestamp)
 			end
 
 			if embedData.footer then
-				embed:setFooter(embedData.footer.text, embedData.footer.icon_url) 
+				embed:SetFooter(embedData.footer.text, embedData.footer.icon_url) 
 
-				embed.footer.proxy_icon_url = embedData.footer.proxy_icon_url
+				embed.Footer.proxy_icon_url = embedData.footer.proxy_icon_url
 			end
 
 			if embedData.image then 
-				embed:setImage(embedData.image.url)
+				embed:SetImage(embedData.image.url)
 
-				embed.image.height = embedData.image.height
-				embed.image.width = embedData.image.width
-				embed.image.proxy_url = embedData.image.proxy_url
+				embed.Image.height = embedData.image.height
+				embed.Image.width = embedData.image.width
+				embed.Image.proxy_url = embedData.image.proxy_url
 			end
 
 			if embedData.thumbnail then
-				embed:setThumbnail(embedData.thumbnail.url)
+				embed:SetThumbnail(embedData.thumbnail.url)
 
-				embed.thumbnail.height = embedData.thumbnail.height
-				embed.thumbnail.width = embedData.thumbnail.width
-				embed.thumbnail.proxy_url = embedData.thumbnail.proxy_url
+				embed.Thumbnail.height = embedData.thumbnail.height
+				embed.Thumbnail.width = embedData.thumbnail.width
+				embed.Thumbnail.proxy_url = embedData.thumbnail.proxy_url
 			end
 
-			if embedData.author then 
-				embed:setAuthor(embedData.author.name, embedData.author.url, embedData.author.icon_url)
+			if embedData.author then
+				embed:SetAuthor(embedData.author.name, embedData.author.url, embedData.author.icon_url)
 
-				embed.author.proxy_icon_url = embedData.author.proxy_icon_url
-			end	
+				embed.Author.proxy_icon_url = embedData.author.proxy_icon_url
+			end
 
 			if embedData.fields then
 				for _, fieldData in embedData.fields do
-					embed:addField(fieldData.name, fieldData.value, fieldData.inline)
+					embed:AddField(fieldData.name, fieldData.value, fieldData.inline)
 				end
 			end
 
-			table.insert(self.embeds, embed)
+			table.insert(self.Embeds, embed)
 		end
-	end	
+	end
 
 	if data.mentions then
 		for _, mentionData in data.mentions do
-			table.insert(self.mentions, User.new(mentionData))
+			table.insert(self.MentionedUsers, User.new(mentionData))
 		end
-	end	
+	end
 
 	if data.mention_roles then
 		for _, roleId in data.mention_roles do
-			table.insert(self.mentionRoles, roleId)
+			table.insert(self.MentionedRoles, roleId)
 		end
-	end	
+	end
 
 	return self
 end

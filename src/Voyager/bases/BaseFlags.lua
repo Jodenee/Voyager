@@ -1,23 +1,23 @@
 local BaseFlags = {}
 BaseFlags.__index = BaseFlags
 
-function BaseFlags.fromBitfield(value : number)
+function BaseFlags.FromBitfield(value : number)
 	local self = setmetatable({}, BaseFlags)
-	
-	self.value = value
-	
+
+	self.Value = value
+
 	return self
 end
 
-function BaseFlags:hasFlag(flag : number) : boolean
-	return bit32.band(self.value, flag) == flag
+function BaseFlags:HasFlag(flag : number) : boolean
+	return bit32.band(self.Value, flag) == flag
 end
 
-function BaseFlags:setFlag(flag : number, toggle : boolean) : nil
+function BaseFlags:SetFlag(flag : number, toggle : boolean) : nil
 	if toggle then
-		self.value = bit32.bor(self.value, flag)
+		self.Value = bit32.bor(self.Value, flag)
 	else
-		self.value = bit32.band(self.value, bit32.bnot(flag))
+		self.Value = bit32.band(self.Value, bit32.bnot(flag))
 	end
 end
 

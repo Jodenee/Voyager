@@ -5,20 +5,20 @@ local BaseFlags = require(script.Parent.bases.BaseFlags)
 
 setmetatable(PublicUserFlags, BaseFlags)
 
-function PublicUserFlags.fromBitfield(value : number)
-	local self = setmetatable(BaseFlags.fromBitfield(value), PublicUserFlags)
+function PublicUserFlags.FromBitfield(value : number)
+	local self = setmetatable(BaseFlags.FromBitfield(value), PublicUserFlags)
 
 	return self
 end
 
-function PublicUserFlags:getFlags() : {number}
-	local enum = require(script.Parent.utilities.Enum)
+function PublicUserFlags:GetFlags() : { number }
+	local enum = require(script.Parent.Enum)
 	local foundFlags = {}
-	
-	for _, flag in enum.UserPublicFlags do
-		if self:hasFlag(flag) then table.insert(foundFlags, flag) end
+
+	for _, flag in enum.PublicUserFlag do
+		if self:HasFlag(flag) then table.insert(foundFlags, flag) end
 	end
-	
+
 	return foundFlags
 end
 

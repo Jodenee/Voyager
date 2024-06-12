@@ -1,15 +1,15 @@
 local MentionFormatter = {}
 
-function MentionFormatter.mentionUser(userId : string) : string
+function MentionFormatter.MentionUser(userId : string) : string
 	return "<@" .. userId .. ">"
 end
 
-function MentionFormatter.mentionRole(roleId : string) : string
+function MentionFormatter.MentionRole(roleId : string) : string
 	return "<@&" .. roleId .. ">"
 end
 
 
-function MentionFormatter.mentionChannel(channelId : string) : string
+function MentionFormatter.MentionChannel(channelId : string) : string
 	return "<#" .. channelId .. ">"
 end
 
