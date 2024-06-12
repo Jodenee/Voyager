@@ -1,0 +1,30 @@
+[package]
+authors = ["Jodene"]
+name = "jodenee/voyager"
+description = "A Discord webhook API wrapper for roblox."
+license = "MIT"
+version = "3.0.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "server"
+include = [
+    "src/Voyager", 
+    "default.project.json", 
+    "LICENSE"
+]
+exclude = [
+    "aftman.toml", 
+    "docs",  
+    "examples", 
+    "wally.toml", 
+    "mkdocs.yml", 
+    "README.md", 
+    "dev_env.project.json",
+    "*.rbxlx",
+    "*.zip"
+]
+
+# Temporary to prevent accidental publishing
+private = true
+
+
+[dependencies]
