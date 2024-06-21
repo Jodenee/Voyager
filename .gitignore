@@ -1,10 +1,15 @@
-# Project place file
+# Project place files and build artifacts
 /*.rbxlx
+/*.rbxl
+/*.rbxmx
+/*.rbxm
 
 # Roblox Studio lock files
 /*.rbxlx.lock
 /*.rbxl.lock
 
-# Zip files
+# Wally lock file
+wally.lock
 
+# Wally package
 /*.zip
