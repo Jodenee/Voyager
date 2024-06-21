@@ -1,10 +1,14 @@
 local Message = {}
 Message.__index = Message
 
-local Author = require(script.Parent.Author)
 local User = require(script.Parent.User)
 local Embed = require(script.Parent.Embed)
 local MessageFlags = require(script.Parent.MessageFlags)
+local EmbedFooter = require(script.Parent.EmbedFooter)
+local EmbedImage = require(script.Parent.EmbedImage)
+local EmbedThumbnail = require(script.Parent.EmbedThumbnail)
+local EmbedAuthor = require(script.Parent.EmbedAuthor)
+local EmbedField = require(script.Parent.EmbedField)
 
 function Message.new(data)
 	local self = setmetatable({}, Message)
@@ -13,65 +17,53 @@ function Message.new(data)
 	self.MessageType = data["type"]
 	self.Content = data.content
 	self.ChannelId = data.channel_id
-	self.Author = Author.new(data.author)
+	self.Author = User.new(data.author)
 	self.Embeds = {}
 	self.MentionedUsers = {}
 	self.MentionedRoles = {}
 	self.IsPinned = data.pinned
 	self.MentionsEveryone = data.mention_everyone
-	self.TTS = data.tts
+	self.IsTTS = data.tts
 	self.CreatedAt = DateTime.fromIsoDate(data.timestamp)
 	self.Flags = MessageFlags.FromBitfield(data.flags)
 	self.WebhookId = data.webhook_id
 	self.JumpUrl = "https://discord.com/channels/@me/" .. self.ChannelId .. "/" .. self.Id
 
 	if data.embeds then
-		for _, embedData in data.embeds do
-			local embed = Embed.new(embedData.title, embedData.description, embedData.url)
+		for _, embedObject in data.embeds do
+			local embed = Embed.new(embedObject.title, embedObject.description, embedObject.url)
 
-			if embedData.color then
-				local red = bit32.band(bit32.rshift(embedData.color, 16), 255)
-				local green = bit32.band(bit32.rshift(embedData.color, 8), 255)
-				local blue = bit32.band(embedData.color, 255)
+			if embedObject.color then
+				local red = bit32.band(bit32.rshift(embedObject.color, 16), 255)
+				local green = bit32.band(bit32.rshift(embedObject.color, 8), 255)
+				local blue = bit32.band(embedObject.color, 255)
 
 				embed:SetColor(Color3.fromRGB(red, green, blue))
 			end
 
-			if embedData.timestamp then
-				embed:SetTimestamp(embedData.timestamp)
+			if embedObject.timestamp then
+				embed:SetTimestamp(embedObject.timestamp)
 			end
 
-			if embedData.footer then
-				embed:SetFooter(embedData.footer.text, embedData.footer.icon_url) 
-
-				embed.Footer.proxy_icon_url = embedData.footer.proxy_icon_url
+			if embedObject.footer then
+				embed.Footer = EmbedFooter._FromObject(embedObject.footer)
 			end
 
-			if embedData.image then 
-				embed:SetImage(embedData.image.url)
-
-				embed.Image.height = embedData.image.height
-				embed.Image.width = embedData.image.width
-				embed.Image.proxy_url = embedData.image.proxy_url
+			if embedObject.image then
+				embed.Image = EmbedImage._FromObject(embedObject.image)
 			end
 
-			if embedData.thumbnail then
-				embed:SetThumbnail(embedData.thumbnail.url)
-
-				embed.Thumbnail.height = embedData.thumbnail.height
-				embed.Thumbnail.width = embedData.thumbnail.width
-				embed.Thumbnail.proxy_url = embedData.thumbnail.proxy_url
+			if embedObject.thumbnail then
+				embed.Thumbnail = EmbedThumbnail._FromObject(embedObject.thumbnail)
 			end
 
-			if embedData.author then
-				embed:SetAuthor(embedData.author.name, embedData.author.url, embedData.author.icon_url)
-
-				embed.Author.proxy_icon_url = embedData.author.proxy_icon_url
+			if embedObject.author then
+				embed.Author = EmbedAuthor._FromObject(embedObject.author)
 			end
 
-			if embedData.fields then
-				for _, fieldData in embedData.fields do
-					embed:AddField(fieldData.name, fieldData.value, fieldData.inline)
+			if embedObject.fields then
+				for _, fieldObject in embedObject.fields do
+					table.insert(embed.Fields, EmbedField._FromObject(fieldObject))
 				end
 			end
 
