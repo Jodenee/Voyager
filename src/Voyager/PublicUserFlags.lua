@@ -1,7 +1,7 @@
 local PublicUserFlags = {}
 PublicUserFlags.__index = PublicUserFlags
 
-local BaseFlags = require(script.Parent.bases.BaseFlags)
+local BaseFlags = require(script.Parent.Bases.BaseFlags)
 
 setmetatable(PublicUserFlags, BaseFlags)
 
