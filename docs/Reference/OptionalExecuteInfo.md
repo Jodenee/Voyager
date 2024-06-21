@@ -1,4 +1,4 @@
-# OptionalExecuteInfo
+# OptionalSendMessageInfo
 
 <br />
 
@@ -6,7 +6,7 @@
 
 <br />
 
-### **OptionalExecuteInfo.threadId :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+### **OptionalSendMessageInfo.threadId :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 The id of the thread the message should go to.
 
 <br />
@@ -15,7 +15,7 @@ The id of the thread the message should go to.
 
 <br />
 
-### **OptionalExecuteInfo.tts :** [*boolean*](https://create.roblox.com/docs/scripting/luau/strings)
+### **OptionalSendMessageInfo.tts :** [*boolean*](https://create.roblox.com/docs/scripting/luau/strings)
 Whether the message should be tts.
 
 <br />
@@ -24,7 +24,7 @@ Whether the message should be tts.
 
 <br />
 
-### **OptionalExecuteInfo.usernameOverride :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+### **OptionalSendMessageInfo.usernameOverride :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 An override for the webhook's username.
 
 <br />
@@ -33,7 +33,7 @@ An override for the webhook's username.
 
 <br />
 
-### **OptionalExecuteInfo.avatarOverride :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+### **OptionalSendMessageInfo.avatarOverride :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 A url to an image that'll override for the webhook's avatar.
 
 <br />
@@ -42,7 +42,7 @@ A url to an image that'll override for the webhook's avatar.
 
 <br />
 
-### **OptionalExecuteInfo.messageFlags :** [*MessageFlags*](MessageFlags.md)
+### **OptionalSendMessageInfo.messageFlags :** [*MessageFlags*](MessageFlags.md)
 A [*MessageFlags*](MessageFlags.md) object.
 
 <br />
@@ -51,7 +51,7 @@ A [*MessageFlags*](MessageFlags.md) object.
 
 <br />
 
-### **OptionalExecuteInfo.threadName :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+### **OptionalSendMessageInfo.threadName :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
 The name of the thread to create.
 
 ???+ warning
@@ -67,8 +67,8 @@ The name of the thread to create.
 
 <br />
 
-### **OptionalExecuteInfo.new**(threadId **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), tts **:** [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans), usernameOverride **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), avatarOverride **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), messageFlags **:** [*MessageFlags?*](MessageFlags.md), threadName **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [OptionalExecuteInfo](OptionalExecuteInfo.md)
-This method returns a new OptionalExecuteInfo object.
+### **OptionalSendMessageInfo.new**(threadId **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), tts **:** [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans), usernameOverride **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), avatarOverride **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), messageFlags **:** [*MessageFlags?*](MessageFlags.md), threadName **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [OptionalSendMessageInfo](OptionalSendMessageInfo.md)
+This method returns a new OptionalSendMessageInfo object.
 
 ???+ warning
     If both threadId and threadName are given an error will occur!

@@ -51,7 +51,7 @@ The third argument is whether we want to queue the request. If left empty it wil
 
 The forth argument is whether we want to wait for a message object to be returned. If left empty it will default to false.
 
-The fifth argument is a [*OptionalExecuteInfo*](../Reference/OptionalExecuteInfo.md) object. This object is used to enable lesser used features like tts, avatar url override, thread id etc. (optional)
+The fifth argument is a [*OptionalSendMessageInfo*](../Reference/OptionalSendMessageInfo.md) object. This object is used to enable lesser used features like tts, avatar url override, thread id etc. (optional)
 
 If you require a more indepth description about the Webhook object's execute function you can find it [*here*](../Reference/Webhook.md) under the methods section.
 

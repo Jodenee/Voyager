@@ -188,7 +188,7 @@ This method returns a new Webhook object.
 
 <br />
 
-### **Webhook:execute**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, queue **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), waitForMessage **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), optionalExecuteInfo **:** [*OptionalExecuteInfo?*](OptionalExecuteInfo.md)) **:** ([*Message?*](Message.md) | [*ThreadMessage?*](ThreadMessage.md), [*RequestStatus*](#requeststatus), [*RatelimitInformation*](#ratelimitinformation) | [*RatelimitedInformation*](#ratelimitedinformation) | {})
+### **Webhook:execute**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, queue **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), waitForMessage **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), optionalExecuteInfo **:** [*OptionalSendMessageInfo?*](OptionalSendMessageInfo.md)) **:** ([*Message?*](Message.md) | [*ThreadMessage?*](ThreadMessage.md), [*RequestStatus*](#requeststatus), [*RatelimitInformation*](#ratelimitinformation) | [*RatelimitedInformation*](#ratelimitedinformation) | {})
 This method sends a message to Discord.
 
 ???+ note
@@ -247,7 +247,7 @@ This method deletes a message sent by the webhook.
 
 <br />
 
-### **Webhook:_validateExecuteRequest**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, optionalExecuteInfo **:** [*OptionalExecuteInfo?*](OptionalExecuteInfo.md)) **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
+### **Webhook:_validateExecuteRequest**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, optionalExecuteInfo **:** [*OptionalSendMessageInfo?*](OptionalSendMessageInfo.md)) **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
 This method validates data given to :execute before sending it to the proxy. This is done to avoid making pointless requests to the proxy.
 
 ???+ warning
@@ -257,7 +257,7 @@ This method validates data given to :execute before sending it to the proxy. Thi
 
 - ***content:*** The content of the message.
 - ***embeds:*** A table of [*Embed*](Embed.md) objects.
-- ***optionalExecuteInfo:*** A [*OptionalExecuteInfo*](OptionalExecuteInfo.md) object.
+- ***optionalExecuteInfo:*** A [*OptionalSendMessageInfo*](OptionalSendMessageInfo.md) object.
 
 <br />
 
