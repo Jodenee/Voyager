@@ -1,7 +1,7 @@
 [package]
 authors = ["Jodene"]
 name = "jodenee/voyager"
-description = "A Discord webhook API wrapper for roblox."
+description = "A Discord webhook API wrapper for Roblox."
 license = "MIT"
 version = "3.0.0"
 registry = "https://github.com/UpliftGames/wally-index"
@@ -20,11 +20,11 @@ exclude = [
     "README.md", 
     "dev_env.project.json",
     "*.rbxlx",
+    "*.rbxl",
+    "*.rbxmx",
+    "*.rbxm",
     "*.zip"
 ]
-
-# Temporary to prevent accidental publishing
-private = true
 
 
 [dependencies]
