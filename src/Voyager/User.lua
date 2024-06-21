@@ -1,18 +1,46 @@
 local User = {}
 User.__index = User
 
-local Author = require(script.Parent.Author)
+local MentionFormatter = require(script.Parent.Utilities.Formatters.MentionFormatter)
 local PublicUserFlags = require(script.Parent.PublicUserFlags)
 
-setmetatable(User, Author)
-
 function User.new(data)
-	local self = setmetatable(Author.new(data), User)
+	local self = setmetatable({}, User)
 
+	self.Id = data.id
+	self.Username = data.username
+	self.Avatar = data.avatar
+	self.Bot = data.bot or false
+	self.Mention = MentionFormatter.MentionUser(data.id)
 	self.GlobalName = data.global_name
 	self.PublicFlags = PublicUserFlags.FromBitfield(data.public_flags)
 
 	return self
+end
+
+function User:GetAvatarUrl(size : number?, imageFormat : (".jpeg" | ".png" | ".webp" | ".gif")?) : string?
+	if not self.Avatar then return end
+
+	if imageFormat then
+		if imageFormat ~= ".jpeg" and imageFormat ~= ".png" and imageFormat ~= ".webp" and imageFormat ~= ".gif" then
+			return error("Unsupported image format given.") 
+		end
+	end
+
+	if size then
+		if size < 16 or size > 4096 then return error("Image size must be between 16 and 4096.") end
+		if math.sqrt(size) % 1 ~= 0 then return error("Image size must be any number to power of two.") end
+
+		return "https://cdn.discordapp.com/avatars/" .. self.Id .. "/" .. self.Avatar .. (imageFormat or ".png") .. "?size=" .. size
+	else
+		return "https://cdn.discordapp.com/avatars/" .. self.Id .. "/" .. self.Avatar .. (imageFormat or ".png")
+	end
+end
+
+function User:HasAnimatedAvatar() : boolean
+	if not self.Avatar then return false end
+
+	return self.Avatar:match("a_") == "a_"
 end
 
 return User
