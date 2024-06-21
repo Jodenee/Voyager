@@ -1,6 +1,12 @@
 local Embed = {}
 Embed.__index = Embed
 
+local EmbedFooter = require(script.Parent.EmbedFooter)
+local EmbedImage = require(script.Parent.EmbedImage)
+local EmbedThumbnail = require(script.Parent.EmbedThumbnail)
+local EmbedAuthor = require(script.Parent.EmbedAuthor)
+local EmbedField = require(script.Parent.EmbedField)
+
 function Embed.new(title : string?, description : string?, url : string?)
 	local self = setmetatable({}, Embed)
 
@@ -15,102 +21,128 @@ end
 
 function Embed:_Validate() : (boolean, string?)
 	if self.Title then
-		if string.len(self.Title) > 256 then return false, "The title of an embed must only contain up to 256 characters." end
+		if string.len(self.Title) > 256 then
+			return false, "The title of an embed can only have up to 256 characters."
+		end
 	end
 
 	if self.Description then
-		if string.len(self.Description) > 4096 then return false, "The description of an embed must only contain up to 4096 characters." end
+		if string.len(self.Description) > 4096 then
+			return false, "The description of an embed can only have up to 4096 characters."
+		end
 	end
 
-	if self.Footer then 
-		if string.len(self.Footer.text) > 2048 then return false, "The text in a footer must only contain up to 2048 characters." end
+	if self.Footer then
+		local isFooterValid, errorMessage = self.Footer:_Validate()
 
-		if self.Footer.icon_url then
-			if not self.Footer.icon_url:match("https") then return false, "The footer's icon url only supports HTTP(S)." end
-		end
+		if not isFooterValid then return false, errorMessage end
 	end
 
 	if self.Image then
-		if not self.Image.url:match("https") then return false, "The image's url only supports HTTP(S)." end
+		local isImageValid, errorMessage = self.Image:_Validate()
+
+		if not isImageValid then return false, errorMessage end
 	end
 
 	if self.Thumbnail then
-		if not self.Thumbnail.url:match("https") then return false, "The thumbnail's url only supports HTTP(S)." end
+		local isThumbnailValid, errorMessage = self.Thumbnail:_Validate()
+
+		if not isThumbnailValid then return false, errorMessage end
 	end
 
-	if self.Author then 
-		if string.len(self.Author.name) > 256 then return false, "The name of an author must only contain up to 256 characters." end
+	if self.Author then
+		local isAuthorValid, errorMessage = self.Author:_Validate()
 
-		if self.Author.icon_url then
-			if not self.Author.icon_url:match("https") then return false, "The author's icon url only supports HTTP(S)." end
+		if not isAuthorValid then return false, errorMessage end
+	end
+
+	if #self.Fields > 25 then
+		return false, "One embed can only have up to 25 fields."
+	end
+
+	for index, field in self.Fields do
+		local isFieldValid, errorMessage = field:_Validate()
+
+		if not isFieldValid then
+			return false, "Fields[" .. index .."]: " .. errorMessage
 		end
-	end
-
-	if #self.Fields > 25 then return false, "One embed must only have up to 25 fields." end
-
-	for _, field in self.Fields do
-		if string.len(field.name) > 256 then return false, "The name of a field must only contain up to 256 characters." end
-		if string.len(field.value) > 1024 then return false, "The value of a field must only contain up to 1024 characters." end
 	end
 
 	return true
 end
 
-function Embed:SetTitle(title : string) : nil
+function Embed:SetTitle(title : string) : { }
 	self.Title = title
+
+	return self
 end
 
-function Embed:SetDescription(description : string) : nil
+function Embed:SetDescription(description : string) : { }
 	self.Description = description
+
+	return self
 end
 
-function Embed:SetUrl(url : string) : nil
+function Embed:SetUrl(url : string) : { }
 	self.Url = url
+
+	return self
 end
 
-function Embed:SetTimestamp(customTimestamp : DateTime?) : nil
+function Embed:SetTimestamp(customTimestamp : DateTime?) : { }
 	if customTimestamp then self.Timestamp = customTimestamp return end
 
 	self.Timestamp = DateTime.now()
+
+	return self
 end
 
-function Embed:SetColor(color3 : Color3) : nil
+function Embed:SetColor(color3 : Color3) : { }
 	self.Color = color3
+
+	return self
 end
 
-function Embed:SetFooter(text : string, iconUrl : string?) : nil
-	self.Footer = {
-		text = text,
-		icon_url = iconUrl
-	}
+function Embed:SetFooter(text : string, iconUrl : string?) : { }
+	self.Footer = EmbedFooter.new(text, iconUrl)
+
+	return self
 end
 
-function Embed:SetImage(url : string) : nil
-	self.Image = {
-		url = url
-	}
+function Embed:SetImage(url : string) : { }
+	self.Image = EmbedImage.new(url)
+
+	return self
 end
 
-function Embed:SetThumbnail(url : string) : nil
-	self.thumbnail = {
-		url = url
-	}
+function Embed:SetThumbnail(url : string) : { }
+	self.thumbnail = EmbedThumbnail.new(url)
+
+	return self
 end
 
-function Embed:SetAuthor(name : string, url : string?, iconUrl : string?) : nil
-	self.Author = {
-		name = name,
-		url = url,
-		icon_url = iconUrl
-	}
+function Embed:SetAuthor(name : string, url : string?, iconUrl : string?) : { }
+	self.Author = EmbedAuthor.new(name, url, iconUrl)
+
+	return self
 end
 
-function Embed:AddField(name : string, value : string, inLine : boolean?) : nil
-	table.insert(self.Fields, {
-		name = name,
-		value = value,
-		inline = inLine
-	})
+function Embed:AddField(name : string, value : string, inLine : boolean?) : { }
+	table.insert(self.Fields, EmbedField.new(name, value, inLine))
+
+	return self
+end
+
+function Embed:SetFieldAt(fieldPosition : number, name : string, value : string, inLine : boolean?)
+	self.Fields[fieldPosition] = EmbedField.new(name, value, inLine)
+
+	return self
+end
+
+function Embed:RemoveFieldAt(fieldPosition : number) : { }
+	table.remove(self.Fields, fieldPosition)
+
+	return self
 end
 
 function Embed:TotalCharacters() : number
@@ -118,12 +150,12 @@ function Embed:TotalCharacters() : number
 
 	if self.Title then total += string.len(self.Title) end
 	if self.Description then total += string.len(self.Description) end
-	if self.Footer then total += string.len(self.Footer.text) end
-	if self.Author then total += string.len(self.Author.name) end
+	if self.Footer then total += string.len(self.Footer.Text) end
+	if self.Author then total += string.len(self.Author.Name) end
 
 	if self.Fields then
 		for _, field in self.Fields do
-			total += (string.len(field.name) + string.len(field.value))
+			total += (string.len(field.Name) + string.len(field.Value))
 		end
 	end
 
@@ -147,18 +179,18 @@ function Embed:_ToObject() : {}
 
 	if self.Footer then
 		embedObject.footer = {
-			text = self.Footer.text,
-			icon_url = self.Footer.icon_url
+			text = self.Footer.Text,
+			icon_url = self.Footer.IconUrl
 		}
 	end
 
-	if self.Image then 
+	if self.Image then
 		embedObject.image = {
-			url = self.Image.url
+			url = self.Image.Url
 		}
 	end
 
-	if self.Thumbnail then 
+	if self.Thumbnail then
 		embedObject.thumbnail = {
 			url = self.Thumbnail.url
 		}
@@ -166,9 +198,9 @@ function Embed:_ToObject() : {}
 
 	if self.Author then
 		embedObject.author = {
-			name = self.Author.name,
-			url = self.Author.url,
-			icon_url = self.Author.icon_url
+			name = self.Author.Name,
+			url = self.Author.Url,
+			icon_url = self.Author.IconUrl
 		}
 	end
 
@@ -177,9 +209,9 @@ function Embed:_ToObject() : {}
 
 		for _, field in self.Fields do
 			table.insert(embedObject.fields, {
-				name = field.name,
-				value = field.value,
-				inline = field.inline
+				name = field.Name,
+				value = field.Value,
+				inline = field.InLine
 			})
 		end
 	end
