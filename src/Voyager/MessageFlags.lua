@@ -1,7 +1,7 @@
 local MessageFlags = {}
 MessageFlags.__index = MessageFlags
 
-local BaseFlags = require(script.Parent.bases.BaseFlags)
+local BaseFlags = require(script.Parent.Bases.BaseFlags)
 
 setmetatable(MessageFlags, BaseFlags)
 
