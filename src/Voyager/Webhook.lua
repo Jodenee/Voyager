@@ -277,13 +277,12 @@ function Webhook:SendMessageInThread(threadId : string, content : string?, embed
 		requestUrl ..= "/queue"
 	end
 
-	requestUrl ..= "?wait=" .. tostring(waitForMessage)
-	requestUrl ..= "&thread_id=" .. threadId
+	requestUrl ..= "?wait=" .. tostring(waitForMessage) .. "&thread_id=" .. threadId
 
 	local responseBody, requestStatus = self:_Request(requestUrl, "POST", requestBody, "application/json")
 
 	if not queue and waitForMessage and requestStatus.Success then
-		return ThreadMessage.new(responseBody), requestStatus
+		return Message.new(responseBody), requestStatus
 	end
 
 	return nil, requestStatus
@@ -310,7 +309,7 @@ function Webhook:EditMessage(messageId : string, content : string?, embeds : {}?
 	local responseBody, requestStatus = self:_Request(requestUrl, "PATCH", requestBody, "application/json")
 
 	if requestStatus.Success then
-		return EditedMessage.new(responseBody), requestStatus
+		return Message.new(responseBody), requestStatus
 	end
 
 	return nil, requestStatus
@@ -337,7 +336,7 @@ function Webhook:EditMessageInThread(threadId : string, messageId : string, cont
 	local responseBody, requestStatus = self:_Request(requestUrl, "PATCH", requestBody, "application/json")
 
 	if requestStatus.Success then
-		return EditedThreadMessage.new(responseBody), requestStatus
+		return Message.new(responseBody), requestStatus
 	end
 
 	return nil, requestStatus
