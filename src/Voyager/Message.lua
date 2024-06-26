@@ -27,7 +27,12 @@ function Message.new(data)
 	self.CreatedAt = DateTime.fromIsoDate(data.timestamp)
 	self.Flags = MessageFlags.FromBitfield(data.flags)
 	self.WebhookId = data.webhook_id
+	self.Position = data.position
 	self.JumpUrl = "https://discord.com/channels/@me/" .. self.ChannelId .. "/" .. self.Id
+
+	if data.edited_timestamp then
+		self.EditedAt = DateTime.fromIsoDate(data.edited_timestamp)
+	end
 
 	if data.embeds then
 		for _, embedObject in data.embeds do
