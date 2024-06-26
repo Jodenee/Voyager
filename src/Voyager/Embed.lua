@@ -7,14 +7,30 @@ local EmbedThumbnail = require(script.Parent.EmbedThumbnail)
 local EmbedAuthor = require(script.Parent.EmbedAuthor)
 local EmbedField = require(script.Parent.EmbedField)
 
-function Embed.new(title : string?, description : string?, url : string?)
+function Embed.new(
+	title : string?,
+	description : string?,
+	url : string?,
+	timestamp : DateTime?,
+	color : Color3?,
+	footer : {}?,
+	image : {}?,
+	thumbnail: {}?,
+	author: {}?,
+	fields: {}?
+)
 	local self = setmetatable({}, Embed)
 
 	self.Title = title
 	self.Description = description
 	self.Url = url
-
-	self.Fields = {}
+	self.Timestamp = timestamp
+	self.Color = color
+	self.Footer = footer
+	self.Image = image
+	self.Thumbnail = thumbnail
+	self.Author = author
+	self.Fields = fields or {}
 
 	return self
 end
@@ -134,12 +150,24 @@ function Embed:AddField(name : string, value : string, inLine : boolean?) : { }
 end
 
 function Embed:SetFieldAt(fieldPosition : number, name : string, value : string, inLine : boolean?)
-	self.Fields[fieldPosition] = EmbedField.new(name, value, inLine)
+	if fieldPosition > (#self.Fields + 1) or fieldPosition <= 0  then
+		error("Could not set field at index " .. fieldPosition .. ", make sure the fieldPosition is less than or 1 greater than the length of the fields table.")
+	end
+
+	table.insert(
+		self.Fields,
+		fieldPosition,
+		EmbedField.new(name, value, inLine)
+	)
 
 	return self
 end
 
 function Embed:RemoveFieldAt(fieldPosition : number) : { }
+	if fieldPosition > #self.Fields or fieldPosition <= 0  then
+		error("No field exists at index " .. fieldPosition .. ".")
+	end
+
 	table.remove(self.Fields, fieldPosition)
 
 	return self
@@ -178,41 +206,26 @@ function Embed:_ToObject() : {}
 	end
 
 	if self.Footer then
-		embedObject.footer = {
-			text = self.Footer.Text,
-			icon_url = self.Footer.IconUrl
-		}
+		embedObject.footer = self.Footer:_ToObject()
 	end
 
 	if self.Image then
-		embedObject.image = {
-			url = self.Image.Url
-		}
+		embedObject.image = self.Image:_ToObject()
 	end
 
 	if self.Thumbnail then
-		embedObject.thumbnail = {
-			url = self.Thumbnail.url
-		}
+		embedObject.thumbnail = self.Thumbnail:_ToObject()
 	end
 
 	if self.Author then
-		embedObject.author = {
-			name = self.Author.Name,
-			url = self.Author.Url,
-			icon_url = self.Author.IconUrl
-		}
+		embedObject.author = self.Author:_ToObject()
 	end
 
 	if #self.Fields > 0 then
 		embedObject.fields = {}
 
 		for _, field in self.Fields do
-			table.insert(embedObject.fields, {
-				name = field.Name,
-				value = field.Value,
-				inline = field.InLine
-			})
+			table.insert(embedObject.fields, field:_ToObject())
 		end
 	end
 
