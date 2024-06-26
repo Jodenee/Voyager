@@ -9,6 +9,12 @@ function EmbedThumbnail.new(url : string)
 	return self
 end
 
+function EmbedThumbnail:_ToObject() : {}
+    return {
+		url = self.Url
+	}
+end
+
 function EmbedThumbnail._FromObject(embedImageObject : {})
 	local self = setmetatable({}, EmbedThumbnail)
 

@@ -11,6 +11,14 @@ function EmbedField.new(name : string, value : string, inLine : boolean?)
 	return self
 end
 
+function EmbedField:_ToObject() : {}
+    return {
+		name = self.Name,
+		value = self.Value,
+		inline = self.InLine
+	}
+end
+
 function EmbedField._FromObject(embedFieldObject : {})
 	local self = setmetatable({}, EmbedField)
 

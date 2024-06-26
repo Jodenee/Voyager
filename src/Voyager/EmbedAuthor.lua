@@ -11,6 +11,14 @@ function EmbedAuthor.new(name : string, url : string?, iconUrl : string?)
 	return self
 end
 
+function EmbedAuthor:_ToObject() : {}
+    return {
+        name = self.Name,
+        url = self.Url,
+        icon_url = self.IconUrl
+    }
+end
+
 function EmbedAuthor._FromObject(embedAuthorObject : {})
 	local self = setmetatable({}, EmbedAuthor)
 
