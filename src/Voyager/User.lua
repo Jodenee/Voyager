@@ -10,7 +10,7 @@ function User.new(data)
 	self.Id = data.id
 	self.Username = data.username
 	self.Avatar = data.avatar
-	self.Bot = data.bot or false
+	self.IsBot = data.bot or false
 	self.Mention = MentionFormatter.MentionUser(data.id)
 	self.GlobalName = data.global_name
 	self.PublicFlags = PublicUserFlags.FromBitfield(data.public_flags)
