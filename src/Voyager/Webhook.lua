@@ -4,9 +4,6 @@ Webhook.__index = Webhook
 local httpService = game:GetService("HttpService")
 
 local Message = require(script.Parent.Message)
-local EditedMessage = require(script.Parent.EditedMessage)
-local ThreadMessage = require(script.Parent.ThreadMessage)
-local EditedThreadMessage = require(script.Parent.EditedThreadMessage)
 local OptionalSendMessageInfo = require(script.Parent.OptionalSendMessageInfo)
 
 export type RatelimitInformation = {
