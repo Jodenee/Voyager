@@ -10,13 +10,6 @@ function EmbedFooter.new(text : string, iconUrl : string?)
 	return self
 end
 
-function EmbedFooter:_ToObject() : {}
-    return {
-		text = self.Text,
-		icon_url = self.IconUrl
-	}
-end
-
 function EmbedFooter._FromObject(embedFooterObject : {})
 	local self = setmetatable({}, EmbedFooter)
 
@@ -25,6 +18,13 @@ function EmbedFooter._FromObject(embedFooterObject : {})
 	self.ProxyIconUrl = embedFooterObject.proxy_icon_url
 
 	return self
+end
+
+function EmbedFooter:_ToObject() : {}
+    return {
+		text = self.Text,
+		icon_url = self.IconUrl
+	}
 end
 
 function EmbedFooter:_Validate() : (boolean, string?)
