@@ -72,25 +72,27 @@ function Webhook:_ValidateSendMessageRequest(content : string?, embeds : {}?, op
 		end
 	end
 
-	if optionalSendMessageInfo.UsernameOverride then
-		local restrictedUsernames = {"everyone", "here"}
-		local restrictedSubStrings = {"discord", "clyde", "```"}
-		local loweredUsername = optionalSendMessageInfo.UsernameOverride:lower()
+	if optionalSendMessageInfo then
+		if optionalSendMessageInfo.UsernameOverride then
+			local restrictedUsernames = {"everyone", "here"}
+			local restrictedSubStrings = {"discord", "clyde", "```"}
+			local loweredUsername = optionalSendMessageInfo.UsernameOverride:lower()
 
-		for _, restrictedUsername in restrictedUsernames do
-			if loweredUsername ~= restrictedUsername then continue end
+			for _, restrictedUsername in restrictedUsernames do
+				if loweredUsername ~= restrictedUsername then continue end
 
-			return false, "Username override is a restricted username \"" .. restrictedUsername .. "\"."
-		end
+				return false, "Username override is a restricted username \"" .. restrictedUsername .. "\"."
+			end
 
-		for _, restrictedSubString in restrictedSubStrings do
-			if not loweredUsername:match(restrictedSubString) then continue end
+			for _, restrictedSubString in restrictedSubStrings do
+				if not loweredUsername:match(restrictedSubString) then continue end
 
-			return false, "Username override contains a restricted substring \"" .. restrictedSubString .. "\"."
-		end
+				return false, "Username override contains a restricted substring \"" .. restrictedSubString .. "\"."
+			end
 
-		if string.len(optionalSendMessageInfo.UsernameOverride) < 1 or string.len(optionalSendMessageInfo.UsernameOverride) > 80 then
-			return false, "Username override must be between 1 and 80 characters in length."
+			if string.len(optionalSendMessageInfo.UsernameOverride) < 1 or string.len(optionalSendMessageInfo.UsernameOverride) > 80 then
+				return false, "Username override must be between 1 and 80 characters in length."
+			end
 		end
 	end
 
@@ -103,6 +105,7 @@ function Webhook:_ValidateSendMessageRequest(content : string?, embeds : {}?, op
 
 		for index, embed in embeds do
 			local isEmbedValid, errorMessage = embed:_Validate()
+
 			if not isEmbedValid then
 				return false, "Embeds[" .. index .. "]: " .. errorMessage
 			end
@@ -130,6 +133,7 @@ function Webhook:_ValidateEditMessageRequest(content : string?, embeds : {}?) : 
 
 		for index, embed in embeds do
 			local isEmbedValid, errorMessage = embed:_Validate()
+
 			if not isEmbedValid then
 				return false, "Embeds[" .. index .. "]: " .. errorMessage
 			end
@@ -201,8 +205,6 @@ function Webhook:_Request(url : string, method : string, body : {}?, contentType
 end
 
 function Webhook:SendMessage(content : string?, embeds : {}?, queue : boolean?, waitForMessage : boolean?, optionalSendMessageInfo : {}?) : ({}?, RequestStatus)
-	optionalSendMessageInfo = optionalSendMessageInfo or OptionalSendMessageInfo.new()
-
 	local isRequestValid, errorMessage = self:_ValidateSendMessageRequest(content, embeds, optionalSendMessageInfo)
 	if not isRequestValid then return error(errorMessage) end
 
@@ -220,13 +222,16 @@ function Webhook:SendMessage(content : string?, embeds : {}?, queue : boolean?, 
 	local requestUrl = self.BaseUrl
 	local requestBody = {
 		content = content,
-		username = optionalSendMessageInfo.UsernameOverride,
-		avatar_url = optionalSendMessageInfo.AvatarOverride,
-		tts = optionalSendMessageInfo.UseTTS,
-		embeds = embedObjects,
-		flags = optionalSendMessageInfo.MessageFlags.Value,
-		thread_name = optionalSendMessageInfo.ThreadName
+		embeds = embedObjects
 	}
+
+	if optionalSendMessageInfo then
+		requestBody.username = optionalSendMessageInfo.UsernameOverride
+		requestBody.avatar_url = optionalSendMessageInfo.AvatarOverride
+		requestBody.tts = optionalSendMessageInfo.UseTTS
+		requestBody.flags = optionalSendMessageInfo.MessageFlags.Value
+		requestBody.thread_name = optionalSendMessageInfo.ThreadName
+	end
 
 	if queue then
 		requestUrl ..= "/queue"
@@ -244,8 +249,6 @@ function Webhook:SendMessage(content : string?, embeds : {}?, queue : boolean?, 
 end
 
 function Webhook:SendMessageInThread(threadId : string, content : string?, embeds : {}?, queue : boolean?, waitForMessage : boolean?, optionalSendMessageInfo : {}?) : ({}?, RequestStatus)
-	optionalSendMessageInfo = optionalSendMessageInfo or OptionalSendMessageInfo.new()
-
 	local isRequestValid, errorMessage = self:_ValidateSendMessageRequest(content, embeds, optionalSendMessageInfo)
 	if not isRequestValid then return error(errorMessage) end
 
@@ -263,12 +266,16 @@ function Webhook:SendMessageInThread(threadId : string, content : string?, embed
 	local requestUrl = self.BaseUrl
 	local requestBody = {
 		content = content,
-		username = optionalSendMessageInfo.UsernameOverride,
-		avatar_url = optionalSendMessageInfo.AvatarOverride,
-		tts = optionalSendMessageInfo.UseTTS,
-		embeds = embedObjects,
-		flags = optionalSendMessageInfo.MessageFlags.Value
+		embeds = embedObjects
 	}
+
+	if optionalSendMessageInfo then
+		requestBody.username = optionalSendMessageInfo.UsernameOverride
+		requestBody.avatar_url = optionalSendMessageInfo.AvatarOverride
+		requestBody.tts = optionalSendMessageInfo.UseTTS
+		requestBody.flags = optionalSendMessageInfo.MessageFlags.Value
+		requestBody.thread_name = optionalSendMessageInfo.ThreadName
+	end
 
 	if queue then
 		requestUrl ..= "/queue"
