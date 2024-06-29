@@ -15,7 +15,7 @@ function EmbedFooter._FromObject(embedFooterObject : {})
 
 	self.Text = embedFooterObject.text
 	self.IconUrl = embedFooterObject.icon_url
-	self.ProxyIconUrl = embedFooterObject.proxy_icon_url
+	self.ProxiedIconUrl = embedFooterObject.proxy_icon_url
 
 	return self
 end

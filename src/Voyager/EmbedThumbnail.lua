@@ -15,7 +15,7 @@ function EmbedThumbnail._FromObject(embedImageObject : {})
 	self.Url = embedImageObject.url
 	self.Width = embedImageObject.width
 	self.Height = embedImageObject.height
-	self.ProxyUrl = embedImageObject.proxy_url
+	self.ProxiedUrl = embedImageObject.proxy_url
 
 	return self
 end

@@ -17,7 +17,7 @@ function EmbedAuthor._FromObject(embedAuthorObject : {})
     self.Name = embedAuthorObject.name
     self.Url = embedAuthorObject.url
     self.IconUrl = embedAuthorObject.icon_url
-    self.ProxyIconUrl = embedAuthorObject.proxy_icon_url
+    self.ProxiedIconUrl = embedAuthorObject.proxy_icon_url
 
 	return self
 end
