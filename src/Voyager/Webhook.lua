@@ -4,7 +4,6 @@ Webhook.__index = Webhook
 local httpService = game:GetService("HttpService")
 
 local Message = require(script.Parent.Message)
-local OptionalSendMessageInfo = require(script.Parent.OptionalSendMessageInfo)
 
 export type RatelimitInformation = {
 	Limit : number,
@@ -22,7 +21,7 @@ export type RatelimitedInformation = {
 }
 
 export type ProxyInformation = {
-	Proxy: boolean,
+	Proxy: true?,
 	Message : string?,
 	Reason : string?,
 	Error : string?
