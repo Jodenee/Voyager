@@ -149,14 +149,14 @@ function Embed:AddField(name : string, value : string, inLine : boolean?) : { }
 	return self
 end
 
-function Embed:SetFieldAt(fieldPosition : number, name : string, value : string, inLine : boolean?)
-	if fieldPosition > (#self.Fields + 1) or fieldPosition <= 0  then
-		error("Could not set field at index " .. fieldPosition .. ", make sure the fieldPosition is less than or 1 greater than the length of the fields table.")
+function Embed:SetFieldAt(position : number, name : string, value : string, inLine : boolean?)
+	if position > #self.Fields or position <= 0  then
+		error("Could not set field at index " .. position .. ", make sure the position is less than or equal to the length of the fields table.")
 	end
 
 	table.insert(
 		self.Fields,
-		fieldPosition,
+		position,
 		EmbedField.new(name, value, inLine)
 	)
 
@@ -169,6 +169,12 @@ function Embed:RemoveFieldAt(fieldPosition : number) : { }
 	end
 
 	table.remove(self.Fields, fieldPosition)
+
+	return self
+end
+
+function Embed:RemoveAllFields() : { }
+	table.clear(self.Fields)
 
 	return self
 end
