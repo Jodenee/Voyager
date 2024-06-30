@@ -13,3 +13,6 @@ wally.lock
 
 # Wally package
 /*.zip
+
+# Documentation page build
+site/
