@@ -48,6 +48,12 @@ function Embed:_Validate() : (boolean, string?)
 		end
 	end
 
+    if self.Url then
+        if not self.Url:match("http://") and not self.Url:match("https://") then
+            return false, "The embed's url needs to be a valid url."
+        end
+    end
+
 	if self.Footer then
 		local isFooterValid, errorMessage = self.Footer:_Validate()
 
