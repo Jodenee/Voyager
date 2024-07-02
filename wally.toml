@@ -19,6 +19,7 @@ exclude = [
     "mkdocs.yml", 
     "README.md", 
     "dev_env.project.json",
+    "site",
     "*.rbxlx",
     "*.rbxl",
     "*.rbxmx",
