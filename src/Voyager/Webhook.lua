@@ -273,7 +273,6 @@ function Webhook:SendMessageInThread(threadId : string, content : string?, embed
 		requestBody.avatar_url = optionalSendMessageInfo.AvatarOverride
 		requestBody.tts = optionalSendMessageInfo.UseTTS
 		requestBody.flags = optionalSendMessageInfo.MessageFlags.Value
-		requestBody.thread_name = optionalSendMessageInfo.ThreadName
 	end
 
 	if queue then
