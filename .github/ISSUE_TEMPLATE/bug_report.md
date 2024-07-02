@@ -12,11 +12,6 @@ A clear and concise description of what the bug is.
 
 ---
 
-**Voyager version used**
-State which version of Voyager was used. (Please state the version number ex 2.2.1 and not latest etc)
-
----
-
 **To reproduce**
 Steps to reproduce the bug
 1. Go to '...'
@@ -44,6 +39,7 @@ If applicable, add screenshots to help explain your problem.
 ---
 
 **Checklist**
+- [ ] I am on the latest version of Voyager.
 - [ ] I have removed my webhook's token, if visible.
 - [ ] I have searched the open issues tab to make sure this issue is unique.
 
