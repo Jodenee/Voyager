@@ -1,13 +1,38 @@
 # PublicUserFlags
+Represents a user's flags.
 
 <br />
 
 ## Properties
 
+---
+
 <br />
 
-### **PublicUserFlags.value :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
-Flags combined as a bitfield.
+### Value
+A [*number*](https://create.roblox.com/docs/scripting/luau/numbers) containing flags combined as a bitfield.
+
+<br />
+
+---
+
+<br />
+
+## Constructors
+
+---
+
+<br />
+
+### FromBitfield(value)
+Constructs a new [*PublicUserFlags*](PublicUserFlags.md) instance from a bitfield. This method returns a new [*PublicUserFlags*](PublicUserFlags.md) instance.
+
+???+ Warning "Internal Code Warning"
+    This method is not meant to be used outside of Voyager's internal code.
+
+***Parameters***
+
+- value : [*number*](https://create.roblox.com/docs/scripting/luau/numbers) - A bitfield.
 
 <br />
 
@@ -17,17 +42,16 @@ Flags combined as a bitfield.
 
 ## Methods
 
+---
+
 <br />
 
-### **PublicUserFlags.fromBitfield**(value **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*PublicUserFlags*](PublicUserFlags.md)
-This method returns a new [*PublicUserFlags*](PublicUserFlags.md) object.
-
-???+ warning
-    This method is not meant to be called outside of Voyager's internal code.
+### HasFlag(flag)
+Returns a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that represents whether the bitfield contains the flag.
 
 ***Parameters***
 
-- ***value:*** A bitfield.
+- flag : [*number*](https://create.roblox.com/docs/scripting/luau/numbers) - The flag that'll be looked for.
 
 <br />
 
@@ -35,15 +59,13 @@ This method returns a new [*PublicUserFlags*](PublicUserFlags.md) object.
 
 <br />
 
-### **PublicUserFlags:hasFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
-This method will check whether the bitfield contains a specific flag.
-
-??? tip
-    You can use Enum.UserPublicFlags to fill out the flag parameter.
+### SetFlag(flag, toggle)
+This method will toggle a flag in the bitfield either to true or false. Returns [*nil*](https://create.roblox.com/docs/luau/nil).
 
 ***Parameters***
 
-- flag: The flag that'll be looked for.
+- flag : [*number*](https://create.roblox.com/docs/scripting/luau/numbers) - A flag.
+- toggle : [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) - Whether to add or remove the flag from the bitfield.
 
 <br />
 
@@ -51,25 +73,8 @@ This method will check whether the bitfield contains a specific flag.
 
 <br />
 
-### **PublicUserFlags:setFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers), toggle **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)) **:** [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
-This method will toggle a flag in the bitfield either to true or false.
-
-??? tip
-    You can use Enum.UserPublicFlags to fill out the flag parameter.
-
-***Parameters***
-
-- ***flag:*** A flag.
-- ***toggle:*** If true the flag will be added to bitfield, otherwise the flag will be removed from the bitfield.
-
-<br />
-
----
-
-<br />
-
-### **PublicUserFlags:getFlags**() **:** { [*number*](https://create.roblox.com/docs/scripting/luau/numbers) }
-This method will return a table of flags that are in the bitfield.
+### GetFlags()
+Returns a table of [*numbers*](https://create.roblox.com/docs/scripting/luau/numbers) that represent flags found in the bitfield.
 
 <br />
 

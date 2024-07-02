@@ -1,15 +1,23 @@
 # DateFormatter
+A utility module that helps add timestamps into messages.
+
+<br />
 
 ## Methods
 
+---
+
 <br />
 
-### **DateFormatter.relativeTime**(datetime **:** [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns a string in Discord's date format, specifically this will display how long ago the passed datetime was.
+### RelativeTime(datetime)
+Formats a [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) into a relative timestamp. Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings). 
+
+??? Note "Output Example"
+    **example:** `3 years ago`
 
 ***Parameters***
 
-- ***datetime:*** A DateTime object.
+- datetime : [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) - A DateTime instance.
 
 <br />
 
@@ -17,12 +25,17 @@ Returns a string in Discord's date format, specifically this will display how lo
 
 <br />
 
-### **DateFormatter.longDate**(datetime **:** [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns a string in Discord's date format, specifically this will display a long date of the passed datetime.
+### LongDate(datetime)
+Formats a [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) into a long date timestamp. Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings). 
+
+??? Note "Output Examples"
+    **12h clock example:** `November 28, 2018`
+
+    **24h clock example:** `28 November 2018`
 
 ***Parameters***
 
-- ***datetime:*** A DateTime object.
+- datetime : [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) - A DateTime instance.
 
 <br />
 
@@ -30,12 +43,17 @@ Returns a string in Discord's date format, specifically this will display a long
 
 <br />
 
-### **DateFormatter.shortDate**(datetime **:** [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns a string in Discord's date format, specifically this will display a short date of the passed datetime.
+### ShortDate(datetime)
+Formats a [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) into a short date timestamp. Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings). 
+
+??? Note "Output Examples"
+    **12h clock example:** `11/28/2018`
+
+    **24h clock example:** `28/11/2018`
 
 ***Parameters***
 
-- ***datetime:*** A DateTime object.
+- datetime : [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) - A DateTime instance.
 
 <br />
 
@@ -43,12 +61,17 @@ Returns a string in Discord's date format, specifically this will display a shor
 
 <br />
 
-### **DateFormatter.longTime**(datetime **:** [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns a string in Discord's date format, specifically this will display a long time of the passed datetime.
+### LongTime(datetime)
+Formats a [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) into a long time timestamp. Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings). 
+
+??? Note "Output Examples"
+    **12h clock example:** `9:01:00 AM`
+
+    **24h clock example:** `9:01:00`
 
 ***Parameters***
 
-- ***datetime:*** A DateTime object.
+- datetime : [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) - A DateTime instance.
 
 <br />
 
@@ -56,12 +79,17 @@ Returns a string in Discord's date format, specifically this will display a long
 
 <br />
 
-### **DateFormatter.shortTime**(datetime **:** [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns a string in Discord's date format, specifically this will display a short time of the passed datetime.
+### ShortTime(datetime)
+Formats a [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) into a short time timestamp. Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings). 
+
+??? Note "Output Examples"
+    **12h clock example:** `9:01 AM`
+
+    **24h clock example:** `9:01`
 
 ***Parameters***
 
-- ***datetime:*** A DateTime object.
+- datetime : [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) - A DateTime instance.
 
 <br />
 
@@ -69,12 +97,17 @@ Returns a string in Discord's date format, specifically this will display a shor
 
 <br />
 
-### **DateFormatter.longDateTime**(datetime **:** [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns a string in Discord's date format, specifically this will display a long date time of the passed datetime.
+### LongDateTime(datetime)
+Formats a [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) into a long datetime timestamp. Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings). 
+
+??? Note "Output Examples"
+    **12h clock example:** `Wednesday, November 28, 2018 9:01 AM`	
+
+    **24h clock example:** `Wednesday, 28 November 2018 09:01`
 
 ***Parameters***
 
-- ***datetime:*** A DateTime object.
+- datetime : [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) - A DateTime instance.
 
 <br />
 
@@ -82,12 +115,17 @@ Returns a string in Discord's date format, specifically this will display a long
 
 <br />
 
-### **DateFormatter.shortDateTime**(datetime **:** [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns a string in Discord's date format, specifically this will display a short date time of the passed datetime.
+### ShortDateTime(datetime)
+Formats a [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) into a short datetime timestamp. Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings). 
+
+??? Note "Output Examples"
+    **12h clock:** `November 28, 2018 9:01 AM`
+
+    **24h clock:** `28 November 2018 09:01`
 
 ***Parameters***
 
-- ***datetime:*** A DateTime object.
+- datetime : [*DateTime*](https://create.roblox.com/docs/en-us/reference/engine/datatypes/DateTime) - A DateTime instance.
 
 <br />
 

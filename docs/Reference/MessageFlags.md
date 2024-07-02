@@ -1,13 +1,51 @@
 # MessageFlags
+Represents a message's flags.
 
 <br />
 
 ## Properties
 
+---
+
 <br />
 
-### **MessageFlags.value :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
-Flags combined as a bitfield.
+### Value
+A [*number*](https://create.roblox.com/docs/scripting/luau/numbers) containing flags combined as a bitfield.
+
+<br />
+
+---
+
+<br />
+
+## Constructors
+
+---
+
+<br />
+
+### FromBitfield(value)
+Constructs a new [*MessageFlags*](MessageFlags.md) instance from a bitfield. Returns a new [*MessageFlags*](MessageFlags.md) instance.
+
+***Parameters***
+
+- value : [*number*](https://create.roblox.com/docs/scripting/luau/numbers) - A bitfield.
+
+<br />
+
+---
+
+<br />
+
+### FromFlags(flags) 
+Constructs a new [*MessageFlags*](MessageFlags.md) instance from a table of flags. Returns a new [*MessageFlags*](MessageFlags.md) instance.
+
+??? tip
+    You can use the [*MessageFlag*](Enum.md#messageflag) enum to fill out the flags parameter.
+
+***Parameters***
+
+- flags : { [*number*](https://create.roblox.com/docs/scripting/luau/numbers) } - A table of numbers that represent message flags.
 
 <br />
 
@@ -17,30 +55,16 @@ Flags combined as a bitfield.
 
 ## Methods
 
-<br />
-
-### **MessageFlags.fromBitfield**(value **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*MessageFlags*](MessageFlags.md)
-This method returns a new MessageFlags object.
-
-Parameters:
-
-- ***value:*** Default bitfield.
-
-<br />
-
 ---
 
 <br />
 
-### **MessageFlags.fromFlags**(flags **:** {[*number*](https://create.roblox.com/docs/scripting/luau/numbers)}) **:** [*MessageFlags*](MessageFlags.md)
-This method returns a new MessageFlags object from a table of flags.
-
-??? tip
-    You can use Enum.MessageFlags to fill out the flags parameter.
+### HasFlag(flag)
+Returns a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that represents whether the bitfield contains the flag.
 
 ***Parameters***
 
-- ***flags:*** A table of message flags.
+- flag : [*number*](https://create.roblox.com/docs/scripting/luau/numbers) - The flag that'll be looked for.
 
 <br />
 
@@ -48,15 +72,13 @@ This method returns a new MessageFlags object from a table of flags.
 
 <br />
 
-### **MessageFlags:hasFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)) **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
-This method will check whether the bitfield contains a specific flag.
-
-??? tip
-    You can use Enum.MessageFlags to fill out the flag parameter.
+### SetFlag(flag, toggle)
+This method will toggle a flag in the bitfield either to true or false. Returns [*nil*](https://create.roblox.com/docs/luau/nil).
 
 ***Parameters***
 
-- ***flag:*** The flag that'll be looked for.
+- flag : [*number*](https://create.roblox.com/docs/scripting/luau/numbers) - A flag.
+- toggle : [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) - Whether to add or remove the flag from the bitfield.
 
 <br />
 
@@ -64,25 +86,8 @@ This method will check whether the bitfield contains a specific flag.
 
 <br />
 
-### **MessageFlags:setFlag**(flag **:** [*number*](https://create.roblox.com/docs/scripting/luau/numbers), toggle **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)): [*nil*](https://create.roblox.com/docs/scripting/luau/nil)
-This method will toggle a flag in the bitfield either to true or false.
-
-??? tip
-    You can use Enum.MessageFlags to fill out the flag parameter.
-
-***Parameters***
-
-- ***flag:*** A flag.
-- ***toggle:*** If true the flag will be added to bitfield, otherwise the flag will be removed from the bitfield.
-
-<br />
-
----
-
-<br />
-
-### **MessageFlags:getFlags**() **:** { [*number*](https://create.roblox.com/docs/scripting/luau/numbers) }
-This method will return a table of flags that are in the bitfield.
+### GetFlags()
+Returns a table of [*numbers*](https://create.roblox.com/docs/scripting/luau/numbers) that represent flags found in the bitfield.
 
 <br />
 

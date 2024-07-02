@@ -1,15 +1,18 @@
 # EmojiFormatter
+A utility module that helps add emojis into messages.
 
 ## Methods
 
+---
+
 <br />
 
-### **EmojiFormatter.emoji**(emojiName **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns the string representation of a regular Discord emoji.
+### Emoji(emojiName)
+Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains a regular Discord emoji.
 
 ***Parameters***
 
-- ***emojiName:*** The emoji's name.
+- emojiName : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The emoji's name.
 
 <br />
 
@@ -17,13 +20,13 @@ Returns the string representation of a regular Discord emoji.
 
 <br />
 
-### **EmojiFormatter.customEmoji**(emojiName **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), emojiId **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns the string representation of a custom Discord emoji.
+### CustomEmoji(emojiName, emojiId)
+Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains a custom Discord emoji.
 
 ***Parameters***
 
-- ***emojiName:*** The emoji's name.
-- ***emojiId:*** The emoji's id.
+- emojiName : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The emoji's name.
+- emojiId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The emoji's id.
 
 <br />
 
@@ -31,13 +34,13 @@ Returns the string representation of a custom Discord emoji.
 
 <br />
 
-### **EmojiFormatter.animatedEmoji**(emojiName **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), emojiId **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns the string representation of an animated Discord emoji.
+### AnimatedEmoji(emojiName, emojiId)
+Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains an animated Discord emoji.
 
 ***Parameters***
 
-- ***emojiName:*** The emoji's name.
-- ***emojiId:*** The emoji's id.
+- emojiName : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The emoji's name.
+- emojiId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The emoji's id.
 
 <br />
 

@@ -1,15 +1,18 @@
 # MentionFormatter
+A utility module that helps mention users, roles and channels in messages.
 
 ## Methods
 
+---
+
 <br />
 
-### **MentionFormatter.mentionUser**(userId **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns the string representation of a user mention.
+### MentionUser(userId)
+Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing a user mention.
 
 ***Parameters***
 
-- ***userId:*** The id of the user you want to mention.
+- userId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the user you want to mention.
 
 <br />
 
@@ -17,12 +20,12 @@ Returns the string representation of a user mention.
 
 <br />
 
-### **MentionFormatter.mentionRole**(roleId **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns the string representation of a role mention.
+### MentionRole(roleId)
+Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing a role mention.
 
 ***Parameters***
 
-- ***roleId:*** The id of the role you want to mention.
+- roleId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the role you want to mention.
 
 <br />
 
@@ -30,12 +33,12 @@ Returns the string representation of a role mention.
 
 <br />
 
-### **MentionFormatter.mentionChannel**(channelId **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-Returns the string representation of a channel mention.
+### MentionChannel(channelId)
+Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing a channel mention.
 
 ***Parameters***
 
-- ***channelId:*** The id of the channel you want to mention.
+- channelId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the channel you want to mention.
 
 <br />
 
