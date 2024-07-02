@@ -46,7 +46,7 @@ A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing t
 <br />
 
 ### Author
-An instance of [*Author*](Author.md) representing the author of the message.
+An instance of [*User*](User.md) representing the author of the message.
 
 <br />
 

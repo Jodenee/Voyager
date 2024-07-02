@@ -104,7 +104,7 @@ An optional [*EmbedAuthor*](EmbedAuthor.md) instance representing the embed's au
 <br />
 
 ### Fields
-A table of [*EmbedField*](EmbedFields.md) instances representing the embed's fields.
+A table of [*EmbedField*](EmbedField.md) instances representing the embed's fields.
 
 <br />
 

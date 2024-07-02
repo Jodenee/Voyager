@@ -73,7 +73,7 @@
     /* Footer */
     .md-footer-meta { background-color: #ffffff; } /* Changes the footer background color */
 
-    /* Versioning list styles NOT DONE PLEASE DONT PUSH THESE YET */
+    /* Versioning list styles */
     .md-version__list {
         background-color: #ffffff; 
         color: #000000;
@@ -136,7 +136,7 @@
         color: #ffffff;
     }
 
-    /* nav title overrides Not Done */
+    /* nav title overrides */
     .md-nav--primary .md-nav__title { 
         color: #ffffff;
         background-color: #0c0c0c;

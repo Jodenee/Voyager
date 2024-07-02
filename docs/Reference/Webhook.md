@@ -226,7 +226,7 @@ Sends a message to a thread in the webhook's channel. Returns a tuple containing
 <br />
 
 ### EditMessage(messageId, content, embeds)
-Edits a message sent by the webhook. Returns a tuple containing 2 items, an [*EditedMessage*](EditedMessage.md) instance and a table of type [*RequestStatus*](#requeststatus).
+Edits a message sent by the webhook. Returns a tuple containing 2 items, a [*Message*](Message.md) instance and a table of type [*RequestStatus*](#requeststatus).
 
 ***Parameters***
 
@@ -241,7 +241,7 @@ Edits a message sent by the webhook. Returns a tuple containing 2 items, an [*Ed
 <br />
 
 ### EditMessageInThread(threadId, messageId, content, embeds)
-Edits a message in a thread sent by the webhook. Returns a tuple containing 2 items, an [*EditedMessage*](EditedMessage.md) instance and a table of type [*RequestStatus*](#requeststatus).
+Edits a message in a thread sent by the webhook. Returns a tuple containing 2 items, a [*Message*](Message.md) instance and a table of type [*RequestStatus*](#requeststatus).
 
 ***Parameters***
 
