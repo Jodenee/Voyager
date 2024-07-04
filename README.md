@@ -10,41 +10,56 @@
 
 ---
 
-## **Key Features**
+## Key Features
 
-- **Simple:** Voyager is curated to be easily utilized by both beginner and advanced scripters.
-- **Flexible:** Voyager is curated to be modular as to fit as many use cases as possible.
-- **Pre-request data validation:** Voyager comes with built in validation functions that automatically validate any data you give it before making an HTTP request. This is done to mitigate making pointless requests to the proxy, as making too many bad requests may get you temporarily or indefinitely banned from the proxy.
+- **Simple:** Voyager is made to be easily used by both beginner and advanced scripters.
+- **Flexible:** Voyager is very modular allowing it to fit many use cases.
+- **Pre-request data validation:** Voyager comes with built in validation methods that automatically validate data to help you catch errors before they reach the proxy.
 
 ---
 
-## **Installation**
+## Installation
 
-1. Get the [*module script*](https://www.roblox.com/library/12390338563).
+### Creator Marketplace
+
+1. Get the [*module script*](https://www.roblox.com/library/12390338563) off the creator marketplace.
 2. Make sure http requests in Game Settings > Security is enabled.
 3. Drag the module into your project and place it in ServerScriptService or ServerStorage.
 
+### Model File
+
+1. Go to the [*releases page*](https://github.com/Jodenee/Voyager/releases) and download the latest version of Voyager's model file.
+2. Make sure http requests in Game Settings > Security is enabled.
+3. Drag the module into your project and place it in ServerScriptService or ServerStorage.
+
+### Wally
+
+1. Go to voyager's [*wally page*](https://wally.run/package/jodenee/voyager) and copy the install string under the metadata section.
+2. Open your wally.toml file and under \[dependencies\] paste the string you got from the previous step.
+3. Open your prefered cli and run `wally install` in your projects directory.
+4. Make sure http requests in Game Settings > Security is enabled.
+
 ---
 
-## **Quick Example**
+## Quick Example
 
 ```lua
 local Voyager = path_here.Voyager
 local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 
-webhook:execute("Hello, World!")
+webhook:SendMessage("Hello, World!")
 ```
 
 ---
 
-## **Credit**
+## Credit
 
-Huge thanks to [*@lewisakura*](https://www.roblox.com/users/25704749/profile) for creating and hosting the [*proxy*](https://github.com/lewisakura/webhook-proxy) used in this module. Without them this module wouldn't have been possible.
+Huge thanks to [*@lewisakura*](https://www.roblox.com/users/25704749/profile) for creating and hosting the [*proxy*](https://github.com/lewisakura/webhook-proxy) used in this library. Without them this wouldn't have been possible. [*Support them here!*](https://github.com/sponsors/lewisakura)
 
 ---
 
-## **Tutorial/Documentation**
+## Tutorial/Documentation
 
-Learn how to use Voyager [*here*](https://jodenee.github.io/Voyager/latest/).
+Learn how to use Voyager [*here!*](https://jodenee.github.io/Voyager/latest/)
 
 ---
