@@ -3,6 +3,12 @@
   "tree": {
     "$className": "DataModel",
 
+    "ServerScriptService": {
+      "examples": {
+        "$className": "Folder",
+        "$path": "examples"
+      }
+    },
     "ServerStorage": {
       "Voyager": {
         "$className": "Folder",
