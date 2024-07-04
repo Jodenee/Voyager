@@ -58,7 +58,7 @@ An optional [*Color3*](https://create.roblox.com/docs/reference/engine/datatypes
 ### Footer
 An optional [*EmbedFooter*](EmbedFooter.md) instance representing the embed's footer.
 
-???+ Info
+???+ info
     ProxyIconUrl is only returned if the embed object was returned by Discord.
 
 <br />
@@ -70,7 +70,7 @@ An optional [*EmbedFooter*](EmbedFooter.md) instance representing the embed's fo
 ### Image
 An optional [*EmbedImage*](EmbedImage.md) instance representing the embed's image.
 
-???+ Info
+???+ info
     The following properties: Height, Width and ProxyUrl are only returned if the embed object was returned by Discord.
 
 <br />
@@ -82,7 +82,7 @@ An optional [*EmbedImage*](EmbedImage.md) instance representing the embed's imag
 ### Thumbnail
 An optional [*EmbedThumbnail*](EmbedThumbnail.md) instance representing the embed's Thumbnail.
 
-???+ Info
+???+ info
     The following properties: Height, Width and ProxyUrl are only returned if the embed object was returned by Discord.
 
 <br />
@@ -94,7 +94,7 @@ An optional [*EmbedThumbnail*](EmbedThumbnail.md) instance representing the embe
 ### Author
 An optional [*EmbedAuthor*](EmbedAuthor.md) instance representing the embed's author.
 
-???+ Info
+???+ info
     ProxyIconUrl is only returned if the embed object was returned by Discord.
 
 <br />
@@ -168,7 +168,7 @@ This method sets the embed's description. Returns the [*Embed*](Embed.md) instan
 ### SetUrl(url)
 This method sets the embed's url. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
 
-??? Info
+??? info
     If the title is absent this makes no changes.
 
 ***Parameters***
@@ -184,7 +184,7 @@ This method sets the embed's url. Returns the [*Embed*](Embed.md) instance this 
 ### SetTimestamp(customTimestamp)
 This method sets the embed's timestamp. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
 
-???+ Info "Default Parameter Values"
+???+ info "Default Parameter Values"
     customTimestamp: `Datetime.now()`
 
 ***Parameters***
@@ -213,7 +213,7 @@ This method sets the embed's color code. Returns the [*Embed*](Embed.md) instanc
 ### SetFooter(text, iconUrl)
 This method sets the embed's footer. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
 
-??? Info
+??? info
     Only urls that use the HTTPS protocol are allowed to be used for the iconUrl parameter.
 
 ***Parameters***
@@ -230,7 +230,7 @@ This method sets the embed's footer. Returns the [*Embed*](Embed.md) instance th
 ### SetImage(url)
 This method sets the embed's image. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
 
-??? Info
+??? info
     Only urls that use the HTTPS protocol are allowed to be used for the url parameter.
 
 ***Parameters***
@@ -246,7 +246,7 @@ This method sets the embed's image. Returns the [*Embed*](Embed.md) instance thi
 ### SetThumbnail(url)
 This method sets the embed's thumbnail. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
 
-??? Info
+??? info
     Only urls that use the HTTPS protocol are allowed to be used for the url parameter.
 
 ***Parameters***
@@ -262,7 +262,7 @@ This method sets the embed's thumbnail. Returns the [*Embed*](Embed.md) instance
 ### SetAuthor(name, url, iconUrl)
 This method sets the embed's author. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
 
-??? Info
+??? info
     Only urls that use the HTTPS protocol are allowed to be used for the iconUrl parameter.
 
 ***Parameters***
@@ -279,6 +279,9 @@ This method sets the embed's author. Returns the [*Embed*](Embed.md) instance th
 
 ### AddField(name, value, inLine)
 Appends a field to the embed. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+
+???+ info "Default Parameter Values"
+    inLine: `true`
 
 ***Parameters***
 
@@ -342,10 +345,10 @@ Returns a [*number*](https://create.roblox.com/docs/scripting/luau/numbers) repr
 ### _Validate()
 Validates the embed to avoid making a bad request to Discord. This method returns a tuple with 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
 
-???+ Warning "Internal Code Warning"
+???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
 
-??? Info
+??? info
     The boolean value indicates whether the validation was successful, and the optional string contains the error message if validation failed. 
 
 <br />

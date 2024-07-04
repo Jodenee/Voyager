@@ -171,7 +171,7 @@ A optional [*number*](https://create.roblox.com/docs/scripting/luau/numbers) con
 ### new(data)
 This method returns a new [*Message*](Message.md) instance.
 
-???+ Warning "Internal Code Warning"
+???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
 
 ***Parameters***

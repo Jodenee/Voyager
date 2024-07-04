@@ -48,7 +48,7 @@ A [*MessageFlags*](MessageFlags.md) instance representing the flags the message 
 ### ThreadName
 A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the name of the thread that will be created.
 
-???+ Info
+???+ info
     The webhook's channel **must** be a forum channel for this to have an effect!
 
 <br />
@@ -66,7 +66,7 @@ A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing t
 ### new(tts, usernameOverride, avatarOverride, messageFlags, threadName)
 This method returns a new [*OptionalSendMessageInfo*](OptionalSendMessageInfo.md) instance.
 
-???+ Info "Default Parameter Values"
+???+ info "Default Parameter Values"
     useTTS: `false`
 
     messageFlags: `MessageFlags.new(0)`

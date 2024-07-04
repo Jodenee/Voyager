@@ -82,7 +82,7 @@ A [*PublicUserFlags*](PublicUserFlags.md) instance representing the user's flags
 ### new(data)
 Returns a new [*User*](User.md) instance.
 
-???+ Warning "Internal Code Warning"
+???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
 
 ***Parameters***
@@ -107,8 +107,8 @@ Returns an optional [*string*](https://create.roblox.com/docs/scripting/luau/str
 ???+ warning
     The size parameter can only be a **power of two** between **16** and **4096**.
 
-???+ info
-    If the imageFormat paramiter is left out. It will defualt to .png.
+???+ info "Default Parameter Values"
+    imageFormat: `.png`
 
 ??? tip
     Use the [*ImageFormat*](Enum.md#imageformat) enum to fill in the imageFormat parameter.

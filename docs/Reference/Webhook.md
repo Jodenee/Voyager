@@ -20,7 +20,7 @@ Represents a Discord webhook.
 | ResetAfterSafe | [*number*](https://create.roblox.com/docs/scripting/luau/numbers)                 | Same as ResetAfter but with 0.5 seconds of delay added.                                |
 | Bucket         | [*string*](https://create.roblox.com/docs/scripting/luau/strings)                 | The current ratelimit bucket id.                                                       |
 
-??? Info "RatelimitInformation Vs RatelimitedInformation"
+??? info "RatelimitInformation Vs RatelimitedInformation"
     **RatelimitInformation** is used to prevent getting ratelimited from the proxy, while **RatelimitedInformation** is used to handle a ratelimit response.
 
 <br />
@@ -37,7 +37,7 @@ Represents a Discord webhook.
 | RetryAfter     | [*number*](https://create.roblox.com/docs/scripting/luau/numbers) | The exact time in **milliseconds** you will have to wait until you are able to send messages again. |
 | RetryAfterSafe | [*number*](https://create.roblox.com/docs/scripting/luau/numbers) | Same as RetryAfter but with 0.5 seconds of delay added.                                             |
 
-??? Info "RatelimitInformation Vs RatelimitedInformation"
+??? info "RatelimitInformation Vs RatelimitedInformation"
     **RatelimitInformation** is used to prevent getting ratelimited from the proxy, while **RatelimitedInformation** is used to handle a ratelimit response.
 
 <br />
@@ -126,7 +126,7 @@ A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing t
 ### new(id, token, customProxyUrl)
 Constructs a new [*Webhook*](Webhook.md) instance from an id, token and an optional custom proxy url. Returns a new [*Webhook*](Webhook.md) instance.
 
-??? Info "Custom proxy url example"
+??? info "Custom proxy url example"
     "https://webhook.lewisakura.moe"
 
 ***Parameters***
@@ -144,7 +144,7 @@ Constructs a new [*Webhook*](Webhook.md) instance from an id, token and an optio
 ### FromUrl(webhookUrl, customProxyUrl)
 Constructs a new [*Webhook*](Webhook.md) instance from a webhook url and an optional custom proxy url. Returns a new [*Webhook*](Webhook.md) instance.
 
-??? Info "Custom proxy url example"
+??? info "Custom proxy url example"
     "https://webhook.lewisakura.moe"
 
 ***Parameters***
@@ -167,12 +167,12 @@ Constructs a new [*Webhook*](Webhook.md) instance from a webhook url and an opti
 ### SendMessage(content, embeds, queue, waitForMessage, optionalSendMessageInfo)
 Sends a message to the webhook's channel. Returns a tuple containing 2 items, an optional [*Message*](Message.md) instance and a table of type [*RequestStatus*](#requeststatus).
     
-???+ Info "Default Parameter Values"
+???+ info "Default Parameter Values"
     queue: `true`
 
     waitForMessage: `false`
 
-??? Info
+??? info
     If both `queue` and `waitForMessage` are true, a message object will NOT be returned.
 
     If `queue` is true, RequestStatus.RatelimitInformation **WILL** be null.
@@ -197,12 +197,12 @@ Sends a message to the webhook's channel. Returns a tuple containing 2 items, an
 ### SendMessageInThread(threadId, content, embeds, queue, waitForMessage, optionalSendMessageInfo)
 Sends a message to a thread in the webhook's channel. Returns a tuple containing 2 items, an optional [*Message*](Message.md) instance and a table of type [*RequestStatus*](#requeststatus).
     
-???+ Info "Default Parameter Values"
+???+ info "Default Parameter Values"
     queue: `true`
 
     waitForMessage: `false`
 
-??? Info
+??? info
     If both `queue` and `waitForMessage` are true, a message object will NOT be returned.
 
     If `queue` is true, RequestStatus.RatelimitInformation **WILL** be null.
@@ -286,10 +286,10 @@ Deletes a message in a thread sent by the webhook. Returns a table of type [*Req
 ### _ValidateSendMessageRequest(content, embeds, optionalExecuteInfo)
 Validates the request to avoid making a bad request to Discord. Returns a tuple with 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
 
-???+ Warning "Internal Code Warning"
+???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
 
-??? Info
+??? info
     The boolean value indicates whether the validation was successful, and the optional string contains the error message if validation failed.
 
 ***Parameters***
@@ -307,10 +307,10 @@ Validates the request to avoid making a bad request to Discord. Returns a tuple 
 ### _ValidateEditMessageRequest(content, embeds)
 Validates the request to avoid making a bad request to Discord. Returns a tuple with 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
 
-???+ Warning "Internal Code Warning"
+???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
 
-??? Info
+??? info
     The boolean value indicates whether the validation was successful, and the optional string contains the error message if validation failed.
 
 ***Parameters***
@@ -327,7 +327,7 @@ Validates the request to avoid making a bad request to Discord. Returns a tuple 
 ### _Request(url, method, body, contentType)
 This method is used to make HTTP requests to the proxy. Returns a tuple containing 2 items, a table containing the response body and a table of type [*RequestStatus*](#requeststatus).
 
-???+ Warning "Internal Code Warning"
+???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
 
 ***Parameters***

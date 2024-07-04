@@ -127,7 +127,7 @@
     /* Search form hover styles */
     .md-search__form:hover { background-color: #424242; }
 
-    /* github link that can be seen on min-width: 60em */
+    /* Github link that can be seen on min-width: 60em */
     .md-nav__source { background-color: #0c0c0c; } 
 
     /* Search result bar color overrides */
@@ -136,7 +136,7 @@
         color: #ffffff;
     }
 
-    /* nav title overrides */
+    /* Nav title overrides */
     .md-nav--primary .md-nav__title { 
         color: #ffffff;
         background-color: #0c0c0c;

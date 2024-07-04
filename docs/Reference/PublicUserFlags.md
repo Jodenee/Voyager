@@ -27,7 +27,7 @@ A [*number*](https://create.roblox.com/docs/scripting/luau/numbers) containing f
 ### FromBitfield(value)
 Constructs a new [*PublicUserFlags*](PublicUserFlags.md) instance from a bitfield. This method returns a new [*PublicUserFlags*](PublicUserFlags.md) instance.
 
-???+ Warning "Internal Code Warning"
+???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
 
 ***Parameters***
