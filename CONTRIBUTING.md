@@ -63,12 +63,18 @@ Once you activate your virtual environment, simply run the commands found in the
 
 Now to serve the docs, simply run the following command. Also keep in mind that mkdocs serve will automatically rebuild and serve the site when you make changes.
 
-`python -m mkdocs serve`
+```shell
+python -m mkdocs serve
+```
 
 There may be some cases were you'd want to test the docs with the version control feature present. In that case run the following commands instead.
 
-`mike deploy dev`
+```shell
+mike deploy dev
+```
 
-`mike serve`
+```shell
+mike serve
+```
 
 Keep in mind that there is no hot reloading with mike, so anytime you make a change to the page you need to manually rebuild and serve the site.
