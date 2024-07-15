@@ -34,7 +34,7 @@
 
 ### Wally
 
-1. Go to Voyager's [*wally page*](https://wally.run/package/jodenee/voyager) and copy the install string under the metadata section.
+1. Go to Voyager's [*wally page*](https://wally.run/package/jodenee/voyager) and copy the install string found underneath the metadata section.
 2. Open your wally.toml file and under \[dependencies\] paste the string you got from the previous step.
 3. Open your prefered cli and run `wally install` in your projects directory.
 4. Make sure http requests in Game Settings > Security is enabled.
@@ -47,19 +47,19 @@
 local Voyager = path_here.Voyager
 local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 
-webhook:SendMessage("Hello, World!")
+webhook:SendMessage("Hello, world!")
 ```
-
----
-
-## Credit
-
-Huge thanks to [*@lewisakura*](https://www.roblox.com/users/25704749/profile) for creating and hosting the [*proxy*](https://github.com/lewisakura/webhook-proxy) used in this library. Without them this wouldn't have been possible. [*Support them here!*](https://github.com/sponsors/lewisakura)
 
 ---
 
 ## Tutorial/Documentation
 
 Learn how to use Voyager [*here!*](https://jodenee.github.io/Voyager/latest/)
+
+---
+
+## Credit
+
+Huge thanks to [*@lewisakura*](https://www.roblox.com/users/25704749/profile) for creating and hosting the [*proxy*](https://github.com/lewisakura/webhook-proxy) used in this library. Without them this project wouldn't have been possible. [*Support them here!*](https://buymeacoffee.com/lewisakura)
 
 ---
