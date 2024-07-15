@@ -37,10 +37,8 @@ Now that we have a Webhook instance, we can send messages to Discord by using th
 local Voyager = path_here.Voyager
 local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 
-webhook:SendMessage("Hello, World!")
+webhook:SendMessage("Hello, world!")
 ```
-
-The SendMessage function requires at least 1 argument, that being either the content of the message or a table of embeds.
 
 If you require a more indepth description about the webhook's SendMessage function you can find it [*here*](../Reference/Webhook.md#sendmessagecontent-embeds-queue-waitformessage-optionalsendmessageinfo).
 
@@ -59,7 +57,7 @@ And it's as simple as that! if you run the script, a message like the one below 
 ## Making something with Voyager
 
 ??? warning "This is only an example"
-	Please **DO NOT** actually implement this into your games. This is just meant to be a fun little example you can learn from.
+	Please don't actually implement this example into your games, join logging takes up queue spots on the proxy just to deliver no real important information. This is just meant to be a fun little example you can learn from.
 
 Now lets make a script that sends a Discord message when a player joins the game.
 
@@ -69,7 +67,7 @@ Using the code from the previous section we already have a good amount of work d
 local Voyager = path_here.Voyager
 local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 
-webhook:SendMessage("Hello, World!", nil, true, false)
+webhook:SendMessage("Hello, world!", nil, true, false)
 ```
 
 We will need to get the players service and use it's PlayerAdded event to know when to send a message.
@@ -80,7 +78,7 @@ local Voyager = game:GetService("ServerStorage").Voyager
 local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 
 playerService.PlayerAdded:Connect(function(player : Player)
-	webhook:SendMessage("Hello, World!", nil, true, false)
+	webhook:SendMessage("Hello, world!", nil, true, false)
 end)
 ```
 
@@ -94,7 +92,7 @@ local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 playerService.PlayerAdded:Connect(function(player : Player)
 	local embed = require(Voyager.Embed).new()
 
-	webhook:SendMessage("Hello, World!", nil, true, false)
+	webhook:SendMessage("Hello, world!", nil, true, false)
 end)
 ```
 
@@ -112,11 +110,11 @@ playerService.PlayerAdded:Connect(function(player : Player)
 			"https://www.roblox.com/users/" .. player.UserId .. "/profile"
 		)
 
-	webhook:SendMessage("Hello, World!", nil, true, false)
+	webhook:SendMessage("Hello, world!", nil, true, false)
 end)
 ```
 
-Now we'll give the embed a color using the embed's [*SetColor*](../Reference/Embed.md#setcolorcolor3) method
+Now we'll give the embed some color using the embed's [*SetColor*](../Reference/Embed.md#setcolorcolor3) method
 
 ```lua linenums="1" hl_lines="11"
 local playerService = game:GetService("Players")
@@ -131,7 +129,7 @@ playerService.PlayerAdded:Connect(function(player : Player)
 		)
     	:SetColor(Color3.fromRGB(85, 255, 127))
 
-	webhook:SendMessage("Hello, World!", nil, true, false)
+	webhook:SendMessage("Hello, world!", nil, true, false)
 end)
 ```
 
@@ -162,7 +160,7 @@ playerService.PlayerAdded:Connect(function(player : Player)
 			"[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")"
 		)
 	
-	webhook:SendMessage("Hello, World!", nil, true, false)
+	webhook:SendMessage("Hello, world!", nil, true, false)
 end)
 ```
 
@@ -194,7 +192,7 @@ playerService.PlayerAdded:Connect(function(player : Player)
 		)
     	:SetTimestamp()
 
-	webhook:SendMessage("Hello, World!", nil, true, false)
+	webhook:SendMessage("Hello, world!", nil, true, false)
 end)
 ```
 
@@ -270,10 +268,12 @@ end)
     <img width="80%" src="../../assets/images/tutorial/sending-messages/Image1.png">
 </div>
 
-## Real use case
+## Real use example
 
-```lua linenums="1" title="examples/gamepassPurchaseNotification.lua"
---8<-- "examples/gamepassPurchaseNotification.lua"
+Here's an actual example of how Voyager can be used in a live game.
+
+```lua linenums="1" title="examples/gamepassPurchaseNotification.server.lua"
+--8<-- "examples/gamepassPurchaseNotification.server.lua"
 ```
 
 <div align="center">

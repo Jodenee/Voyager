@@ -12,7 +12,7 @@ Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings) cont
 
 ***Parameters***
 
-- userId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the user you want to mention.
+- userId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the user to mention.
 
 <br />
 
@@ -25,7 +25,7 @@ Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings) cont
 
 ***Parameters***
 
-- roleId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the role you want to mention.
+- roleId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the role to mention.
 
 <br />
 
@@ -38,7 +38,7 @@ Returns a [*string*](https://create.roblox.com/docs/scripting/luau/strings) cont
 
 ***Parameters***
 
-- channelId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the channel you want to mention.
+- channelId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the channel to mention.
 
 <br />
 

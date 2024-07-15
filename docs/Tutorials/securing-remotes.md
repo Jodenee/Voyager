@@ -9,11 +9,11 @@ To show you how to secure a remote the user feedback example will be used.
 
 The way we will prevent exploiters from spamming our remote is by putting players on cooldown when they fire the remote. So if a player fires the remote it'll put them on a cooldown and until the cooldown duration has passed they will not be able to send anymore feedback.
 
-```lua linenums="1" title="examples/playerFeedback.lua"
---8<-- "examples/playerFeedback.lua"
+```lua linenums="1" title="examples/playerFeedback.server.lua"
+--8<-- "examples/playerFeedback.server.lua"
 ```
 
-First we will make 2 new variables, the first one will be a table that stores timestamps and the second variable will store a number that'll represent the cooldown duration in seconds.
+First we will make 2 new variables, the first one will be a table that stores timestamps and the second variable will store a number that'll contain the cooldown duration in seconds.
 
 ```lua linenums="1" hl_lines="6-7"
 local voyager = game:GetService("ServerStorage").Voyager
@@ -127,7 +127,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 end)
 ```
 
-And just like that we've made the exploiter's life much harder with a few lines of code. Now they cannot spam the remote event anymore. Now there is only one issue, they can still just rejoin the server, while this is extremely tedious some may still may attempt this. If you'd like to patch this as well check out [*advanced remote security*](#advanced-remote-security).
+And just like that we've made the exploiter's life much harder with a few lines of code. Now they can't spam the remote event anymore, but there is only one issue, they can still just rejoin the server to reset their cooldown, while this is extremely tedious some may still may attempt this. If you'd like to patch this as well check out [*advanced remote security*](#advanced-remote-security).
 
 ## Advanced remote security
 
@@ -225,12 +225,24 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 
 	local embed = require(voyager.Embed).new()
 		:SetDescription(feedback)
-		:SetAuthor("Feedback from " .. player.DisplayName, "https://www.roblox.com/users/" .. player.UserId .. "/profile")
-		:SetColor(Color3.fromRGB(0, 135, 255))
 		:SetTimestamp()
-		:AddField("Account Age", "**" .. player.AccountAge .. "** Days", true)
-		:AddField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
-		:AddField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
+		:SetColor(Color3.fromRGB(0, 135, 255))
+		:SetAuthor(
+			"Feedback from " .. player.DisplayName, 
+			"https://www.roblox.com/users/" .. player.UserId .. "/profile"
+		)
+		:AddField(
+			"Account Age", 
+			"**" .. player.AccountAge .. "** Days"
+		)
+		:AddField(
+			"Has Verified Badge?", 
+			tostring(player.HasVerifiedBadge)
+		)
+		:AddField(
+			"From Game", 
+			"[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")"
+		)
 	
 	local _, requestStatus = webhook:SendMessage(nil, {embed})
 	
@@ -284,12 +296,24 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 
 	local embed = require(voyager.Embed).new()
 		:SetDescription(feedback)
-		:SetAuthor("Feedback from " .. player.DisplayName, "https://www.roblox.com/users/" .. player.UserId .. "/profile")
-		:SetColor(Color3.fromRGB(0, 135, 255))
 		:SetTimestamp()
-		:AddField("Account Age", "**" .. player.AccountAge .. "** Days", true)
-		:AddField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
-		:AddField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
+		:SetColor(Color3.fromRGB(0, 135, 255))
+		:SetAuthor(
+			"Feedback from " .. player.DisplayName, 
+			"https://www.roblox.com/users/" .. player.UserId .. "/profile"
+		)
+		:AddField(
+			"Account Age", 
+			"**" .. player.AccountAge .. "** Days"
+		)
+		:AddField(
+			"Has Verified Badge?", 
+			tostring(player.HasVerifiedBadge)
+		)
+		:AddField(
+			"From Game", 
+			"[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")"
+		)
 	
 	local _, requestStatus = webhook:SendMessage(nil, {embed})
 	
@@ -354,12 +378,24 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 
 	local embed = require(voyager.Embed).new()
 		:SetDescription(feedback)
-		:SetAuthor("Feedback from " .. player.DisplayName, "https://www.roblox.com/users/" .. player.UserId .. "/profile")
-		:SetColor(Color3.fromRGB(0, 135, 255))
 		:SetTimestamp()
-		:AddField("Account Age", "**" .. player.AccountAge .. "** Days", true)
-		:AddField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
-		:AddField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
+		:SetColor(Color3.fromRGB(0, 135, 255))
+		:SetAuthor(
+			"Feedback from " .. player.DisplayName, 
+			"https://www.roblox.com/users/" .. player.UserId .. "/profile"
+		)
+		:AddField(
+			"Account Age", 
+			"**" .. player.AccountAge .. "** Days"
+		)
+		:AddField(
+			"Has Verified Badge?", 
+			tostring(player.HasVerifiedBadge)
+		)
+		:AddField(
+			"From Game", 
+			"[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")"
+		)
 	
 	local _, requestStatus = webhook:SendMessage(nil, {embed})
 	
@@ -369,7 +405,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 end)
 ```
 
-And lasty we will add a BindToClose event to make sure data isn't lost when the server shuts down.
+And lasty we will add a BindToClose event to ensure data isn't lost when the server shuts down.
 
 ```lua linenums="1" hl_lines="48-62"
 local voyager = game:GetService("ServerStorage").Voyager
@@ -441,12 +477,24 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 
 	local embed = require(voyager.Embed).new()
 		:SetDescription(feedback)
-		:SetAuthor("Feedback from " .. player.DisplayName, "https://www.roblox.com/users/" .. player.UserId .. "/profile")
-		:SetColor(Color3.fromRGB(0, 135, 255))
 		:SetTimestamp()
-		:AddField("Account Age", "**" .. player.AccountAge .. "** Days", true)
-		:AddField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
-		:AddField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
+		:SetColor(Color3.fromRGB(0, 135, 255))
+		:SetAuthor(
+			"Feedback from " .. player.DisplayName, 
+			"https://www.roblox.com/users/" .. player.UserId .. "/profile"
+		)
+		:AddField(
+			"Account Age", 
+			"**" .. player.AccountAge .. "** Days"
+		)
+		:AddField(
+			"Has Verified Badge?", 
+			tostring(player.HasVerifiedBadge)
+		)
+		:AddField(
+			"From Game", 
+			"[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")"
+		)
 
 	local _, requestStatus = webhook:SendMessage(nil, {embed})
 	
@@ -455,3 +503,5 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	end
 end)
 ```
+
+And thats it! Now our feedback example can't be spammed by exploiters and is way more robust.

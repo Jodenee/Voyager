@@ -12,7 +12,7 @@ local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 webhook:SendMessage("Hello, World!")
 ```
 
-All of the webhook's methods excluding some private ones return second item, a table of type [*RequestStatus*](../Reference/Webhook.md#requeststatus). With this table you can easily handle any error that may occur.
+All of the webhook's methods excluding some private ones return a second item, a table of type [*RequestStatus*](../Reference/Webhook.md#requeststatus). With this table you can easily handle any error that may occur.
 
 First we have to put the [*RequestStatus*](../Reference/Webhook.md#requeststatus) table into a variable.
 
@@ -68,7 +68,7 @@ local message, requestStatus = webhook:SendMessage("Hello, World!", nil, false, 
 print(message.Id)
 ```
 
-Now that we have the [*RequestStatus*](../Reference/Webhook.md#requeststatus) table we can set up the basic logic.
+Now that we have the [*RequestStatus*](../Reference/Webhook.md#requeststatus) table we can check to make sure the message was sent successfully.
 
 ```lua linenums="1" hl_lines="6-10"
 local Voyager = path_here.Voyager
@@ -94,9 +94,7 @@ local message, requestStatus = webhook:SendMessage("Hello, World!", nil, false, 
 if requestStatus.success then
     print(message.Id)
 else
-    if requestStatus.StatusCode == 400 then
-        warn("Bad request!")
-    elseif requestStatus.StatusCode == 429 then
+    if requestStatus.StatusCode == 429 then
         warn("We've been ratelimited!")
     elseif requestStatus.StatusCode == 500 then
         warn("Internal server error!")

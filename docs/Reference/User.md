@@ -27,7 +27,7 @@ A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing t
 
 <br />
 
-### Avatar 
+### AvatarHash
 An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the user's avatar hash.
 
 <br />
@@ -80,7 +80,7 @@ A [*PublicUserFlags*](PublicUserFlags.md) instance representing the user's flags
 
 
 ### new(data)
-Returns a new [*User*](User.md) instance.
+Constructs a new [*User*](User.md) instance from a [*user object*](https://discord.com/developers/docs/resources/user#user-object). Returns a new [*User*](User.md) instance.
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
@@ -102,10 +102,12 @@ Returns a new [*User*](User.md) instance.
 <br />
 
 ### GetAvatarUrl(size, imageFormat)
-Returns an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the user's avatar url.
+Returns an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the user's avatar url.
 
 ???+ warning
     The size parameter can only be a **power of two** between **16** and **4096**.
+
+    If the user has no avatar, this **will** return [*nil*](https://create.roblox.com/docs/luau/nil).
 
 ???+ info "Default Parameter Values"
     imageFormat: `.png`

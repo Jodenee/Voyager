@@ -46,7 +46,7 @@ A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing t
 <br />
 
 ### Author
-An instance of [*User*](User.md) representing the author of the message.
+A [*User*](User.md) instance representing the author of the message.
 
 <br />
 
@@ -64,7 +64,7 @@ A table of [*Embed*](Embed.md) instances that represent the embeds attached to t
 <br />
 
 ### MentionedUsers
-A table of [*User*](User.md) instances that represent users mentioned in the message.
+A table of [*User*](User.md) instances that represent the users mentioned in the message.
 
 <br />
 
@@ -100,7 +100,7 @@ A [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that repre
 <br />
 
 ### IsTTS
-A [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that represents whether the message was a TTS message. 
+A [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that represents whether the message is a TTS message. 
 
 <br />
 
@@ -136,7 +136,7 @@ A [*MessageFlags*](MessageFlags.md) instance representing the message's flags.
 <br />
 
 ### WebhookId
-A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the id of the webhook that sent the message.
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the id of the webhook that sent this message.
 
 <br />
 
@@ -145,7 +145,7 @@ A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contain
 <br />
 
 ### JumpUrl
-A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the jump url of the message.
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the jump url of this message.
 
 <br />
 
@@ -154,7 +154,7 @@ A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing t
 <br />
 
 ### Position
-A optional [*number*](https://create.roblox.com/docs/scripting/luau/numbers) containing the approximate position of the message in the thread.
+A optional [*number*](https://create.roblox.com/docs/scripting/luau/numbers) containing the approximate position of the message in a thread.
 
 <br />
 
@@ -169,7 +169,7 @@ A optional [*number*](https://create.roblox.com/docs/scripting/luau/numbers) con
 <br />
 
 ### new(data)
-This method returns a new [*Message*](Message.md) instance.
+Constructs a new [*Message*](Message.md) instance from a [*message object*](https://discord.com/developers/docs/resources/channel#message-object). Returns a new [*Message*](Message.md) instance.
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.

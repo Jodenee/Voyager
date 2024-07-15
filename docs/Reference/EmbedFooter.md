@@ -20,7 +20,7 @@ A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contain
 <br />
 
 ### IconUrl
-An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the footers's icon url.
+An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the url to the footer's icon.
 
 <br />
 
@@ -58,7 +58,7 @@ This method returns a new [*EmbedFooter*](EmbedFooter.md) instance.
 <br />
 
 ### _FromObject(embedFooterObject)
-This method returns a new [*EmbedFooter*](EmbedFooter.md) instance.
+This method constructs a [*EmbedFooter*](EmbedFooter.md) instance from a [*footer object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-footer-structure). Returns a new [*EmbedFooter*](EmbedFooter.md) instance.
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.

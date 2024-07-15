@@ -1,5 +1,5 @@
 # BaseFlags
-A base class for flags.
+A base class for any flags.
 
 <br />
 
@@ -27,8 +27,8 @@ A [*number*](https://create.roblox.com/docs/scripting/luau/numbers) containing f
 ### FromBitfield(value)
 Constructs a new [*BaseFlags*](BaseFlags.md) instance from a bitfield. Returns a new [*BaseFlags*](BaseFlags.md) instance.
 
-???+ warning
-    This method is not meant to be called outside of Voyager's internal code.
+???+ warning "Internal Code warning"
+    This method is not meant to be used outside of Voyager's internal code.
 
 ***Parameters***
 

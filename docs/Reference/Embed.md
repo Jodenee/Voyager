@@ -118,14 +118,21 @@ A table of [*EmbedField*](EmbedField.md) instances representing the embed's fiel
 
 <br />
 
-### new(title, description, url)
+### new(title, description, url, timestamp, color, footer, image, thumbnail, author, fields)
 This method returns a new [*Embed*](Embed.md) instance.
 
 ***Parameters***
 
-- title : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The title of the embed.
-- description : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The description of the embed.
-- url : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The url attached to the embed's title.
+- title : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - Sets the title of the embed during initialisation.
+- description : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - Sets the description of the embed during initialisation.
+- url : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - Sets the url attached to the embed's title during initialisation.
+- timestamp : [*Datetime?*](https://create.roblox.com/docs/reference/engine/datatypes/DateTime) - Sets the embed's timestamp during initialisation.
+- color : [*Color3?*](https://create.roblox.com/docs/reference/engine/datatypes/Color3) - Sets the embed's color during initialisation.
+- footer : [*EmbedFooter?*](EmbedFooter.md) - Sets the embed's footer during initialisation.
+- image : [*EmbedImage?*](EmbedImage.md) - Sets the embed's image during initialisation.
+- thumbnail : [*EmbedThumbnail?*](EmbedThumbnail.md) - Sets the embed's thumbnail during initialisation.
+- author : [*EmbedAuthor?*](EmbedAuthor.md) - Sets the embed's author during initialisation.
+- fields : { [*EmbedField?*](EmbedField.md) } - Sets the embed's fields during initialisation.
 
 <br />
 
@@ -140,7 +147,7 @@ This method returns a new [*Embed*](Embed.md) instance.
 <br />
 
 ### SetTitle(title)
-This method sets the embed's title. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+This method sets the embed's title. Returns [*self*](Embed.md) to allow chaining.
 
 ***Parameters***
 
@@ -153,7 +160,7 @@ This method sets the embed's title. Returns the [*Embed*](Embed.md) instance thi
 <br />
 
 ### SetDescription(description)
-This method sets the embed's description. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+This method sets the embed's description. Returns [*self*](Embed.md) to allow chaining.
 
 ***Parameters***
 
@@ -166,14 +173,14 @@ This method sets the embed's description. Returns the [*Embed*](Embed.md) instan
 <br />
 
 ### SetUrl(url)
-This method sets the embed's url. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+This method sets the embed's url. Returns [*self*](Embed.md) to allow chaining.
 
 ??? info
-    If the title is absent this makes no changes.
+    If the embed title is absent, this makes no changes.
 
 ***Parameters***
 
-- url : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The url to set the title hyperlink as.
+- url : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The url of the title hyperlink.
 
 <br />
 
@@ -182,7 +189,7 @@ This method sets the embed's url. Returns the [*Embed*](Embed.md) instance this 
 <br />
 
 ### SetTimestamp(customTimestamp)
-This method sets the embed's timestamp. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+This method sets the embed's timestamp. Returns [*self*](Embed.md) to allow chaining.
 
 ???+ info "Default Parameter Values"
     customTimestamp: `Datetime.now()`
@@ -198,7 +205,7 @@ This method sets the embed's timestamp. Returns the [*Embed*](Embed.md) instance
 <br />
 
 ### SetColor(color3)
-This method sets the embed's color code. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+This method sets the embed's color code. Returns [*self*](Embed.md) to allow chaining.
 
 ***Parameters***
 
@@ -211,7 +218,7 @@ This method sets the embed's color code. Returns the [*Embed*](Embed.md) instanc
 <br />
 
 ### SetFooter(text, iconUrl)
-This method sets the embed's footer. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+This method sets the embed's footer. Returns [*self*](Embed.md) to allow chaining.
 
 ??? info
     Only urls that use the HTTPS protocol are allowed to be used for the iconUrl parameter.
@@ -228,7 +235,7 @@ This method sets the embed's footer. Returns the [*Embed*](Embed.md) instance th
 <br />
 
 ### SetImage(url)
-This method sets the embed's image. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+This method sets the embed's image. Returns [*self*](Embed.md) to allow chaining.
 
 ??? info
     Only urls that use the HTTPS protocol are allowed to be used for the url parameter.
@@ -244,7 +251,7 @@ This method sets the embed's image. Returns the [*Embed*](Embed.md) instance thi
 <br />
 
 ### SetThumbnail(url)
-This method sets the embed's thumbnail. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+This method sets the embed's thumbnail. Returns [*self*](Embed.md) to allow chaining.
 
 ??? info
     Only urls that use the HTTPS protocol are allowed to be used for the url parameter.
@@ -260,7 +267,7 @@ This method sets the embed's thumbnail. Returns the [*Embed*](Embed.md) instance
 <br />
 
 ### SetAuthor(name, url, iconUrl)
-This method sets the embed's author. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+This method sets the embed's author. Returns [*self*](Embed.md) to allow chaining.
 
 ??? info
     Only urls that use the HTTPS protocol are allowed to be used for the iconUrl parameter.
@@ -278,7 +285,7 @@ This method sets the embed's author. Returns the [*Embed*](Embed.md) instance th
 <br />
 
 ### AddField(name, value, inLine)
-Appends a field to the embed. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+Appends a field to the embed. Returns [*self*](Embed.md) to allow chaining.
 
 ???+ info "Default Parameter Values"
     inLine: `true`
@@ -295,12 +302,12 @@ Appends a field to the embed. Returns the [*Embed*](Embed.md) instance this meth
 
 <br />
 
-### SetFieldAt(position, name, value, inLine)
-Modifies a field belonging to the embed. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+### SetFieldAt(index, name, value, inLine)
+Modifies a field belonging to the embed. Returns [*self*](Embed.md) to allow chaining.
 
 ***Parameters***
 
-- position : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The index of the field to modify.
+- index : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The index of the field to modify.
 - name : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The field's name.
 - value : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The field's value.
 - inLine : [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans) - Whether the field should display inline.
@@ -311,12 +318,12 @@ Modifies a field belonging to the embed. Returns the [*Embed*](Embed.md) instanc
 
 <br />
 
-### RemoveFieldAt(position)
-Removes the field at the specified index. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+### RemoveFieldAt(index)
+Removes the field at the specified index. Returns [*self*](Embed.md) to allow chaining.
 
 ***Parameters***
 
-- position : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The index of the field to remove.
+- index : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The index of the field to remove.
 
 <br />
 
@@ -325,7 +332,7 @@ Removes the field at the specified index. Returns the [*Embed*](Embed.md) instan
 <br />
 
 ### RemoveAllFields()
-Removes every field belonging to the embed. Returns the [*Embed*](Embed.md) instance this method is being used on to allow chaining.
+Removes every field belonging to the embed. Returns [*self*](Embed.md) to allow chaining.
 
 <br />
 
@@ -343,7 +350,7 @@ Returns a [*number*](https://create.roblox.com/docs/scripting/luau/numbers) repr
 <br />
 
 ### _Validate()
-Validates the embed to avoid making a bad request to Discord. This method returns a tuple with 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
+Validates the embed to avoid making a bad request to Discord. This method returns a tuple containing 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.

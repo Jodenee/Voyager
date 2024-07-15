@@ -11,7 +11,7 @@ Represents an embed's thumbnail.
 
 
 ### Url
-A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the thumbnail's url.
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the url to the thumbnail's image.
 
 <br />
 
@@ -38,7 +38,7 @@ An optional [*number*](https://create.roblox.com/docs/luau/numbers) that contain
 <br />
 
 ### ProxiedUrl
-An optional [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that contains a proxied url of the thumbnail.
+An optional [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that contains a proxied url of the thumbnail's image.
 
 <br />
 
@@ -53,7 +53,7 @@ An optional [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) 
 <br />
 
 ### new(url)
-This method returns a new [*EmbedImage*](EmbedImage.md) instance.
+This method returns a new [*EmbedThumbnail*](EmbedThumbnail.md) instance.
 
 ***Parameters***
 
@@ -65,15 +65,15 @@ This method returns a new [*EmbedImage*](EmbedImage.md) instance.
 
 <br />
 
-### _FromObject(embedImageObject)
-This method returns a new [*EmbedImage*](EmbedImage.md) instance.
+### _FromObject(embedThumbnailObject)
+This method constructs a [*EmbedThumbnail*](EmbedThumbnail.md) instance from a [*thumbnail object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-thumbnail-structure). Returns a new [*EmbedThumbnail*](EmbedThumbnail.md) instance.
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
 
 ***Parameters***
 
-- embedImageObject : [*Dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) - A [*thumbnail object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-thumbnail-structure) returned by Discord.
+- embedThumbnailObject : [*Dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) - A [*thumbnail object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-thumbnail-structure) returned by Discord.
 
 <br />
 
@@ -100,7 +100,7 @@ This method returns a [*dictionary*](https://create.roblox.com/docs/scripting/lu
 <br />
 
 ### _Validate()
-Validates the thumbnail to avoid making a bad request to Discord. This method returns a tuple with 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
+Validates the thumbnail to avoid making a bad request to Discord. This method returns a tuple containing 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.

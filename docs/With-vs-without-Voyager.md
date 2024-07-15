@@ -1,20 +1,21 @@
 # With vs without Voyager
 
+??? danger "Security Disclaimer"
+	Both examples shown here are not safe to use in a live game, for the sake of simplicity these scripts are not secured. If you wish to use them in your game you need to follow the [*remote secruity*](./Tutorials/securing-remotes.md) tutorial.
+
 ## Goal
 
 Make a script that sends a message with embedded content that displays the player's feedback to Discord.
 
 ## With Voyager
 
-```lua linenums="1" title="examples/playerFeedback.lua"
---8<-- "examples/playerFeedback.lua"
+```lua linenums="1" title="examples/playerFeedback.server.lua"
+--8<-- "examples/playerFeedback.server.lua"
 ```
 
 ## Without Voyager
 
 ```lua linenums="1"
--- Make a remote event called "SendFeedback" in replicated storage
-
 local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
 local httpService = game:GetService("HttpService")
 

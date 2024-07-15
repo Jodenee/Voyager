@@ -11,7 +11,7 @@ Represents an embed's author.
 
 
 ### Name
-A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the author's text.
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the author's name.
 
 <br />
 
@@ -68,7 +68,7 @@ This method returns a new [*EmbedAuthor*](EmbedAuthor.md) instance.
 <br />
 
 ### _FromObject(embedAuthorObject)
-This method returns a new [*EmbedAuthor*](EmbedAuthor.md) instance.
+This method constructs a [*EmbedAuthor*](EmbedAuthor.md) instance from an [*author object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-author-structure). Returns a new [*EmbedAuthor*](EmbedAuthor.md) instance.
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
@@ -102,7 +102,7 @@ This method returns a [*dictionary*](https://create.roblox.com/docs/scripting/lu
 <br />
 
 ### _Validate()
-Validates the author to avoid making a bad request to Discord. This method returns a tuple with 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
+Validates the author to avoid making a bad request to Discord. This method returns a tuple containing 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.

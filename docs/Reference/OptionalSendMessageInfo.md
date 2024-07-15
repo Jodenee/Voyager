@@ -28,7 +28,7 @@ An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) co
 <br />
 
 ### AvatarOverride
-An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing an image url that'll override the webhook's avatar.
+An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing a url to an image that'll override the webhook's avatar.
 
 <br />
 
@@ -36,7 +36,7 @@ An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) co
 
 <br />
 
-### MessageFlags 
+### Flags 
 A [*MessageFlags*](MessageFlags.md) instance representing the flags the message will have when sent.
 
 <br />
@@ -46,7 +46,7 @@ A [*MessageFlags*](MessageFlags.md) instance representing the flags the message 
 <br />
 
 ### ThreadName
-A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the name of the thread that will be created.
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the name of the forum thread that will be created.
 
 ???+ info
     The webhook's channel **must** be a forum channel for this to have an effect!
@@ -63,20 +63,15 @@ A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing t
 
 <br />
 
-### new(tts, usernameOverride, avatarOverride, messageFlags, threadName)
+### new(tts, usernameOverride, avatarOverride, flags, threadName)
 This method returns a new [*OptionalSendMessageInfo*](OptionalSendMessageInfo.md) instance.
-
-???+ info "Default Parameter Values"
-    useTTS: `false`
-
-    messageFlags: `MessageFlags.new(0)`
 
 ***Parameters***
 
-- useTTS : [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans) - An optional boolean representing whether the message should be text to speach when sent.
-- usernameOverride : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - An override for the webhook's username.
-- avatarOverride : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - An override for the webhook's avatar.
-- messageFlags : [*MessageFlags?*](MessageFlags.md) - A MessageFlags object.
+- useTTS : [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans) - Whether the message should be read by text to speach when sent.
+- usernameOverride : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - An override for the username.
+- avatarOverride : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - A url to an image.
+- flags : [*MessageFlags?*](MessageFlags.md) - A MessageFlags object.
 - threadName : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - Name of the thread to create.
 
 <br />

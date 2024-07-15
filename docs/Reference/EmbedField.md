@@ -62,7 +62,7 @@ This method returns a new [*EmbedField*](EmbedField.md) instance.
 <br />
 
 ### _FromObject(embedFieldObject)
-This method returns a new [*EmbedField*](EmbedField.md) instance.
+This method constructs a [*EmbedField*](EmbedField.md) instance from a [*field object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-field-structure). Returns a new [*EmbedField*](EmbedField.md) instance.
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
@@ -96,7 +96,7 @@ This method returns a [*dictionary*](https://create.roblox.com/docs/scripting/lu
 <br />
 
 ### _Validate()
-Validates the author to avoid making a pointless request to Discord. This method returns a tuple with 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
+Validates the field to avoid making a pointless request to Discord. This method returns a tuple containing 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.

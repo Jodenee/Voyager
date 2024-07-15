@@ -11,7 +11,7 @@ Represents an embed's image.
 
 
 ### Url
-A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the image's url.
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the url of the image.
 
 <br />
 
@@ -66,14 +66,14 @@ This method returns a new [*EmbedImage*](EmbedImage.md) instance.
 <br />
 
 ### _FromObject(embedImageObject)
-This method returns a new [*EmbedImage*](EmbedImage.md) instance.
+This method constructs a [*EmbedImage*](EmbedImage.md) instance from an [*image object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-image-structure). Returns a new [*EmbedImage*](EmbedImage.md) instance.
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
 
 ***Parameters***
 
-- embedImageObject : [*Dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) - A [*image object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-image-structure) returned by Discord.
+- embedImageObject : [*Dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) - An [*image object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-image-structure) returned by Discord.
 
 <br />
 
@@ -100,7 +100,7 @@ This method returns a [*dictionary*](https://create.roblox.com/docs/scripting/lu
 <br />
 
 ### _Validate()
-Validates the image to avoid making a bad request to Discord. This method returns a tuple with 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
+Validates the image to avoid making a bad request to Discord. This method returns a tuple containing 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.

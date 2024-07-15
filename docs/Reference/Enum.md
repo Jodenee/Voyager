@@ -36,7 +36,7 @@ A [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionari
 | Enum                    | Type                                                    | Description                                                |
 |:-----------------------:|:-------------------------------------------------------:|------------------------------------------------------------|
 | SuppressEmbeds          | [*number*](https://create.roblox.com/docs/luau/numbers) | Suppresses all embeds on a message.                        |
-| SuppressNotifications   | [*number*](https://create.roblox.com/docs/luau/numbers) | Suppresses the notification sound for all users mentioned. |
+| SuppressNotifications   | [*number*](https://create.roblox.com/docs/luau/numbers) | Suppresses push and desktop notifications.                 |
 
 <br />
 
@@ -46,15 +46,15 @@ A [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionari
 
 ### ImageFormat
 
-A [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) of strings that represent different image extensions. [*Offical docs reference*](https://discord.com/developers/docs/reference#image-formatting-image-formats)
+A [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) of strings that represent different image formats. [*Offical docs reference*](https://discord.com/developers/docs/reference#image-formatting-image-formats)
 
 | Enum     | Type                                                    | Description              |
 |:--------:|:-------------------------------------------------------:|--------------------------|
-| Jpeg     | [*string*](https://create.roblox.com/docs/luau/strings) | Represents a .jpeg file. |
-| Png      | [*string*](https://create.roblox.com/docs/luau/strings) | Represents a .png file.  |
-| Gif      | [*string*](https://create.roblox.com/docs/luau/strings) | Represents a .gif file.  |
-| WebP     | [*string*](https://create.roblox.com/docs/luau/strings) | Represents a .webp file. |
-| Lottie   | [*string*](https://create.roblox.com/docs/luau/strings) | Represents a .json file. |
+| Jpeg     | [*string*](https://create.roblox.com/docs/luau/strings) | Represents a jpeg file. |
+| Png      | [*string*](https://create.roblox.com/docs/luau/strings) | Represents a png file.  |
+| Gif      | [*string*](https://create.roblox.com/docs/luau/strings) | Represents a gif file.  |
+| WebP     | [*string*](https://create.roblox.com/docs/luau/strings) | Represents a webp file. |
+| Lottie   | [*string*](https://create.roblox.com/docs/luau/strings) | Represents a json file. |
 
 <br />
 
@@ -69,7 +69,7 @@ A [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionari
 | Enum     | Type                                                    | Description                         |
 |:--------:|:-------------------------------------------------------:|-------------------------------------|
 | User     | [*string*](https://create.roblox.com/docs/luau/strings) | You have been directly ratelimited. |
-| Shared   | [*string*](https://create.roblox.com/docs/luau/strings) | The resource is being rate limited. |
+| Shared   | [*string*](https://create.roblox.com/docs/luau/strings) | The resource is being ratelimited.  |
 | Global   | [*string*](https://create.roblox.com/docs/luau/strings) | You have been directly ratelimited. |
 
 <br />
