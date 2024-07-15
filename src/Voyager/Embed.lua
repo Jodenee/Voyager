@@ -35,6 +35,51 @@ function Embed.new(
 	return self
 end
 
+function Embed._FromObject(embedObject)
+	local self = setmetatable({}, Embed)
+
+	self.Title = embedObject.title
+	self.Description = embedObject.description
+	self.Url = embedObject.url
+	self.Fields = {}
+
+	if embedObject.color then
+		local red = bit32.band(bit32.rshift(embedObject.color, 16), 255)
+		local green = bit32.band(bit32.rshift(embedObject.color, 8), 255)
+		local blue = bit32.band(embedObject.color, 255)
+
+		self:SetColor(Color3.fromRGB(red, green, blue))
+	end
+
+	if embedObject.timestamp then
+		self:SetTimestamp(DateTime.fromIsoDate(embedObject.timestamp))
+	end
+
+	if embedObject.footer then
+		self.Footer = EmbedFooter._FromObject(embedObject.footer)
+	end
+
+	if embedObject.image then
+		self.Image = EmbedImage._FromObject(embedObject.image)
+	end
+
+	if embedObject.thumbnail then
+		self.Thumbnail = EmbedThumbnail._FromObject(embedObject.thumbnail)
+	end
+
+	if embedObject.author then
+		self.Author = EmbedAuthor._FromObject(embedObject.author)
+	end
+
+	if embedObject.fields then
+		for _, fieldObject in embedObject.fields do
+			table.insert(self.Fields, EmbedField._FromObject(fieldObject))
+		end
+	end
+
+	return self
+end
+
 function Embed:_Validate() : (boolean, string?)
 	if self.Title then
 		if string.len(self.Title) > 256 then
@@ -93,93 +138,91 @@ function Embed:_Validate() : (boolean, string?)
 	return true
 end
 
-function Embed:SetTitle(title : string) : { }
+function Embed:SetTitle(title : string) : {}
 	self.Title = title
 
 	return self
 end
 
-function Embed:SetDescription(description : string) : { }
+function Embed:SetDescription(description : string) : {}
 	self.Description = description
 
 	return self
 end
 
-function Embed:SetUrl(url : string) : { }
+function Embed:SetUrl(url : string) : {}
 	self.Url = url
 
 	return self
 end
 
-function Embed:SetTimestamp(customTimestamp : DateTime?) : { }
-	if customTimestamp then self.Timestamp = customTimestamp return end
-
-	self.Timestamp = DateTime.now()
+function Embed:SetTimestamp(customTimestamp : DateTime?) : {}
+	if customTimestamp then
+		self.Timestamp = customTimestamp
+	else
+		self.Timestamp = DateTime.now()
+	end
 
 	return self
 end
 
-function Embed:SetColor(color3 : Color3) : { }
+function Embed:SetColor(color3 : Color3) : {}
 	self.Color = color3
 
 	return self
 end
 
-function Embed:SetFooter(text : string, iconUrl : string?) : { }
+function Embed:SetFooter(text : string, iconUrl : string?) : {}
 	self.Footer = EmbedFooter.new(text, iconUrl)
 
 	return self
 end
 
-function Embed:SetImage(url : string) : { }
+function Embed:SetImage(url : string) : {}
 	self.Image = EmbedImage.new(url)
 
 	return self
 end
 
-function Embed:SetThumbnail(url : string) : { }
-	self.thumbnail = EmbedThumbnail.new(url)
+function Embed:SetThumbnail(url : string) : {}
+	self.Thumbnail = EmbedThumbnail.new(url)
 
 	return self
 end
 
-function Embed:SetAuthor(name : string, url : string?, iconUrl : string?) : { }
+function Embed:SetAuthor(name : string, url : string?, iconUrl : string?) : {}
 	self.Author = EmbedAuthor.new(name, url, iconUrl)
 
 	return self
 end
 
-function Embed:AddField(name : string, value : string, inLine : boolean?) : { }
+function Embed:AddField(name : string, value : string, inLine : boolean?) : {}
 	table.insert(self.Fields, EmbedField.new(name, value, inLine))
 
 	return self
 end
 
-function Embed:SetFieldAt(position : number, name : string, value : string, inLine : boolean?)
-	if position > #self.Fields or position <= 0  then
-		error("Could not set field at index " .. position .. ", make sure the position is less than or equal to the length of the fields table.")
+function Embed:SetFieldAt(index : number, name : string, value : string, inLine : boolean?)
+	if index > #self.Fields or index <= 0  then
+		error("Could not set field at index " .. index .. ", make sure the index is less than or equal to the length of the fields table.")
 	end
 
-	table.insert(
-		self.Fields,
-		position,
-		EmbedField.new(name, value, inLine)
-	)
+	self.Fields[index] = EmbedField.new(name, value, inLine)
 
 	return self
 end
 
-function Embed:RemoveFieldAt(fieldPosition : number) : { }
-	if fieldPosition > #self.Fields or fieldPosition <= 0  then
-		error("No field exists at index " .. fieldPosition .. ".")
+function Embed:RemoveFieldAt(index : number) : {}
+	if index > #self.Fields or index <= 0  then
+		error("No field exists at index " .. index .. ".")
 	end
 
-	table.remove(self.Fields, fieldPosition)
+	table.remove(self.Fields, index)
 
 	return self
 end
 
-function Embed:RemoveAllFields() : { }
+function Embed:RemoveAllFields() : {}
 	table.clear(self.Fields)
 
 	return self
