@@ -7,6 +7,12 @@
       "examples": {
         "$className": "Folder",
         "$path": "examples"
+      },
+      "Voyager Development": {
+        "$className": "Script",
+        "$properties": {
+          "RunContext": "Server"
+        }
       }
     },
     "ServerStorage": {
