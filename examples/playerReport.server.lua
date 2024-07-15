@@ -1,6 +1,3 @@
--- Put Voyager in server storage
--- Make a remote event called "SendReport" in replicated storage
-
 local voyager = game:GetService("ServerStorage").Voyager
 local sendReportRemote = game:GetService("ReplicatedStorage").SendReport
 local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")

@@ -1,6 +1,3 @@
--- Put Voyager in server storage
--- Make a remote event called "SendFeedback" in replicated storage
-
 local voyager = game:GetService("ServerStorage").Voyager
 local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
 local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
@@ -12,7 +9,8 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 		:SetTimestamp()
 		:SetAuthor(
 			"Feedback from " .. player.DisplayName, 
-			"https://www.roblox.com/users/" .. player.UserId .. "/profile")
+			"https://www.roblox.com/users/" .. player.UserId .. "/profile"
+		)
 		:addField(
 			"Account Age",
 			"**" .. player.AccountAge .. "** Days"

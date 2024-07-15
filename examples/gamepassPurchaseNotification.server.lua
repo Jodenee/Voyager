@@ -1,5 +1,3 @@
--- Put Voyager in server storage
-
 local marketplaceService = game:GetService("MarketplaceService")
 local voyager = game:GetService("ServerStorage").Voyager
 local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
