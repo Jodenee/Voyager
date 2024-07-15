@@ -36,13 +36,13 @@ function EmbedAuthor:_Validate() : (boolean, string?)
     end
 
     if self.Url then
-        if not self.Url:match("http://") and not self.Url:match("https://") then
+        if not self.Url:lower():match("http://") and not self.Url:lower():match("https://") then
             return false, "The author's url needs to be a valid url."
         end
     end
 
     if self.IconUrl then
-        if not self.IconUrl:match("https://") then
+        if not self.IconUrl:lower():match("https://") then
             return false, "The author's icon url needs to use the HTTPS protocol."
         end
     end
