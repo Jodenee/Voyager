@@ -90,7 +90,7 @@ function Webhook:_ValidateSendMessageRequest(content : string?, embeds : {}?, op
 			end
 
 			if string.len(optionalSendMessageInfo.UsernameOverride) < 1 or string.len(optionalSendMessageInfo.UsernameOverride) > 80 then
-				return false, "Username override must be between 1 and 80 characters in length."
+				return false, "Username override can only be between 1 and 80 characters."
 			end
 		end
 	end
@@ -123,12 +123,16 @@ end
 function Webhook:_ValidateEditMessageRequest(content : string?, embeds : {}?) : (boolean, string?)
 	if content then
 		if string.len(content) > 2000 then
-			return false, "The content must only contain up to 2000 characters."
+			return false, "The content can only be up to 2000 characters."
 		end
 	end
 
 	if embeds then
 		local totalEmbedCharacters = 0
+
+		if #embeds > 10 then
+			return false, "A single message can only have up to 10 embeds."
+		end
 
 		for index, embed in embeds do
 			local isEmbedValid, errorMessage = embed:_Validate()
@@ -228,8 +232,11 @@ function Webhook:SendMessage(content : string?, embeds : {}?, queue : boolean?, 
 		requestBody.username = optionalSendMessageInfo.UsernameOverride
 		requestBody.avatar_url = optionalSendMessageInfo.AvatarOverride
 		requestBody.tts = optionalSendMessageInfo.UseTTS
-		requestBody.flags = optionalSendMessageInfo.MessageFlags.Value
 		requestBody.thread_name = optionalSendMessageInfo.ThreadName
+
+		if optionalSendMessageInfo.Flags then
+			requestBody.flags = optionalSendMessageInfo.Flags.Value
+		end
 	end
 
 	if queue then
@@ -272,7 +279,10 @@ function Webhook:SendMessageInThread(threadId : string, content : string?, embed
 		requestBody.username = optionalSendMessageInfo.UsernameOverride
 		requestBody.avatar_url = optionalSendMessageInfo.AvatarOverride
 		requestBody.tts = optionalSendMessageInfo.UseTTS
-		requestBody.flags = optionalSendMessageInfo.MessageFlags.Value
+
+		if optionalSendMessageInfo.Flags then
+			requestBody.flags = optionalSendMessageInfo.Flags.Value
+		end
 	end
 
 	if queue then
