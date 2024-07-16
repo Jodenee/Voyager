@@ -23,21 +23,21 @@
 ### Creator Marketplace
 
 1. Get the [*module script*](https://www.roblox.com/library/12390338563) off the creator marketplace.
-2. Make sure http requests in Game Settings > Security is enabled.
-3. Drag the module into your project and place it in ServerScriptService or ServerStorage.
+2. Drag the module into your project and place it in ServerScriptService or ServerStorage.
+3. Enable "Allow HTTP Requests" in Game Settings > Security.
 
 ### Model File
 
 1. Go to the [*releases page*](https://github.com/Jodenee/Voyager/releases) and download the latest version of Voyager's model file.
-2. Make sure http requests in Game Settings > Security is enabled.
-3. Drag the module into your project and place it in ServerScriptService or ServerStorage.
+2. Drag the module into your project and place it in ServerScriptService or ServerStorage.
+3. Enable "Allow HTTP Requests" in Game Settings > Security.
 
 ### Wally
 
 1. Go to Voyager's [*wally page*](https://wally.run/package/jodenee/voyager) and copy the install string found underneath the metadata section.
-2. Open your wally.toml file and under \[dependencies\] paste the string you got from the previous step.
+2. Open your wally.toml file and paste the string you got from the previous step underneath `[dependencies]`.
 3. Open your prefered cli and run `wally install` in your projects directory.
-4. Make sure http requests in Game Settings > Security is enabled.
+4. Enable "Allow HTTP Requests" in Game Settings > Security.
 
 ---
 
