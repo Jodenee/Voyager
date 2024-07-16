@@ -10,7 +10,7 @@ function EmbedFooter.new(text : string, iconUrl : string?)
 	return self
 end
 
-function EmbedFooter._FromObject(embedFooterObject : {})
+function EmbedFooter._fromObject(embedFooterObject : {})
 	local self = setmetatable({}, EmbedFooter)
 
 	self.Text = embedFooterObject.text

@@ -9,7 +9,7 @@ function EmbedImage.new(url : string)
 	return self
 end
 
-function EmbedImage._FromObject(embedImageObject : {})
+function EmbedImage._fromObject(embedImageObject : {})
 	local self = setmetatable({}, EmbedImage)
 
 	self.Url = embedImageObject.url

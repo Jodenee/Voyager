@@ -11,7 +11,7 @@ function EmbedAuthor.new(name : string, url : string?, iconUrl : string?)
 	return self
 end
 
-function EmbedAuthor._FromObject(embedAuthorObject : {})
+function EmbedAuthor._fromObject(embedAuthorObject : {})
 	local self = setmetatable({}, EmbedAuthor)
 
     self.Name = embedAuthorObject.name
