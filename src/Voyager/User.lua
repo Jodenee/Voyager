@@ -13,7 +13,7 @@ function User.new(data)
 	self.IsBot = data.bot or false
 	self.Mention = MentionFormatter.MentionUser(data.id)
 	self.GlobalName = data.global_name
-	self.PublicFlags = PublicUserFlags.FromBitfield(data.public_flags)
+	self.PublicFlags = PublicUserFlags.fromBitfield(data.public_flags)
 
 	return self
 end
