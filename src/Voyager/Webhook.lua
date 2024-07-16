@@ -45,7 +45,7 @@ function Webhook.new(id : string, token : string, customProxyUrl : string?)
 	return self
 end
 
-function Webhook.FromUrl(webhookUrl : string, customProxyUrl : string?)
+function Webhook.fromUrl(webhookUrl : string, customProxyUrl : string?)
 	local self = setmetatable({}, Webhook)
 	local webhookId, webhookToken = string.match(webhookUrl, "^https://discord.com/api/webhooks/(%d+)/([%w%p]+)$")
 
