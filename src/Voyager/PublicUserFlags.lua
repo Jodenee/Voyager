@@ -5,8 +5,8 @@ local BaseFlags = require(script.Parent.Bases.BaseFlags)
 
 setmetatable(PublicUserFlags, BaseFlags)
 
-function PublicUserFlags.FromBitfield(value : number)
-	local self = setmetatable(BaseFlags.FromBitfield(value), PublicUserFlags)
+function PublicUserFlags.fromBitfield(value : number)
+	local self = setmetatable(BaseFlags.fromBitfield(value), PublicUserFlags)
 
 	return self
 end

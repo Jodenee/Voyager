@@ -1,7 +1,7 @@
 local BaseFlags = {}
 BaseFlags.__index = BaseFlags
 
-function BaseFlags.FromBitfield(value : number)
+function BaseFlags.fromBitfield(value : number)
 	local self = setmetatable({}, BaseFlags)
 
 	self.Value = value

@@ -5,14 +5,14 @@ local BaseFlags = require(script.Parent.Bases.BaseFlags)
 
 setmetatable(MessageFlags, BaseFlags)
 
-function MessageFlags.FromBitfield(value : number)
-	local self = setmetatable(BaseFlags.FromBitfield(value), MessageFlags)
+function MessageFlags.fromBitfield(value : number)
+	local self = setmetatable(BaseFlags.fromBitfield(value), MessageFlags)
 
 	return self
 end
 
-function MessageFlags.FromFlags(flags : { number })
-	local self = setmetatable(BaseFlags.FromBitfield(0), MessageFlags)
+function MessageFlags.fromFlags(flags : { number })
+	local self = setmetatable(BaseFlags.fromBitfield(0), MessageFlags)
 
 	for _, flag in flags do
 		self.Value = bit32.bor(self.Value, flag)
