@@ -57,7 +57,7 @@ This method returns a new [*EmbedFooter*](EmbedFooter.md) instance.
 
 <br />
 
-### _FromObject(embedFooterObject)
+### _fromObject(embedFooterObject)
 This method constructs a [*EmbedFooter*](EmbedFooter.md) instance from a [*footer object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-footer-structure). Returns a new [*EmbedFooter*](EmbedFooter.md) instance.
 
 ???+ warning "Internal Code warning"

@@ -65,7 +65,7 @@ This method returns a new [*EmbedImage*](EmbedImage.md) instance.
 
 <br />
 
-### _FromObject(embedImageObject)
+### _fromObject(embedImageObject)
 This method constructs a [*EmbedImage*](EmbedImage.md) instance from an [*image object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-image-structure). Returns a new [*EmbedImage*](EmbedImage.md) instance.
 
 ???+ warning "Internal Code warning"

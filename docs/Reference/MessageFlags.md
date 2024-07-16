@@ -24,7 +24,7 @@ A [*number*](https://create.roblox.com/docs/scripting/luau/numbers) containing f
 
 <br />
 
-### FromBitfield(value)
+### fromBitfield(value)
 Constructs a new [*MessageFlags*](MessageFlags.md) instance from a bitfield. Returns a new [*MessageFlags*](MessageFlags.md) instance.
 
 ***Parameters***
@@ -37,7 +37,7 @@ Constructs a new [*MessageFlags*](MessageFlags.md) instance from a bitfield. Ret
 
 <br />
 
-### FromFlags(flags) 
+### fromFlags(flags) 
 Constructs a new [*MessageFlags*](MessageFlags.md) instance from a table of flags. Returns a new [*MessageFlags*](MessageFlags.md) instance.
 
 ??? tip

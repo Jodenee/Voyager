@@ -65,7 +65,7 @@ This method returns a new [*EmbedThumbnail*](EmbedThumbnail.md) instance.
 
 <br />
 
-### _FromObject(embedThumbnailObject)
+### _fromObject(embedThumbnailObject)
 This method constructs a [*EmbedThumbnail*](EmbedThumbnail.md) instance from a [*thumbnail object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-thumbnail-structure). Returns a new [*EmbedThumbnail*](EmbedThumbnail.md) instance.
 
 ???+ warning "Internal Code warning"

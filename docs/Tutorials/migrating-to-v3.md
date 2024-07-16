@@ -19,7 +19,6 @@ Updating Voyager from v2 to v3 will bring breaking changes. This is here to help
 * Renamed property `token` to `Token`.
 * Renamed property `baseUrl` to `BaseUrl`.
 * Removed property `ratelimitInfo`. Replaced by `RequestStatus.RatelimitInformation`.
-* Renamed constructor method `fromUrl` to `FromUrl`.
 * Changed method `execute`.
     * Renamed to `SendMessage`.
     * No longer returns a third item. Moved to `RequestStatus.RatelimitInformation`.
@@ -98,6 +97,7 @@ Updating Voyager from v2 to v3 will bring breaking changes. This is here to help
 * Renamed method `addField` to `AddField`
 * Renamed method `totalCharacters` to `TotalCharacters`
 * Renamed method `_validate` to `_Validate`
+* Removed method `colorToRGB`. Replaced by `Embed.Color`
 
 <br/>
 
@@ -197,13 +197,13 @@ Updating Voyager from v2 to v3 will bring breaking changes. This is here to help
 ### User changes
 ---
 
-* Renamed property `id` to `Id`.
-* Renamed property `username` to `Username`.
-* Renamed property `avatar` to `AvatarHash`.
-* Renamed property `bot` to `IsBot`.
-* Renamed property `mention` to `Mention`.
-* Renamed property `globalName` to `GlobalName`.
-* Renamed property `publicFlags` to `PublicFlags`.
+* Renamed property `id` to `Id`
+* Renamed property `username` to `Username`
+* Renamed property `avatar` to `AvatarHash`
+* Renamed property `bot` to `IsBot`
+* Renamed property `mention` to `Mention`
+* Renamed property `globalName` to `GlobalName`
+* Renamed property `publicFlags` to `PublicFlags`
 * Renamed method `getAvatarUrl` to `GetAvatarUrl`
 * Renamed method `hasAnimatedAvatar` to `HasAnimatedAvatar`
 
@@ -236,8 +236,6 @@ Updating Voyager from v2 to v3 will bring breaking changes. This is here to help
 ---
 
 * Renamed property `value` to `Value`
-* Renamed constructor method `fromBitfield` to `FromBitfield`
-* Renamed constructor method `fromFlags` to `FromFlags`
 * Renamed method `getFlags` to `GetFlags`
 * Renamed method `hasFlag` to `HasFlag`
 * Renamed method `setFlag` to `SetFlag`
@@ -246,7 +244,6 @@ Updating Voyager from v2 to v3 will bring breaking changes. This is here to help
 ---
 
 * Renamed property `value` to `Value`
-* Renamed constructor method `fromBitfield` to `FromBitfield`
 * Renamed method `getFlags` to `GetFlags`
 * Renamed method `hasFlag` to `HasFlag`
 * Renamed method `setFlag` to `SetFlag`

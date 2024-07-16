@@ -24,7 +24,7 @@ A [*number*](https://create.roblox.com/docs/scripting/luau/numbers) containing f
 
 <br />
 
-### FromBitfield(value)
+### fromBitfield(value)
 Constructs a new [*PublicUserFlags*](PublicUserFlags.md) instance from a bitfield. This method returns a new [*PublicUserFlags*](PublicUserFlags.md) instance.
 
 ???+ warning "Internal Code warning"

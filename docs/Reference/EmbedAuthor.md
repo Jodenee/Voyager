@@ -67,7 +67,7 @@ This method returns a new [*EmbedAuthor*](EmbedAuthor.md) instance.
 
 <br />
 
-### _FromObject(embedAuthorObject)
+### _fromObject(embedAuthorObject)
 This method constructs a [*EmbedAuthor*](EmbedAuthor.md) instance from an [*author object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-author-structure). Returns a new [*EmbedAuthor*](EmbedAuthor.md) instance.
 
 ???+ warning "Internal Code warning"

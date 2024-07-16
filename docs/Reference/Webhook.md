@@ -144,7 +144,7 @@ Constructs a new [*Webhook*](Webhook.md) instance from an id, token and an optio
 
 <br />
 
-### FromUrl(webhookUrl, customProxyUrl)
+### fromUrl(webhookUrl, customProxyUrl)
 Constructs a new [*Webhook*](Webhook.md) instance from a webhook url and an optional custom proxy url. Returns a new [*Webhook*](Webhook.md) instance.
 
 ??? info "Custom proxy url example"
