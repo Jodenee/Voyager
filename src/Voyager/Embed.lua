@@ -35,7 +35,7 @@ function Embed.new(
 	return self
 end
 
-function Embed._FromObject(embedObject)
+function Embed._fromObject(embedObject)
 	local self = setmetatable({}, Embed)
 
 	self.Title = embedObject.title
@@ -56,24 +56,24 @@ function Embed._FromObject(embedObject)
 	end
 
 	if embedObject.footer then
-		self.Footer = EmbedFooter._FromObject(embedObject.footer)
+		self.Footer = EmbedFooter._fromObject(embedObject.footer)
 	end
 
 	if embedObject.image then
-		self.Image = EmbedImage._FromObject(embedObject.image)
+		self.Image = EmbedImage._fromObject(embedObject.image)
 	end
 
 	if embedObject.thumbnail then
-		self.Thumbnail = EmbedThumbnail._FromObject(embedObject.thumbnail)
+		self.Thumbnail = EmbedThumbnail._fromObject(embedObject.thumbnail)
 	end
 
 	if embedObject.author then
-		self.Author = EmbedAuthor._FromObject(embedObject.author)
+		self.Author = EmbedAuthor._fromObject(embedObject.author)
 	end
 
 	if embedObject.fields then
 		for _, fieldObject in embedObject.fields do
-			table.insert(self.Fields, EmbedField._FromObject(fieldObject))
+			table.insert(self.Fields, EmbedField._fromObject(fieldObject))
 		end
 	end
 
