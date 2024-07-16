@@ -20,7 +20,7 @@ function Message.new(data)
 	self.MentionsEveryone = data.mention_everyone
 	self.IsTTS = data.tts
 	self.CreatedAt = DateTime.fromIsoDate(data.timestamp)
-	self.Flags = MessageFlags.FromBitfield(data.flags)
+	self.Flags = MessageFlags.fromBitfield(data.flags)
 	self.WebhookId = data.webhook_id
 	self.Position = data.position
 	self.JumpUrl = "https://discord.com/channels/@me/" .. self.ChannelId .. "/" .. self.Id
@@ -31,7 +31,7 @@ function Message.new(data)
 
 	if data.embeds then
 		for _, embedObject in data.embeds do
-			table.insert(self.Embeds, Embed._FromObject(embedObject))
+			table.insert(self.Embeds, Embed._fromObject(embedObject))
 		end
 	end
 
