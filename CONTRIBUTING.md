@@ -42,7 +42,7 @@ When you first open the file it will be blank, to save you some time you can cop
 
 ```lua
 --// Get voyager
-local voyager = game:GetService("ServerStorage").Voyager
+local voyager = game:GetService("ServerStorage").voyager
 
 --// Get classes
 local Webhook = require(voyager.Webhook)
