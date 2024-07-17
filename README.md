@@ -44,8 +44,8 @@
 ## Quick Example
 
 ```lua
-local Voyager = path_here.Voyager
-local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = path_here.voyager
+local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
 
 webhook:SendMessage("Hello, world!")
 ```
