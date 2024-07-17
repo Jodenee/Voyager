@@ -1,4 +1,4 @@
-local voyager = game:GetService("ServerStorage").Voyager
+local voyager = game:GetService("ServerStorage").voyager
 local sendReportRemote = game:GetService("ReplicatedStorage").SendReport
 local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
 
