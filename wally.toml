@@ -9,13 +9,13 @@ realm = "server"
 include = [
     "src/voyager", 
     "default.project.json", 
-    "LICENSE"
+    "LICENSE",
+    "wally.toml"
 ]
 exclude = [
     "aftman.toml", 
     "docs",  
     "examples", 
-    "wally.toml", 
     "mkdocs.yml", 
     "README.md",
     "CONTRIBUTING.md",
