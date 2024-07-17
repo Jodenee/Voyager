@@ -1,0 +1,18 @@
+# Project place files and build artifacts
+/*.rbxlx
+/*.rbxl
+/*.rbxmx
+/*.rbxm
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+# Wally lock file
+wally.lock
+
+# Wally package
+/*.zip
+
+# Documentation page build
+site/

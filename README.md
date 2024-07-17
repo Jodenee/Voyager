@@ -10,41 +10,56 @@
 
 ---
 
-## **Key Features**
+## Key Features
 
-- **Simple:** Voyager is curated to be easily utilized by both beginner and advanced scripters.
-- **Flexible:** Voyager is curated to be modular as to fit as many use cases as possible.
-- **Pre-request data validation:** Voyager comes with built in validation functions that automatically validate any data you give it before making an HTTP request. This is done to mitigate making pointless requests to the proxy, as making too many bad requests may get you temporarily or indefinitely banned from the proxy.
-
----
-
-## **Installation**
-
-1. Get the [*module script*](https://www.roblox.com/library/12390338563).
-2. Make sure http requests in Game Settings > Security is enabled.
-3. Drag the module into your project and place it in ServerScriptService or ServerStorage.
+- **Simple:** Voyager is made to be easily used by both beginner and advanced scripters.
+- **Flexible:** Voyager is very modular allowing it to fit many use cases.
+- **Pre-request data validation:** Voyager comes with built in validation methods that automatically validate data to help you catch errors before they reach the proxy.
 
 ---
 
-## **Quick Example**
+## Installation
+
+### Creator Marketplace
+
+1. Get [*Voyager*](https://www.roblox.com/library/12390338563) off the creator marketplace.
+2. Drag the Voyager into your project and into ServerScriptService or ServerStorage.
+3. Enable "Allow HTTP Requests" in Game Settings > Security.
+
+### Model File
+
+1. Go to the [*releases page*](https://github.com/Jodenee/Voyager/releases) and download the latest version of Voyager.
+2. Drag the model file into your project and into ServerScriptService or ServerStorage.
+3. Enable "Allow HTTP Requests" in Game Settings > Security.
+
+### Wally
+
+1. Go to Voyager's [*wally page*](https://wally.run/package/jodenee/voyager) and copy the install string found underneath the metadata section.
+2. Open your wally.toml file and paste the string you got from the previous step underneath `[dependencies]`.
+3. Open your prefered cli and run `wally install` in your projects directory.
+4. Enable "Allow HTTP Requests" in Game Settings > Security.
+
+---
+
+## Quick Example
 
 ```lua
 local Voyager = path_here.Voyager
 local webhook = require(Voyager.Webhook).new("webhookId", "webhookToken")
 
-webhook:execute("Hello, World!")
+webhook:SendMessage("Hello, world!")
 ```
 
 ---
 
-## **Credit**
+## Tutorial/Documentation
 
-Huge thanks to [*@lewisakura*](https://www.roblox.com/users/25704749/profile) for creating and hosting the [*proxy*](https://github.com/lewisakura/webhook-proxy) used in this module. Without them this module wouldn't have been possible.
+Learn how to use Voyager [*here!*](https://jodenee.github.io/Voyager/latest/)
 
 ---
 
-## **Tutorial/Documentation**
+## Credit
 
-Learn how to use Voyager [*here*](https://jodenee.github.io/Voyager/latest/).
+Huge thanks to [*@lewisakura*](https://www.roblox.com/users/25704749/profile) for creating and hosting the [*proxy*](https://github.com/lewisakura/webhook-proxy) used in this library. Without them this project wouldn't have been possible. [*Support them here!*](https://buymeacoffee.com/lewisakura)
 
 ---

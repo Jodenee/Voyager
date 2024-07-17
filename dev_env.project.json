@@ -1,0 +1,25 @@
+{
+  "name": "voyager",
+  "tree": {
+    "$className": "DataModel",
+
+    "ServerScriptService": {
+      "examples": {
+        "$className": "Folder",
+        "$path": "examples"
+      },
+      "Voyager Development": {
+        "$className": "Script",
+        "$properties": {
+          "RunContext": "Server"
+        }
+      }
+    },
+    "ServerStorage": {
+      "Voyager": {
+        "$className": "Folder",
+        "$path": "src/Voyager"
+      }
+    }
+  }
+}

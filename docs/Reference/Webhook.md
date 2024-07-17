@@ -1,53 +1,27 @@
 # Webhook
+Represents a Discord webhook.
 
 <br />
 
 ## Types
 
-<br />
-
-### **RatelimitInfo**
-
-**RatelimitInfo.XRatelimitLimit :** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
-
-**RatelimitInfo.XRatelimitRemaining :** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
-
-**RatelimitInfo.XRatelimitReset :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
-
-**RatelimitInfo.XRatelimitResetAfter :** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers)
-
-**RatelimitInfo.XRatelimitBucket :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
-
-<br />
-
-???+ warning "Deprecation Notice"
-    This type has been deprecated. Please use [RatelimitInformation](#ratelimitinformation) and [RatelimitedInformation](#ratelimitedinformation) instead. 
-
 ---
 
 <br />
 
-### **RatelimitInformation**
+## RatelimitInformation
 
-Please use the [offical Discord](https://discord.com/developers/docs/topics/rate-limits#header-format-rate-limit-header-examples) docs to reference what these values represent. 
+| Key            | Type                                                                              | Description                                                              |
+|----------------|-----------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| Limit          | [*number*](https://create.roblox.com/docs/scripting/luau/numbers)                 | The maximum amount of requests you can make.                             |
+| Remaining      | [*number*](https://create.roblox.com/docs/scripting/luau/numbers)                 | The remaining amount of requests you can make.                           |
+| Reset          | [*Datetime*](https://create.roblox.com/docs/reference/engine/datat ypes/DateTime) | Represents the timestamp of when the ratelimit bucket resets.            |
+| ResetAfter     | [*number*](https://create.roblox.com/docs/scripting/luau/numbers)                 | The exact time in **seconds** to wait until the ratelimit bucket resets. |
+| ResetAfterSafe | [*number*](https://create.roblox.com/docs/scripting/luau/numbers)                 | Same as `ResetAfter` but with 0.5 seconds of delay added.                |
+| Bucket         | [*string*](https://create.roblox.com/docs/scripting/luau/strings)                 | The current ratelimit bucket id.                                         |
 
-**RatelimitInformation.limit :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
-
-**RatelimitInformation.remaining :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
-
-**RatelimitInformation.reset :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-
-**RatelimitInformation.resetAfter :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers) (In seconds)
-
-**RatelimitInformation.resetAfterSafe :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers) *(same as resetAfter, just with one extra second added)*
-
-**RatelimitInformation.bucket :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-
-??? info
-    The difference between [RatelimitInformation](#ratelimitinformation) and [RatelimitedInformation](#ratelimitedinformation) is, RatelimitInformation is used to prevent getting ratelimited from the proxy, while RatelimitedInformation is used to handle a ratelimit responce from the proxy.
-
-???+ warning
-    Logical errors **must** be avoided when handling bucket ratelimits yourself, as you may end up sending too many requests and getting either ratelimited or banned from the proxy.
+??? info "RatelimitInformation Vs RatelimitedInformation"
+    **RatelimitInformation** is used to prevent getting ratelimited from the proxy, while **RatelimitedInformation** is used to handle a ratelimit response.
 
 <br />
 
@@ -55,23 +29,16 @@ Please use the [offical Discord](https://discord.com/developers/docs/topics/rate
 
 <br />
 
-### **RatelimitedInformation**
+## RatelimitedInformation
 
-Please use the [offical Discord](https://discord.com/developers/docs/topics/rate-limits#exceeding-a-rate-limit-rate-limit-response-structure) docs to reference what these values represent. 
+| Key            | Type                                                              | Description                                                                   |
+|----------------|-------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Scope          | [*string*](https://create.roblox.com/docs/luau/strings)           | The scope you are ratelimited from.                                           |
+| RetryAfter     | [*number*](https://create.roblox.com/docs/scripting/luau/numbers) | The exact time in **milliseconds** until you are able to send messages again. |
+| RetryAfterSafe | [*number*](https://create.roblox.com/docs/scripting/luau/numbers) | Same as `RetryAfter` but with 0.5 seconds of delay added.                     |
 
-**RatelimitedInformation.global :** [*boolean*](https://create.roblox.com/docs/luau/booleans)
-
-**RatelimitedInformation.scope :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-
-**RatelimitedInformation.retryAfter :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers) (In milliseconds)
-
-**RatelimitedInformation.retryAfterSafe :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers) *(same as retryAfter, just with one extra second added)*
-
-??? info
-    The difference between [RatelimitInformation](#ratelimitinformation) and [RatelimitedInformation](#ratelimitedinformation) is, RatelimitInformation is used to prevent getting ratelimited from the proxy, while RatelimitedInformation is used to handle a ratelimit responce from the proxy.
-
-???+ warning
-    Logical errors **must** be avoided when handling 429 responses yourself, as you may end up sending too many requests and getting banned from the proxy.
+??? info "RatelimitInformation Vs RatelimitedInformation"
+    **RatelimitInformation** is used to prevent getting ratelimited from the proxy, while **RatelimitedInformation** is used to handle a ratelimit response.
 
 <br />
 
@@ -79,17 +46,33 @@ Please use the [offical Discord](https://discord.com/developers/docs/topics/rate
 
 <br />
 
-### **RequestStatus**
+## ProxyInformation
 
-**RequestStatus.success :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
+| Key            | Type                                                               | Description                                                        |
+|----------------|--------------------------------------------------------------------|--------------------------------------------------------------------|
+| Proxy          | [*true?*](https://create.roblox.com/docs/scripting/luau/booleans)  | If proxy is true, the proxy isn't responsible for 4xx HTTP errors. |
+| Message        | [*string?*](https://create.roblox.com/docs/scripting/luau/strings) | A message from the proxy.                                          |
+| Reason         | [*string?*](https://create.roblox.com/docs/scripting/luau/strings) | A reason for your ban.                                             |
+| Error          | [*string?*](https://create.roblox.com/docs/scripting/luau/strings) | An error message.                                                  |
 
-**RequestStatus.statusCode :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
+<br />
 
-**RequestStatus.statusMessage :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
+---
 
-**RequestStatus.message :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+<br />
 
-**RequestStatus.reason :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
+## RequestStatus
+
+| Key                  | Type                                                                                                      | Description                             |
+|----------------------|-----------------------------------------------------------------------------------------------------------|-----------------------------------------|
+| Success              | [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)                                       | Indicates if the request succeeded.     |
+| StatusCode           | [*number*](https://create.roblox.com/docs/scripting/luau/numbers)                                         | Contains the request's status code.     |
+| StatusMessage        | [*string*](https://create.roblox.com/docs/scripting/luau/strings)                                         | Contains the request's status message.  |
+| ProxyInformation     | [*ProxyInformation?*](#proxyinformation)                                                                  | Contains information sent by the proxy. |
+| RatelimitInformation | ([*RatelimitInformation*](#ratelimitinformation) \| [*RatelimitedInformation*](#ratelimitedinformation))? | Contains information on ratelimiting.   |
+
+??? note 
+    RatelimitInformation will contain a table of type [*RatelimitedInformation*](#ratelimitedinformation) if the StatusCode returned is 429. Otherwise it will be a table of type [*RatelimitInformation*](#ratelimitinformation).
 
 <br />
 
@@ -99,10 +82,13 @@ Please use the [offical Discord](https://discord.com/developers/docs/topics/rate
 
 ## Properties
 
+---
+
 <br />
 
-### **Webhook.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The webhook's id.
+
+### Id 
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the webhook's id.
 
 <br />
 
@@ -110,11 +96,11 @@ The webhook's id.
 
 <br />
 
-### **Webhook.token :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The webhook's token.
+### Token
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the webhook's token.
 
 ???+ danger
-    Never share this with **anyone**! If this string is made public it gives everyone full access to your webhook. If you think someone has your webhook's token the best course of action is to delete the webhook and create a new one.
+    Never share this with **anyone**! If this string is made public it gives everyone full access to your webhook. If you think someone has your webhook's token the best course of action to take is to delete the webhook and create a new one.
 
 <br />
 
@@ -122,11 +108,11 @@ The webhook's token.
 
 <br />
 
-### **Webhook.baseUrl :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The webhook's base url.
+### BaseUrl
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the webhook's base url.
 
 ???+ danger
-    Never share this with **anyone**! If this string is made public it gives everyone full access to your webhook. If you think someone has your webhook's url the best course of action is to delete the webhook and create a new one.
+    Never share this with **anyone**! If this string is made public it gives everyone full access to your webhook. If you think someone has your webhook's token the best course of action to take is to delete the webhook and create a new one.
 
 <br />
 
@@ -134,17 +120,40 @@ The webhook's base url.
 
 <br />
 
-### **Webhook.ratelimitInfo :** [*RatelimitInfo*](#ratelimitinfo)
-The latest ratelimit information given to the webhook by Discord. [*Offical docs reference*](https://discord.com/developers/docs/topics/rate-limits#header-format-rate-limit-header-examples)
+## Constructors
 
-???+ warning "Deprecation Notice"
-    This property has been deprecated. Please use [RatelimitInformation](#ratelimitinformation) returned by :execute, :editMessage and :deleteMessage instead. 
+---
 
-??? note
-    ratelimitInfo will be nil until you make a request to Discord via :execute, :editMessage or :deleteMessage.
+<br />
 
-??? tip
-    These values can be utilised to prevent getting ratelimited from the proxy.
+### new(id, token, customProxyUrl)
+Constructs a new [*Webhook*](Webhook.md) instance from an id, token and an optional custom proxy url. Returns a new [*Webhook*](Webhook.md) instance.
+
+??? info "Custom proxy url example"
+    "https://webhook.lewisakura.moe"
+
+***Parameters***
+
+- id : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The webhook's id.
+- token : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The webhook's token.
+- customProxyUrl : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The base url of a self hosted [*WebhookProxy*](https://github.com/lewisakura/webhook-proxy).
+
+<br />
+
+---
+
+<br />
+
+### fromUrl(webhookUrl, customProxyUrl)
+Constructs a new [*Webhook*](Webhook.md) instance from a webhook url and an optional custom proxy url. Returns a new [*Webhook*](Webhook.md) instance.
+
+??? info "Custom proxy url example"
+    "https://webhook.lewisakura.moe"
+
+***Parameters***
+
+- webhookUrl : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - A webhook url.
+- customProxyUrl : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The base url of a self hosted [*WebhookProxy*](https://github.com/lewisakura/webhook-proxy).
 
 <br />
 
@@ -154,62 +163,33 @@ The latest ratelimit information given to the webhook by Discord. [*Offical docs
 
 ## Methods
 
-<br />
-
-### **Webhook.new**(id **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), token **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), customProxyUrl **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*Webhook*](Webhook.md)
-This method returns a new Webhook object.
-
-***Parameters***
-
-- ***id:*** The webhook's id.
-- ***token:*** The webhook's token.
-- ***customProxyUrl:*** The base url of a self hosted [*WebhookProxy*](https://github.com/lewisakura/webhook-proxy). (*example: "https://webhook.lewisakura.moe"*)
-
-<br />
-
 ---
 
 <br />
 
-### **Webhook.fromUrl**(webhookUrl **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), customProxyUrl **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*Webhook*](Webhook.md)
-This method returns a new Webhook object.
+### SendMessage(content, embeds, queue, waitForMessage, optionalSendMessageInfo)
+Sends a message to the webhook's channel. Returns a tuple containing 2 items, an optional [*Message*](Message.md) instance and a table of type [*RequestStatus*](#requeststatus).
+    
+???+ info "Default Parameter Values"
+    queue: `true`
 
-???+ note
-    The webhookUrl param should be a normal Discord webhook url.
+    waitForMessage: `false`
 
-***Parameters***
+??? info
+    If both `queue` and `waitForMessage` are true, a message object will NOT be returned.
 
-- ***webhookUrl:*** The url of your webhook.
-- ***customProxyUrl:*** The base url of a self hosted [*WebhookProxy*](https://github.com/lewisakura/webhook-proxy). (*example: "https://webhook.lewisakura.moe"*)
-
-<br />
-
----
-
-<br />
-
-### **Webhook:execute**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, queue **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), waitForMessage **:** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), optionalExecuteInfo **:** [*OptionalExecuteInfo?*](OptionalExecuteInfo.md)) **:** ([*Message?*](Message.md) | [*ThreadMessage?*](ThreadMessage.md), [*RequestStatus*](#requeststatus), [*RatelimitInformation*](#ratelimitinformation) | [*RatelimitedInformation*](#ratelimitedinformation) | {})
-This method sends a message to Discord.
-
-???+ note
-    If both queue and waitForMessage are true, a message object will NOT be returned.
-
-???+ note
-    If queue is left nil it will default to true. If waitForMessage is left nil it will default to false.
-
-???+ note
-    If queue is true, ratelimitInfo will **NOT** be returned.
+    If `queue` is true, RequestStatus.RatelimitInformation **will** be [*nil*](https://create.roblox.com/docs/luau/nil).
 
 ??? tip
     If you dont feel like making your own ratelimit handler set queue to true. This will ensure the message is sent to Discord. The only down side is it may take a few more seconds to be sent depending on how busy the proxy's queue is.
 
 ***Parameters***
 
-- ***content:*** The message's content.
-- ***embeds:*** A table of embeds that'll be attached to the message.
-- ***queue:*** Whether to queue the request, this will make sure the message is sent.
-- ***waitForMessage:*** Whether to wait for the message to be returned. If this is set to true a Message or ThreadMessage object will be returned depending on where the message was sent.
-- ***optionalExecuteInfo:*** Optional extra information for the request.
+- content : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The message's content.
+- embeds : { [*Embed*](Embed.md) }? - Embeds that'll be attached to the message.
+- queue : [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans) - Whether to queue the request.
+- waitForMessage : [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans) - Whether to wait for a [*Message*](Message.md) instance to be returned.
+- optionalSendMessageInfo : [*OptionalSendMessageInfo?*](OptionalSendMessageInfo.md) - Contains extra information for the request.
 
 <br />
 
@@ -217,15 +197,30 @@ This method sends a message to Discord.
 
 <br />
 
-### **Webhook:editMessage**(messageId **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, threadId **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** ([*EditedMessage*](EditedMessage.md) | [*EditedThreadMessage*](EditedThreadMessage.md), [*RequestStatus*](#requeststatus), [*RatelimitInformation*](#ratelimitinformation) | [*RatelimitedInformation*](#ratelimitedinformation))
-This method edits a message sent by the webhook.
+### SendMessageInThread(threadId, content, embeds, queue, waitForMessage, optionalSendMessageInfo)
+Sends a message to a thread in the webhook's channel. Returns a tuple containing 2 items, an optional [*Message*](Message.md) instance and a table of type [*RequestStatus*](#requeststatus).
+    
+???+ info "Default Parameter Values"
+    queue: `true`
+
+    waitForMessage: `false`
+
+??? info
+    If both `queue` and `waitForMessage` are true, a message object will NOT be returned.
+
+    If `queue` is true, RequestStatus.RatelimitInformation **WILL** be null.
+
+??? tip
+    If you dont feel like making your own ratelimit handler set queue to true. This will ensure the message is sent to Discord. The only down side is it may take a few more seconds to be sent depending on how busy the proxy's queue is.
 
 ***Parameters***
 
-- ***messageId:*** The id of the message you wanna edit.
-- ***content:*** The new content that'll override the old content.
-- ***embeds:*** The new embeds that'll override the old embeds.
-- ***threadId:*** The id of the thread the message is in.
+- threadId : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the thread the message will be sent to.
+- content : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The message's content.
+- embeds : { [*Embed*](Embed.md) }? - Embeds that'll be attached to the message.
+- queue : [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans) - Whether to queue the request.
+- waitForMessage : [*boolean?*](https://create.roblox.com/docs/scripting/luau/booleans) - Whether to wait for a [*Message*](Message.md) instance to be returned.
+- optionalSendMessageInfo : [*OptionalSendMessageInfo?*](OptionalSendMessageInfo.md) - Contains extra information for the request.
 
 <br />
 
@@ -233,13 +228,14 @@ This method edits a message sent by the webhook.
 
 <br />
 
-### **Webhook:deleteMessage**(messageId **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), threadId **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** ([*RequestStatus*](#requeststatus), [*RatelimitInformation*](#ratelimitinformation) | [*RatelimitedInformation*](#ratelimitedinformation))
-This method deletes a message sent by the webhook.
+### EditMessage(messageId, content, embeds)
+Edits a message sent by the webhook. Returns a tuple containing 2 items, a [*Message*](Message.md) instance and a table of type [*RequestStatus*](#requeststatus).
 
 ***Parameters***
 
-- ***messageId:*** The id of the message you wanna delete.
-- ***threadId:*** The id of the thread the message is in.
+- messageId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the message.
+- content : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The new content.
+- embeds : { [*Embed*](Embed.md) }? - The new embeds.
 
 <br />
 
@@ -247,17 +243,15 @@ This method deletes a message sent by the webhook.
 
 <br />
 
-### **Webhook:_validateExecuteRequest**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?, optionalExecuteInfo **:** [*OptionalExecuteInfo?*](OptionalExecuteInfo.md)) **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
-This method validates data given to :execute before sending it to the proxy. This is done to avoid making pointless requests to the proxy.
-
-???+ warning
-    This method is not meant to be used outside Voyager's internal code.
+### EditMessageInThread(threadId, messageId, content, embeds)
+Edits a message in a thread sent by the webhook. Returns a tuple containing 2 items, a [*Message*](Message.md) instance and a table of type [*RequestStatus*](#requeststatus).
 
 ***Parameters***
 
-- ***content:*** The content of the message.
-- ***embeds:*** A table of [*Embed*](Embed.md) objects.
-- ***optionalExecuteInfo:*** A [*OptionalExecuteInfo*](OptionalExecuteInfo.md) object.
+- threadId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the thread the message is in.
+- messageId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the message.
+- content : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The new content.
+- embeds : { [*Embed*](Embed.md) }? - The new embeds.
 
 <br />
 
@@ -265,16 +259,12 @@ This method validates data given to :execute before sending it to the proxy. Thi
 
 <br />
 
-### **Webhook:_validateEditMessageRequest**(content **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings), embeds **:** {[[*number*](https://create.roblox.com/docs/scripting/luau/numbers)] **:** [*Embed*](Embed.md)}?) **:** ([*boolean*](https://create.roblox.com/docs/scripting/luau/booleans), [*string?*](https://create.roblox.com/docs/scripting/luau/strings))
-This method validates data given to :editMessage before sending it to the proxy. This is done to avoid making pointless requests to the proxy.
-
-???+ warning
-    This method is not meant to be used outside Voyager's internal code.
+### DeleteMessage(messageId)
+Deletes a message sent by the webhook. Returns a table of type [*RequestStatus*](#requeststatus).
 
 ***Parameters***
 
-- ***content:*** The content of the execute request.
-- ***embeds:*** The embeds of the execute request.
+- messageId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the message.
 
 <br />
 
@@ -282,18 +272,73 @@ This method validates data given to :editMessage before sending it to the proxy.
 
 <br />
 
-### **Webhook:_request**(url **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), method **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings), body **:** {}?, contentType **:** [*string*](https://create.roblox.com/docs/scripting/luau/strings)) **:** ({}?, [*RequestStatus*](#requeststatus), [*RatelimitInformation*](#ratelimitinformation) | [*RatelimitedInformation*](#ratelimitedinformation) | { })
-This method is used to make HTTP requests to the proxy. While this method is not meant to be used outside Voyager's internal code, if you know what you're doing, it can be used to send requests to endpoints not yet implemented to Voyager yet.
-
-???+ warning
-    This method is not meant to be used outside Voyager's internal code.
+### DeleteMessageInThread(threadId, messageId)
+Deletes a message in a thread sent by the webhook. Returns a table of type [*RequestStatus*](#requeststatus).
 
 ***Parameters***
 
-- ***url:*** The url the request will be sent to.
-- ***method:*** The HTTP method needed to make the request.
-- ***body:*** The body of the request.
-- ***contentType:*** The content type to use in the request header.
+- threadId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the thread the message is in.
+- messageId : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The id of the message.
+
+<br />
+
+---
+
+<br />
+
+### _ValidateSendMessageRequest(content, embeds, optionalExecuteInfo)
+Validates the request to avoid making a bad request to Discord. Returns a tuple with 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
+
+???+ warning "Internal Code warning"
+    This method is not meant to be used outside of Voyager's internal code.
+
+??? info
+    The boolean value indicates whether the validation was successful, and the optional string contains the error message if validation failed.
+
+***Parameters***
+
+- content : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The content of the message.
+- embeds : { [*Embed*](Embed.md) }? - Embeds that'll be attached to the message.
+- optionalExecuteInfo : [*OptionalSendMessageInfo?*](OptionalSendMessageInfo.md) - Any extra info for the request.
+
+<br />
+
+---
+
+<br />
+
+### _ValidateEditMessageRequest(content, embeds)
+Validates the request to avoid making a bad request to Discord. Returns a tuple with 2 items a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) and an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings).
+
+???+ warning "Internal Code warning"
+    This method is not meant to be used outside of Voyager's internal code.
+
+??? info
+    The boolean value indicates whether the validation was successful, and the optional string contains the error message if validation failed.
+
+***Parameters***
+
+- content : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The new content of the message.
+- embeds : { [*Embed*](Embed.md) }? - The new embeds that'll be attached to the message.
+
+<br />
+
+---
+
+<br />
+
+### _Request(url, method, body, contentType)
+This method is used to make HTTP requests to the proxy. Returns a tuple containing 2 items, a table containing the response body and a table of type [*RequestStatus*](#requeststatus).
+
+???+ warning "Internal Code warning"
+    This method is not meant to be used outside of Voyager's internal code.
+
+***Parameters***
+
+- url : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The url the request will be sent to.
+- method : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The HTTP method.
+- body : {}? - The body of the request.
+- contentType : [*string*](https://create.roblox.com/docs/scripting/luau/strings) - The content type of the request.
 
 <br />
 

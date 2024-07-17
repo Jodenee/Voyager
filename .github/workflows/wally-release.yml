@@ -1,0 +1,31 @@
+name: Release Voyager on wally
+
+on:
+  release:
+    types: [ published ]
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Manual release"
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install aftman
+        uses: ok-nick/setup-aftman@v0.4.2
+
+      - name: Wally login
+        run: wally login --token ${{ secrets.WALLY_AUTH_TOKEN }}
+
+      - name: Publish Voyager to wally
+        run: wally publish
+
+      - name: Wally logout
+        run: wally logout

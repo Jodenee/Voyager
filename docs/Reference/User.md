@@ -1,13 +1,16 @@
 # User
+Represents a user
 
 <br />
 
 ## Properties
 
+---
+
 <br />
 
-### **User.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The user's Discord id.
+### Id 
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the user's Id.
 
 <br />
 
@@ -15,8 +18,8 @@ The user's Discord id.
 
 <br />
 
-### **User.username :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The user's Discord username.
+### Username
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the user's username.
 
 <br />
 
@@ -24,8 +27,8 @@ The user's Discord username.
 
 <br />
 
-### **User.avatar :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The user's Discord avatar hash.
+### AvatarHash
+An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the user's avatar hash.
 
 <br />
 
@@ -33,8 +36,8 @@ The user's Discord avatar hash.
 
 <br />
 
-### **User.bot :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
-Whether the user is a bot.
+### IsBot 
+A [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) representing whether the user is a bot.
 
 <br />
 
@@ -42,8 +45,8 @@ Whether the user is a bot.
 
 <br />
 
-### **Author.mention :**  [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-A string that mentions this user.
+### Mention
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that mentions this user.
 
 <br />
 
@@ -51,8 +54,8 @@ A string that mentions this user.
 
 <br />
 
-### **User.globalName :** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
-the user's display name on Discord.
+### GlobalName 
+An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the user's display name.
 
 <br />
 
@@ -60,8 +63,31 @@ the user's display name on Discord.
 
 <br />
 
-### **User.publicFlags :** [*PublicUserFlags*](PublicUserFlags.md)
-The user's flags.
+### PublicFlags 
+A [*PublicUserFlags*](PublicUserFlags.md) instance representing the user's flags.
+
+<br />
+
+---
+
+<br />
+
+## Constructors
+
+---
+
+<br />
+
+
+### new(data)
+Constructs a new [*User*](User.md) instance from a [*user object*](https://discord.com/developers/docs/resources/user#user-object). Returns a new [*User*](User.md) instance.
+
+???+ warning "Internal Code warning"
+    This method is not meant to be used outside of Voyager's internal code.
+
+***Parameters***
+
+- data : [*Dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) - A [*user object*](https://discord.com/developers/docs/resources/user#user-object) returned by Discord.
 
 <br />
 
@@ -71,40 +97,28 @@ The user's flags.
 
 ## Methods
 
-<br />
-
-### **User.new**(data **:** [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)) **:** [*User*](User.md)
-This method returns a new User object.
-
-???+ warning
-    This method is not meant to be called outside of Voyager's internal code.
-
-***Parameters***
-
-- ***data:*** A [*user object*](https://discord.com/developers/docs/resources/user#user-object).
-
-<br />
-
 ---
 
 <br />
 
-### **User:getAvatarUrl**(size **:** [*number?*](https://create.roblox.com/docs/scripting/luau/numbers), imageFormat **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)) **:** [*string?*](https://create.roblox.com/docs/scripting/luau/strings)
-This method will return the user's avatar url.
+### GetAvatarUrl(size, imageFormat)
+Returns an optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the user's avatar url.
 
 ???+ warning
-    The size parameter can only be a power of two between 16 and 4096.
+    The size parameter can only be a **power of two** between **16** and **4096**.
 
-???+ info
-    If the imageFormat paramiter is left out. It will defualt to .png.
+    If the user has no avatar, this **will** return [*nil*](https://create.roblox.com/docs/luau/nil).
+
+???+ info "Default Parameter Values"
+    imageFormat: `.png`
 
 ??? tip
-    Use [*Enum.AvatarImageFormats*](./utilities/Enum.md) to fill in the imageFormat parameter.
+    Use the [*ImageFormat*](Enum.md#imageformat) enum to fill in the imageFormat parameter.
 
 ***Parameters***
 
-- ***size:*** The desired size the avatar should be.
-- ***imageFormat:*** The format the author's avatar should be returned as.
+- size : [*number?*](https://create.roblox.com/docs/scripting/luau/numbers) - The desired size of the user's avatar url.
+- imageFormat : [*string?*](https://create.roblox.com/docs/scripting/luau/strings) - The desired image format of the user's avatar url.
 
 <br />
 
@@ -112,8 +126,8 @@ This method will return the user's avatar url.
 
 <br />
 
-### **User:hasAnimatedAvatar**(): [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
-This method checks whether the user has an animated avatar.
+### HasAnimatedAvatar()
+Returns a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) representing whether the user's avatar is animated.
 
 <br />
 

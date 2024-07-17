@@ -1,13 +1,16 @@
 # Message
+Represents a message.
 
 <br />
 
 ## Properties
 
+---
+
 <br />
 
-### **Message.id :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The message's id.
+### Id
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the message's id.
 
 <br />
 
@@ -15,8 +18,8 @@ The message's id.
 
 <br />
 
-### **Message.messageType :** [*number*](https://create.roblox.com/docs/scripting/luau/numbers)
-The type of message the message is.
+### MessageType
+A [*number*](https://create.roblox.com/docs/scripting/luau/numbers) representing the message's [*type*](https://discord.com/developers/docs/resources/channel#message-object-message-types).
 
 <br />
 
@@ -24,8 +27,8 @@ The type of message the message is.
 
 <br />
 
-### **Message.content :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The message's content.
+### Content
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the message's content.
 
 <br />
 
@@ -33,8 +36,8 @@ The message's content.
 
 <br />
 
-### **Message.channelId :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The id of the channel the message was sent in.
+### ChannelId
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the id of the channel the message was sent in.
 
 <br />
 
@@ -42,8 +45,8 @@ The id of the channel the message was sent in.
 
 <br />
 
-### **Message.author :** [*Author*](Author.md)
-The the author of the message.
+### Author
+A [*User*](User.md) instance representing the author of the message.
 
 <br />
 
@@ -51,8 +54,8 @@ The the author of the message.
 
 <br />
 
-### **Message.embeds :** { [*Embed*](Embed.md) }
-A table of embeds that are attached to the message.
+### Embeds
+A table of [*Embed*](Embed.md) instances that represent the embeds attached to the message.
 
 <br />
 
@@ -60,11 +63,8 @@ A table of embeds that are attached to the message.
 
 <br />
 
-### **Message.reactions :** { [*Reaction*](Reaction.md) }
-A table of reactions to the message.
-
-???+ warning "Deprecation Notice"
-    This property has been deprecated due to an API change.
+### MentionedUsers
+A table of [*User*](User.md) instances that represent the users mentioned in the message.
 
 <br />
 
@@ -72,8 +72,8 @@ A table of reactions to the message.
 
 <br />
 
-### **Message.mentions :** { [*User*](User.md) }
-A table of users mentioned in the message.
+### MentionedRoles
+A table of [*strings*](https://create.roblox.com/docs/scripting/luau/strings) that contain role ids which were mentioned in the message.
 
 <br />
 
@@ -81,8 +81,8 @@ A table of users mentioned in the message.
 
 <br />
 
-### **Message.mentionRoles :** { [*string*](https://create.roblox.com/docs/scripting/luau/strings) }
-A table of role ids mentioned in the message.
+### IsPinned
+A [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that represents whether the message is pinned.
 
 <br />
 
@@ -90,8 +90,8 @@ A table of role ids mentioned in the message.
 
 <br />
 
-### **Message.pinned :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
-Whether the message is pinned.
+### MentionsEveryone
+A [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that represents whether the message mentions @everyone.
 
 <br />
 
@@ -99,8 +99,8 @@ Whether the message is pinned.
 
 <br />
 
-### **Message.mentionEveryone :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
-Whether the message mentions @everyone.
+### IsTTS
+A [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that represents whether the message is a TTS message. 
 
 <br />
 
@@ -108,8 +108,8 @@ Whether the message mentions @everyone.
 
 <br />
 
-### **Message.tts :** [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans)
-Whether the message was a TTS message.
+### CreatedAt
+A [*DateTime*](https://create.roblox.com/docs/reference/engine/datatypes/DateTime) instance representing when the message was created.
 
 <br />
 
@@ -117,11 +117,8 @@ Whether the message was a TTS message.
 
 <br />
 
-### **Message.timestamp :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-A timestamp of when the message was sent in [*ISO8601 format*](https://www.iso.org/iso-8601-date-and-time-format.html).
-
-???+ warning "Deprecation Notice"
-    This property has been deprecated. Please use ***Message.createdAt*** instead. 
+### EditedAt
+An optional [*DateTime*](https://create.roblox.com/docs/reference/engine/datatypes/DateTime) instance representing when the message was last edited.
 
 <br />
 
@@ -129,8 +126,8 @@ A timestamp of when the message was sent in [*ISO8601 format*](https://www.iso.o
 
 <br />
 
-### **Message.createdAt :** [*DateTime*](https://create.roblox.com/docs/reference/engine/datatypes/DateTime)
-A datetime object representing when the message was created.
+### Flags
+A [*MessageFlags*](MessageFlags.md) instance representing the message's flags.
 
 <br />
 
@@ -138,8 +135,8 @@ A datetime object representing when the message was created.
 
 <br />
 
-### **Message.flags :** [*MessageFlags*](MessageFlags.md)
-A [*MessageFlags*](MessageFlags.md) object representing the message's flags.
+### WebhookId
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains the id of the webhook that sent this message.
 
 <br />
 
@@ -147,8 +144,8 @@ A [*MessageFlags*](MessageFlags.md) object representing the message's flags.
 
 <br />
 
-### **Message.webhookId :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The id of the webhook that sent this message.
+### JumpUrl
+A [*string*](https://create.roblox.com/docs/scripting/luau/strings) containing the jump url of this message.
 
 <br />
 
@@ -156,8 +153,8 @@ The id of the webhook that sent this message.
 
 <br />
 
-### **Message.jumpUrl :** [*string*](https://create.roblox.com/docs/scripting/luau/strings)
-The jump url of the message.
+### Position
+A optional [*number*](https://create.roblox.com/docs/scripting/luau/numbers) containing the approximate position of the message in a thread.
 
 <br />
 
@@ -165,19 +162,21 @@ The jump url of the message.
 
 <br />
 
-## Methods
+## Constructors
+
+---
 
 <br />
 
-### **Message.new**(data: [*dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries)): [*Message*](Message.md)
-This method returns a new Message object.
+### new(data)
+Constructs a new [*Message*](Message.md) instance from a [*message object*](https://discord.com/developers/docs/resources/channel#message-object). Returns a new [*Message*](Message.md) instance.
 
-???+ warning
-    This method is not meant to be used outside Voyager's internal code.
+???+ warning "Internal Code warning"
+    This method is not meant to be used outside of Voyager's internal code.
 
 ***Parameters***
 
-- ***data:*** A [message object](https://discord.com/developers/docs/resources/channel#message-object).
+- data : [*Dictionary*](https://create.roblox.com/docs/scripting/luau/tables#dictionaries) - A [*message object*](https://discord.com/developers/docs/resources/channel#message-object) returned by Discord.
 
 <br />
 

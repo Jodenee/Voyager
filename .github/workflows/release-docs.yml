@@ -2,7 +2,7 @@ name: Deploy documentation (release)
 
 on:
   release:
-    types: [published]
+    types: [ published ]
 
 jobs:
   mkdocs:

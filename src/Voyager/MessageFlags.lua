@@ -1,7 +1,7 @@
 local MessageFlags = {}
 MessageFlags.__index = MessageFlags
 
-local BaseFlags = require(script.Parent.bases.BaseFlags)
+local BaseFlags = require(script.Parent.Bases.BaseFlags)
 
 setmetatable(MessageFlags, BaseFlags)
 
@@ -11,22 +11,22 @@ function MessageFlags.fromBitfield(value : number)
 	return self
 end
 
-function MessageFlags.fromFlags(flags : {number})
+function MessageFlags.fromFlags(flags : { number })
 	local self = setmetatable(BaseFlags.fromBitfield(0), MessageFlags)
-	
+
 	for _, flag in flags do
-		self.value = bit32.bor(self.value, flag)
+		self.Value = bit32.bor(self.Value, flag)
 	end
 
 	return self
 end
 
-function MessageFlags:getFlags() : {number}
-	local enum = require(script.Parent.utilities.Enum)
+function MessageFlags:GetFlags() : { number }
+	local enum = require(script.Parent.Enum)
 	local foundFlags = {}
 
-	for _, flag in enum.MessageFlags do
-		if self:hasFlag(flag) then table.insert(foundFlags, flag) end
+	for _, flag in enum.MessageFlag do
+		if self:HasFlag(flag) then table.insert(foundFlags, flag) end
 	end
 
 	return foundFlags

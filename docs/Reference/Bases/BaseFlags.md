@@ -1,5 +1,5 @@
-# PublicUserFlags
-Represents a user's flags.
+# BaseFlags
+A base class for any flags.
 
 <br />
 
@@ -25,7 +25,7 @@ A [*number*](https://create.roblox.com/docs/scripting/luau/numbers) containing f
 <br />
 
 ### fromBitfield(value)
-Constructs a new [*PublicUserFlags*](PublicUserFlags.md) instance from a bitfield. This method returns a new [*PublicUserFlags*](PublicUserFlags.md) instance.
+Constructs a new [*BaseFlags*](BaseFlags.md) instance from a bitfield. Returns a new [*BaseFlags*](BaseFlags.md) instance.
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
@@ -42,12 +42,10 @@ Constructs a new [*PublicUserFlags*](PublicUserFlags.md) instance from a bitfiel
 
 ## Methods
 
----
-
 <br />
 
 ### HasFlag(flag)
-Returns a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that represents whether the bitfield contains the flag.
+Checks whether the bitfield contains a flag. Returns a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that represents whether the bitfield contains the flag.
 
 ***Parameters***
 
@@ -60,21 +58,12 @@ Returns a [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) th
 <br />
 
 ### SetFlag(flag, toggle)
-This method will toggle a flag in the bitfield either to true or false. Returns [*nil*](https://create.roblox.com/docs/luau/nil).
+Toggles a flag in the bitfield either to true or false. Returns [*nil*](https://create.roblox.com/docs/luau/nil).
 
 ***Parameters***
 
 - flag : [*number*](https://create.roblox.com/docs/scripting/luau/numbers) - A flag.
 - toggle : [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) - Whether to add or remove the flag from the bitfield.
-
-<br />
-
----
-
-<br />
-
-### GetFlags()
-Returns a table of [*numbers*](https://create.roblox.com/docs/scripting/luau/numbers) that represent flags found in the bitfield.
 
 <br />
 
