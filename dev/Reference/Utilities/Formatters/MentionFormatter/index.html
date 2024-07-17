@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../Reaction/">
+        <link rel="prev" href="../EmojiFormatter/">
       
       
-        <link rel="next" href="../User/">
+        <link rel="next" href="../../../../Tutorials/">
       
       
-      <link rel="icon" href="../../assets/images/Voyager_Logo.svg">
+      <link rel="icon" href="../../../../assets/images/Voyager_Logo.svg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
     
     
       
-        <title>ThreadMessage - Voyager</title>
+        <title>MentionFormatter - Voyager</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f2e4d321.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -44,8 +44,11 @@
     
     
   
+    
+    
   
-  <style>:root{--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2v6Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M297.2 248.9c14.4-20.6 22.8-45.7 22.8-72.9 0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9 3.7 5.3 8.1 11.3 12.8 17.7 12.9 17.7 28.3 38.9 39.8 59.8 10.4 19 15.7 38.8 18.3 57.5H109c-2.2-12-5.9-23.7-11.8-34.5-9.9-18-22.2-34.9-34.5-51.8-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176 16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3-5 7.2-10.2 14.3-15.4 21.4-12.3 16.8-24.6 33.7-34.5 51.8-5.9 10.8-9.6 22.5-11.8 34.5h-48.5c2.6-18.7 7.9-38.6 18.3-57.5 11.5-20.9 26.9-42.1 39.8-59.8 4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48 0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80 8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80v-16h160v16c0 44.2-35.8 80-80 80z"/></svg>');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 14.88 2.05 2.05L15.06 23H13v-2.06l6.07-6.06m1.97-1.75c.14 0 .27.06.38.17l1.28 1.28c.22.21.22.56 0 .77l-1 1-2.05-2.05 1-1c.11-.11.25-.17.39-.17M17 4v6l-2-2-2 2V4H9v16h2v2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v6l-2 2V4h-2M5 5v2h2V5H5m0 6v2h2v-2H5m0 6v2h2v-2H5Z"/></svg>');}</style>
+  
+  <style>:root{--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2v6Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M297.2 248.9c14.4-20.6 22.8-45.7 22.8-72.9 0-70.7-57.3-128-128-128S64 105.3 64 176c0 27.2 8.4 52.3 22.8 72.9 3.7 5.3 8.1 11.3 12.8 17.7 12.9 17.7 28.3 38.9 39.8 59.8 10.4 19 15.7 38.8 18.3 57.5H109c-2.2-12-5.9-23.7-11.8-34.5-9.9-18-22.2-34.9-34.5-51.8-5.2-7.1-10.4-14.2-15.4-21.4C27.6 247.9 16 213.3 16 176 16 78.8 94.8 0 192 0s176 78.8 176 176c0 37.3-11.6 71.9-31.4 100.3-5 7.2-10.2 14.3-15.4 21.4-12.3 16.8-24.6 33.7-34.5 51.8-5.9 10.8-9.6 22.5-11.8 34.5h-48.5c2.6-18.7 7.9-38.6 18.3-57.5 11.5-20.9 26.9-42.1 39.8-59.8 4.7-6.4 9-12.4 12.7-17.7zM192 128c-26.5 0-48 21.5-48 48 0 8.8-7.2 16-16 16s-16-7.2-16-16c0-44.2 35.8-80 80-80 8.8 0 16 7.2 16 16s-7.2 16-16 16zm0 384c-44.2 0-80-35.8-80-80v-16h160v16c0 44.2-35.8 80-80 80z"/></svg>');--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.07 14.88 2.05 2.05L15.06 23H13v-2.06l6.07-6.06m1.97-1.75c.14 0 .27.06.38.17l1.28 1.28c.22.21.22.56 0 .77l-1 1-2.05-2.05 1-1c.11-.11.25-.17.39-.17M17 4v6l-2-2-2 2V4H9v16h2v2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v6l-2 2V4h-2M5 5v2h2V5H5m0 6v2h2v-2H5m0 6v2h2v-2H5Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1a87.983 87.983 0 0 0-40.4 74v1.5c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128h-32C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>');}</style>
 
 
 
@@ -63,9 +66,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/theme.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/theme.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -91,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#threadmessage" class="md-skip">
+        <a href="#mentionformatter" class="md-skip">
           Skip to content
         </a>
       
@@ -109,9 +112,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Voyager" class="md-header__button md-logo" aria-label="Voyager" data-md-component="logo">
+    <a href="../../../.." title="Voyager" class="md-header__button md-logo" aria-label="Voyager" data-md-component="logo">
       
-  <img src="../../assets/images/Voyager_Logo.svg" alt="logo">
+  <img src="../../../../assets/images/Voyager_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -128,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ThreadMessage
+              MentionFormatter
             
           </span>
         </div>
@@ -235,7 +238,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -252,7 +255,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../With-vs-without-Voyager/" class="md-tabs__link">
+      <a href="../../../../With-vs-without-Voyager/" class="md-tabs__link">
         
   
     
@@ -273,7 +276,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../Author/" class="md-tabs__link">
+        <a href="../../../Embed/" class="md-tabs__link">
           
   
   Reference
@@ -291,7 +294,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Tutorials/" class="md-tabs__link">
+        <a href="../../../../Tutorials/" class="md-tabs__link">
           
   
   Tutorials
@@ -322,13 +325,11 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Voyager" class="md-nav__button md-logo" aria-label="Voyager" data-md-component="logo">
+    <a href="../../../.." title="Voyager" class="md-nav__button md-logo" aria-label="Voyager" data-md-component="logo">
       
-  <img src="../../assets/images/Voyager_Logo.svg" alt="logo">
+  <img src="../../../../assets/images/Voyager_Logo.svg" alt="logo">
 
     </a>
     Voyager
@@ -355,7 +356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -375,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../With-vs-without-Voyager/" class="md-nav__link">
+      <a href="../../../../With-vs-without-Voyager/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -437,70 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Author/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Author
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../EditedMessage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    EditedMessage
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../EditedThreadMessage/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    EditedThreadMessage
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Embed/" class="md-nav__link">
+      <a href="../../../Embed/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -521,11 +459,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Emoji/" class="md-nav__link">
+      <a href="../../../EmbedAuthor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Emoji
+    EmbedAuthor
   </span>
   
 
@@ -542,7 +480,112 @@
   
   
     <li class="md-nav__item">
-      <a href="../Message/" class="md-nav__link">
+      <a href="../../../EmbedField/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EmbedField
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EmbedFooter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EmbedFooter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EmbedImage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EmbedImage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../EmbedThumbnail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EmbedThumbnail
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Enum/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Message/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -563,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../MessageFlags/" class="md-nav__link">
+      <a href="../../../MessageFlags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,11 +627,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../OptionalExecuteInfo/" class="md-nav__link">
+      <a href="../../../OptionalSendMessageInfo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    OptionalExecuteInfo
+    OptionalSendMessageInfo
   </span>
   
 
@@ -605,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../PublicUserFlags/" class="md-nav__link">
+      <a href="../../../PublicUserFlags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,290 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Reaction/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Reaction
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    ThreadMessage
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    ThreadMessage
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    <span class="md-ellipsis">
-      Properties
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Properties">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#threadmessageid-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.id : string
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagemessagetype-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.messageType : number
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagecontent-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.content : string
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagechannelid-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.channelId : string
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessageauthor-author" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.author : Author
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessageembeds-embed" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.embeds : { Embed }
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagereactions-reaction" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.reactions : { Reaction }
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagementions-user" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.mentions : { User }
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagementionroles-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.mentionRoles : { string }
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagepinned-boolean" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.pinned : boolean
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagementioneveryone-boolean" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.mentionEveryone : boolean
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagetts-boolean" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.tts : boolean
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagetimestamp-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.timestamp : string
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagecreatedat-datetime" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.createdAt : DateTime
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessageflags-messageflags" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.flags : MessageFlags
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagewebhookid-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.webhookId : string
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessageposition-number" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.position: number
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagejumpurl-string" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.jumpUrl : string
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#methods" class="md-nav__link">
-    <span class="md-ellipsis">
-      Methods
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Methods">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#threadmessagenewdata-dictionary-threadmessage" class="md-nav__link">
-    <span class="md-ellipsis">
-      ThreadMessage.new(data : dictionary) : ThreadMessage
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../User/" class="md-nav__link">
+      <a href="../../../User/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -930,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Webhook/" class="md-nav__link">
+      <a href="../../../Webhook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -988,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bases/BaseFlags/" class="md-nav__link">
+      <a href="../../../Bases/BaseFlags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,19 +774,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15" checked>
         
           
           <label class="md-nav__link" for="__nav_3_15" id="__nav_3_15_label" tabindex="0">
@@ -1040,7 +802,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_15_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_15">
             <span class="md-nav__icon md-icon"></span>
             Utilities
@@ -1051,26 +813,7 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../utilities/Enum/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Enum
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
+    
   
   
   
@@ -1079,15 +822,15 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_15_2" id="__nav_3_15_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_15_1" id="__nav_3_15_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1098,8 +841,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_15_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_15_2">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_15_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_15_1">
             <span class="md-nav__icon md-icon"></span>
             Formatters
           </label>
@@ -1112,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../utilities/Formatters/DateFormatter/" class="md-nav__link">
+      <a href="../DateFormatter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1133,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../utilities/Formatters/EmojiFormatter/" class="md-nav__link">
+      <a href="../EmojiFormatter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1151,10 +894,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../utilities/Formatters/MentionFormatter/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MentionFormatter
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1163,6 +926,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mentionuseruserid" class="md-nav__link">
+    <span class="md-ellipsis">
+      MentionUser(userId)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mentionroleroleid" class="md-nav__link">
+    <span class="md-ellipsis">
+      MentionRole(roleId)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mentionchannelchannelid" class="md-nav__link">
+    <span class="md-ellipsis">
+      MentionChannel(channelId)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1238,7 +1063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/" class="md-nav__link">
+      <a href="../../../../Tutorials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1259,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/error-handling/" class="md-nav__link">
+      <a href="../../../../Tutorials/error-handling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1280,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/getting-started/" class="md-nav__link">
+      <a href="../../../../Tutorials/getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1301,7 +1126,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/securing-remotes/" class="md-nav__link">
+      <a href="../../../../Tutorials/migrating-to-v3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migrating to v3.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Tutorials/securing-remotes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1329,6 +1175,74 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mentionuseruserid" class="md-nav__link">
+    <span class="md-ellipsis">
+      MentionUser(userId)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mentionroleroleid" class="md-nav__link">
+    <span class="md-ellipsis">
+      MentionRole(roleId)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mentionchannelchannelid" class="md-nav__link">
+    <span class="md-ellipsis">
+      MentionChannel(channelId)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           
             <div class="md-content" data-md-component="content">
@@ -1340,120 +1254,38 @@
   
 
 
-<h1 id="threadmessage">ThreadMessage</h1>
-<p><br /></p>
-<h2 id="properties">Properties</h2>
-<p><br /></p>
-<h3 id="threadmessageid-string"><strong>ThreadMessage.id :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
-<p>The message's id.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagemessagetype-number"><strong>ThreadMessage.messageType :</strong> <a href="https://create.roblox.com/docs/scripting/luau/numbers"><em>number</em></a></h3>
-<p>The type of message the message is.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagecontent-string"><strong>ThreadMessage.content :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
-<p>The message's content.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagechannelid-string"><strong>ThreadMessage.channelId :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
-<p>The id of the channel the message was sent in.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessageauthor-author"><strong>ThreadMessage.author :</strong> <a href="../Author/"><em>Author</em></a></h3>
-<p>The the author of the message.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessageembeds-embed"><strong>ThreadMessage.embeds :</strong> { <a href="../Embed/"><em>Embed</em></a> }</h3>
-<p>A table of embeds that are attached to the message.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagereactions-reaction"><strong>ThreadMessage.reactions :</strong> { <a href="../Reaction/"><em>Reaction</em></a> }</h3>
-<p>A table of reactions to the message.</p>
-<details class="warning" open="open">
-<summary>Deprecation Notice</summary>
-<p>This property has been deprecated due to an API change.</p>
-</details>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagementions-user"><strong>ThreadMessage.mentions :</strong> { <a href="../User/"><em>User</em></a> }</h3>
-<p>A table of users mentioned in the message.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagementionroles-string"><strong>ThreadMessage.mentionRoles :</strong> { <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a> }</h3>
-<p>A table of role ids mentioned in the message.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagepinned-boolean"><strong>ThreadMessage.pinned :</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a></h3>
-<p>Whether the message is pinned.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagementioneveryone-boolean"><strong>ThreadMessage.mentionEveryone :</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a></h3>
-<p>Whether the message mentions @everyone.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagetts-boolean"><strong>ThreadMessage.tts :</strong> <a href="https://create.roblox.com/docs/scripting/luau/booleans"><em>boolean</em></a></h3>
-<p>Whether the message was a TTS message.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagetimestamp-string"><strong>ThreadMessage.timestamp :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
-<p>A timestamp of when the message was sent in <a href="https://www.iso.org/iso-8601-date-and-time-format.html"><em>ISO8601 format</em></a>.</p>
-<details class="warning" open="open">
-<summary>Deprecation Notice</summary>
-<p>This property has been deprecated. Please use <strong><em>ThreadMessage.createdAt</em></strong> instead. </p>
-</details>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagecreatedat-datetime"><strong>ThreadMessage.createdAt :</strong> <a href="https://create.roblox.com/docs/reference/engine/datatypes/DateTime"><em>DateTime</em></a></h3>
-<p>A datetime object representing when the message was created.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessageflags-messageflags"><strong>ThreadMessage.flags :</strong> <a href="../MessageFlags/"><em>MessageFlags</em></a></h3>
-<p>A <a href="../MessageFlags/"><em>MessageFlags</em></a> object representing the message's flags.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagewebhookid-string"><strong>ThreadMessage.webhookId :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
-<p>The id of the webhook that sent this message.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessageposition-number"><strong>ThreadMessage.position</strong>: <a href="https://create.roblox.com/docs/scripting/luau/numbers">number</a></h3>
-<p>A number that represents the approximate position of the message in a thread.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
-<h3 id="threadmessagejumpurl-string"><strong>ThreadMessage.jumpUrl :</strong> <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a></h3>
-<p>The jump url of the message.</p>
-<p><br /></p>
-<hr />
-<p><br /></p>
+<h1 id="mentionformatter">MentionFormatter</h1>
+<p>A utility module that helps mention users, roles and channels in messages.</p>
 <h2 id="methods">Methods</h2>
+<hr />
 <p><br /></p>
-<h3 id="threadmessagenewdata-dictionary-threadmessage"><strong>ThreadMessage.new</strong>(data <strong>:</strong> <a href="https://create.roblox.com/docs/scripting/luau/tables#dictionaries"><em>dictionary</em></a>) <strong>:</strong> <a href="./"><em>ThreadMessage</em></a></h3>
-<p>This method returns a new ThreadMessage object.</p>
-<details class="warning" open="open">
-<summary>Warning</summary>
-<p>This method is not meant to be called outside of Voyager's internal code.</p>
-</details>
+<h3 id="mentionuseruserid">MentionUser(userId)</h3>
+<p>Returns a <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a> containing a user mention.</p>
 <p><strong><em>Parameters</em></strong></p>
 <ul>
-<li><strong><em>data:</em></strong> A <a href="https://discord.com/developers/docs/resources/channel#message-object"><em>message object</em></a>.</li>
+<li>userId : <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a> - The id of the user to mention.</li>
 </ul>
+<p><br /></p>
+<hr />
+<p><br /></p>
+<h3 id="mentionroleroleid">MentionRole(roleId)</h3>
+<p>Returns a <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a> containing a role mention.</p>
+<p><strong><em>Parameters</em></strong></p>
+<ul>
+<li>roleId : <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a> - The id of the role to mention.</li>
+</ul>
+<p><br /></p>
+<hr />
+<p><br /></p>
+<h3 id="mentionchannelchannelid">MentionChannel(channelId)</h3>
+<p>Returns a <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a> containing a channel mention.</p>
+<p><strong><em>Parameters</em></strong></p>
+<ul>
+<li>channelId : <a href="https://create.roblox.com/docs/scripting/luau/strings"><em>string</em></a> - The id of the channel to mention.</li>
+</ul>
+<p><br /></p>
+<hr />
+<p><br /></p>
 
 
 
@@ -1542,10 +1374,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.tabs", "navigation.top", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.copy", "navigation.tabs", "navigation.top"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.caa56a14.min.js"></script>
       
     
   </body>
