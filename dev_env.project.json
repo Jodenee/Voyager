@@ -16,9 +16,9 @@
       }
     },
     "ServerStorage": {
-      "Voyager": {
+      "voyager": {
         "$className": "Folder",
-        "$path": "src/Voyager"
+        "$path": "src/voyager"
       }
     }
   }
