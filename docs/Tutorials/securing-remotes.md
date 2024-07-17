@@ -16,7 +16,7 @@ The way we will prevent exploiters from spamming our remote is by putting player
 First we will make 2 new variables, the first one will be a table that stores timestamps and the second variable will store a number that'll contain the cooldown duration in seconds.
 
 ```lua linenums="1" hl_lines="6-7"
-local voyager = game:GetService("ServerStorage").Voyager
+local voyager = game:GetService("ServerStorage").voyager
 local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
 
 local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
@@ -45,7 +45,7 @@ end)
 Now we will need to make a function that'll check if a player can send feedback or not. The way it will decide if someone can send a message is by subtracting the current timestamp by their timestamp. Their timestamp represents when they last sent feedback so the difference will represent the time in seconds since the user sent feedback, then we just need to check if that difference is more or equal to the cooldownDuration variable.
 
 ```lua linenums="1" hl_lines="9-17"
-local voyager = game:GetService("ServerStorage").Voyager
+local voyager = game:GetService("ServerStorage").voyager
 local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
 
 local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
@@ -84,7 +84,7 @@ end)
 Now all we need to do is check if the player can send feedback using the canSendFeedback function. If they can send feedback we will put them in cooldown and set their timestamp. Also we will add a PlayerRemoving function that removes the player's cooldown from the table if they leave, otherwise the data will never be removed and will stay there until the server shuts down.
 
 ```lua linenums="1" hl_lines="24-25"
-local voyager = game:GetService("ServerStorage").Voyager
+local voyager = game:GetService("ServerStorage").voyager
 local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
 
 local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
@@ -138,7 +138,7 @@ The easiest way we can solve the rejoining problem is by putting the player on c
 We can do this by simply adding a PlayerAdded event and then putting the player in the playersOnCooldown table.
 
 ```lua linenums="1" hl_lines="19-21"
-local voyager = game:GetService("ServerStorage").Voyager
+local voyager = game:GetService("ServerStorage").voyager
 local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
 
 local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
@@ -194,7 +194,7 @@ A regular datastore will be used for the sake of simplicity, but this can be don
 First we will change cooldownDuration to last a week. Then we'll get the necessary dependencies like the Datastore and the PlayersSerivce.
 
 ```lua linenums="1" hl_lines="4-6 9"
-local voyager = game:GetService("ServerStorage").Voyager
+local voyager = game:GetService("ServerStorage").voyager
 local webhook = require(voyager.Webhook).new("webhookId", "WebhookToken")
 
 local playerService = game:GetService("Players")
@@ -255,7 +255,7 @@ end)
 Now we'll add a PlayerAdded event, and in that event we will fetch the player's timestamp and add it to the playersOnCooldown table.
 
 ```lua linenums="1" hl_lines="22-30"
-local voyager = game:GetService("ServerStorage").Voyager
+local voyager = game:GetService("ServerStorage").voyager
 local webhook = require(voyager.Webhook).new("webhookId", "WebhookToken")
 
 local playerService = game:GetService("Players")
@@ -326,7 +326,7 @@ end)
 Now we'll edit the PlayerRemoving event to save the player's timestamp before removing it from the playersOnCooldown table.
 
 ```lua linenums="1" hl_lines="32-44"
-local voyager = game:GetService("ServerStorage").Voyager
+local voyager = game:GetService("ServerStorage").voyager
 local webhook = require(voyager.Webhook).new("webhookId", "WebhookToken")
 
 local playerService = game:GetService("Players")
@@ -408,7 +408,7 @@ end)
 And lasty we will add a BindToClose event to ensure data isn't lost when the server shuts down.
 
 ```lua linenums="1" hl_lines="48-62"
-local voyager = game:GetService("ServerStorage").Voyager
+local voyager = game:GetService("ServerStorage").voyager
 local webhook = require(voyager.Webhook).new("webhookId", "WebhookToken")
 
 local playerService = game:GetService("Players")

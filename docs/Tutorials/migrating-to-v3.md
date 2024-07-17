@@ -5,6 +5,7 @@ Updating Voyager from v2 to v3 will bring breaking changes. This is here to help
 ### Small Changes
 ---
 
+* Voyager folder name is now in lowercase.
 * Removed class `Reaction`. Has no replacement.
 * Removed class `Emoji`. Has no replacement.
 * Removed class `ThreadMessage`. Replaced by `Message` class.
