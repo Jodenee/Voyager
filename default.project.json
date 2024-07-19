@@ -1,6 +1,6 @@
 {
   "name": "voyager",
   "tree": {
-    "$path": "src/voyager"
+    "$path": "src"
   }
 }
