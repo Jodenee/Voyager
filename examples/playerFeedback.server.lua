@@ -1,6 +1,6 @@
-local voyager = game:GetService("ServerStorage").voyager
 local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(game:GetService("ServerStorage").voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : string)
 	local embed = require(voyager.Embed).new()

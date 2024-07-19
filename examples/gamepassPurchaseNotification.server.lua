@@ -1,6 +1,6 @@
 local marketplaceService = game:GetService("MarketplaceService")
-local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(game:GetService("ServerStorage").voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 marketplaceService.PromptGamePassPurchaseFinished:Connect(function(player : Player, gamepassid : number, wasPurchased : boolean)
 	if not wasPurchased then return end
