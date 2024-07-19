@@ -10,6 +10,7 @@ on:
       - "dev"
     paths:
       - "docs/**"
+      - "examples/**"
       - ".github/workflows/dev-docs.yml"
       - "mkdocs.yml"
 
