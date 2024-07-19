@@ -132,7 +132,7 @@ This method returns a new [*Embed*](Embed.md) instance.
 - image : [*EmbedImage?*](EmbedImage.md) - Sets the embed's image during initialisation.
 - thumbnail : [*EmbedThumbnail?*](EmbedThumbnail.md) - Sets the embed's thumbnail during initialisation.
 - author : [*EmbedAuthor?*](EmbedAuthor.md) - Sets the embed's author during initialisation.
-- fields : { [*EmbedField?*](EmbedField.md) } - Sets the embed's fields during initialisation.
+- fields : { [*EmbedField*](EmbedField.md) }? - Sets the embed's fields during initialisation.
 
 <br />
 

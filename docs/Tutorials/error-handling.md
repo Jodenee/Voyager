@@ -6,8 +6,8 @@
 ## Basic error handling
 
 ```lua linenums="1"
-local voyager = path_here.voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(path_here.voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 webhook:SendMessage("Hello, World!")
 ```
@@ -17,8 +17,8 @@ All of the webhook's methods excluding some private ones return a second item, a
 First we have to put the [*RequestStatus*](../Reference/Webhook.md#requeststatus) table into a variable.
 
 ```lua linenums="1" hl_lines="4"
-local voyager = path_here.voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(path_here.voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local _, requestStatus = webhook:SendMessage("Hello, World!")
 ```
@@ -28,8 +28,8 @@ The reason we put a _ before requestStatus is because SendMessage can return a M
 Now we can check if the request was successfuly sent to the proxy.
 
 ```lua linenums="1" hl_lines="6-10"
-local voyager = path_here.voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(path_here.voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local _, requestStatus = webhook:SendMessage("Hello, World!")
 
@@ -47,8 +47,8 @@ And just like that we've set up basic error handling! The same thing can be done
 Lets say we want to send a message to Discord and print that message's id. The code would look something like this.
 
 ```lua linenums="1"
-local voyager = path_here.voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(path_here.voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local message = webhook:SendMessage("Hello, World!", nil, false, true)
 
@@ -60,8 +60,8 @@ But this code is actually very unsafe as the request isn't guaranteed to be sent
 Now we can set up some logic to prevent that from happening. First we should put the [*RequestStatus*](../Reference/Webhook.md#requeststatus) table into a variable.
 
 ```lua linenums="1" hl_lines="4"
-local voyager = path_here.voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(path_here.voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local message, requestStatus = webhook:SendMessage("Hello, World!", nil, false, true)
 
@@ -71,8 +71,8 @@ print(message.Id)
 Now that we have the [*RequestStatus*](../Reference/Webhook.md#requeststatus) table we can check to make sure the message was sent successfully.
 
 ```lua linenums="1" hl_lines="6-10"
-local voyager = path_here.voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(path_here.voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local message, requestStatus = webhook:SendMessage("Hello, World!", nil, false, true)
 
@@ -86,8 +86,8 @@ end
 Now we can take things a step further by handling specific HTTP errors like 429, 400, 500, 503, etc differently.
 
 ```lua linenums="1" hl_lines="9-19"
-local voyager = path_here.voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(path_here.voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local message, requestStatus = webhook:SendMessage("Hello, World!", nil, false, true)
 

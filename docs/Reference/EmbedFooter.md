@@ -58,7 +58,7 @@ This method returns a new [*EmbedFooter*](EmbedFooter.md) instance.
 <br />
 
 ### _fromObject(embedFooterObject)
-This method constructs a [*EmbedFooter*](EmbedFooter.md) instance from a [*footer object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-footer-structure). Returns a new [*EmbedFooter*](EmbedFooter.md) instance.
+This method constructs an [*EmbedFooter*](EmbedFooter.md) instance from a [*footer object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-footer-structure). Returns a new [*EmbedFooter*](EmbedFooter.md) instance.
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.

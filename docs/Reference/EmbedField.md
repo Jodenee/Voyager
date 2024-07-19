@@ -62,7 +62,7 @@ This method returns a new [*EmbedField*](EmbedField.md) instance.
 <br />
 
 ### _fromObject(embedFieldObject)
-This method constructs a [*EmbedField*](EmbedField.md) instance from a [*field object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-field-structure). Returns a new [*EmbedField*](EmbedField.md) instance.
+This method constructs an [*EmbedField*](EmbedField.md) instance from a [*field object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-field-structure). Returns a new [*EmbedField*](EmbedField.md) instance.
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.

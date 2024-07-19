@@ -16,8 +16,8 @@ The way we will prevent exploiters from spamming our remote is by putting player
 First we will make 2 new variables, the first one will be a table that stores timestamps and the second variable will store a number that'll contain the cooldown duration in seconds.
 
 ```lua linenums="1" hl_lines="6-7"
-local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(game:GetService("ServerStorage").voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
 
@@ -25,7 +25,7 @@ local playersOnCooldown = {}
 local cooldownDuration = 60 * 10 -- 10 minutes
 
 sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : string)
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
 		:SetDescription(feedback)
 		:SetAuthor("Feedback from " .. player.DisplayName, "https://www.roblox.com/users/" .. player.UserId .. "/profile")
 		:SetColor(Color3.fromRGB(0, 135, 255))
@@ -34,7 +34,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 		:AddField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 		:AddField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:SendMessage(nil, {embed})
+	local _, requestStatus = webhook:SendMessage(nil, { embed })
 	
 	if not requestStatus.Success then
 		warn("Request was not successful! " .. requestStatus.StatusCode .. " " .. requestStatus.StatusMessage)
@@ -45,8 +45,8 @@ end)
 Now we will need to make a function that'll check if a player can send feedback or not. The way it will decide if someone can send a message is by subtracting the current timestamp by their timestamp. Their timestamp represents when they last sent feedback so the difference will represent the time in seconds since the user sent feedback, then we just need to check if that difference is more or equal to the cooldownDuration variable.
 
 ```lua linenums="1" hl_lines="9-17"
-local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(game:GetService("ServerStorage").voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
 
@@ -64,7 +64,7 @@ function canSendFeedback(player : Player) : boolean
 end
 
 sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : string)
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
 		:SetDescription(feedback)
 		:SetAuthor("Feedback from " .. player.DisplayName, "https://www.roblox.com/users/" .. player.UserId .. "/profile")
 		:SetColor(Color3.fromRGB(0, 135, 255))
@@ -73,7 +73,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 		:AddField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 		:AddField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:SendMessage(nil, {embed})
+	local _, requestStatus = webhook:SendMessage(nil, { embed })
 	
 	if not requestStatus.Success then
 		warn("Request was not successful! " .. requestStatus.StatusCode .. " " .. requestStatus.StatusMessage)
@@ -84,8 +84,8 @@ end)
 Now all we need to do is check if the player can send feedback using the canSendFeedback function. If they can send feedback we will put them in cooldown and set their timestamp. Also we will add a PlayerRemoving function that removes the player's cooldown from the table if they leave, otherwise the data will never be removed and will stay there until the server shuts down.
 
 ```lua linenums="1" hl_lines="24-25"
-local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(game:GetService("ServerStorage").voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
 
@@ -110,7 +110,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	if not canSendFeedback(player) then return end
 	playersOnCooldown[player] = os.time()
 
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
 		:SetDescription(feedback)
 		:SetAuthor("Feedback from " .. player.DisplayName, "https://www.roblox.com/users/" .. player.UserId .. "/profile")
 		:SetColor(Color3.fromRGB(0, 135, 255))
@@ -119,7 +119,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 		:AddField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 		:AddField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:SendMessage(nil, {embed})
+	local _, requestStatus = webhook:SendMessage(nil, { embed })
 	
 	if not requestStatus.Success then
 		warn("Request was not successful! " .. requestStatus.StatusCode .. " " .. requestStatus.StatusMessage)
@@ -138,8 +138,8 @@ The easiest way we can solve the rejoining problem is by putting the player on c
 We can do this by simply adding a PlayerAdded event and then putting the player in the playersOnCooldown table.
 
 ```lua linenums="1" hl_lines="19-21"
-local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(game:GetService("ServerStorage").voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local sendFeedbackRemote = game:GetService("ReplicatedStorage").SendFeedback
 
@@ -168,7 +168,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	if not canSendFeedback(player) then return end
 	playersOnCooldown[player] = os.time()
 
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
 		:SetDescription(feedback)
 		:SetAuthor("Feedback from " .. player.DisplayName, "https://www.roblox.com/users/" .. player.UserId .. "/profile")
 		:SetColor(Color3.fromRGB(0, 135, 255))
@@ -177,7 +177,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 		:AddField("Has Verified Badge?", tostring(player.HasVerifiedBadge), true)
 		:AddField("From Game", "[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")" , true)
 	
-	local _, requestStatus = webhook:SendMessage(nil, {embed})
+	local _, requestStatus = webhook:SendMessage(nil, { embed })
 	
 	if not requestStatus.Success then
 		warn("Request was not successful! " .. requestStatus.StatusCode .. " " .. requestStatus.StatusMessage)
@@ -194,8 +194,8 @@ A regular datastore will be used for the sake of simplicity, but this can be don
 First we will change cooldownDuration to last a week. Then we'll get the necessary dependencies like the Datastore and the PlayersSerivce.
 
 ```lua linenums="1" hl_lines="4-6 9"
-local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "WebhookToken")
+local voyager = require(game:GetService("ServerStorage").voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local playerService = game:GetService("Players")
 local datastoreService = game:GetService("DataStoreService")
@@ -223,7 +223,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	if not canSendFeedback(player) then return end
 	playersOnCooldown[player] = os.time()
 
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
 		:SetDescription(feedback)
 		:SetTimestamp()
 		:SetColor(Color3.fromRGB(0, 135, 255))
@@ -244,7 +244,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 			"[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")"
 		)
 	
-	local _, requestStatus = webhook:SendMessage(nil, {embed})
+	local _, requestStatus = webhook:SendMessage(nil, { embed })
 	
 	if not requestStatus.Success then
 		warn("Request was not successful! " .. requestStatus.StatusCode .. " " .. requestStatus.StatusMessage)
@@ -255,8 +255,8 @@ end)
 Now we'll add a PlayerAdded event, and in that event we will fetch the player's timestamp and add it to the playersOnCooldown table.
 
 ```lua linenums="1" hl_lines="22-30"
-local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "WebhookToken")
+local voyager = require(game:GetService("ServerStorage").voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local playerService = game:GetService("Players")
 local datastoreService = game:GetService("DataStoreService")
@@ -294,7 +294,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	if not canSendFeedback(player) then return end
 	playersOnCooldown[player] = os.time()
 
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
 		:SetDescription(feedback)
 		:SetTimestamp()
 		:SetColor(Color3.fromRGB(0, 135, 255))
@@ -315,7 +315,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 			"[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")"
 		)
 	
-	local _, requestStatus = webhook:SendMessage(nil, {embed})
+	local _, requestStatus = webhook:SendMessage(nil, { embed })
 	
 	if not requestStatus.Success then
 		warn("Request was not successful! " .. requestStatus.StatusCode .. " " .. requestStatus.StatusMessage)
@@ -326,8 +326,8 @@ end)
 Now we'll edit the PlayerRemoving event to save the player's timestamp before removing it from the playersOnCooldown table.
 
 ```lua linenums="1" hl_lines="32-44"
-local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "WebhookToken")
+local voyager = require(game:GetService("ServerStorage").voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local playerService = game:GetService("Players")
 local datastoreService = game:GetService("DataStoreService")
@@ -376,7 +376,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	if not canSendFeedback(player) then return end
 	playersOnCooldown[player] = os.time()
 
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
 		:SetDescription(feedback)
 		:SetTimestamp()
 		:SetColor(Color3.fromRGB(0, 135, 255))
@@ -397,7 +397,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 			"[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")"
 		)
 	
-	local _, requestStatus = webhook:SendMessage(nil, {embed})
+	local _, requestStatus = webhook:SendMessage(nil, { embed })
 	
 	if not requestStatus.Success then
 		warn("Request was not successful! " .. requestStatus.StatusCode .. " " .. requestStatus.StatusMessage)
@@ -408,8 +408,8 @@ end)
 And lasty we will add a BindToClose event to ensure data isn't lost when the server shuts down.
 
 ```lua linenums="1" hl_lines="48-62"
-local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "WebhookToken")
+local voyager = require(game:GetService("ServerStorage").voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local playerService = game:GetService("Players")
 local datastoreService = game:GetService("DataStoreService")
@@ -475,7 +475,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 	if not canSendFeedback(player) then return end
 	playersOnCooldown[player] = os.time()
 
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
 		:SetDescription(feedback)
 		:SetTimestamp()
 		:SetColor(Color3.fromRGB(0, 135, 255))
@@ -496,7 +496,7 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 			"[Game Link](https://www.roblox.com/games/" .. game.PlaceId .. ")"
 		)
 
-	local _, requestStatus = webhook:SendMessage(nil, {embed})
+	local _, requestStatus = webhook:SendMessage(nil, { embed })
 	
 	if not requestStatus.Success then
 		warn("Request was not successful! " .. requestStatus.StatusCode .. " " .. requestStatus.StatusMessage)
@@ -504,4 +504,4 @@ sendFeedbackRemote.OnServerEvent:Connect(function(player : Player, feedback : st
 end)
 ```
 
-And thats it! Now our feedback example can't be spammed by exploiters and is way more robust.
+And thats it! Now our feedback example is way more robust as it cannot be spammed by exploiters anymore.

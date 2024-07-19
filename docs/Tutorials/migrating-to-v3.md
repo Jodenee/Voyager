@@ -5,7 +5,7 @@ Updating Voyager from v2 to v3 will bring breaking changes. This is here to help
 ### Small Changes
 ---
 
-* Voyager folder name is now in lowercase.
+* Voyager classes are now no longer parented to a folder, they are now parented to a module script. Requiring this module script gives you access to all Voyager classes without the need to individually require them.
 * Removed class `Reaction`. Has no replacement.
 * Removed class `Emoji`. Has no replacement.
 * Removed class `ThreadMessage`. Replaced by `Message` class.

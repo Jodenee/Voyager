@@ -2,17 +2,17 @@
 
 ## Sending a basic message
 
-At the start of any script that uses Voyager, It all starts with first storing the path to the Voyager folder in a variable.
+Frist and formost you should require the voyager module script and store the result inside a variable. 
 
 ```lua linenums="1"
-local voyager = path_here.voyager
+local voyager = require(path_here.voyager)
 ```
 
 Then after that we can require all the objects we need. In this case, since we only need to send a basic message to Discord we only need the [*Webhook*](../Reference/Webhook.md) object.
 
 ```lua linenums="1" hl_lines="2"
-local voyager = path_here.voyager
-local webhook = require(voyager.Webhook)
+local voyager = require(path_here.voyager)
+local webhook = voyager.Webhook
 ```
 
 Now we need to create a new [*Webhook*](../Reference/Webhook.md) instance to start sending messages, to do that call the webhook's "new" constructor method.
@@ -20,8 +20,8 @@ Now we need to create a new [*Webhook*](../Reference/Webhook.md) instance to sta
 The constructor method requires 2 arguments to be passed. The first argument must be the webhook's id, and the second argument must be the webhook's token.
 
 ```lua linenums="1" hl_lines="2"
-local voyager = path_here.voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(path_here.voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 ``` 
 
 ??? Question "How do I obtain my webhook's id and token?"
@@ -34,8 +34,8 @@ local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
 Now that we have a Webhook instance, we can send messages to Discord by using the webhook's SendMessage method.
 
 ```lua linenums="1" hl_lines="4"
-local voyager = path_here.voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(path_here.voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 webhook:SendMessage("Hello, world!")
 ```
@@ -64,8 +64,8 @@ Now lets make a script that sends a Discord message when a player joins the game
 Using the code from the previous section we already have a good amount of work done.
 
 ```lua linenums="1"
-local voyager = path_here.voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local voyager = require(path_here.voyager)
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 webhook:SendMessage("Hello, world!", nil, true, false)
 ```
@@ -75,7 +75,7 @@ We will need to get the players service and use it's PlayerAdded event to know w
 ```lua linenums="1" hl_lines="5-7"
 local playerService = game:GetService("Players")
 local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 playerService.PlayerAdded:Connect(function(player : Player)
 	webhook:SendMessage("Hello, world!", nil, true, false)
@@ -87,10 +87,10 @@ Now we'll create a new [*Embed*](../Reference/Embed.md) instance.
 ```lua linenums="1" hl_lines="6"
 local playerService = game:GetService("Players")
 local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 playerService.PlayerAdded:Connect(function(player : Player)
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
 
 	webhook:SendMessage("Hello, world!", nil, true, false)
 end)
@@ -101,10 +101,10 @@ Now we'll set the embed's author using the embed's [*SetAuthor*](../Reference/Em
 ```lua linenums="1" hl_lines="7-10"
 local playerService = game:GetService("Players")
 local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 playerService.PlayerAdded:Connect(function(player : Player)
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
     	:SetAuthor(
 			player.DisplayName .. " Joined!", 
 			"https://www.roblox.com/users/" .. player.UserId .. "/profile"
@@ -119,10 +119,10 @@ Now we'll give the embed some color using the embed's [*SetColor*](../Reference/
 ```lua linenums="1" hl_lines="11"
 local playerService = game:GetService("Players")
 local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 playerService.PlayerAdded:Connect(function(player : Player)
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
     	:SetAuthor(
 			player.DisplayName .. " Joined!", 
 			"https://www.roblox.com/users/" .. player.UserId .. "/profile"
@@ -138,10 +138,10 @@ Now we'll give the embed some fields so we can see some more information about t
 ```lua linenums="1" hl_lines="12-23"
 local playerService = game:GetService("Players")
 local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 playerService.PlayerAdded:Connect(function(player : Player)
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
     	:SetAuthor(
 			player.DisplayName .. " Joined!", 
 			"https://www.roblox.com/users/" .. player.UserId .. "/profile"
@@ -169,10 +169,10 @@ Lastly we're gonna add a timestamp to the embed's footer using the embed's [*Set
 ```lua linenums="1" hl_lines="24"
 local playerService = game:GetService("Players")
 local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 playerService.PlayerAdded:Connect(function(player : Player)
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
     	:SetAuthor(
 			player.DisplayName .. " Joined!", 
 			"https://www.roblox.com/users/" .. player.UserId .. "/profile"
@@ -201,10 +201,10 @@ And now we can edit the SendMessage method to send the message.
 ```lua linenums="1" hl_lines="26"
 local playerService = game:GetService("Players")
 local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 playerService.PlayerAdded:Connect(function(player : Player)
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
     	:SetAuthor(
 			player.DisplayName .. " Joined!", 
 			"https://www.roblox.com/users/" .. player.UserId .. "/profile"
@@ -233,10 +233,10 @@ Lastly we'll add some basic error handling.
 ```lua linenums="1" hl_lines="28-30"
 local playerService = game:GetService("Players")
 local voyager = game:GetService("ServerStorage").voyager
-local webhook = require(voyager.Webhook).new("webhookId", "webhookToken")
+local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 playerService.PlayerAdded:Connect(function(player : Player)
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
     	:SetAuthor(
 			player.DisplayName .. " Joined!", 
 			"https://www.roblox.com/users/" .. player.UserId .. "/profile"

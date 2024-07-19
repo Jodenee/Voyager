@@ -66,7 +66,7 @@ This method returns a new [*EmbedThumbnail*](EmbedThumbnail.md) instance.
 <br />
 
 ### _fromObject(embedThumbnailObject)
-This method constructs a [*EmbedThumbnail*](EmbedThumbnail.md) instance from a [*thumbnail object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-thumbnail-structure). Returns a new [*EmbedThumbnail*](EmbedThumbnail.md) instance.
+This method constructs an [*EmbedThumbnail*](EmbedThumbnail.md) instance from a [*thumbnail object*](https://discord.com/developers/docs/resources/channel#embed-object-embed-thumbnail-structure). Returns a new [*EmbedThumbnail*](EmbedThumbnail.md) instance.
 
 ???+ warning "Internal Code warning"
     This method is not meant to be used outside of Voyager's internal code.
