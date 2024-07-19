@@ -3,6 +3,11 @@
   "tree": {
     "$className": "DataModel",
 
+    "HttpService": {
+      "$properties": {
+        "HttpEnabled": true
+      }
+    },
     "ServerScriptService": {
       "examples": {
         "$className": "Folder",
@@ -17,8 +22,7 @@
     },
     "ServerStorage": {
       "voyager": {
-        "$className": "Folder",
-        "$path": "src/voyager"
+        "$path": "src"
       }
     }
   }
