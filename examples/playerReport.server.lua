@@ -3,7 +3,7 @@ local voyager = require(game:GetService("ServerStorage").voyager)
 local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 sendReportRemote.OnServerEvent:Connect(function(player : Player, reportedPlayer : Player, report : string, reason : string)
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
 		:SetDescription(report)
 		:SetColor(Color3.fromRGB(255, 0, 0))
 		:SetTimestamp()

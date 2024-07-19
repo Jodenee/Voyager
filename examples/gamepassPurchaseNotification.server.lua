@@ -6,7 +6,7 @@ marketplaceService.PromptGamePassPurchaseFinished:Connect(function(player : Play
 	if not wasPurchased then return end
 
 	local gamepassInfo = marketplaceService:GetProductInfo(gamepassid, Enum.InfoType.GamePass)
-	local embed = require(voyager.Embed).new()
+	local embed = voyager.Embed.new()
 		:SetColor(Color3.fromRGB(85, 255, 127))
 		:SetTimestamp()
 		:SetAuthor(
