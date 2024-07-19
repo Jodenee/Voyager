@@ -25,7 +25,7 @@ aftman install
 Now that rojo is installed, you need to build the development environment.
 
 ```shell
-rojo build -o Voyager.rbxlx
+rojo build dev_env.project.json -o Voyager.rbxlx
 ```
 
 Great! Now all we need to do is serve the dev_env project using rojo.
@@ -36,25 +36,25 @@ rojo serve dev_env.project.json
 
 Now that rojo is synchronising changes with the Voyager.rbxlx file, you can apply the changes you wish to add by editing the code found in [*src/Voyager*](src/Voyager) with a code editor of your choice.
 
-After you apply your changes you will need to test them. You can test your changes by opening the Voyager.rbxlx file in roblox studio, then navigate to ServerScriptService and look for a file named "Voyager Development", this is where you can test your changes. 
+After you apply your changes you will need to test them. You can test your changes by opening the Voyager.rbxlx file in roblox studio, then navigate to ServerScriptService and look for a script named "Voyager Development", this is where you can test your changes. 
 
-When you first open the file it will be blank, to save you some time you can copy and paste the code found below for a quick start.
+When you first open the script it will be blank, to save you some time you can copy and paste the code found below for a quick start.
 
 ```lua
 --// Get voyager
-local voyager = game:GetService("ServerStorage").voyager
+local voyager = require(game:GetService("ServerStorage").voyager)
 
 --// Get classes
-local Webhook = require(voyager.Webhook)
-local Embed = require(voyager.Embed)
-local VoyagerEnum = require(voyager.Enum)
-local OptionalSendMessageInfo = require(voyager.OptionalSendMessageInfo)
-local MessageFlags = require(voyager.MessageFlags)
+local Webhook = voyager.Webhook
+local Embed = voyager.Embed
+local VoyagerEnum = voyager.Enum
+local OptionalSendMessageInfo = voyager.OptionalSendMessageInfo
+local MessageFlags = voyager.MessageFlags
 
 --// Get formatters
-local dateFormatter = require(voyager.Utilities.Formatters.DateFormatter)
-local emojiFormatter = require(voyager.Utilities.Formatters.EmojiFormatter)
-local mentionFormatter = require(voyager.Utilities.Formatters.MentionFormatter)
+local dateFormatter = voyager.Utilities.Formatters.DateFormatter
+local emojiFormatter = voyager.Utilities.Formatters.EmojiFormatter
+local mentionFormatter = voyager.Utilities.Formatters.MentionFormatter
 
 --// Define credentials
 
