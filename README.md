@@ -35,7 +35,7 @@
 ### Wally
 
 1. Go to Voyager's [*wally page*](https://wally.run/package/jodenee/voyager) and copy the install string found underneath the metadata section.
-2. Open your wally.toml file and paste the string you got from the previous step underneath `[dependencies]`.
+2. Open your wally.toml file and under \[server-dependencies\] paste the string you got from the previous step.
 3. Open your prefered cli and run `wally install` in your projects directory.
 4. Enable "Allow HTTP Requests" in Game Settings > Security.
 
