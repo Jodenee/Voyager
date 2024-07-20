@@ -43,7 +43,7 @@ Voyager is an API wrapper for Discord webhooks made for Roblox. Voyager makes in
 ### Wally
 
 1. Go to voyager's [*wally page*](https://wally.run/package/jodenee/voyager) and copy the install string under the metadata section.
-2. Open your wally.toml file and under \[dependencies\] paste the string you got from the previous step.
+2. Open your wally.toml file and under \[server-dependencies\] paste the string you got from the previous step.
 3. Open your prefered cli and run `wally install` in your projects directory.
 4. Make sure http requests in Game Settings > Security is enabled.
 
