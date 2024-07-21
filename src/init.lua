@@ -9,7 +9,7 @@ local voyager = {
 
     Utilities = {
         Formatters = {
-            DateFormatters = require(script.Utilities.Formatters.DateFormatter),
+            DateFormatter = require(script.Utilities.Formatters.DateFormatter),
             EmojiFormatter = require(script.Utilities.Formatters.EmojiFormatter),
             MentionFormatter = require(script.Utilities.Formatters.MentionFormatter)
         }
