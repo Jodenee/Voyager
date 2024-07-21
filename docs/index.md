@@ -30,22 +30,24 @@ Voyager is an API wrapper for Discord webhooks made for Roblox. Voyager makes in
 
 ### Creator Marketplace
 
-1. Get the [*module script*](https://www.roblox.com/library/12390338563) off the creator marketplace.
-2. Make sure http requests in Game Settings > Security is enabled.
-3. Drag the module into your project and place it in ServerScriptService or ServerStorage.
+1. Get [*Voyager*](https://www.roblox.com/library/12390338563) off the creator marketplace.
+2. Open the toolbox and drag the Voyager into your project.
+3. Move Voyager into  ServerScriptService or ServerStorage.
+4. Enable "Allow HTTP Requests" in Game Settings > Security.
 
 ### Model File
 
-1. Go to the [*releases page*](https://github.com/Jodenee/Voyager/releases) and download the latest version of Voyager's model file.
-2. Make sure http requests in Game Settings > Security is enabled.
-3. Drag the module into your project and place it in ServerScriptService or ServerStorage.
+1. Go to the [*releases page*](https://github.com/Jodenee/Voyager/releases) and download the latest version of Voyager.
+2. Drag the model file into your project.
+3. Move Voyager into  ServerScriptService or ServerStorage.
+4. Enable "Allow HTTP Requests" in Game Settings > Security.
 
 ### Wally
 
-1. Go to voyager's [*wally page*](https://wally.run/package/jodenee/voyager) and copy the install string under the metadata section.
+1. Go to Voyager's [*wally page*](https://wally.run/package/jodenee/voyager) and copy the install string found underneath the metadata section.
 2. Open your wally.toml file and under \[server-dependencies\] paste the string you got from the previous step.
-3. Open your prefered cli and run `wally install` in your projects directory.
-4. Make sure http requests in Game Settings > Security is enabled.
+3. Open your preferred cli and run `wally install` in your projects directory.
+4. Enable "Allow HTTP Requests" in Game Settings > Security.
 
 ---
 
