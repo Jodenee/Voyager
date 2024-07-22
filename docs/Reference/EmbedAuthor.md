@@ -40,6 +40,9 @@ An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) th
 ### ProxiedIconUrl
 An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains a proxied url to the author's icon.
 
+??? info
+    `ProxiedIconUrl` is only returned if the embed object was returned by Discord.
+
 <br />
 
 ---

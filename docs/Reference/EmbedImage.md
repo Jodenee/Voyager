@@ -22,6 +22,9 @@ A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contain
 ### Width
 An optional [*number*](https://create.roblox.com/docs/luau/numbers) that contains the images's width.
 
+??? info
+    `Width` is only returned if the embed object was returned by Discord.
+
 <br />
 
 ---
@@ -31,6 +34,9 @@ An optional [*number*](https://create.roblox.com/docs/luau/numbers) that contain
 ### Height
 An optional [*number*](https://create.roblox.com/docs/luau/numbers) that contains the images's height.
 
+??? info
+    `Height` is only returned if the embed object was returned by Discord.
+
 <br />
 
 ---
@@ -39,6 +45,9 @@ An optional [*number*](https://create.roblox.com/docs/luau/numbers) that contain
 
 ### ProxiedUrl
 An optional [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contains a proxied url of the image.
+
+??? info
+    `ProxiedUrl` is only returned if the embed object was returned by Discord.
 
 <br />
 

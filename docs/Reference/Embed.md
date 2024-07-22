@@ -58,9 +58,6 @@ An optional [*Color3*](https://create.roblox.com/docs/reference/engine/datatypes
 ### Footer
 An optional [*EmbedFooter*](EmbedFooter.md) instance representing the embed's footer.
 
-???+ info
-    ProxyIconUrl is only returned if the embed object was returned by Discord.
-
 <br />
 
 ---
@@ -69,9 +66,6 @@ An optional [*EmbedFooter*](EmbedFooter.md) instance representing the embed's fo
 
 ### Image
 An optional [*EmbedImage*](EmbedImage.md) instance representing the embed's image.
-
-???+ info
-    The following properties: Height, Width and ProxyUrl are only returned if the embed object was returned by Discord.
 
 <br />
 
@@ -93,9 +87,6 @@ An optional [*EmbedThumbnail*](EmbedThumbnail.md) instance representing the embe
 
 ### Author
 An optional [*EmbedAuthor*](EmbedAuthor.md) instance representing the embed's author.
-
-???+ info
-    ProxyIconUrl is only returned if the embed object was returned by Discord.
 
 <br />
 

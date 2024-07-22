@@ -22,6 +22,9 @@ A [*string*](https://create.roblox.com/docs/scripting/luau/strings) that contain
 ### Width
 An optional [*number*](https://create.roblox.com/docs/luau/numbers) that contains the thumbnails's width.
 
+??? info
+    `Width` is only returned if the embed object was returned by Discord.
+
 <br />
 
 ---
@@ -31,6 +34,9 @@ An optional [*number*](https://create.roblox.com/docs/luau/numbers) that contain
 ### Height
 An optional [*number*](https://create.roblox.com/docs/luau/numbers) that contains the thumbnails's height.
 
+??? info
+    `Height` is only returned if the embed object was returned by Discord.
+
 <br />
 
 ---
@@ -39,6 +45,9 @@ An optional [*number*](https://create.roblox.com/docs/luau/numbers) that contain
 
 ### ProxiedUrl
 An optional [*boolean*](https://create.roblox.com/docs/scripting/luau/booleans) that contains a proxied url of the thumbnail's image.
+
+??? info
+    `ProxiedUrl` is only returned if the embed object was returned by Discord.
 
 <br />
 
