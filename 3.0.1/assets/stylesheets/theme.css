@@ -1,0 +1,156 @@
+:root {
+    /* Body color vars */
+    --md-primary-fg-color--dark: #000000; /* primary fg color */
+
+    /* Voyager thumbnail style */
+    #voyager_thumbnail {
+        max-width: 75%;
+    }
+
+    /* Table styles */
+    .md-typeset table { border-radius: .3rem !important; }
+}
+
+[data-md-color-scheme="light"] {
+    /* Header color vars */
+    --md-primary-fg-color: #ffffff; /* Header background color */
+    --md-primary-bg-color: #000000; /* Header icon color */
+
+    /* Body color vars */
+    --md-typeset-color:    #141414; /* List Text color */
+    --md-typeset-a-color:  #686868; /* Link color */
+    --md-accent-fg-color:  #b4b4b4; /* Link hover color */
+    --md-default-fg-color--light: #141414; /* Title color */
+    --md-default-fg-color--lightest: #141414; /* Hr color */
+    --md-default-bg-color: #ffffff; /* Background color */
+    --md-typeset-table-color: #141414; /* Table color */
+
+    /* Code block color vars */
+    --md-code-hl-string-color: #007a37; /* Code string color */
+    --md-code-hl-color: #dddddd; /* Code highlight color */
+
+    /* Footer color vars */
+    --md-footer-bg-color: #ffffff;
+    --md-footer-fg-color: #000000;
+
+    --md-footer-fg-color--light: #000000; /* Footer icon colors and "material for mkdocs" text color */
+    --md-footer-fg-color--lighter: #141414; /* "Made for" footer text color */
+
+    /*Back to top button vars*/
+    --md-accent-fg-color: #141414; /* Hover background color */
+
+
+    /* Search form color styles */
+    .md-search__form {
+        color: #141414;
+        background-color: #eeeeee;
+    }
+
+    /* Search form hover color overrides */
+    .md-search__form:hover { background-color: #dddddd; } /* Changes the search bar's background color */
+
+    /* Search result bar color overrides */
+    .md-search-result__meta {
+        background-color: #ffffff;
+        color: #141414;
+    }
+
+    /* Nav title that can be seen on min-width: 60em */
+    .md-nav--primary .md-nav__title { 
+        color: #000000;
+        background-color: #ffffff;
+    }
+
+    /* Black bottom border under the tabs */
+    .md-tabs { border-bottom: 1px solid #141414; } /* Adds a bottom border to the tabs */
+
+    /* github link that can be seen on min-width: 60em */
+    .md-nav__source { background-color: #ffffff; } /* Makes the github link background white */
+
+    /* Footer styles */
+    .md-footer { border-top: 1px solid #141414; } /* Adds a top border to the footer */
+    
+    /* Footer */
+    .md-footer-meta { background-color: #ffffff; } /* Changes the footer background color */
+
+    /* Versioning list styles */
+    .md-version__list {
+        background-color: #ffffff; 
+        color: #000000;
+    }
+    
+    /* Versioning list hover styles */
+    .md-version__link:focus, .md-version__link:hover {
+        color: #000000;
+        background-color: #eeeeee;
+    }
+}
+
+[data-md-color-scheme="dark"] { 
+    /* Header color vars */
+    --md-primary-fg-color: #0c0c0c; /* Header background color */
+    --md-primary-bg-color: #ffffff; /* Header icon color */
+    
+    /* Body color vars */
+    --md-typeset-color:    #ffffff; /* List text color */
+    --md-typeset-a-color:  #c0c0c0; /* Link color */
+    --md-accent-fg-color:  #707070; /* Link hover color */
+    --md-default-fg-color--light: #ffffff; /* Title color */
+    --md-default-fg-color--lightest: #ffffff; /* Hr color */
+    --md-default-fg-color: #ffffff; /* Forum color */
+    --md-default-bg-color: #141414; /* Background color */
+    --md-admonition-bg-color: #141414; /* Admonition background color */
+    --md-admonition-fg-color: #ffffff; /* Admonition text color */
+    --md-typeset-table-color: #ffffff; /* Table color */
+
+    /* Code block color vars */
+    --md-code-bg-color: #222222; /* Code block background color */
+    --md-code-hl-name-color: #e2e2e2; /* Code block name color */
+    --md-code-hl-punctuation-color: #ffffff; /* Code punctuation color */
+    --md-code-hl-operator-color: #ffffff; /* Code operator color */
+    --md-code-hl-string-color: #00bb54; /* Code string color */
+    --md-code-hl-comment-color: #5f5f5f; /* Code comment color */
+    --md-code-hl-color: #494949; /* Code highlight color */
+    
+    /* In-line code block vars*/
+    --md-code-fg-color: #cccccc; /* Code color */
+
+    /* Footer color vars */
+    --md-footer-bg-color: #0c0c0c;
+    
+    /* Search form color overrides */
+    .md-search__form {
+        color: #ffffff;
+        background-color: #1a1a1a;
+    }
+
+    /* Search form hover styles */
+    .md-search__form:hover { background-color: #424242; }
+
+    /* Github link that can be seen on min-width: 60em */
+    .md-nav__source { background-color: #0c0c0c; } 
+
+    /* Search result bar color overrides */
+    .md-search-result__meta {
+        background-color: #141414;
+        color: #ffffff;
+    }
+
+    /* Nav title overrides */
+    .md-nav--primary .md-nav__title { 
+        color: #ffffff;
+        background-color: #0c0c0c;
+    }
+
+    /* Versioning list styles */
+    .md-version__list {
+        background-color: #0c0c0c; 
+        color: #ffffff;
+    }
+
+    /* Versioning list hover styles */
+    .md-version__link:focus, .md-version__link:hover {
+        color: #cecece;
+        background-color: #202020;
+    }
+}
