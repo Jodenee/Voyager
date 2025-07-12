@@ -91,14 +91,14 @@ local webhook = voyager.Webhook.new("webhookId", "webhookToken")
 
 local message, requestStatus = webhook:SendMessage("Hello, World!", nil, false, true)
 
-if requestStatus.success then
+if requestStatus.Success then
     print(message.Id)
 else
     if requestStatus.StatusCode == 429 then
         warn("We've been ratelimited!")
     elseif requestStatus.StatusCode == 500 then
         warn("Internal server error!")
-    elseif requestStatus.statusCode == 503 then
+    elseif requestStatus.StatusCode == 503 then
         warn("The proxy is down!")
     else
         warn("Request was not successful! " .. requestStatus.StatusCode .. " " .. requestStatus.StatusMessage)
