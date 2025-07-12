@@ -29,6 +29,10 @@
     --md-code-hl-string-color: #007a37; /* Code string color */
     --md-code-hl-color: #dddddd; /* Code highlight color */
 
+    /* In-line code block vars */
+    --md-code-hl-name-color: var(--md-code-fg-color); /* Code block name color */
+    --md-code-hl-variable-color: var(--md-code-fg-color); /* Code variable name color */
+
     /* Footer color vars */
     --md-footer-bg-color: #ffffff;
     --md-footer-fg-color: #000000;
@@ -105,16 +109,16 @@
 
     /* Code block color vars */
     --md-code-bg-color: #222222; /* Code block background color */
-    --md-code-hl-variable-color: #e2e2e2; /* Code variable name color */
     --md-code-hl-punctuation-color: #ffffff; /* Code punctuation color */
     --md-code-hl-operator-color: #ffffff; /* Code operator color */
     --md-code-hl-string-color: #00bb54; /* Code string color */
     --md-code-hl-comment-color: #5f5f5f; /* Code comment color */
     --md-code-hl-color: #494949; /* Code highlight color */
     
-    /* In-line code block vars*/
-    --md-code-hl-name-color: #cccccc; /* Code block name color */
-    --md-code-fg-color: #cccccc; /* Code color */
+    /* In-line code block vars */
+    --md-code-fg-color: #e2e2e2; /* Code color */
+    --md-code-hl-name-color: var(--md-code-fg-color); /* Code block name color */
+    --md-code-hl-variable-color: var(--md-code-fg-color); /* Code variable name color */
 
     /* Footer color vars */
     --md-footer-bg-color: #0c0c0c;
