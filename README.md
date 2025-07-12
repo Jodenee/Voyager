@@ -22,8 +22,6 @@
 
 ### Creator Marketplace
 
-### Creator Marketplace
-
 1. Get [*Voyager*](https://www.roblox.com/library/12390338563) off the creator marketplace.
 2. Open the toolbox and drag the Voyager into your project.
 3. Move Voyager into  ServerScriptService or ServerStorage.
